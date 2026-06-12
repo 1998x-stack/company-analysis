@@ -21,6 +21,7 @@
 | 11 | 上海开普勒机器人 (Kepler Robot) | 机器人 · 人形机器人 | 37 | ⚫ 高风险 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
 | 12 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
 | 13 | DeepSeek（深度求索） | AI · 大模型/AGI | 56 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
+| 14 | MiniMax（稀宇科技 0100.HK） | AI · 多模态大模型 | 50 | 🔴 中等偏下 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -59,6 +60,7 @@
 | 开普勒机器人 | 28 | 20 | 70 | 42 | 55 | **37** |
 | 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
 | DeepSeek | 45 | 38 | 78 | 90 | 78 | **56** |
+| MiniMax | 38 | 42 | 72 | 65 | 70 | **50** |
 
 ## 雷达图
 

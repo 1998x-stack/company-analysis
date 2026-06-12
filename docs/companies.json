@@ -322,6 +322,29 @@
     "revenue": "未披露（2025H1同比翻倍）"
   },
   {
+    "id": "netease",
+    "name": "网易",
+    "nameEn": "NetEase",
+    "ticker": "9999.HK / NTES",
+    "ind1": "互动娱乐",
+    "ind2": "游戏",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 35,
+      "sustainability": 72
+    },
+    "total": 82,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "净现金¥1,559亿+游戏毛利率70%，梦幻西游占75%毛利+新品断层",
+    "report": "网易-财务健康评估-2026-06-12.md",
+    "radar": "NetEase_health_radar.png",
+    "employees": "~25,400",
+    "revenue": "¥1,126亿（2025）"
+  },
+  {
     "id": "tencent",
     "name": "腾讯",
     "nameEn": "Tencent",

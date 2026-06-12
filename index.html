@@ -487,6 +487,8 @@ const CARD_GRADE_CLS = {
   "High-Risk": "grade-high-risk"
 };
 
+const IND_ORDER = ['人工智能','互联网平台','企业服务','金融科技','科技硬件','互动娱乐','教育科技','机器人','汽车科技','化工'];
+
 const SCORE_BAR_COLORS = {
   cashFlow: "#d4a853",
   profitability: "#5b9e9e",
@@ -551,8 +553,7 @@ function renderSidebar() {
     </a>
   `;
 
-  const indOrder = ['人工智能','互联网平台','企业服务','互动娱乐','教育科技','机器人','汽车科技','化工'];
-  indOrder.forEach(ind1 => {
+  IND_ORDER.forEach(ind1 => {
     if (!tree[ind1]) return;
     const subInds = tree[ind1];
     const total = Object.values(subInds).reduce((s, arr) => s + arr.length, 0);
@@ -643,7 +644,7 @@ function renderBrowse() {
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px;">
         <div>
           <h1 style="margin-bottom:4px;">公司健康评估总览</h1>
-          <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · ${indOrder.filter(i => tree[i]).length} 个赛道 · 5维财务框架</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · ${new Set(COMPANIES.map(c => c.ind1)).size} 个赛道 · 5维财务框架</p>
         </div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">${statChips}</div>
@@ -1188,10 +1189,11 @@ function drawCompareRadar(c1, c2) {
     const resp = await fetch('docs/companies.json');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     COMPANIES = await resp.json();
+    route();
   } catch(e) {
     console.error('Failed to load companies data:', e);
     const main = byId('main');
-    if (main && COMPANIES.length === 0) {
+    if (main) {
       main.innerHTML = `<div class="fade-in" style="text-align:center;padding:60px 20px;">
         <h2 style="color:var(--red);margin-bottom:16px;">数据加载失败</h2>
         <p style="color:var(--text-muted);">无法加载公司评估数据，请稍后刷新页面重试。</p>
@@ -1199,7 +1201,6 @@ function drawCompareRadar(c1, c2) {
       </div>`;
     }
   }
-  route();
 })();
 </script>
 

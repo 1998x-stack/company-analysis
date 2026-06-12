@@ -184,6 +184,29 @@
     "revenue": "~¥350-400亿（2025，估）"
   },
   {
+    "id": "horizonrobotics",
+    "name": "地平线",
+    "nameEn": "Horizon Robotics",
+    "ticker": "9660.HK",
+    "ind1": "汽车科技",
+    "ind2": "自动驾驶芯片",
+    "scores": {
+      "cashFlow": 78,
+      "profitability": 55,
+      "debt": 15,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 63,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "征程芯片1000万颗+ADAS份额47.7%第一，研发137%营收+持续巨亏",
+    "report": "地平线-财务健康评估-2026-06-12.md",
+    "radar": "HorizonRobotics_health_radar.png",
+    "employees": "2,215",
+    "revenue": "¥37.58亿（FY2025）"
+  },
+  {
     "id": "thundersoft",
     "name": "中科创达",
     "nameEn": "ThunderSoft",

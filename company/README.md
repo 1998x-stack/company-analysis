@@ -61,6 +61,7 @@
 
 ├── 生物医药
 │   └── ADC与创新药
+│       ├── 康诺亚 (Keymed Biosciences / 2162.HK)
 │       ├── 科伦博泰 (Kelun-Biotech / 6990.HK)
 │       └── 映恩生物 (Duality Biotherapeutics / 9606.HK)
 ├── 化工

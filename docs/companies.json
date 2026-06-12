@@ -184,6 +184,29 @@
     "revenue": "~¥350-400亿（2025，估）"
   },
   {
+    "id": "keymed",
+    "name": "康诺亚",
+    "nameEn": "Keymed Biosciences",
+    "ticker": "2162.HK",
+    "ind1": "生物医药",
+    "ind2": "ADC与创新药",
+    "scores": {
+      "cashFlow": 54,
+      "profitability": 65,
+      "debt": 76,
+      "operations": 90,
+      "sustainability": 90
+    },
+    "total": 67,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "自免赛道IL-4Rα国产首发，NewCo模式标杆，OCF连负4年",
+    "report": "康诺亚-财务健康评估-2026-06-12.md",
+    "radar": "keymed_health_radar.png",
+    "employees": "1,625",
+    "revenue": "¥7.16亿（2025）"
+  },
+  {
     "id": "horizonrobotics",
     "name": "地平线",
     "nameEn": "Horizon Robotics",

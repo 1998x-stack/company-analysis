@@ -30,16 +30,17 @@ LEVEL_RD = {"excellent": 95, "good": 70, "average": 50, "alert": 15}
 
 def score_cash_flow(d: dict) -> float:
     """4 indicators × 25% each. receivable_turnover lives in operations only."""
-    indicators = ["operating_cf", "cash_runway", "debt_level", "cf_to_ni_ratio"]
-    return _average(d, indicators, LEVEL_3)
+    w = {"operating_cf": 0.25, "cash_runway": 0.25,
+         "debt_level": 0.25, "cf_to_ni_ratio": 0.25}
+    return _weighted(d, w, {k: LEVEL_3 for k in w})
 
 
 def score_profitability(d: dict) -> float:
-    """5 indicators × 20% each. 4-tier mapping, rd_ratio uses special scale."""
-    weights = {"gross_margin": 0.20, "net_margin": 0.20,
-               "revenue_growth": 0.20, "rd_ratio": 0.20,
-               "revenue_per_head": 0.20}
-    return _weighted(d, weights, {
+    """5 indicators × 20% each. rd_ratio uses special LEVEL_RD scale."""
+    w = {"gross_margin": 0.20, "net_margin": 0.20,
+         "revenue_growth": 0.20, "rd_ratio": 0.20,
+         "revenue_per_head": 0.20}
+    return _weighted(d, w, {
         "gross_margin": LEVEL_4, "net_margin": LEVEL_4,
         "revenue_growth": LEVEL_4, "rd_ratio": LEVEL_RD,
         "revenue_per_head": LEVEL_4,
@@ -48,45 +49,29 @@ def score_profitability(d: dict) -> float:
 
 def score_debt(d: dict) -> float:
     """5 indicators × 20% each + bonus for zero interest debt + tax A-grade."""
-    indicators = ["debt_to_assets", "interest_bearing_debt",
-                  "current_ratio", "cash_ratio", "pledge_ratio"]
-    base = _average(d, indicators, LEVEL_3)
-    bonus = d.get("bonus_zero_debt_tax_a", False)
-    if bonus:
+    w = {"debt_to_assets": 0.20, "interest_bearing_debt": 0.20,
+         "current_ratio": 0.20, "cash_ratio": 0.20, "pledge_ratio": 0.20}
+    base = _weighted(d, w, {k: LEVEL_3 for k in w})
+    if d.get("bonus_zero_debt_tax_a", False):
         base = min(base + 5, 100)
     return base
 
 
 def score_operations(d: dict) -> float:
     """4 indicators × 25% each."""
-    indicators = ["receivable_turnover", "customer_concentration",
-                  "employee_trend", "executive_stability"]
-    return _average(d, indicators, LEVEL_3)
+    w = {"receivable_turnover": 0.25, "customer_concentration": 0.25,
+         "employee_trend": 0.25, "executive_stability": 0.25}
+    return _weighted(d, w, {k: LEVEL_3 for k in w})
 
 
 def score_sustainability(d: dict) -> float:
     """5 indicators × 20% each."""
-    indicators = ["market_growth", "tech_moat", "diversification",
-                  "capital_support", "policy_risk"]
-    return _average(d, indicators, LEVEL_3)
+    w = {"market_growth": 0.20, "tech_moat": 0.20, "diversification": 0.20,
+         "capital_support": 0.20, "policy_risk": 0.20}
+    return _weighted(d, w, {k: LEVEL_3 for k in w})
 
 
 # -- Helpers --------------------------------------------------------
-
-def _average(d: dict, indicators: list, level_map: dict) -> float:
-    """Equal-weight average of indicators present in d. Skips unknowns."""
-    total, count = 0.0, 0
-    for key in indicators:
-        entry = d.get(key)
-        if entry is None:
-            continue
-        level = entry if isinstance(entry, str) else entry.get("level")
-        if level is None:
-            continue
-        total += level_map.get(level, 0)
-        count += 1
-    return round(total / count, 1) if count > 0 else 0.0
-
 
 def _weighted(d: dict, weights: dict, level_maps: dict) -> float:
     """Weighted average. Redistributes weight of missing indicators."""

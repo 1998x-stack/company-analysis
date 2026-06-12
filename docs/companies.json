@@ -322,6 +322,29 @@
     "revenue": "¥2.5亿（2025，审计）"
   },
   {
+    "id": "infinigence",
+    "name": "无问芯穹",
+    "nameEn": "Infinigence AI",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "AI基础设施",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 50,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 69,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "清华系Agentic Infra独角兽，25,000P算力纳管，Token每两周翻番",
+    "report": "无问芯穹-财务健康评估-2026-06-12.md",
+    "radar": "InfinigenceAI_health_radar.png",
+    "employees": "~250",
+    "revenue": "未披露"
+  },
+  {
     "id": "moonshotai",
     "name": "月之暗面",
     "nameEn": "Moonshot AI",

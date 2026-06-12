@@ -1,51 +1,5 @@
 [
   {
-    "id": "henkel",
-    "name": "汉高",
-    "nameEn": "Henkel",
-    "ticker": "HEN3.DE",
-    "ind1": "化工",
-    "ind2": "特种化学品",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 73,
-      "debt": 88,
-      "operations": 81,
-      "sustainability": 76
-    },
-    "total": 84,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "现金流极稳、零净债务的百年德企，消费品利润追赶中",
-    "report": "汉高-财务健康评估-2026-06-12.md",
-    "radar": "Henkel_health_radar.png",
-    "employees": "47,150",
-    "revenue": "€205亿（FY2025）"
-  },
-  {
-    "id": "papergames",
-    "name": "叠纸游戏",
-    "nameEn": "Papergames",
-    "ticker": "",
-    "ind1": "互动娱乐",
-    "ind2": "游戏研发",
-    "scores": {
-      "cashFlow": 83,
-      "profitability": 75,
-      "debt": 95,
-      "operations": 53,
-      "sustainability": 69
-    },
-    "total": 79,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "女性向游戏霸主，单产品依赖是最大风险",
-    "report": "叠纸游戏-财务健康评估-2026-06-12.md",
-    "radar": "叠纸游戏_health_radar.png",
-    "employees": "2,300+",
-    "revenue": "~¥70亿（2024）"
-  },
-  {
     "id": "taptap",
     "name": "TapTap / 心动公司",
     "nameEn": "TapTap",
@@ -67,29 +21,6 @@
     "radar": "TapTap_health_radar.png",
     "employees": "1,600",
     "revenue": "¥57.6亿（2025）"
-  },
-  {
-    "id": "bytedance",
-    "name": "字节跳动",
-    "nameEn": "ByteDance",
-    "ticker": "",
-    "ind1": "互联网平台",
-    "ind2": "社交媒体与内容",
-    "scores": {
-      "cashFlow": 83,
-      "profitability": 86,
-      "debt": 90,
-      "operations": 81,
-      "sustainability": 83
-    },
-    "total": 84,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "全球最大独角兽，all in AI军备竞赛",
-    "report": "字节跳动-财务健康评估-2026-06-12.md",
-    "radar": "ByteDance_health_radar.png",
-    "employees": "15万+",
-    "revenue": "$1,860亿（2025）"
   },
   {
     "id": "evatmaster",
@@ -122,20 +53,89 @@
     "ind1": "汽车科技",
     "ind2": "汽车软件",
     "scores": {
-      "cashFlow": 83,
+      "cashFlow": 90,
       "profitability": 87,
       "debt": 95,
       "operations": 62,
       "sustainability": 69
     },
-    "total": 82,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
     "oneLine": "小而稳的车载软件供应商，零负债",
     "report": "商泰汽车-iAUTO-财务健康评估-2026-06-12.md",
     "radar": "iAUTO_health_radar.png",
     "employees": "474",
     "revenue": "~¥3-5亿（估）"
+  },
+  {
+    "id": "henkel",
+    "name": "汉高",
+    "nameEn": "Henkel",
+    "ticker": "HEN3.DE",
+    "ind1": "化工",
+    "ind2": "特种化学品",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 73,
+      "debt": 88,
+      "operations": 81,
+      "sustainability": 76
+    },
+    "total": 84,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "现金流极稳、零净债务的百年德企，消费品利润追赶中",
+    "report": "汉高-财务健康评估-2026-06-12.md",
+    "radar": "Henkel_health_radar.png",
+    "employees": "47,150",
+    "revenue": "€205亿（FY2025）"
+  },
+  {
+    "id": "bytedance",
+    "name": "字节跳动",
+    "nameEn": "ByteDance",
+    "ticker": "",
+    "ind1": "互联网平台",
+    "ind2": "社交媒体与内容",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 86,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 84,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球最大独角兽，all in AI军备竞赛",
+    "report": "字节跳动-财务健康评估-2026-06-12.md",
+    "radar": "ByteDance_health_radar.png",
+    "employees": "15万+",
+    "revenue": "$1,860亿（2025）"
+  },
+  {
+    "id": "papergames",
+    "name": "叠纸游戏",
+    "nameEn": "Papergames",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 75,
+      "debt": 95,
+      "operations": 53,
+      "sustainability": 69
+    },
+    "total": 78,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "女性向游戏霸主，单产品依赖是最大风险",
+    "report": "叠纸游戏-财务健康评估-2026-06-12.md",
+    "radar": "叠纸游戏_health_radar.png",
+    "employees": "2,300+",
+    "revenue": "~¥70亿（2024）"
   },
   {
     "id": "meituan",
@@ -145,7 +145,7 @@
     "ind1": "互联网平台",
     "ind2": "本地生活",
     "scores": {
-      "cashFlow": 83,
+      "cashFlow": 81,
       "profitability": 61,
       "debt": 83,
       "operations": 62,
@@ -161,6 +161,52 @@
     "revenue": "¥3,789亿（2025）"
   },
   {
+    "id": "moonshotai",
+    "name": "月之暗面",
+    "nameEn": "Moonshot AI",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 62,
+      "profitability": 61,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 69
+    },
+    "total": 68,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "ARR 60天翻倍至$2亿，零负债百亿现金，芯片+数据安全双高悬",
+    "report": "月之暗面-财务健康评估-2026-06-12.md",
+    "radar": "MoonshotAI_health_radar.png",
+    "employees": "~300",
+    "revenue": "$2亿+ ARR（2026.4）"
+  },
+  {
+    "id": "iflytek",
+    "name": "科大讯飞",
+    "nameEn": "iFLYTEK",
+    "ticker": "002230.SZ",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 57,
+      "debt": 54,
+      "operations": 62,
+      "sustainability": 76
+    },
+    "total": 66,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "AI国家队级平台，扣非净利率不足1%，补贴占利润76%",
+    "report": "科大讯飞-财务健康评估-2026-06-12.md",
+    "radar": "科大讯飞_iFLYTEK_health_radar.png",
+    "employees": "16,818",
+    "revenue": "¥271亿（2025）"
+  },
+  {
     "id": "deepseek",
     "name": "DeepSeek",
     "nameEn": "DeepSeek",
@@ -168,7 +214,7 @@
     "ind1": "人工智能",
     "ind2": "大模型",
     "scores": {
-      "cashFlow": 53,
+      "cashFlow": 52,
       "profitability": 59,
       "debt": 95,
       "operations": 81,
@@ -191,7 +237,7 @@
     "ind1": "人工智能",
     "ind2": "大模型",
     "scores": {
-      "cashFlow": 53,
+      "cashFlow": 52,
       "profitability": 50,
       "debt": 90,
       "operations": 81,
@@ -214,7 +260,7 @@
     "ind1": "人工智能",
     "ind2": "大模型",
     "scores": {
-      "cashFlow": 53,
+      "cashFlow": 52,
       "profitability": 50,
       "debt": 90,
       "operations": 63,
@@ -230,29 +276,6 @@
     "revenue": "~¥5亿（2025）"
   },
   {
-    "id": "iflytek",
-    "name": "科大讯飞",
-    "nameEn": "iFLYTEK",
-    "ticker": "002230.SZ",
-    "ind1": "人工智能",
-    "ind2": "AI平台",
-    "scores": {
-      "cashFlow": 61,
-      "profitability": 57,
-      "debt": 54,
-      "operations": 62,
-      "sustainability": 76
-    },
-    "total": 61,
-    "grade": "Moderate",
-    "gradeLabel": "中等",
-    "oneLine": "AI国家队级平台，扣非净利率不足1%，补贴占利润76%",
-    "report": "科大讯飞-财务健康评估-2026-06-12.md",
-    "radar": "科大讯飞_iFLYTEK_health_radar.png",
-    "employees": "16,818",
-    "revenue": "¥271亿（2025）"
-  },
-  {
     "id": "marketingforce",
     "name": "迈富时",
     "nameEn": "Marketingforce",
@@ -260,13 +283,13 @@
     "ind1": "企业服务",
     "ind2": "营销SaaS",
     "scores": {
-      "cashFlow": 45,
+      "cashFlow": 52,
       "profitability": 56,
       "debt": 69,
       "operations": 71,
       "sustainability": 83
     },
-    "total": 57,
+    "total": 61,
     "grade": "Moderate",
     "gradeLabel": "中等",
     "oneLine": "营销SaaS龙头，精准营销拖累利润",
@@ -283,7 +306,7 @@
     "ind1": "人工智能",
     "ind2": "计算机视觉",
     "scores": {
-      "cashFlow": 54,
+      "cashFlow": 53,
       "profitability": 45,
       "debt": 83,
       "operations": 35,
@@ -306,13 +329,13 @@
     "ind1": "人工智能",
     "ind2": "大模型",
     "scores": {
-      "cashFlow": 38,
+      "cashFlow": 43,
       "profitability": 45,
       "debt": 83,
       "operations": 52,
       "sustainability": 76
     },
-    "total": 51,
+    "total": 54,
     "grade": "Moderate-Low",
     "gradeLabel": "中等偏下",
     "oneLine": "GLM-5.1编程全球SOTA，年亏47亿财务悬崖",
@@ -322,29 +345,6 @@
     "revenue": "¥7.24亿（2025）"
   },
   {
-    "id": "neoexcellent",
-    "name": "卓越睿新",
-    "nameEn": "Neoexcellent",
-    "ticker": "2687.HK",
-    "ind1": "教育科技",
-    "ind2": "智慧教育",
-    "scores": {
-      "cashFlow": 23,
-      "profitability": 82,
-      "debt": 61,
-      "operations": 71,
-      "sustainability": 62
-    },
-    "total": 49,
-    "grade": "Moderate-Low",
-    "gradeLabel": "中等偏下",
-    "oneLine": "好赛道好产品，坏现金流",
-    "report": "卓越睿新-财务健康评估-2026-06-12.md",
-    "radar": "Neoexcellent_health_radar.png",
-    "employees": "2,728",
-    "revenue": "¥9.69亿（2025）"
-  },
-  {
     "id": "winnertech",
     "name": "汇纳科技",
     "nameEn": "Winner Tech",
@@ -352,13 +352,13 @@
     "ind1": "人工智能",
     "ind2": "商业大数据",
     "scores": {
-      "cashFlow": 53,
+      "cashFlow": 62,
       "profitability": 45,
       "debt": 61,
       "operations": 15,
       "sustainability": 47
     },
-    "total": 48,
+    "total": 52,
     "grade": "Moderate-Low",
     "gradeLabel": "中等偏下",
     "oneLine": "连续4年亏损，创始人清仓，应收账款濒危",
@@ -368,6 +368,29 @@
     "revenue": "¥3.07亿（2025）"
   },
   {
+    "id": "neoexcellent",
+    "name": "卓越睿新",
+    "nameEn": "Neoexcellent",
+    "ticker": "2687.HK",
+    "ind1": "教育科技",
+    "ind2": "智慧教育",
+    "scores": {
+      "cashFlow": 25,
+      "profitability": 82,
+      "debt": 61,
+      "operations": 71,
+      "sustainability": 62
+    },
+    "total": 50,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "好赛道好产品，坏现金流",
+    "report": "卓越睿新-财务健康评估-2026-06-12.md",
+    "radar": "Neoexcellent_health_radar.png",
+    "employees": "2,728",
+    "revenue": "¥9.69亿（2025）"
+  },
+  {
     "id": "kepler",
     "name": "上海开普勒机器人",
     "nameEn": "Kepler Robot",
@@ -375,13 +398,13 @@
     "ind1": "机器人",
     "ind2": "人形机器人",
     "scores": {
-      "cashFlow": 38,
+      "cashFlow": 33,
       "profitability": 31,
       "debt": 76,
       "operations": 52,
       "sustainability": 61
     },
-    "total": 46,
+    "total": 44,
     "grade": "Moderate-Low",
     "gradeLabel": "中等偏下",
     "oneLine": "营收433万亏损6694万，估值暴跌68%被收购",
@@ -398,13 +421,13 @@
     "ind1": "人工智能",
     "ind2": "计算机视觉",
     "scores": {
-      "cashFlow": 31,
+      "cashFlow": 25,
       "profitability": 29,
       "debt": 61,
       "operations": 35,
       "sustainability": 46
     },
-    "total": 37,
+    "total": 34,
     "grade": "High-Risk",
     "gradeLabel": "高风险",
     "oneLine": "AI四小龙光环褪色，研发断臂求生",

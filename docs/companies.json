@@ -414,6 +414,29 @@
     "revenue": "$0.79亿（2025）"
   },
   {
+    "id": "kunlun",
+    "name": "昆仑万维",
+    "nameEn": "Kunlun Tech",
+    "ticker": "300418.SZ",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 44,
+      "profitability": 79,
+      "debt": 69,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 63,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "天工GAIA全球第一，AI营收+252%，两年累亏32亿OCF转负",
+    "report": "昆仑万维-财务健康评估-2026-06-12.md",
+    "radar": "KunlunTech_health_radar.png",
+    "employees": "2,394",
+    "revenue": "¥82亿（2025）"
+  },
+  {
     "id": "stepfun",
     "name": "阶跃星辰",
     "nameEn": "StepFun",

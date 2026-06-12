@@ -299,6 +299,29 @@
     "revenue": "¥1,291亿（2025）"
   },
   {
+    "id": "agora",
+    "name": "声网",
+    "nameEn": "Agora",
+    "ticker": "NASDAQ: API",
+    "ind1": "企业服务",
+    "ind2": "云通信",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 72,
+      "debt": 90,
+      "operations": 35,
+      "sustainability": 55
+    },
+    "total": 74,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "现金$3.75亿+首次盈利+Voice Agent新引擎，4年裁员58%",
+    "report": "声网-财务健康评估-2026-06-12.md",
+    "radar": "Agora_health_radar.png",
+    "employees": "~543",
+    "revenue": "$1.41亿（FY2025）"
+  },
+  {
     "id": "alibaba",
     "name": "阿里巴巴 (阿里云)",
     "nameEn": "Alibaba Cloud",

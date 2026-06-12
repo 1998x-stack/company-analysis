@@ -37,8 +37,12 @@
 ├── 企业服务
 │   ├── 财税SaaS
 │   │   └── 欧税通 (eVat Master)
-│   └── 营销SaaS
-│       └── 迈富时 (Marketingforce)
+│   ├── 营销SaaS
+│   │   └── 迈富时 (Marketingforce)
+│   ├── 云通信
+│   │   └── 声网 (Agora)
+│   └── RPA与自动化
+│       └── 实在智能 (Shizai AI)
 ├── 科技硬件
 │   └── 通信与ICT
 │       └── 华为 (Huawei)

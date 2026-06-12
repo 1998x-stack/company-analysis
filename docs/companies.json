@@ -69,6 +69,29 @@
     "revenue": "~¥420亿（2025，估）"
   },
   {
+    "id": "antgroup",
+    "name": "蚂蚁集团",
+    "nameEn": "Ant Group",
+    "ticker": "",
+    "ind1": "金融科技",
+    "ind2": "综合金融科技",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 91,
+      "debt": 76,
+      "operations": 90,
+      "sustainability": 76
+    },
+    "total": 87,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "现金2,800亿+净利润强劲反弹，AI全面转型，金控牌照未获批是最大悬案",
+    "report": "蚂蚁集团-财务健康评估-2026-06-12.md",
+    "radar": "AntGroup_health_radar.png",
+    "employees": "3.7万",
+    "revenue": "~¥2,100亿（2024，估）"
+  },
+  {
     "id": "iauto",
     "name": "商泰汽车 iAUTO",
     "nameEn": "iAUTO",

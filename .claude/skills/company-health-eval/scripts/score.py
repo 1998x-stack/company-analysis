@@ -80,11 +80,10 @@ def _weighted(d: dict, weights: dict, level_maps: dict) -> float:
         entry = d.get(key)
         if entry is None:
             continue
-        level = entry if isinstance(entry, str) else entry.get("level")
-        if level is None:
+        if not isinstance(entry, str):
             continue
         level_map = level_maps.get(key, LEVEL_3)
-        total += level_map.get(level, 0) * weight
+        total += level_map.get(entry, 0) * weight
         used_weight += weight
     if used_weight == 0:
         return 0.0

@@ -15,32 +15,33 @@
 | 3 | 小红书 | 互联网平台 · 社交媒体与内容 | 87 | 🟢 优秀 | [报告](docs/examples/小红书-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Xiaohongshu_health_radar.png) |
 | 4 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 优秀 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
 | 5 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
-| 6 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
-| 7 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
-| 8 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
-| 9 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
-| 10 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
-| 11 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 中等偏上 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
-| 12 | 百度 (9888.HK/BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 中等偏上 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
-| 13 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 中等偏上 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
-| 14 | 阿里巴巴 (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 中等偏上 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
-| 15 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 中等 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
-| 16 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
-| 17 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
-| 18 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
-| 19 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
-| 20 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
-| 21 | MiniMax (0100.HK) | 人工智能 · 大模型 | 63 | 🟠 中等 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
-| 22 | 星环科技 (688031.SH) | 人工智能 · AI平台 | 62 | 🟠 中等 | [报告](docs/examples/星环科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Transwarp_health_radar.png) |
-| 23 | 阶跃星辰 | 人工智能 · 大模型 | 61 | 🟠 中等 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
-| 24 | 迈富时 (02556.HK) | 企业服务 · 营销SaaS | 61 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
-| 25 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 55 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
-| 26 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
-| 27 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
-| 28 | 卓越睿新 (02687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
-| 29 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 中等偏下 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
-| 30 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
-| 31 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 6 | 米哈游 (miHoYo) | 互动娱乐 · 游戏研发 | 85 | 🟢 优秀 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
+| 7 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
+| 8 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
+| 9 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
+| 10 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
+| 11 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
+| 12 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 中等偏上 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
+| 13 | 百度 (9888.HK/BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 中等偏上 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
+| 14 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 中等偏上 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
+| 15 | 阿里巴巴 (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 中等偏上 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
+| 16 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 中等 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
+| 17 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
+| 18 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
+| 19 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
+| 20 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
+| 21 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
+| 22 | MiniMax (0100.HK) | 人工智能 · 大模型 | 63 | 🟠 中等 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
+| 23 | 星环科技 (688031.SH) | 人工智能 · AI平台 | 62 | 🟠 中等 | [报告](docs/examples/星环科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Transwarp_health_radar.png) |
+| 24 | 阶跃星辰 | 人工智能 · 大模型 | 61 | 🟠 中等 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
+| 25 | 迈富时 (02556.HK) | 企业服务 · 营销SaaS | 61 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
+| 26 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 55 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
+| 27 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
+| 28 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
+| 29 | 卓越睿新 (02687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
+| 30 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 中等偏下 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
+| 31 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
+| 32 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -71,6 +72,7 @@
 | 小红书 | 90 | 90 | 76 | 90 | 83 | **87** |
 | 蚂蚁集团 | 90 | 91 | 76 | 90 | 76 | **87** |
 | 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
+| 米哈游 | 90 | 84 | 90 | 72 | 72 | **85** |
 | 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
 | 字节跳动 | 81 | 86 | 90 | 81 | 83 | **84** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |

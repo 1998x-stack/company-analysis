@@ -115,6 +115,29 @@
     "revenue": "~¥3-5亿（估）"
   },
   {
+    "id": "mihoyo",
+    "name": "米哈游",
+    "nameEn": "miHoYo",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "零负债+59%净利率+人均创利行业第一，千亿AI赌注",
+    "report": "米哈游-财务健康评估-2026-06-12.md",
+    "radar": "miHoYo_health_radar.png",
+    "employees": "~7,500",
+    "revenue": "~¥350-400亿（2025，估）"
+  },
+  {
     "id": "henkel",
     "name": "汉高",
     "nameEn": "Henkel",

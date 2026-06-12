@@ -207,6 +207,29 @@
     "revenue": "~¥100亿（2024）"
   },
   {
+    "id": "thundersoft",
+    "name": "中科创达",
+    "nameEn": "ThunderSoft",
+    "ticker": "300496.SZ",
+    "ind1": "科技硬件",
+    "ind2": "智能操作系统",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 80,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 85,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "座舱OS市占率28%第一+AIOS全栈，毛利率四连跌+华为挤压",
+    "report": "中科创达-财务健康评估-2026-06-12.md",
+    "radar": "ThunderSoft_health_radar.png",
+    "employees": "18,708",
+    "revenue": "¥77.78亿（2025）"
+  },
+  {
     "id": "bytedance",
     "name": "字节跳动",
     "nameEn": "ByteDance",

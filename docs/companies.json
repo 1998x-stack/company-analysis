@@ -184,6 +184,29 @@
     "revenue": "~¥70亿（2024）"
   },
   {
+    "id": "datacanvas",
+    "name": "九章云极",
+    "nameEn": "DataCanvas",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 78,
+      "profitability": 64,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 78,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "AI基础软件+智算云双轮驱动，2025H1已盈利，国资背书冲刺IPO",
+    "report": "九章云极-财务健康评估-2026-06-12.md",
+    "radar": "DataCanvas_health_radar.png",
+    "employees": "~400",
+    "revenue": "未披露（2025H1同比翻倍）"
+  },
+  {
     "id": "tencent",
     "name": "腾讯",
     "nameEn": "Tencent",

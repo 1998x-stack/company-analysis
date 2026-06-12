@@ -161,6 +161,29 @@
     "revenue": "€205亿（FY2025）"
   },
   {
+    "id": "lilith",
+    "name": "莉莉丝游戏",
+    "nameEn": "Lilith Games",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 85,
+      "debt": 90,
+      "operations": 52,
+      "sustainability": 72
+    },
+    "total": 84,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "零负债+SLG运营顶级+游戏圈最佳WLB，>60%收入系于单产品",
+    "report": "莉莉丝游戏-财务健康评估-2026-06-12.md",
+    "radar": "LilithGames_health_radar.png",
+    "employees": "~2,300",
+    "revenue": "~¥100亿（2024）"
+  },
+  {
     "id": "bytedance",
     "name": "字节跳动",
     "nameEn": "ByteDance",
@@ -297,6 +320,29 @@
     "radar": "Huawei_health_radar.png",
     "employees": "21.3万",
     "revenue": "¥8,809亿（2025）"
+  },
+  {
+    "id": "newcapec",
+    "name": "新开普",
+    "nameEn": "Newcapec",
+    "ticker": "300248.SZ",
+    "ind1": "教育科技",
+    "ind2": "智慧教育",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 66,
+      "debt": 83,
+      "operations": 53,
+      "sustainability": 83
+    },
+    "total": 76,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "校园信息化龙头，高毛利低杠杆但增长停滞",
+    "report": "新开普-财务健康评估-2026-06-12.md",
+    "radar": "newcapec_health_radar.png",
+    "employees": "2,227",
+    "revenue": "¥9.78亿（2025）"
   },
   {
     "id": "baidu",
@@ -736,7 +782,27 @@
     "revenue": "¥28.2亿（2025）"
   },
   {
-    "id": "4paradigm","name": "第四范式","nameEn": "4Paradigm","ticker": "06682.HK","ind1": "人工智能","ind2": "AI平台","scores": {"cashFlow": 44,"profitability": 72,"debt": 76,"operations": 54,"sustainability": 90},"total": 60,"grade": "Moderate","gradeLabel": "中等","oneLine": "人均创收中国AI第一¥1,153万，首次全年盈利，OCF连续4年为负","report": "第四范式-财务健康评估-2026-06-12.md","radar": "4Paradigm_health_radar.png","employees": "619","revenue": "¥71.4亿（2025）"
+    "id": "4paradigm",
+    "name": "第四范式",
+    "nameEn": "4Paradigm",
+    "ticker": "06682.HK",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 44,
+      "profitability": 72,
+      "debt": 76,
+      "operations": 54,
+      "sustainability": 90
+    },
+    "total": 60,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "人均创收中国AI第一¥1,153万，首次全年盈利，OCF连续4年为负",
+    "report": "第四范式-财务健康评估-2026-06-12.md",
+    "radar": "4Paradigm_health_radar.png",
+    "employees": "619",
+    "revenue": "¥71.4亿（2025）"
   },
   {
     "id": "sensetime",

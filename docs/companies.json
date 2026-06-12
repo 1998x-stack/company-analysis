@@ -299,6 +299,29 @@
     "revenue": "¥1.02万亿（FY2026）"
   },
   {
+    "id": "01ai",
+    "name": "零一万物",
+    "nameEn": "01.AI",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 63,
+      "debt": 76,
+      "operations": 55,
+      "sustainability": 76
+    },
+    "total": 70,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "人效六小虎第一（人均125万），近盈亏平衡，依赖开源基座模型是最大隐患",
+    "report": "零一万物-财务健康评估-2026-06-12.md",
+    "radar": "01AI_health_radar.png",
+    "employees": "~200",
+    "revenue": "¥2.5亿（2025，审计）"
+  },
+  {
     "id": "moonshotai",
     "name": "月之暗面",
     "nameEn": "Moonshot AI",

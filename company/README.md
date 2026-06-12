@@ -64,6 +64,8 @@
 │       └── 卓越睿新 (Neoexcellent / 智慧树)
 
 ├── 生物医药
+│   ├── 综合制药
+│   │   └── 恒瑞医药 (Hengrui Medicine / 600276.SH)
 │   └── ADC与创新药
 │       ├── 康诺亚 (Keymed Biosciences / 2162.HK)
 │       ├── 科伦博泰 (Kelun-Biotech / 6990.HK)

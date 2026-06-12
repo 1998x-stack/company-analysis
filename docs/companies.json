@@ -23,6 +23,29 @@
     "revenue": "¥33-41亿（2025，估）"
   },
   {
+    "id": "hengrui",
+    "name": "恒瑞医药",
+    "nameEn": "Hengrui Medicine",
+    "ticker": "600276.SH / 01276.HK",
+    "ind1": "生物医药",
+    "ind2": "综合制药",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 86,
+      "debt": 95,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 89,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "中国制药龙头，零负债410亿现金，24款创新药，FDA是唯一短板",
+    "report": "恒瑞医药-财务健康评估-2026-06-12.md",
+    "radar": "hengrui_health_radar.png",
+    "employees": "20,602",
+    "revenue": "¥316.29亿（2025）"
+  },
+  {
     "id": "taptap",
     "name": "TapTap / 心动公司",
     "nameEn": "TapTap",

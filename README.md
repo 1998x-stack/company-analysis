@@ -16,6 +16,7 @@
 | 6 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
 | 7 | 卓越睿新 Neoexcellent (02687.HK) | 教育 · 高校数字化 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
 | 8 | 美团 Meituan (3690.HK) | 本地生活 · AI Agent | 68 | 🟠 中等 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
+| 9 | 字节跳动 ByteDance | AI · 社交媒体 | 72 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -49,6 +50,7 @@
 | 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
 | 卓越睿新 | 35 | 72 | 60 | 40 | 65 | **50** |
 | 美团 | 70 | 50 | 82 | 72 | 68 | **68** |
+| 字节跳动 | 68 | 65 | 78 | 82 | 85 | **72** |
 
 ## 雷达图
 

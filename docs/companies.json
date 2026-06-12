@@ -713,6 +713,29 @@
     "revenue": "$2亿+ ARR（2026.4）"
   },
   {
+    "id": "unitedimagingai",
+    "name": "联影智能",
+    "nameEn": "United Imaging AI",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "医疗AI",
+    "scores": {
+      "cashFlow": 63,
+      "profitability": 50,
+      "debt": 90,
+      "operations": 73,
+      "sustainability": 83
+    },
+    "total": 67,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "医疗AI影像龙头，19张三类证+4000+医院，商业化路径未跑通",
+    "report": "联影智能-财务健康评估-2026-06-12.md",
+    "radar": "UnitedImagingAI_health_radar.png",
+    "employees": "~300-500",
+    "revenue": "¥2.88亿（2024）"
+  },
+  {
     "id": "mininglamp",
     "name": "明略科技",
     "nameEn": "MiningLamp",

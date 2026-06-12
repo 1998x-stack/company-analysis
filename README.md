@@ -30,6 +30,7 @@
 | 37 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 中等 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
 | 37 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
 | 37 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
+| 37 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 中等 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
 | 37 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
 | 37 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
 | 37 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
@@ -92,6 +93,7 @@
 | 零一万物 | 73 | 63 | 76 | 55 | 76 | **70** |
 | 月之暗面 | 62 | 61 | 90 | 72 | 69 | **68** |
 | 明略科技 | 63 | 59 | 90 | 63 | 76 | **67** |
+| 联影智能 | 63 | 50 | 90 | 73 | 83 | **67** |
 | 科大讯飞 | 72 | 57 | 54 | 62 | 76 | **66** |
 | DeepSeek | 52 | 59 | 95 | 81 | 69 | **65** |
 | 面壁智能 | 65 | 39 | 90 | 73 | 76 | **65** |

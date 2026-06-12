@@ -460,6 +460,29 @@
     "revenue": "¥82亿（2025）"
   },
   {
+    "id": "transwarp",
+    "name": "星环科技",
+    "nameEn": "Transwarp",
+    "ticker": "688031.SH",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 34,
+      "debt": 90,
+      "operations": 44,
+      "sustainability": 76
+    },
+    "total": 62,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "大数据基础软件信创标的，亏损收窄港股冲刺中，应收账款恶化+持续裁员",
+    "report": "星环科技-财务健康评估-2026-06-12.md",
+    "radar": "Transwarp_health_radar.png",
+    "employees": "897",
+    "revenue": "¥4.48亿（2025）"
+  },
+  {
     "id": "stepfun",
     "name": "阶跃星辰",
     "nameEn": "StepFun",

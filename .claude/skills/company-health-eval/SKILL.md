@@ -394,6 +394,60 @@ company/<一级行业>/<二级行业>/<公司展示名>/
 - [ ] 雷达图已生成 `docs/examples/<公司英文名>_health_radar.png`
 - [ ] 两个文件均在 `docs/examples/` 下，实体文件存在（非软链接）
 
+### 评分验证（强制）
+
+**每次评估完成后，必须用评分脚本验证报告中的分数与脚本输出一致。**
+
+- [ ] 评分输入文件已保存（`/tmp/score_input.json`，来自阶段三Step 1）
+- [ ] 运行脚本验证分数：
+
+```bash
+python3 .claude/skills/company-health-eval/scripts/score.py --data /tmp/score_input.json
+```
+
+- [ ] 脚本输出的各维度得分和总分与报告 `## 三、综合评分与健康等级` 中的分数逐项核对一致
+- [ ] 若报告中有手动调整（如迈富时从49→58、TapTap从81→78），已移除——标准化引擎不允许主观调整，所有偏离必须通过修正指标等级来反映
+- [ ] 雷达图中的数值与脚本输出一致（雷达图由脚本输出JSON生成，自动一致）
+
+**批量核查所有已评估公司分数：**
+
+```bash
+# 一键重算全部公司，对比 companies.json 中的分数
+python3 -c "
+import json, os, subprocess
+
+with open('docs/companies.json') as f:
+    companies = json.load(f)
+
+mismatches = []
+for c in companies:
+    cid = c['id']
+    path = f'/tmp/score_inputs/{cid}.json'
+    if not os.path.exists(path):
+        print(f'  SKIP {c[\"name\"]} — no input file at {path}')
+        continue
+    r = subprocess.run(['python3', '.claude/skills/company-health-eval/scripts/score.py',
+                       '--data', path, '--output', f'/tmp/verify_{cid}.json'],
+                      capture_output=True, text=True)
+    with open(f'/tmp/verify_{cid}.json') as fh:
+        new = json.load(fh)
+    old_total = c['total']
+    new_total = round(new['total_score'])
+    old_dims = {k: c['scores'][k] for k in c['scores']}
+    new_dims = {k: int(v) for k, v in new['scores'].items()}
+    if old_total != new_total or old_dims != new_dims:
+        mismatches.append((c['name'], old_total, new_total, old_dims, new_dims))
+        print(f'  MISMATCH {c[\"name\"]}: JSON={old_total} script={new_total}')
+    else:
+        print(f'  OK {c[\"name\"]}: {new_total}')
+
+if mismatches:
+    print(f'\n{mismatches} companies have score drift — regenerate reports and radar charts.')
+else:
+    print(f'\nAll {len(companies)} companies verified.')
+"
+```
+
 ### 公司归档（软链接）
 
 - [ ] 已确定一级行业和二级行业分类（以实际主营业务为准）

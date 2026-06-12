@@ -69,6 +69,29 @@
     "revenue": "未披露"
   },
   {
+    "id": "pdd",
+    "name": "拼多多",
+    "nameEn": "PDD Holdings",
+    "ticker": "NASDAQ: PDD",
+    "ind1": "互联网平台",
+    "ind2": "电商",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 52
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "净现金¥4,169亿+人效全球顶级，增速90%→10%+中概股最大未回港风险",
+    "report": "拼多多-财务健康评估-2026-06-12.md",
+    "radar": "PDD_health_radar.png",
+    "employees": "25,474",
+    "revenue": "¥4,318亿（2025）"
+  },
+  {
     "id": "xiaohongshu",
     "name": "小红书",
     "nameEn": "Xiaohongshu",

@@ -506,6 +506,29 @@
     "revenue": "¥4.48亿（2025）"
   },
   {
+    "id": "datagrand",
+    "name": "达观数据",
+    "nameEn": "DataGrand",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 53,
+      "profitability": 41,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 76
+    },
+    "total": 61,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "NLP文本智能小巨人，80%银行覆盖，C轮后3年+无融资",
+    "report": "达观数据-财务健康评估-2026-06-12.md",
+    "radar": "DataGrand_health_radar.png",
+    "employees": "~500",
+    "revenue": "未披露（估3-5亿）"
+  },
+  {
     "id": "stepfun",
     "name": "阶跃星辰",
     "nameEn": "StepFun",

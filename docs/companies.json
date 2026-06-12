@@ -1,5 +1,28 @@
 [
   {
+    "id": "minghong",
+    "name": "明汯投资",
+    "nameEn": "MH Investments",
+    "ticker": "",
+    "ind1": "金融科技",
+    "ind2": "量化投资",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 95,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 89,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "量化四天王之一，人均创利2500万+，量化监管收紧+人才单飞是隐忧",
+    "report": "明汯投资-财务健康评估-2026-06-12.md",
+    "radar": "MHInvestments_health_radar.png",
+    "employees": "~100",
+    "revenue": "¥33-41亿（2025，估）"
+  },
+  {
     "id": "taptap",
     "name": "TapTap / 心动公司",
     "nameEn": "TapTap",

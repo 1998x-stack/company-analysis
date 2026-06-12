@@ -10,7 +10,8 @@
 
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
-| 1 | TapTap / 心动公司 (2400.HK) | 互动娱乐 · 游戏平台 | 88 | 🟢 优秀 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
+| 1 | 明汯投资 | 金融科技 · 量化投资 | 89 | 🟢 优秀 | [报告](docs/examples/明汯投资-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MHInvestments_health_radar.png) |
+| 2 | TapTap / 心动公司 (2400.HK) | 互动娱乐 · 游戏平台 | 88 | 🟢 优秀 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
 | 2 | 欧税通 (eVat Master) | 企业服务 · 财税SaaS | 87 | 🟢 优秀 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
 | 3 | 小红书 | 互联网平台 · 社交媒体与内容 | 87 | 🟢 优秀 | [报告](docs/examples/小红书-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Xiaohongshu_health_radar.png) |
 | 4 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 优秀 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
@@ -71,6 +72,7 @@
 
 | 公司 | 现金流 (45%) | 盈利 (20%) | 偿债 (15%) | 运营 (10%) | 可持续 (10%) | 综合 |
 |------|:-----------:|:---------:|:---------:|:---------:|:----------:|:----:|
+| 明汯投资 | 90 | 95 | 90 | 81 | 83 | **89** |
 | TapTap | 90 | 91 | 95 | 72 | 76 | **88** |
 | 欧税通 | 90 | 86 | 95 | 90 | 61 | **87** |
 | 小红书 | 90 | 90 | 76 | 90 | 83 | **87** |

@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业健康度评估 · Company Health Evaluation</title>
+<style>
+/* ============================================================
+   DESIGN SYSTEM: "Research Institute Terminal"
+   Dark, precise, amber-on-black. Editorial meets forensic.
+   ============================================================ */
+
+:root {
+  --bg: #0a0a0f;
+  --bg-elevated: #111118;
+  --bg-surface: #181820;
+  --border: #252530;
+  --border-light: #2e2e3a;
+  --text: #e4e2df;
+  --text-secondary: #8b8b96;
+  --text-muted: #5c5c68;
+  --amber: #d4a853;
+  --amber-dim: #8a6d30;
+  --teal: #5b9e9e;
+  --teal-dim: #3a6a6a;
+  --red: #c45b4c;
+  --red-dim: #7a3830;
+  --green: #6b9e6b;
+  --green-dim: #3d6a3d;
+  --blue: #5b7e9e;
+  --gold: #e2b04a;
+  --shadow: 0 2px 16px rgba(0,0,0,0.4);
+
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+
+  --sidebar-w: 260px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  /* Subtle grid texture */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ---- TYPOGRAPHY ---- */
+h1 { font-size: 1.65rem; font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.005em; color: var(--text); }
+h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); }
+h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); }
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { color: var(--amber); }
+
+.score-num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- LAYOUT ---- */
+.app { display: flex; min-height: 100vh; }
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
+.sidebar-header {
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.sidebar-header .logo {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--amber);
+}
+.sidebar-header .subtitle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.industry-group { margin-bottom: 2px; }
+.industry-toggle {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 8px 20px;
+  background: none; border: none;
+  color: var(--text-secondary); font-size: 0.82rem;
+  cursor: pointer; text-align: left;
+  font-family: var(--font-sans);
+  transition: color 0.15s, background 0.15s;
+}
+.industry-toggle:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.industry-toggle .arrow {
+  font-size: 0.6rem; transition: transform 0.2s;
+  font-family: var(--font-mono); color: var(--text-muted);
+  width: 12px; text-align: center;
+}
+.industry-toggle.open .arrow { transform: rotate(90deg); }
+.industry-toggle .count {
+  margin-left: auto; font-size: 0.7rem; color: var(--text-muted);
+  font-family: var(--font-mono);
+  background: var(--bg-surface); padding: 1px 6px; border-radius: 3px;
+}
+
+.sub-industries { display: none; }
+.sub-industries.open { display: block; }
+
+.sub-industry-group { margin-bottom: 0; }
+.sub-toggle {
+  display: flex; align-items: center; gap: 6px;
+  width: 100%; padding: 5px 20px 5px 34px;
+  background: none; border: none;
+  color: var(--text-muted); font-size: 0.78rem;
+  cursor: pointer; text-align: left;
+  font-family: var(--font-sans);
+  transition: color 0.15s;
+}
+.sub-toggle:hover { color: var(--text-secondary); }
+.sub-toggle .arrow { font-size: 0.55rem; width: 10px; text-align: center; }
+.sub-toggle.open .arrow { transform: rotate(90deg); }
+
+.company-list { display: none; }
+.company-list.open { display: block; }
+
+.company-link {
+  display: flex; align-items: center; gap: 8px;
+  padding: 5px 20px 5px 48px;
+  font-size: 0.78rem; color: var(--text-secondary);
+  cursor: pointer; text-decoration: none;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
+}
+.company-link:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+.company-link.active { color: var(--amber); border-left-color: var(--amber); background: rgba(212,168,83,0.06); }
+.company-link .dot {
+  width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
+}
+
+/* ---- MAIN ---- */
+.main {
+  flex: 1; padding: 28px 36px; overflow-y: auto;
+  max-width: 960px;
+}
+
+/* ---- HEADER BAR ---- */
+.top-bar {
+  display: flex; align-items: center; gap: 20px; margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.top-bar .mode-switch {
+  display: flex; gap: 0;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
+}
+.mode-btn {
+  padding: 7px 16px; font-size: 0.8rem; font-family: var(--font-sans);
+  background: var(--bg-surface); border: none; color: var(--text-secondary);
+  cursor: pointer; transition: all 0.15s;
+  border-right: 1px solid var(--border);
+}
+.mode-btn:last-child { border-right: none; }
+.mode-btn:hover { color: var(--text); background: var(--bg-elevated); }
+.mode-btn.active { color: var(--amber); background: var(--bg-elevated); }
+
+.breadcrumb { font-size: 0.78rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-secondary); }
+.breadcrumb span { color: var(--amber); }
+
+/* ---- CARDS GRID ---- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.company-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: cardIn 0.35s ease-out both;
+  position: relative;
+  overflow: hidden;
+}
+.company-card:hover {
+  border-color: var(--border-light);
+  background: var(--bg-elevated);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+}
+.company-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  opacity: 0; transition: opacity 0.2s;
+}
+.company-card:hover::after { opacity: 1; }
+.company-card.grade-excellent::after, .company-card.grade-moderate-high::after { background: var(--green); }
+.company-card.grade-moderate::after { background: var(--amber); }
+.company-card.grade-moderate-low::after { background: var(--red); }
+.company-card.grade-high-risk::after { background: var(--red-dim); }
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.card-name { font-weight: 700; font-size: 0.95rem; }
+.card-name-en { font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono); }
+.card-ticker { font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-mono); }
+
+.card-score {
+  font-family: var(--font-mono); font-size: 1.4rem; font-weight: 700;
+  padding: 4px 10px; border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.card-score.grade-high { background: rgba(107,158,107,0.15); color: var(--green); }
+.card-score.grade-mid-high { background: rgba(107,158,107,0.12); color: var(--green); }
+.card-score.grade-mid { background: rgba(212,168,83,0.12); color: var(--amber); }
+.card-score.grade-mid-low { background: rgba(196,91,76,0.12); color: var(--red); }
+.card-score.grade-low { background: rgba(196,91,76,0.15); color: var(--red); }
+
+.card-industry { font-size: 0.7rem; color: var(--teal); margin-bottom: 6px; font-family: var(--font-mono); letter-spacing: 0.02em; }
+.card-oneline { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; }
+.card-meta { display: flex; gap: 14px; margin-top: 8px; font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono); }
+.card-compare-btn {
+  margin-top: 10px; padding: 4px 12px; font-size: 0.7rem;
+  background: transparent; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text-muted); cursor: pointer; font-family: var(--font-sans);
+  transition: all 0.15s;
+}
+.card-compare-btn:hover { border-color: var(--amber); color: var(--amber); }
+.card-compare-btn.selected { background: rgba(212,168,83,0.12); border-color: var(--amber); color: var(--amber); }
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- SINGLE COMPANY VIEW ---- */
+.company-detail { animation: fadeIn 0.3s ease-out; }
+
+.detail-hero {
+  display: flex; gap: 32px; align-items: flex-start;
+  padding: 24px 28px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+}
+.detail-hero .radar-img { width: 280px; height: 280px; flex-shrink: 0; }
+.detail-hero .radar-img img { width: 100%; height: 100%; object-fit: contain; }
+
+.detail-info { flex: 1; }
+.detail-info .company-title { font-size: 1.5rem; font-weight: 700; }
+.detail-info .company-ticker { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 8px; }
+.detail-info .company-verdict {
+  font-size: 1rem; color: var(--amber); margin-bottom: 16px;
+  padding: 8px 14px; background: rgba(212,168,83,0.06);
+  border-left: 2px solid var(--amber); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.score-bars { display: flex; flex-direction: column; gap: 6px; }
+.score-bar-row { display: flex; align-items: center; gap: 10px; }
+.score-bar-label { width: 70px; font-size: 0.72rem; color: var(--text-secondary); text-align: right; flex-shrink: 0; }
+.score-bar-track { flex: 1; height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; }
+.score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease-out; }
+.score-bar-val { width: 32px; font-size: 0.75rem; font-family: var(--font-mono); color: var(--text); text-align: right; }
+.score-bar-weight { width: 36px; font-size: 0.65rem; color: var(--text-muted); text-align: right; font-family: var(--font-mono); }
+
+.detail-tabs {
+  display: flex; gap: 0; margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-tab {
+  padding: 8px 18px; font-size: 0.8rem; font-family: var(--font-sans);
+  background: none; border: none; color: var(--text-muted);
+  cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+.detail-tab:hover { color: var(--text); }
+.detail-tab.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+.report-content {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 32px 36px;
+  font-size: 0.88rem; line-height: 1.75;
+}
+.report-content h1 { font-size: 1.3rem; margin: 24px 0 14px; color: var(--text); }
+.report-content h1:first-child { margin-top: 0; }
+.report-content h2 { font-size: 1.1rem; margin: 22px 0 10px; color: var(--text); padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.report-content h3 { font-size: 0.95rem; margin: 18px 0 8px; color: var(--text-secondary); }
+.report-content h4 { font-size: 0.85rem; margin: 14px 0 6px; color: var(--text-muted); }
+.report-content p { margin: 8px 0; }
+.report-content strong { color: var(--amber); font-weight: 600; }
+.report-content em { color: var(--teal); font-style: normal; }
+.report-content blockquote {
+  margin: 12px 0; padding: 10px 16px;
+  background: rgba(212,168,83,0.05); border-left: 3px solid var(--amber);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-secondary); font-size: 0.84rem;
+}
+.report-content code {
+  background: var(--bg); padding: 1px 6px; border-radius: 3px;
+  font-family: var(--font-mono); font-size: 0.78rem; color: var(--teal);
+}
+.report-content pre {
+  background: var(--bg); padding: 14px 18px; border-radius: var(--radius);
+  overflow-x: auto; margin: 12px 0;
+  border: 1px solid var(--border);
+}
+.report-content pre code { background: none; padding: 0; color: var(--text-secondary); }
+.report-content hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+.report-content ul, .report-content ol { margin: 8px 0 8px 20px; }
+.report-content li { margin: 4px 0; }
+.report-content table {
+  width: 100%; border-collapse: collapse; margin: 14px 0;
+  font-size: 0.8rem;
+}
+.report-content th {
+  background: var(--bg); padding: 8px 12px; text-align: left;
+  font-weight: 600; color: var(--text-secondary); border-bottom: 2px solid var(--border);
+}
+.report-content td {
+  padding: 7px 12px; border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.report-content tr:hover td { background: rgba(255,255,255,0.02); }
+.report-content a { color: var(--teal); text-decoration: underline; }
+.report-content img { max-width: 100%; border-radius: var(--radius); }
+.report-content .loading { color: var(--text-muted); text-align: center; padding: 40px; }
+
+/* ---- COMPARE VIEW ---- */
+.compare-view { animation: fadeIn 0.3s ease-out; }
+
+.compare-header {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 24px;
+}
+.compare-header .vs { font-size: 0.9rem; color: var(--text-muted); font-family: var(--font-mono); }
+.compare-company-pick {
+  flex: 1; padding: 12px 16px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  cursor: pointer; transition: all 0.15s;
+}
+.compare-company-pick:hover { border-color: var(--amber); }
+.compare-company-pick .pick-name { font-weight: 700; font-size: 0.95rem; }
+.compare-company-pick .pick-score { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--amber); }
+.compare-company-pick .pick-hint { font-size: 0.7rem; color: var(--text-muted); }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+
+.compare-chart-box {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.compare-chart-box canvas { max-width: 100%; }
+
+.compare-table {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem;
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.compare-table th {
+  background: var(--bg); padding: 10px 14px; text-align: left;
+  font-weight: 600; color: var(--text-secondary); border-bottom: 2px solid var(--border);
+}
+.compare-table td {
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono); color: var(--text);
+}
+.compare-table .dim-label { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-secondary); }
+.compare-table .winner { color: var(--amber); font-weight: 600; }
+.compare-table tr:last-child td { font-weight: 700; border-top: 2px solid var(--border); font-size: 0.9rem; }
+
+.compare-verdicts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.compare-verdict {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 18px;
+  font-size: 0.82rem; color: var(--text-secondary);
+}
+.compare-verdict strong { color: var(--text); }
+
+/* ---- UTILITY ---- */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+.empty-state h2 { color: var(--text-secondary); margin-bottom: 8px; }
+.fade-in { animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text-secondary); font-size: 0.78rem;
+  cursor: pointer; font-family: var(--font-sans); transition: all 0.15s;
+}
+.back-btn:hover { border-color: var(--border-light); color: var(--text); }
+
+/* ---- MOBILE ---- */
+@media (max-width: 768px) {
+  .app { flex-direction: column; }
+  .sidebar {
+    width: 100%; min-width: 100%; height: auto; position: static;
+    border-right: none; border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .sidebar-header { padding: 0 16px 12px; }
+  .industry-toggle { padding: 6px 16px; }
+  .sub-toggle { padding: 4px 16px 4px 28px; }
+  .company-link { padding: 4px 16px 4px 38px; }
+
+  .main { padding: 16px; }
+
+  .detail-hero { flex-direction: column; gap: 20px; padding: 16px; }
+  .detail-hero .radar-img { width: 200px; height: 200px; margin: 0 auto; }
+
+  .cards-grid { grid-template-columns: 1fr; }
+
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-verdicts { grid-template-columns: 1fr; }
+  .report-content { padding: 16px; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar"></nav>
+
+  <!-- MAIN -->
+  <main class="main" id="main"></main>
+</div>
+
+<script>
+// ============================================================
+// DATA: All 13 companies
+// ============================================================
+const COMPANIES = [
+  { id:"papergames", name:"叠纸游戏", nameEn:"Papergames", ticker:"", ind1:"互动娱乐", ind2:"游戏研发",
+    scores:{cashFlow:84,profitability:72,debt:92,operations:60,sustainability:72},
+    total:79, grade:"Moderate-High", gradeLabel:"中等偏上",
+    oneLine:"女性向游戏霸主，单产品依赖是最大风险",
+    report:"叠纸游戏-财务健康评估-2026-06-12.md", radar:"叠纸游戏_health_radar.png",
+    employees:"2,300+", revenue:"~¥70亿（2024）" },
+  { id:"taptap", name:"TapTap / 心动公司", nameEn:"TapTap", ticker:"2400.HK", ind1:"互动娱乐", ind2:"游戏平台",
+    scores:{cashFlow:82,profitability:78,debt:92,operations:72,sustainability:76},
+    total:78, grade:"Moderate-High", gradeLabel:"中等偏上",
+    oneLine:"零负债高现金，游戏+社区双轮驱动",
+    report:"TapTap-财务健康评估-2026-06-12.md", radar:"TapTap_health_radar.png",
+    employees:"1,600", revenue:"¥57.6亿（2025）" },
+  { id:"iauto", name:"商泰汽车 iAUTO", nameEn:"iAUTO", ticker:"", ind1:"汽车科技", ind2:"汽车软件",
+    scores:{cashFlow:75,profitability:70,debt:95,operations:72,sustainability:65},
+    total:76, grade:"Moderate-High", gradeLabel:"中等偏上",
+    oneLine:"小而稳的车载软件供应商，零负债",
+    report:"商泰汽车-iAUTO-财务健康评估-2026-06-12.md", radar:"iAUTO_health_radar.png",
+    employees:"474", revenue:"~¥3-5亿（估）" },
+  { id:"bytedance", name:"字节跳动", nameEn:"ByteDance", ticker:"", ind1:"互联网平台", ind2:"社交媒体与内容",
+    scores:{cashFlow:68,profitability:65,debt:78,operations:82,sustainability:85},
+    total:72, grade:"Moderate-High", gradeLabel:"中等偏上",
+    oneLine:"全球最大独角兽，all in AI军备竞赛",
+    report:"字节跳动-财务健康评估-2026-06-12.md", radar:"ByteDance_health_radar.png",
+    employees:"15万+", revenue:"$1,860亿（2025）" },
+  { id:"evatmaster", name:"欧税通", nameEn:"eVat Master", ticker:"", ind1:"企业服务", ind2:"财税SaaS",
+    scores:{cashFlow:63,profitability:70,debt:75,operations:82,sustainability:70},
+    total:69, grade:"Moderate", gradeLabel:"中等",
+    oneLine:"跨境合规SaaS龙头，财务不透明",
+    report:"欧税通-财务健康评估-2026-06-12.md", radar:"欧税通_eVatMaster_health_radar.png",
+    employees:"~300", revenue:"未披露" },
+  { id:"meituan", name:"美团", nameEn:"Meituan", ticker:"3690.HK", ind1:"互联网平台", ind2:"本地生活",
+    scores:{cashFlow:70,profitability:50,debt:82,operations:72,sustainability:68},
+    total:68, grade:"Moderate", gradeLabel:"中等",
+    oneLine:"本地生活霸主，外卖大战致短期承压",
+    report:"美团-财务健康评估-2026-06-12.md", radar:"Meituan_health_radar.png",
+    employees:"10.9万", revenue:"¥3,789亿（2025）" },
+  { id:"sensetime", name:"商汤科技", nameEn:"SenseTime", ticker:"0020.HK", ind1:"人工智能", ind2:"计算机视觉",
+    scores:{cashFlow:60,profitability:48,debt:82,operations:45,sustainability:55},
+    total:59, grade:"Moderate", gradeLabel:"中等",
+    oneLine:"AI视觉领军者，七年亏损563亿",
+    report:"商汤科技-财务健康评估-2026-06-12.md", radar:"SenseTime_health_radar.png",
+    employees:"2,472", revenue:"¥50亿（2025）" },
+  { id:"marketingforce", name:"迈富时", nameEn:"Marketingforce", ticker:"02556.HK", ind1:"企业服务", ind2:"营销SaaS",
+    scores:{cashFlow:35,profitability:55,debt:62,operations:58,sustainability:72},
+    total:58, grade:"Moderate", gradeLabel:"中等",
+    oneLine:"营销SaaS龙头，精准营销拖累利润",
+    report:"迈富时-财务健康评估-2026-06-12.md", radar:"Marketingforce_health_radar.png",
+    employees:"1,737", revenue:"¥28.2亿（2025）" },
+  { id:"iflytek", name:"科大讯飞", nameEn:"iFLYTEK", ticker:"002230.SZ", ind1:"人工智能", ind2:"AI平台",
+    scores:{cashFlow:58,profitability:50,debt:56,operations:60,sustainability:68},
+    total:57, grade:"Moderate", gradeLabel:"中等",
+    oneLine:"AI国家队级平台，扣非净利率不足1%，补贴占利润76%",
+    report:"科大讯飞-财务健康评估-2026-06-12.md", radar:"科大讯飞_iFLYTEK_health_radar.png",
+    employees:"16,818", revenue:"¥271亿（2025）" },
+  { id:"winnertech", name:"汇纳科技", nameEn:"Winner Tech", ticker:"300609.SZ", ind1:"人工智能", ind2:"商业大数据",
+    scores:{cashFlow:52,profitability:45,debt:68,operations:35,sustainability:50},
+    total:51, grade:"Moderate-Low", gradeLabel:"中等偏下",
+    oneLine:"连续4年亏损，创始人清仓，应收账款濒危",
+    report:"汇纳科技-财务健康评估-2026-06-12.md", radar:"汇纳科技_WinnerTech_health_radar.png",
+    employees:"~543", revenue:"¥3.07亿（2025）" },
+  { id:"neoexcellent", name:"卓越睿新", nameEn:"Neoexcellent", ticker:"2687.HK", ind1:"教育科技", ind2:"智慧教育",
+    scores:{cashFlow:35,profitability:72,debt:60,operations:40,sustainability:65},
+    total:50, grade:"Moderate-Low", gradeLabel:"中等偏下",
+    oneLine:"好赛道好产品，坏现金流",
+    report:"卓越睿新-财务健康评估-2026-06-12.md", radar:"Neoexcellent_health_radar.png",
+    employees:"2,728", revenue:"¥9.69亿（2025）" },
+  { id:"kepler", name:"上海开普勒机器人", nameEn:"Kepler Robot", ticker:"", ind1:"机器人", ind2:"人形机器人",
+    scores:{cashFlow:28,profitability:20,debt:70,operations:42,sustainability:55},
+    total:37, grade:"High-Risk", gradeLabel:"高风险",
+    oneLine:"营收433万亏损6694万，估值暴跌68%被收购",
+    report:"开普勒机器人-财务健康评估-2026-06-12.md", radar:"开普勒机器人_KeplerRobot_health_radar.png",
+    employees:"~100+", revenue:"¥434万（2025）" },
+  { id:"cloudwalk", name:"云从科技", nameEn:"CloudWalk", ticker:"688327.SH", ind1:"人工智能", ind2:"计算机视觉",
+    scores:{cashFlow:10,profitability:15,debt:25,operations:30,sustainability:35},
+    total:30, grade:"High-Risk", gradeLabel:"高风险",
+    oneLine:"AI四小龙光环褪色，研发断臂求生",
+    report:"云从科技-财务健康评估-2026-06-12.md", radar:"CloudWalk_health_radar.png",
+    employees:"~800", revenue:"¥3.7亿（2025）" }
+];
+
+// ============================================================
+// HELPERS
+// ============================================================
+const DIMS = [
+  { key:"cashFlow", label:"现金流质量", weight:"45%" },
+  { key:"profitability", label:"盈利能力", weight:"20%" },
+  { key:"debt", label:"偿债能力", weight:"15%" },
+  { key:"operations", label:"运营效率", weight:"10%" },
+  { key:"sustainability", label:"可持续发展", weight:"10%" }
+];
+
+const GRADE_COLORS = {
+  "Excellent": { bg:"rgba(107,158,107,0.12)", fg:"#6b9e6b", cls:"grade-high" },
+  "Moderate-High": { bg:"rgba(107,158,107,0.10)", fg:"#6b9e6b", cls:"grade-mid-high" },
+  "Moderate": { bg:"rgba(212,168,83,0.10)", fg:"#d4a853", cls:"grade-mid" },
+  "Moderate-Low": { bg:"rgba(196,91,76,0.10)", fg:"#c45b4c", cls:"grade-mid-low" },
+  "High-Risk": { bg:"rgba(196,91,76,0.14)", fg:"#c45b4c", cls:"grade-low" }
+};
+
+const CARD_GRADE_CLS = {
+  "Excellent": "grade-excellent",
+  "Moderate-High": "grade-moderate-high",
+  "Moderate": "grade-moderate",
+  "Moderate-Low": "grade-moderate-low",
+  "High-Risk": "grade-high-risk"
+};
+
+const SCORE_BAR_COLORS = {
+  cashFlow: "#d4a853",
+  profitability: "#5b9e9e",
+  debt: "#6b9e6b",
+  operations: "#5b7e9e",
+  sustainability: "#9e7b9e"
+};
+
+function byId(id) { return document.getElementById(id); }
+function getC(cid) { return COMPANIES.find(c => c.id === cid); }
+
+// ============================================================
+// ROUTER
+// ============================================================
+function route() {
+  const hash = location.hash.slice(1) || '';
+  const parts = hash.split('/').filter(Boolean);
+  renderSidebar();
+
+  if (parts[0] === 'company' && parts[1]) {
+    renderCompany(parts[1]);
+  } else if (parts[0] === 'compare') {
+    renderCompare(parts[1], parts[2]);
+  } else {
+    renderBrowse();
+  }
+}
+
+window.addEventListener('hashchange', route);
+
+// ============================================================
+// SIDEBAR
+// ============================================================
+function renderSidebar() {
+  const nav = byId('sidebar');
+  const hash = location.hash.slice(1) || '';
+
+  // Build industry tree
+  const tree = {};
+  COMPANIES.forEach(c => {
+    if (!tree[c.ind1]) tree[c.ind1] = {};
+    if (!tree[c.ind1][c.ind2]) tree[c.ind1][c.ind2] = [];
+    tree[c.ind1][c.ind2].push(c);
+  });
+
+  let html = `
+    <div class="sidebar-header">
+      <div class="logo">企业健康度评估</div>
+      <div class="subtitle">Company Health Evaluation</div>
+    </div>
+    <a class="company-link ${hash === '' || hash.startsWith('compare') ? '' : 'active'}" href="#"
+       style="padding-left:20px;border-left:none;">
+      <span style="font-size:0.8rem;">▦ 全部公司</span>
+      <span style="margin-left:auto;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono);">${COMPANIES.length}</span>
+    </a>
+    <a class="company-link" href="#compare" style="padding-left:20px;border-left:none;${hash.startsWith('compare') ? 'color:var(--amber);border-left:2px solid var(--amber);background:rgba(212,168,83,0.06);' : ''}">
+      <span style="font-size:0.8rem;">⇆ 对比公司</span>
+    </a>
+  `;
+
+  const indOrder = ['人工智能','互联网平台','企业服务','互动娱乐','教育科技','机器人','汽车科技'];
+  indOrder.forEach(ind1 => {
+    if (!tree[ind1]) return;
+    const subInds = tree[ind1];
+    const total = Object.values(subInds).reduce((s, arr) => s + arr.length, 0);
+    html += `<div class="industry-group">
+      <button class="industry-toggle" onclick="toggleIndustry(this)" data-ind1="${ind1}">
+        <span class="arrow">▶</span> ${ind1}
+        <span class="count">${total}</span>
+      </button>
+      <div class="sub-industries">`;
+
+    Object.keys(subInds).sort().forEach(ind2 => {
+      const companies = subInds[ind2];
+      html += `<div class="sub-industry-group">
+        <button class="sub-toggle" onclick="toggleSub(this)">
+          <span class="arrow">▶</span> ${ind2}
+          <span class="count" style="margin-left:auto;">${companies.length}</span>
+        </button>
+        <div class="company-list">`;
+
+      companies.sort((a,b) => b.total - a.total).forEach(c => {
+        const isActive = hash === `company/${c.id}`;
+        html += `<a class="company-link ${isActive ? 'active' : ''}" href="#company/${c.id}">
+          <span class="dot" style="background:${GRADE_COLORS[c.grade].fg};"></span>
+          ${c.name}
+          <span style="margin-left:auto;font-size:0.68rem;font-family:var(--font-mono);color:var(--text-muted);">${c.total}</span>
+        </a>`;
+      });
+
+      html += `</div></div>`;
+    });
+
+    html += `</div></div>`;
+  });
+
+  nav.innerHTML = html;
+}
+
+function toggleIndustry(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+function toggleSub(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// ============================================================
+// BROWSE VIEW
+// ============================================================
+function renderBrowse() {
+  const main = byId('main');
+  const sorted = [...COMPANIES].sort((a,b) => b.total - a.total);
+
+  let cards = '';
+  sorted.forEach((c, i) => {
+    const g = GRADE_COLORS[c.grade];
+    cards += `
+      <div class="company-card ${CARD_GRADE_CLS[c.grade]}" style="animation-delay:${i*0.04}s"
+           onclick="location.hash='company/${c.id}'">
+        <div class="card-header">
+          <div>
+            <div class="card-name">${c.name}</div>
+            <div class="card-name-en">${c.nameEn} ${c.ticker ? '· '+c.ticker : ''}</div>
+          </div>
+          <div class="card-score ${g.cls}">${c.total}</div>
+        </div>
+        <div class="card-industry">${c.ind1} · ${c.ind2}</div>
+        <div class="card-oneline">${c.oneLine}</div>
+        <div class="card-meta">
+          <span>👥 ${c.employees}</span>
+          <span>💰 ${c.revenue}</span>
+        </div>
+        <button class="card-compare-btn" onclick="event.stopPropagation(); startCompare('${c.id}', this)" title="加入对比">⇆ 加入对比</button>
+      </div>`;
+  });
+
+  // Industry stat chips
+  const indCounts = {};
+  COMPANIES.forEach(c => { indCounts[c.ind1] = (indCounts[c.ind1]||0) + 1; });
+
+  let statChips = '';
+  Object.entries(indCounts).forEach(([ind, n]) => {
+    statChips += `<span style="font-size:0.72rem;color:var(--text-muted);font-family:var(--font-mono);background:var(--bg-surface);padding:3px 10px;border-radius:12px;border:1px solid var(--border);">${ind} ${n}</span>`;
+  });
+
+  main.innerHTML = `
+    <div class="fade-in">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px;">
+        <div>
+          <h1 style="margin-bottom:4px;">公司健康评估总览</h1>
+          <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · 7 个赛道 · 5维财务框架</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">${statChips}</div>
+      <div class="cards-grid">${cards}</div>
+    </div>`;
+
+  updateCompareBar(main);
+}
+
+// ============================================================
+// SINGLE COMPANY VIEW
+// ============================================================
+function renderCompany(cid) {
+  const c = getC(cid);
+  if (!c) { location.hash = ''; return; }
+
+  const main = byId('main');
+  const g = GRADE_COLORS[c.grade];
+
+  let bars = '';
+  DIMS.forEach(d => {
+    const v = c.scores[d.key];
+    bars += `<div class="score-bar-row">
+      <span class="score-bar-label">${d.label}</span>
+      <div class="score-bar-track"><div class="score-bar-fill" style="width:${v}%;background:${SCORE_BAR_COLORS[d.key]};"></div></div>
+      <span class="score-bar-val">${v}</span>
+      <span class="score-bar-weight">${d.weight}</span>
+    </div>`;
+  });
+
+  main.innerHTML = `
+    <div class="company-detail">
+      <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap;">
+        <button class="back-btn" onclick="startCompare('${c.id}')" style="border-color:var(--amber);color:var(--amber);">⇆ 加入对比</button>
+      </div>
+
+      <div class="detail-hero" style="margin-top:16px;">
+        <div class="radar-img"><img src="docs/examples/${c.radar}" alt="${c.name} radar" onerror="this.parentElement.innerHTML='<div style=padding:40px;color:var(--text-muted)>Radar chart unavailable</div>'"></div>
+        <div class="detail-info">
+          <div class="company-title">${c.name}</div>
+          <div class="company-ticker">${c.nameEn} ${c.ticker ? '· '+c.ticker : ''} · ${c.ind1} · ${c.ind2}</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="font-family:var(--font-mono);font-size:2rem;font-weight:700;color:${g.fg};">${c.total}</span>
+            <span style="font-size:0.85rem;color:${g.fg};padding:2px 10px;border-radius:4px;background:${g.bg};">${c.gradeLabel}</span>
+          </div>
+          <div class="company-verdict">${c.oneLine}</div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:12px;">👥 ${c.employees} · 💰 ${c.revenue}</div>
+          <div class="score-bars">${bars}</div>
+        </div>
+      </div>
+
+      <div class="detail-tabs">
+        <button class="detail-tab active" onclick="loadReport('${cid}','full',this)">完整报告</button>
+        <button class="detail-tab" onclick="loadReport('${cid}','summary',this)">摘要</button>
+      </div>
+      <div class="report-content" id="report-container">
+        <div class="loading">加载报告中...</div>
+      </div>
+    </div>`;
+
+  updateCompareBar(main);
+
+  // Load report
+  loadReportContent(cid, 'full');
+}
+
+function loadReport(cid, mode, btn) {
+  document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  loadReportContent(cid, mode);
+}
+
+async function loadReportContent(cid, mode) {
+  const c = getC(cid);
+  const container = document.getElementById('report-container');
+  if (!container) return;
+  container.innerHTML = '<div class="loading">加载报告中...</div>';
+
+  try {
+    const resp = await fetch(`docs/examples/${c.report}`);
+    if (!resp.ok) throw new Error('Not found');
+    let md = await resp.text();
+
+    if (mode === 'summary') {
+      // Extract first 3 sections: 一句话结论 + 基本画像 + 5-dim summary
+      const h2s = [...md.matchAll(/^## /gm)];
+      if (h2s.length >= 3) {
+        md = md.substring(0, h2s[3].index);
+      } else if (h2s.length >= 2) {
+        md = md.substring(0, h2s[2].index);
+      } else {
+        md = md.substring(0, 3000);
+      }
+    }
+
+    container.innerHTML = renderMarkdown(md);
+  } catch(e) {
+    container.innerHTML = `<div class="loading">报告加载失败: ${e.message}</div>`;
+  }
+}
+
+// ============================================================
+// SIMPLE MARKDOWN RENDERER
+// ============================================================
+function renderMarkdown(md) {
+  let html = '';
+  const lines = md.split('\n');
+  let inTable = false, tableHtml = '';
+  let inCodeBlock = false, codeHtml = '', codeLang = '';
+
+  function flushTable() {
+    if (inTable && tableHtml) {
+      html += `<table>${tableHtml}</table>`;
+      tableHtml = '';
+      inTable = false;
+    }
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+
+    // Code block
+    if (line.startsWith('```')) {
+      if (inCodeBlock) {
+        html += `<pre><code>${escapeHtml(codeHtml)}</code></pre>`;
+        codeHtml = ''; inCodeBlock = false;
+      } else {
+        flushTable();
+        codeLang = line.slice(3).trim();
+        inCodeBlock = true;
+      }
+      continue;
+    }
+    if (inCodeBlock) { codeHtml += (codeHtml ? '\n' : '') + line; continue; }
+
+    // Table
+    if (line.startsWith('|') && line.endsWith('|')) {
+      if (line.match(/^\|[\s\-:]+\|/)) { inTable = true; continue; } // separator row
+      if (!inTable) { inTable = true; tableHtml = ''; }
+      const cells = line.split('|').filter(c => c.trim() !== '');
+      const tag = i === 0 || (i > 0 && lines[i-1] && lines[i-1].match(/^\|[\s\-:]+\|/)) ? 'th' : 'td';
+      tableHtml += '<tr>' + cells.map(c => `<${tag}>${inlineMarkdown(c.trim())}</${tag}>`).join('') + '</tr>';
+      continue;
+    } else {
+      flushTable();
+    }
+
+    // Headers
+    if (line.startsWith('#### ')) { html += `<h4>${inlineMarkdown(line.slice(5))}</h4>`; continue; }
+    if (line.startsWith('### ')) { html += `<h3>${inlineMarkdown(line.slice(4))}</h3>`; continue; }
+    if (line.startsWith('## ')) { html += `<h2>${inlineMarkdown(line.slice(3))}</h2>`; continue; }
+    if (line.startsWith('# ')) { html += `<h1>${inlineMarkdown(line.slice(2))}</h1>`; continue; }
+
+    // Horizontal rule
+    if (/^\-{3,}$/.test(line.trim())) { html += '<hr>'; continue; }
+
+    // Blockquote
+    if (line.startsWith('> ')) { html += `<blockquote>${inlineMarkdown(line.slice(2))}</blockquote>`; continue; }
+    if (line.startsWith('>') && line.length > 1) { html += `<blockquote>${inlineMarkdown(line.slice(1))}</blockquote>`; continue; }
+
+    // Lists
+    if (/^\s*[\-\*]\s/.test(line)) {
+      const content = line.replace(/^\s*[\-\*]\s/, '');
+      html += `<li>${inlineMarkdown(content)}</li>`;
+      continue;
+    }
+    if (/^\s*\d+[\.\)]\s/.test(line)) {
+      const content = line.replace(/^\s*\d+[\.\)]\s/, '');
+      html += `<li>${inlineMarkdown(content)}</li>`;
+      continue;
+    }
+
+    // Empty line
+    if (line.trim() === '') { html += ''; continue; }
+
+    // Paragraph (catch-all)
+    html += `<p>${inlineMarkdown(line)}</p>`;
+  }
+
+  flushTable();
+  if (inCodeBlock && codeHtml) { html += `<pre><code>${escapeHtml(codeHtml)}</code></pre>`; }
+
+  return html;
+}
+
+function inlineMarkdown(text) {
+  return escapeHtml(text)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ============================================================
+// COMPARE VIEW
+// ============================================================
+let compareSlots = [null, null];
+
+function startCompare(cid, btn) {
+  if (compareSlots[0] === cid) {
+    compareSlots[0] = compareSlots[1];
+    compareSlots[1] = null;
+  } else if (compareSlots[1] === cid) {
+    compareSlots[1] = null;
+  } else if (!compareSlots[0]) {
+    compareSlots[0] = cid;
+  } else if (!compareSlots[1]) {
+    compareSlots[1] = cid;
+  } else {
+    compareSlots = [cid, null];
+  }
+
+  updateCompareButtons();
+
+  if (compareSlots[0] && compareSlots[1]) {
+    location.hash = `compare/${compareSlots[0]}/${compareSlots[1]}`;
+  } else if (compareSlots[0]) {
+    location.hash = `compare/${compareSlots[0]}`;
+  } else {
+    location.hash = '';
+  }
+}
+
+function updateCompareButtons() {
+  document.querySelectorAll('.card-compare-btn').forEach(btn => {
+    // We don't have cid on the DOM element, so just re-render
+  });
+  updateCompareBar(byId('main'));
+}
+
+function updateCompareBar(mainEl) {
+  let bar = mainEl.querySelector('.compare-bar');
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.className = 'compare-bar';
+    bar.style.cssText = 'position:fixed;bottom:20px;right:20px;z-index:100;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px 18px;box-shadow:0 8px 32px rgba(0,0,0,0.6);min-width:220px;';
+    document.body.appendChild(bar);
+  }
+
+  if (!compareSlots[0] && !compareSlots[1]) {
+    bar.style.display = 'none';
+    return;
+  }
+  bar.style.display = 'block';
+
+  let html = '<div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:8px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.04em;">对比队列</div>';
+  [0,1].forEach(i => {
+    const c = compareSlots[i] ? getC(compareSlots[i]) : null;
+    if (c) {
+      const g = GRADE_COLORS[c.grade];
+      html += `<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;font-size:0.8rem;">
+        <span style="color:${g.fg};font-family:var(--font-mono);font-weight:700;">${c.total}</span>
+        <span>${c.name}</span>
+        <button onclick="compareSlots[${i}]=null;updateCompareBar(byId('main'));updateCompareButtons()" style="margin-left:auto;background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem;">&times;</button>
+      </div>`;
+    } else {
+      html += `<div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:4px;">${i+1}. 点击卡片「加入对比」</div>`;
+    }
+  });
+
+  if (compareSlots[0] && compareSlots[1]) {
+    html += `<a href="#compare/${compareSlots[0]}/${compareSlots[1]}" style="display:block;margin-top:8px;padding:6px;text-align:center;background:rgba(212,168,83,0.12);color:var(--amber);border-radius:var(--radius-sm);font-size:0.78rem;text-decoration:none;">⇆ 开始对比</a>`;
+  } else {
+    html += `<div style="margin-top:8px;font-size:0.68rem;color:var(--text-muted);">选择 2 家公司进行对比</div>`;
+  }
+
+  bar.innerHTML = html;
+}
+
+function renderCompare(cid1, cid2) {
+  const c1 = getC(cid1);
+  const c2 = getC(cid2);
+  if (!c1) { location.hash = ''; return; }
+  if (!c2) {
+    compareSlots = [cid1, null];
+    updateCompareButtons();
+  } else {
+    compareSlots = [cid1, cid2];
+  }
+
+  const main = byId('main');
+
+  if (!c2) {
+    // Only one company selected — show picker
+    const sorted = [...COMPANIES].sort((a,b) => b.total - a.total);
+    let pickCards = '';
+    sorted.forEach(c => {
+      if (c.id === cid1) return;
+      pickCards += `
+        <div class="company-card ${CARD_GRADE_CLS[c.grade]}" onclick="location.hash='compare/${cid1}/${c.id}'">
+          <div class="card-header">
+            <div><div class="card-name">${c.name}</div><div class="card-name-en">${c.nameEn} ${c.ticker?'· '+c.ticker:''}</div></div>
+            <div class="card-score ${GRADE_COLORS[c.grade].cls}">${c.total}</div>
+          </div>
+          <div class="card-industry">${c.ind1} · ${c.ind2}</div>
+          <div class="card-oneline">${c.oneLine}</div>
+        </div>`;
+    });
+
+    main.innerHTML = `
+      <div class="fade-in">
+        <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+        <div class="compare-header" style="margin-top:16px;">
+          <div class="compare-company-pick" style="border-color:var(--amber);">
+            <div class="pick-hint">公司 A</div>
+            <div class="pick-name">${c1.name}</div>
+            <div class="pick-score">${c1.total}</div>
+          </div>
+          <span class="vs">VS</span>
+          <div class="compare-company-pick">
+            <div class="pick-hint">选择公司 B</div>
+            <div class="pick-name" style="color:var(--text-muted);">—</div>
+          </div>
+        </div>
+        <h2 style="margin-bottom:14px;">选择第二家公司</h2>
+        <div class="cards-grid">${pickCards}</div>
+      </div>`;
+    updateCompareBar(main);
+    return;
+  }
+
+  // Full comparison
+  const g1 = GRADE_COLORS[c1.grade];
+  const g2 = GRADE_COLORS[c2.grade];
+
+  // Build comparison table
+  let tableRows = '';
+  DIMS.forEach(d => {
+    const v1 = c1.scores[d.key];
+    const v2 = c2.scores[d.key];
+    const diff = v1 - v2;
+    tableRows += `<tr>
+      <td class="dim-label">${d.label} <span style="font-size:0.65rem;color:var(--text-muted);">${d.weight}</span></td>
+      <td class="${v1 >= v2 ? 'winner' : ''}">${v1}</td>
+      <td class="${v2 >= v1 ? 'winner' : ''}">${v2}</td>
+      <td style="color:${diff > 0 ? 'var(--green)' : diff < 0 ? 'var(--red)' : 'var(--text-muted)'}">${diff > 0 ? '+' + diff : diff}</td>
+    </tr>`;
+  });
+
+  tableRows += `<tr>
+    <td class="dim-label" style="font-weight:700;">综合得分</td>
+    <td class="${c1.total >= c2.total ? 'winner' : ''}">${c1.total}</td>
+    <td class="${c2.total >= c1.total ? 'winner' : ''}">${c2.total}</td>
+    <td style="color:${c1.total > c2.total ? 'var(--green)' : c1.total < c2.total ? 'var(--red)' : 'var(--text-muted)'}">${c1.total > c2.total ? '+' + (c1.total-c2.total) : c1.total < c2.total ? (c1.total-c2.total) : '0'}</td>
+  </tr>`;
+
+  main.innerHTML = `
+    <div class="compare-view">
+      <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+
+      <div class="compare-header" style="margin-top:16px;">
+        <div class="compare-company-pick" style="border-color:${g1.fg};">
+          <div class="pick-hint">公司 A</div>
+          <div class="pick-name">${c1.name}</div>
+          <div class="pick-score" style="color:${g1.fg};">${c1.total}</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);">${c1.ind1} · ${c1.ind2}</div>
+        </div>
+        <span class="vs">VS</span>
+        <div class="compare-company-pick" style="border-color:${g2.fg};">
+          <div class="pick-hint">公司 B</div>
+          <div class="pick-name">${c2.name}</div>
+          <div class="pick-score" style="color:${g2.fg};">${c2.total}</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);">${c2.ind1} · ${c2.ind2}</div>
+        </div>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-chart-box">
+          <h3 style="margin-bottom:14px;text-align:center;">雷达图对比</h3>
+          <canvas id="compare-canvas" width="400" height="400"></canvas>
+          <div style="display:flex;gap:20px;margin-top:10px;font-size:0.75rem;">
+            <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:rgba(212,168,83,0.5);border:2px solid #d4a853;"></span> ${c1.name}</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:rgba(91,158,158,0.5);border:2px solid #5b9e9e;"></span> ${c2.name}</span>
+          </div>
+        </div>
+        <div>
+          <table class="compare-table">
+            <thead><tr><th>维度</th><th>${c1.name}</th><th>${c2.name}</th><th>Δ</th></tr></thead>
+            <tbody>${tableRows}</tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="compare-verdicts">
+        <div class="compare-verdict">
+          <strong>${c1.name}</strong> · ${c1.gradeLabel} (${c1.total})
+          <p style="margin-top:6px;">${c1.oneLine}</p>
+          <p style="margin-top:4px;font-size:0.75rem;color:var(--text-muted);">👥 ${c1.employees} · 💰 ${c1.revenue}</p>
+        </div>
+        <div class="compare-verdict">
+          <strong>${c2.name}</strong> · ${c2.gradeLabel} (${c2.total})
+          <p style="margin-top:6px;">${c2.oneLine}</p>
+          <p style="margin-top:4px;font-size:0.75rem;color:var(--text-muted);">👥 ${c2.employees} · 💰 ${c2.revenue}</p>
+        </div>
+      </div>
+    </div>`;
+
+  updateCompareBar(main);
+
+  // Draw radar chart after DOM update
+  requestAnimationFrame(() => drawCompareRadar(c1, c2));
+}
+
+// ============================================================
+// CANVAS RADAR CHART FOR COMPARISON
+// ============================================================
+function drawCompareRadar(c1, c2) {
+  const canvas = document.getElementById('compare-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const R = 140;
+  const dimLabels = ['Cash Flow', 'Profitability', 'Debt', 'Operations', 'Sustainability'];
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Background grid
+  const levels = [20, 40, 60, 80, 100];
+  levels.forEach(lvl => {
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const angle = -Math.PI/2 + (2*Math.PI*i)/5;
+      const r = R * (lvl/100);
+      const x = cx + r * Math.cos(angle);
+      const y = cy + r * Math.sin(angle);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = lvl === 100 ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)';
+    ctx.lineWidth = lvl === 100 ? 1 : 0.5;
+    ctx.stroke();
+
+    // Level label
+    ctx.fillStyle = 'rgba(255,255,255,0.2)';
+    ctx.font = '9px JetBrains Mono, monospace';
+    ctx.textAlign = 'left';
+    ctx.fillText(lvl, cx + 4, cy - R*(lvl/100) - 2);
+  });
+
+  // Axis lines
+  for (let i = 0; i < 5; i++) {
+    const angle = -Math.PI/2 + (2*Math.PI*i)/5;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + R*Math.cos(angle), cy + R*Math.sin(angle));
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  }
+
+  // Draw company polygons
+  function drawPolygon(scores, fillColor, strokeColor) {
+    ctx.beginPath();
+    const keys = ['cashFlow','profitability','debt','operations','sustainability'];
+    for (let i = 0; i < 5; i++) {
+      const angle = -Math.PI/2 + (2*Math.PI*i)/5;
+      const r = R * (scores[keys[i]]/100);
+      const x = cx + r * Math.cos(angle);
+      const y = cy + r * Math.sin(angle);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = fillColor;
+    ctx.fill();
+    ctx.strokeStyle = strokeColor;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Dots
+    for (let i = 0; i < 5; i++) {
+      const angle = -Math.PI/2 + (2*Math.PI*i)/5;
+      const r = R * (scores[keys[i]]/100);
+      ctx.beginPath();
+      ctx.arc(cx + r*Math.cos(angle), cy + r*Math.sin(angle), 3.5, 0, Math.PI*2);
+      ctx.fillStyle = strokeColor;
+      ctx.fill();
+    }
+  }
+
+  // Draw C2 first (behind), then C1
+  drawPolygon(c2.scores, 'rgba(91,158,158,0.15)', '#5b9e9e');
+  drawPolygon(c1.scores, 'rgba(212,168,83,0.15)', '#d4a853');
+
+  // Axis labels
+  const labelDistance = R + 24;
+  for (let i = 0; i < 5; i++) {
+    const angle = -Math.PI/2 + (2*Math.PI*i)/5;
+    const x = cx + labelDistance * Math.cos(angle);
+    const y = cy + labelDistance * Math.sin(angle);
+    ctx.fillStyle = '#8b8b96';
+    ctx.font = '10px -apple-system, PingFang SC, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    // Offset labels slightly based on position
+    let ly = y;
+    if (Math.abs(angle + Math.PI/2) < 0.5) ly = y + 6; // top
+    if (Math.abs(angle - Math.PI/2) < 0.5) ly = y - 6; // bottom
+    ctx.fillText(dimLabels[i], x, ly);
+  }
+
+  // Center: total scores
+  ctx.fillStyle = '#e4e2df';
+  ctx.font = 'bold 12px JetBrains Mono, monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(`${c1.total} vs ${c2.total}`, cx, cy);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+route();
+</script>
+
+</body>
+</html>

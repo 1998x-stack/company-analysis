@@ -506,6 +506,10 @@ function route() {
   const parts = hash.split('/').filter(Boolean);
   renderSidebar();
 
+  if (parts[0] !== 'compare') {
+    compareSlots = [null, null];
+  }
+
   if (parts[0] === 'company' && parts[1]) {
     renderCompany(parts[1]);
   } else if (parts[0] === 'compare') {
@@ -547,7 +551,7 @@ function renderSidebar() {
     </a>
   `;
 
-  const indOrder = ['人工智能','互联网平台','企业服务','互动娱乐','教育科技','机器人','汽车科技'];
+  const indOrder = ['人工智能','互联网平台','企业服务','互动娱乐','教育科技','机器人','汽车科技','化工'];
   indOrder.forEach(ind1 => {
     if (!tree[ind1]) return;
     const subInds = tree[ind1];
@@ -621,7 +625,7 @@ function renderBrowse() {
           <span>👥 ${c.employees}</span>
           <span>💰 ${c.revenue}</span>
         </div>
-        <button class="card-compare-btn" onclick="event.stopPropagation(); startCompare('${c.id}', this)" title="加入对比">⇆ 加入对比</button>
+        <button class="card-compare-btn" data-cid="${c.id}" onclick="event.stopPropagation(); startCompare('${c.id}', this)" title="加入对比">⇆ 加入对比</button>
       </div>`;
   });
 
@@ -639,7 +643,7 @@ function renderBrowse() {
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px;">
         <div>
           <h1 style="margin-bottom:4px;">公司健康评估总览</h1>
-          <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · 7 个赛道 · 5维财务框架</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · ${indOrder.filter(i => tree[i]).length} 个赛道 · 5维财务框架</p>
         </div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">${statChips}</div>
@@ -693,8 +697,8 @@ function renderCompany(cid) {
       </div>
 
       <div class="detail-tabs">
-        <button class="detail-tab active" onclick="loadReport('${cid}','full',this)">完整报告</button>
-        <button class="detail-tab" onclick="loadReport('${cid}','summary',this)">摘要</button>
+        <button class="detail-tab active" onclick="loadReport('${cid.replace(/'/g, "\\'")}','full',this)">完整报告</button>
+        <button class="detail-tab" onclick="loadReport('${cid.replace(/'/g, "\\'")}','summary',this)">摘要</button>
       </div>
       <div class="report-content" id="report-container">
         <div class="loading">加载报告中...</div>
@@ -801,17 +805,34 @@ function renderMarkdown(md) {
     if (line.startsWith('> ')) { html += `<blockquote>${inlineMarkdown(line.slice(2))}</blockquote>`; continue; }
     if (line.startsWith('>') && line.length > 1) { html += `<blockquote>${inlineMarkdown(line.slice(1))}</blockquote>`; continue; }
 
-    // Lists
+    // Lists — track state to wrap groups in <ul>/<ol>
+    let inList = null; // 'ul' | 'ol' | null
+    let listHtml = '';
+
+    function flushList() {
+      if (!inList) return '';
+      const tag = inList === 'ol' ? 'ol' : 'ul';
+      const out = `<${tag}>${listHtml}</${tag}>`;
+      inList = null;
+      listHtml = '';
+      return out;
+    }
+
     if (/^\s*[\-\*]\s/.test(line)) {
+      if (inList !== 'ul') { html += flushList(); inList = 'ul'; }
       const content = line.replace(/^\s*[\-\*]\s/, '');
-      html += `<li>${inlineMarkdown(content)}</li>`;
+      listHtml += `<li>${inlineMarkdown(content)}</li>`;
       continue;
     }
     if (/^\s*\d+[\.\)]\s/.test(line)) {
+      if (inList !== 'ol') { html += flushList(); inList = 'ol'; }
       const content = line.replace(/^\s*\d+[\.\)]\s/, '');
-      html += `<li>${inlineMarkdown(content)}</li>`;
+      listHtml += `<li>${inlineMarkdown(content)}</li>`;
       continue;
     }
+
+    // Non-list line: flush any open list
+    html += flushList();
 
     // Empty line
     if (line.trim() === '') { html += ''; continue; }
@@ -870,7 +891,12 @@ function startCompare(cid, btn) {
 
 function updateCompareButtons() {
   document.querySelectorAll('.card-compare-btn').forEach(btn => {
-    // We don't have cid on the DOM element, so just re-render
+    const cid = btn.dataset.cid;
+    if (cid) {
+      const selected = compareSlots[0] === cid || compareSlots[1] === cid;
+      btn.classList.toggle('selected', selected);
+      btn.textContent = selected ? '已加入对比 ✓' : '+ 加入对比';
+    }
   });
   updateCompareBar(byId('main'));
 }
@@ -1164,6 +1190,14 @@ function drawCompareRadar(c1, c2) {
     COMPANIES = await resp.json();
   } catch(e) {
     console.error('Failed to load companies data:', e);
+    const main = byId('main');
+    if (main && COMPANIES.length === 0) {
+      main.innerHTML = `<div class="fade-in" style="text-align:center;padding:60px 20px;">
+        <h2 style="color:var(--red);margin-bottom:16px;">数据加载失败</h2>
+        <p style="color:var(--text-muted);">无法加载公司评估数据，请稍后刷新页面重试。</p>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;">${e.message}</p>
+      </div>`;
+    }
   }
   route();
 })();

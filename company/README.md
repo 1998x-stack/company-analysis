@@ -19,7 +19,7 @@
 │   │   ├── 月之暗面 (Moonshot AI)
 │   │   └── 智谱AI (Zhipu AI)
 │   └── 商业大数据
-│       └── 汇纳科技 (Winner Technology)
+│       └── 汇纳科技 (Winner Tech)
 ├── 互联网平台
 │   ├── 社交媒体与内容
 │   │   └── 字节跳动 (ByteDance)

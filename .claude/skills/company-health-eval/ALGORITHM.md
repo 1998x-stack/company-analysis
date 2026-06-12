@@ -300,52 +300,41 @@ else            → High-Risk      (高风险)     重大财务或法律隐患�
 
 ## 十、缺失值处理
 
-### 10.1 等权平均（`_average`）
+所有 5 个维度统一使用 `_weighted()` 加权平均函数（无 `_average` 等权函数）。
+
+### 10.1 加权平均（`_weighted`）
 
 ```python
-def _average(d, indicators, level_map):
-    total = 0.0
-    count = 0
-    for key in indicators:
-        entry = d.get(key)
-        if entry is None:
-            continue                          # 键不存在 → 跳过
-        level = entry if isinstance(entry, str) else entry.get("level")
-        if level is None:
-            continue                          # 值为 null → 跳过
-        total += level_map.get(level, 0)     # 无法识别的等级 → 计0
-        count += 1
-    return round(total / count, 1) if count > 0 else 0.0
-```
-
-**重新加权逻辑**：若 5 个指标中有 1 个缺失，剩余 4 个各占 25%（而非 20%）。这保证了得分始终在 0-100 区间内。
-
-### 10.2 加权平均（`_weighted`）
-
-```python
-def _weighted(d, weights, level_maps):
-    total = 0.0
-    used_weight = 0.0
+def _weighted(d: dict, weights: dict, level_maps: dict) -> float:
+    """Weighted average. Redistributes weight of missing indicators."""
+    total, used_weight = 0.0, 0.0
     for key, weight in weights.items():
         entry = d.get(key)
         if entry is None:
             continue
-        level = entry if isinstance(entry, str) else entry.get("level")
-        if level is None:
-            continue
+        if not isinstance(entry, str):
+            continue                          # 非字符串值 → 跳过
         level_map = level_maps.get(key, LEVEL_3)
-        total += level_map.get(level, 0) * weight
+        if entry not in level_map:
+            # 无法识别的等级 → 打印 WARNING 并跳过
+            print(f"WARNING: '{entry}' is not a valid level for '{key}'",
+                  file=sys.stderr)
+            continue
+        total += level_map[entry] * weight
         used_weight += weight
     if used_weight == 0:
         return 0.0
-    return round(total / used_weight, 1)     # 归一化
+    return round(total / used_weight, 1)
 ```
 
-**归一化**：`total / used_weight` 而非 `total / 1.0`。若 `rd_ratio` 缺失（权重 0.20），`used_weight = 0.80`，剩余 4 个指标的有效权重各为 0.20/0.80 = 0.25。
+**关键行为**：
+- **仅接受字符串值**：`entry` 必须是 `str` 类型，否则跳过该指标。
+- **无法识别的等级**：打印 WARNING 到 stderr 并**跳过该指标**（权重重新分配），而非映射到 0 分。
+- **归一化**：`total / used_weight` 而非 `total / 1.0`。若 `rd_ratio` 缺失（权重 0.20），`used_weight = 0.80`，剩余 4 个指标的有效权重各为 0.20/0.80 = 0.25。
 
-### 10.3 空维度
+### 10.2 空维度
 
-若整个维度的所有指标均缺失（如完全无法获取数据），该维度得分为 0.0，直接拖低总分。这是一种惩罚性设计——数据完全不透明的公司不应获得"中性"评分。
+若整个维度的所有指标均缺失（如完全无法获取数据），`_weighted()` 返回 0.0。但 `calculate()` 会将空维度**回填至 15.0**（与 all-danger 等效——「不知道」不应该比「知道且极差」更糟糕）。
 
 ---
 
@@ -383,11 +372,11 @@ main()
   └─ json.load(args.data)
   └─ calculate(input_data)
        ├─ _safe_dim() × 5                      // null保护
-       ├─ score_cash_flow()                     // _average × 5指标
+       ├─ score_cash_flow()                     // _weighted × 4指标
        ├─ score_profitability()                 // _weighted × 5指标
-       ├─ score_debt()                          // _average × 5 + bonus
-       ├─ score_operations()                    // _average × 4指标
-       ├─ score_sustainability()                // _average × 5指标
+       ├─ score_debt()                          // _weighted × 5指标 + bonus
+       ├─ score_operations()                    // _weighted × 4指标
+       ├─ score_sustainability()                // _weighted × 5指标
        ├─ sum(scores × weights)                 // 加权求和
        └─ get_grade(total)                      // 等级划分
 ```

@@ -1,28 +1,5 @@
 [
   {
-    "id": "dewu",
-    "name": "得物",
-    "nameEn": "Dewu (Poizon)",
-    "ticker": "",
-    "ind1": "互联网平台",
-    "ind2": "电商",
-    "scores": {
-      "cashFlow": 72,
-      "profitability": 79,
-      "debt": 15,
-      "operations": 72,
-      "sustainability": 52
-    },
-    "total": 63,
-    "grade": "Moderate",
-    "gradeLabel": "中等",
-    "oneLine": "AI鉴别SAIL奖+95后渗透70%，财务黑箱+鉴定不合格率50%",
-    "report": "得物-财务健康评估-2026-06-12.md",
-    "radar": "Dewu_health_radar.png",
-    "employees": "~10,000",
-    "revenue": "未披露（估¥200-300亿）"
-  },
-  {
     "id": "taptap",
     "name": "TapTap / 心动公司",
     "nameEn": "TapTap",
@@ -44,29 +21,6 @@
     "radar": "TapTap_health_radar.png",
     "employees": "1,600",
     "revenue": "¥57.6亿（2025）"
-  },
-  {
-    "id": "kingsoftoffice",
-    "name": "金山办公",
-    "nameEn": "Kingsoft Office",
-    "ticker": "688111.SH",
-    "ind1": "企业服务",
-    "ind2": "办公软件",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 84,
-      "debt": 90,
-      "operations": 72,
-      "sustainability": 72
-    },
-    "total": 85,
-    "grade": "Excellent",
-    "gradeLabel": "优秀",
-    "oneLine": "毛利率86%+零负债+中国唯一盈利上市办公软件，C端见顶+AI变现未验证",
-    "report": "金山办公-财务健康评估-2026-06-12.md",
-    "radar": "KingsoftOffice_health_radar.png",
-    "employees": "~6,048",
-    "revenue": "¥59.29亿（2025）"
   },
   {
     "id": "evatmaster",
@@ -92,29 +46,6 @@
     "revenue": "未披露"
   },
   {
-    "id": "pdd",
-    "name": "拼多多",
-    "nameEn": "PDD Holdings",
-    "ticker": "NASDAQ: PDD",
-    "ind1": "互联网平台",
-    "ind2": "电商",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 84,
-      "debt": 90,
-      "operations": 90,
-      "sustainability": 52
-    },
-    "total": 85,
-    "grade": "Excellent",
-    "gradeLabel": "优秀",
-    "oneLine": "净现金¥4,169亿+人效全球顶级，增速90%→10%+中概股最大未回港风险",
-    "report": "拼多多-财务健康评估-2026-06-12.md",
-    "radar": "PDD_health_radar.png",
-    "employees": "25,474",
-    "revenue": "¥4,318亿（2025）"
-  },
-  {
     "id": "xiaohongshu",
     "name": "小红书",
     "nameEn": "Xiaohongshu",
@@ -138,29 +69,6 @@
     "revenue": "~¥420亿（2025，估）"
   },
   {
-    "id": "hithink",
-    "name": "同花顺",
-    "nameEn": "Hithink",
-    "ticker": "300033.SZ",
-    "ind1": "金融科技",
-    "ind2": "金融数据服务",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 90,
-      "debt": 90,
-      "operations": 55,
-      "sustainability": 52
-    },
-    "total": 83,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "零负债+¥140亿现金+53%净利率+金融AI第一，业绩高度绑定A股牛市",
-    "report": "同花顺-财务健康评估-2026-06-12.md",
-    "radar": "Hithink_health_radar.png",
-    "employees": "5,087",
-    "revenue": "¥60.29亿（2025）"
-  },
-  {
     "id": "antgroup",
     "name": "蚂蚁集团",
     "nameEn": "Ant Group",
@@ -182,6 +90,52 @@
     "radar": "AntGroup_health_radar.png",
     "employees": "3.7万",
     "revenue": "~¥2,100亿（2024，估）"
+  },
+  {
+    "id": "kingsoftoffice",
+    "name": "金山办公",
+    "nameEn": "Kingsoft Office",
+    "ticker": "688111.SH",
+    "ind1": "企业服务",
+    "ind2": "办公软件",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "毛利率86%+零负债+中国唯一盈利上市办公软件，C端见顶+AI变现未验证",
+    "report": "金山办公-财务健康评估-2026-06-12.md",
+    "radar": "KingsoftOffice_health_radar.png",
+    "employees": "~6,048",
+    "revenue": "¥59.29亿（2025）"
+  },
+  {
+    "id": "pdd",
+    "name": "拼多多",
+    "nameEn": "PDD Holdings",
+    "ticker": "NASDAQ: PDD",
+    "ind1": "互联网平台",
+    "ind2": "电商",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 52
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "净现金¥4,169亿+人效全球顶级，增速90%→10%+中概股最大未回港风险",
+    "report": "拼多多-财务健康评估-2026-06-12.md",
+    "radar": "PDD_health_radar.png",
+    "employees": "25,474",
+    "revenue": "¥4,318亿（2025）"
   },
   {
     "id": "iauto",
@@ -230,6 +184,29 @@
     "revenue": "~¥350-400亿（2025，估）"
   },
   {
+    "id": "thundersoft",
+    "name": "中科创达",
+    "nameEn": "ThunderSoft",
+    "ticker": "300496.SZ",
+    "ind1": "科技硬件",
+    "ind2": "智能操作系统",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 80,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 85,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "座舱OS市占率28%第一+AIOS全栈，毛利率四连跌+华为挤压",
+    "report": "中科创达-财务健康评估-2026-06-12.md",
+    "radar": "ThunderSoft_health_radar.png",
+    "employees": "18,708",
+    "revenue": "¥77.78亿（2025）"
+  },
+  {
     "id": "henkel",
     "name": "汉高",
     "nameEn": "Henkel",
@@ -276,29 +253,6 @@
     "revenue": "~¥100亿（2024）"
   },
   {
-    "id": "thundersoft",
-    "name": "中科创达",
-    "nameEn": "ThunderSoft",
-    "ticker": "300496.SZ",
-    "ind1": "科技硬件",
-    "ind2": "智能操作系统",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 80,
-      "debt": 90,
-      "operations": 72,
-      "sustainability": 72
-    },
-    "total": 85,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "座舱OS市占率28%第一+AIOS全栈，毛利率四连跌+华为挤压",
-    "report": "中科创达-财务健康评估-2026-06-12.md",
-    "radar": "ThunderSoft_health_radar.png",
-    "employees": "18,708",
-    "revenue": "¥77.78亿（2025）"
-  },
-  {
     "id": "bytedance",
     "name": "字节跳动",
     "nameEn": "ByteDance",
@@ -322,6 +276,29 @@
     "revenue": "$1,860亿（2025）"
   },
   {
+    "id": "hithink",
+    "name": "同花顺",
+    "nameEn": "Hithink",
+    "ticker": "300033.SZ",
+    "ind1": "金融科技",
+    "ind2": "金融数据服务",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 90,
+      "debt": 90,
+      "operations": 55,
+      "sustainability": 52
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "零负债+¥140亿现金+53%净利率+金融AI第一，业绩高度绑定A股牛市",
+    "report": "同花顺-财务健康评估-2026-06-12.md",
+    "radar": "Hithink_health_radar.png",
+    "employees": "5,087",
+    "revenue": "¥60.29亿（2025）"
+  },
+  {
     "id": "dualitybio",
     "name": "映恩生物",
     "nameEn": "Duality Biotherapeutics",
@@ -343,6 +320,29 @@
     "radar": "dualitybio_health_radar.png",
     "employees": "220",
     "revenue": "¥18.52亿（2025）"
+  },
+  {
+    "id": "netease",
+    "name": "网易",
+    "nameEn": "NetEase",
+    "ticker": "9999.HK / NTES",
+    "ind1": "互动娱乐",
+    "ind2": "游戏",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 35,
+      "sustainability": 72
+    },
+    "total": 82,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "净现金¥1,559亿+游戏毛利率70%，梦幻西游占75%毛利+新品断层",
+    "report": "网易-财务健康评估-2026-06-12.md",
+    "radar": "NetEase_health_radar.png",
+    "employees": "~25,400",
+    "revenue": "¥1,126亿（2025）"
   },
   {
     "id": "papergames",
@@ -391,52 +391,6 @@
     "revenue": "未披露（2025H1同比翻倍）"
   },
   {
-    "id": "netdragon",
-    "name": "网龙",
-    "nameEn": "NetDragon",
-    "ticker": "0777.HK",
-    "ind1": "互动娱乐",
-    "ind2": "游戏",
-    "scores": {
-      "cashFlow": 64,
-      "profitability": 64,
-      "debt": 55,
-      "operations": 15,
-      "sustainability": 55
-    },
-    "total": 57,
-    "grade": "Moderate",
-    "gradeLabel": "中等",
-    "oneLine": "200+AI员工先行者，魔域IP占87%运营20年+现金跌破借款线",
-    "report": "网龙-财务健康评估-2026-06-12.md",
-    "radar": "NetDragon_health_radar.png",
-    "employees": "~3,400",
-    "revenue": "¥44.75亿（2025）"
-  },
-  {
-    "id": "netease",
-    "name": "网易",
-    "nameEn": "NetEase",
-    "ticker": "9999.HK / NTES",
-    "ind1": "互动娱乐",
-    "ind2": "游戏",
-    "scores": {
-      "cashFlow": 90,
-      "profitability": 84,
-      "debt": 90,
-      "operations": 35,
-      "sustainability": 72
-    },
-    "total": 82,
-    "grade": "Moderate-High",
-    "gradeLabel": "中等偏上",
-    "oneLine": "净现金¥1,559亿+游戏毛利率70%，梦幻西游占75%毛利+新品断层",
-    "report": "网易-财务健康评估-2026-06-12.md",
-    "radar": "NetEase_health_radar.png",
-    "employees": "~25,400",
-    "revenue": "¥1,126亿（2025）"
-  },
-  {
     "id": "tencent",
     "name": "腾讯",
     "nameEn": "Tencent",
@@ -458,6 +412,29 @@
     "radar": "Tencent_health_radar.png",
     "employees": "11.5万",
     "revenue": "¥7,518亿（2025）"
+  },
+  {
+    "id": "kelunbiotech",
+    "name": "科伦博泰",
+    "nameEn": "Kelun-Biotech",
+    "ticker": "6990.HK",
+    "ind1": "生物医药",
+    "ind2": "ADC与创新药",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 66,
+      "debt": 95,
+      "operations": 71,
+      "sustainability": 90
+    },
+    "total": 76,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "中国ADC第一梯队，默沙东118亿美元背书，4款产品已上市",
+    "report": "科伦博泰-财务健康评估-2026-06-12.md",
+    "radar": "kelunbiotech_health_radar.png",
+    "employees": "2,045",
+    "revenue": "¥20.58亿（2025）"
   },
   {
     "id": "meituan",
@@ -805,6 +782,29 @@
     "revenue": "未披露（极早期）"
   },
   {
+    "id": "dewu",
+    "name": "得物",
+    "nameEn": "Dewu (Poizon)",
+    "ticker": "",
+    "ind1": "互联网平台",
+    "ind2": "电商",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 79,
+      "debt": 15,
+      "operations": 72,
+      "sustainability": 52
+    },
+    "total": 63,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "AI鉴别SAIL奖+95后渗透70%，财务黑箱+鉴定不合格率50%",
+    "report": "得物-财务健康评估-2026-06-12.md",
+    "radar": "Dewu_health_radar.png",
+    "employees": "~10,000",
+    "revenue": "未披露（估¥200-300亿）"
+  },
+  {
     "id": "minimax",
     "name": "MiniMax",
     "nameEn": "MiniMax",
@@ -920,29 +920,6 @@
     "revenue": "~¥5亿（2025）"
   },
   {
-    "id": "shizai",
-    "name": "实在智能",
-    "nameEn": "Shizai AI",
-    "ticker": "",
-    "ind1": "企业服务",
-    "ind2": "RPA与自动化",
-    "scores": {
-      "cashFlow": 44,
-      "profitability": 55,
-      "debt": 76,
-      "operations": 81,
-      "sustainability": 73
-    },
-    "total": 58,
-    "grade": "Moderate",
-    "gradeLabel": "中等",
-    "oneLine": "ISSUT+RPA+Agent信创第一，5,000+客户+40%增速，持续亏损是主要风险",
-    "report": "实在智能-财务健康评估-2026-06-12.md",
-    "radar": "ShizaiAI_health_radar.png",
-    "employees": "300+",
-    "revenue": "~¥2.5亿（2025）"
-  },
-  {
     "id": "marketingforce",
     "name": "迈富时",
     "nameEn": "Marketingforce",
@@ -987,6 +964,52 @@
     "radar": "4Paradigm_health_radar.png",
     "employees": "619",
     "revenue": "¥71.4亿（2025）"
+  },
+  {
+    "id": "shizai",
+    "name": "实在智能",
+    "nameEn": "Shizai AI",
+    "ticker": "",
+    "ind1": "企业服务",
+    "ind2": "RPA与自动化",
+    "scores": {
+      "cashFlow": 44,
+      "profitability": 55,
+      "debt": 76,
+      "operations": 81,
+      "sustainability": 73
+    },
+    "total": 58,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "ISSUT+RPA+Agent信创第一，5,000+客户+40%增速，持续亏损是主要风险",
+    "report": "实在智能-财务健康评估-2026-06-12.md",
+    "radar": "ShizaiAI_health_radar.png",
+    "employees": "300+",
+    "revenue": "~¥2.5亿（2025）"
+  },
+  {
+    "id": "netdragon",
+    "name": "网龙",
+    "nameEn": "NetDragon",
+    "ticker": "0777.HK",
+    "ind1": "互动娱乐",
+    "ind2": "游戏",
+    "scores": {
+      "cashFlow": 64,
+      "profitability": 64,
+      "debt": 55,
+      "operations": 15,
+      "sustainability": 55
+    },
+    "total": 57,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "200+AI员工先行者，魔域IP占87%运营20年+现金跌破借款线",
+    "report": "网龙-财务健康评估-2026-06-12.md",
+    "radar": "NetDragon_health_radar.png",
+    "employees": "~3,400",
+    "revenue": "¥44.75亿（2025）"
   },
   {
     "id": "sensetime",

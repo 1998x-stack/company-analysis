@@ -17,7 +17,7 @@ When asked to evaluate a company (`/company-health-eval`):
 3. **Generate radar chart** — use the score.py output JSON directly: `python3 .claude/skills/company-health-eval/scripts/radar_chart.py --data /tmp/score_output.json --output docs/examples/<company_en>_health_radar.png`. Embed into report at section 三.
 4. **Write report** — save to `docs/examples/<公司名>-财务健康评估-YYYY-MM-DD.md`. The dimension scores and total in the report must exactly match the engine output.
 5. **Archive to company/ tree** — create `company/<一级行业>/<二级行业>/<公司名>/`, symlink the `.md` report and `.png` radar chart into it. Relative symlink target: `../../../../docs/examples/<file>`. See `company/README.md` for existing classifications. New industries get new directories.
-6. **Update data files** — after the report is written: (a) append entry to `docs/companies.json` with short camelCase score keys, (b) update `company/index.md` ranking table, stats, and industry sections, (c) update `company/README.md` classification table sorted by score. See "Data File Consistency" section below for exact key mapping and verification.
+6. **Update data files** — after the report is written: (a) append entry to `docs/companies.json` with short camelCase score keys, (b) update `company/index.md` ranking table, stats, and industry sections, (c) update `company/README.md` classification table sorted by score, (d) update root `README.md` ranking table and dimension overview table. See "Data File Consistency" section below for exact key mapping and verification.
 
 ## Scoring Engine
 
@@ -79,18 +79,41 @@ for c in companies:
         assert int(ev) == c['scores'][KEY_MAP[ek]], f\"{c['name']} {ek}: JSON={c['scores'][KEY_MAP[ek]]} engine={int(ev)}\"
 
 # 3. Cross-check report markdowns ↔ engine
+report_map = {f\"docs/examples/{c['report']}\": c['id'] for c in companies}
+dim_patterns = [
+    (r'现金流质量|现金流', 'Cash Flow Quality'),
+    (r'盈利能力', 'Profitability'),
+    (r'债务偿债|偿债能力', 'Debt Solvency'),
+    (r'运营效率', 'Operational Efficiency'),
+    (r'可持续', 'Sustainability'),
+]
 for path, cid in report_map.items():
     with open(path) as f:
         content = f.read()
     with open(f'/tmp/score_outputs/{cid}.json') as f:
         e = json.load(f)
-    # Check dimension headers: ### N. 维度名（X/100）
     for cn_pat, ek in dim_patterns:
         m = re.search(rf'### \\d+\\. {cn_pat}（(\\d+)/100）', content)
-        assert m and int(m.group(1)) == int(e['scores'][ek])
-    # Check total row: | **综合得分** | **X/100** |
+        assert m and int(m.group(1)) == int(e['scores'][ek]), f\"{cid} {ek}: report={m.group(1) if m else 'MISSING'} engine={int(e['scores'][ek])}\"
     m = re.search(r'\\*\\*综合得分\\*\\*\\s*\\|\\s*\\*?\\*?(\\d+)/100', content)
-    assert m and int(m.group(1)) == round(e['total_score'])
+    assert m and int(m.group(1)) == round(e['total_score']), f\"{cid} total: report={m.group(1) if m else 'MISSING'} engine={round(e['total_score'])}\"
+
+# 4. Cross-check root README.md ↔ engine
+with open('README.md') as f:
+    readme = f.read()
+for c in companies:
+    with open(f'/tmp/score_outputs/{c[\"id\"]}.json') as f:
+        e = json.load(f)
+    # Check dimension overview table: | 公司 | 现金流 | 盈利 | 偿债 | 运营 | 可持续 | 综合 |
+    # Find row for this company in the dimension table
+    name_escaped = re.escape(c['name'].split('(')[0].strip().rstrip(' /'))
+    dim_row = re.search(rf'\\|\\s*{name_escaped}.*?\\|\\s*\\*\\*(\\d+)\\*\\*\\s*\\|', readme)
+    if dim_row:
+        assert int(dim_row.group(1)) == round(e['total_score']), f\"README dim table {c['name']}: total mismatch\"
+    # Check ranking table row
+    rank_row = re.search(rf'\\|\\s*\\d+\\s*\\|\\s*{name_escaped}.*?\\|\\s*(\\d+)\\s*\\|', readme)
+    if rank_row:
+        assert int(rank_row.group(1)) == round(e['total_score']), f\"README ranking {c['name']}: total mismatch\"
 
 print('All layers consistent.')
 "
@@ -102,11 +125,12 @@ print('All layers consistent.')
 |---|-------|-------|
 | 1 | `score.py` engine | Run on all 20+ input files, zero warnings |
 | 2 | `docs/companies.json` | Total + 5 dimension scores per company match engine |
-| 3 | 20 report markdowns | Dimension headers, score table, one-liner match engine |
-| 4 | 20 radar PNGs | Regenerated from engine output JSON |
-| 5 | `company/index.md` | Ranking table + industry section scores match JSON |
+| 3 | Report markdowns | Dimension headers, score table, one-liner match engine (all N reports) |
+| 4 | Radar PNGs | Regenerated from engine output JSON (all N reports) |
+| 5 | `company/index.md` | Ranking table, industry section scores, stats (average, grade counts) match JSON |
 | 6 | `company/README.md` | Classification table scores match JSON, sorted desc |
-| 7 | `company/` symlinks | 2 per company (report + radar), 40+ total |
+| 7 | `company/` symlinks | 2 per company (report + radar), 2N total |
+| 8 | Root `README.md` | Ranking table + dimension overview table scores match JSON |
 
 ### Common failure modes
 
@@ -114,7 +138,10 @@ print('All layers consistent.')
 - **int() truncation**: `int(78.9)` = 78 but `round(78.9)` = 79 — always use `round()` for display scores
 - **Stale radar PNGs**: scores changed but chart not regenerated — visual doesn't match numbers
 - **Report format variants**: some reports use `可持续发展` others `可持续发展能力` — regex patterns must handle both
+- **Stale root README.md**: root `README.md` has two score tables (ranking + dimension overview) — both must be updated when scores change, not just `companies.json`
+- **Stale index.md stats**: `company/index.md` "统计概览" section has computed values (average score, grade counts like "3家/5家/7家/4家/1家") — must recalculate after every add/change
 - **External modifications**: `index.md` and `README.md` may be edited by other tools; always read before writing
+- **Verification script requires score_inputs**: section 1 of the verification loop reads from `/tmp/score_inputs/` — ensure those mirror the current indicator levels used in each report; stale inputs silently mask drift
 
 ## Git Workflow
 

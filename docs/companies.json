@@ -506,6 +506,9 @@
     "revenue": "¥28.2亿（2025）"
   },
   {
+    "id": "4paradigm","name": "第四范式","nameEn": "4Paradigm","ticker": "06682.HK","ind1": "人工智能","ind2": "AI平台","scores": {"cashFlow": 44,"profitability": 72,"debt": 76,"operations": 54,"sustainability": 90},"total": 60,"grade": "Moderate","gradeLabel": "中等","oneLine": "人均创收中国AI第一¥1,153万，首次全年盈利，OCF连续4年为负","report": "第四范式-财务健康评估-2026-06-12.md","radar": "4Paradigm_health_radar.png","employees": "619","revenue": "¥71.4亿（2025）"
+  },
+  {
     "id": "sensetime",
     "name": "商汤科技",
     "nameEn": "SenseTime",

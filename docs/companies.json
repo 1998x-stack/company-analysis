@@ -1,5 +1,28 @@
 [
   {
+    "id": "dewu",
+    "name": "得物",
+    "nameEn": "Dewu (Poizon)",
+    "ticker": "",
+    "ind1": "互联网平台",
+    "ind2": "电商",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 79,
+      "debt": 15,
+      "operations": 72,
+      "sustainability": 52
+    },
+    "total": 63,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "AI鉴别SAIL奖+95后渗透70%，财务黑箱+鉴定不合格率50%",
+    "report": "得物-财务健康评估-2026-06-12.md",
+    "radar": "Dewu_health_radar.png",
+    "employees": "~10,000",
+    "revenue": "未披露（估¥200-300亿）"
+  },
+  {
     "id": "taptap",
     "name": "TapTap / 心动公司",
     "nameEn": "TapTap",

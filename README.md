@@ -4,32 +4,34 @@
 
 ## 已评估公司
 
-按综合得分降序排列。新增公司时，在下方追加一行即可——表格自动按得分排序仅供参考，实际顺序保持追加先后。
+按综合得分降序排列，数据源自 `docs/companies.json`（标准化评分引擎 v1.1）。
 
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
-| 1 | 叠纸游戏 (Papergames) | 游戏 · 女性向 | 79 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
-| 2 | TapTap / 心动公司 (2400.HK) | 游戏 · 平台社区 | 78 | 🟡 中等偏上 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
-| 3 | 商泰汽车 iAUTO | 汽车 · 车载软件 | 76 | 🟡 中等偏上 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
-| 4 | 字节跳动 ByteDance | AI · 社交媒体 | 72 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
-| 5 | 欧税通 (eVat Master) | 企业服务 · 财税SaaS | 69 | 🟠 中等 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
-| 6 | 美团 Meituan (3690.HK) | 本地生活 · AI Agent | 68 | 🟠 中等 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
-| 7 | 商汤科技 SenseTime (0020.HK) | AI · 计算机视觉 | 59 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
-| 8 | 迈富时 Marketingforce (02556.HK) | SaaS · MarTech | 58 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
-| 9 | 汇纳科技 (Winner Tech 300609) | AI · 商业大数据 | 51 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
-| 10 | 卓越睿新 Neoexcellent (02687.HK) | 教育 · 高校数字化 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
-| 11 | 上海开普勒机器人 (Kepler Robot) | 机器人 · 人形机器人 | 37 | ⚫ 高风险 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
-| 12 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
-| 13 | DeepSeek（深度求索） | AI · 大模型/AGI | 56 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
-| 14 | MiniMax（稀宇科技 0100.HK） | AI · 多模态大模型 | 50 | 🔴 中等偏下 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
-| 15 | 智谱AI（智谱华章 02513.HK） | AI · 大模型/Agent | 43 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
-| 16 | 阶跃星辰 StepFun | AI · Agent基础设施 | 47 | 🔴 中等偏下 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
+| 1 | TapTap / 心动公司 (2400.HK) | 互动娱乐 · 游戏平台 | 88 | 🟢 优秀 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
+| 2 | 欧税通 (eVat Master) | 企业服务 · 财税SaaS | 87 | 🟢 优秀 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
+| 3 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
+| 4 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
+| 5 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
+| 6 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
+| 7 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
+| 8 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
+| 9 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
+| 10 | MiniMax (0100.HK) | 人工智能 · 大模型 | 63 | 🟠 中等 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
+| 11 | 阶跃星辰 | 人工智能 · 大模型 | 61 | 🟠 中等 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
+| 12 | 迈富时 (02556.HK) | 企业服务 · 营销SaaS | 61 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
+| 13 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 55 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
+| 14 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
+| 15 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
+| 16 | 卓越睿新 (02687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
+| 17 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
+| 18 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
 
 ## 五维度评估框架
 
 | 维度 | 权重 | 核心指标 |
 |------|------|----------|
-| **现金流质量** | 45% | 经营现金流趋势、现金跑道、有息负债、净现比、应收周转 |
+| **现金流质量** | 45% | 经营现金流趋势、现金跑道、有息负债、净现比（4项，v1.1 应收周转已移至运营效率） |
 | **盈利能力** | 20% | 毛利率、净利率、营收增速（3年CAGR）、研发效率、人均产出 |
 | **偿债能力** | 15% | 资产负债率、有息负债率、流动比率、现金比率、股权质押 |
 | **运营效率** | 10% | 应收周转、客户集中度、员工人数趋势、管理层稳定性 |
@@ -49,46 +51,50 @@
 
 | 公司 | 现金流 (45%) | 盈利 (20%) | 偿债 (15%) | 运营 (10%) | 可持续 (10%) | 综合 |
 |------|:-----------:|:---------:|:---------:|:---------:|:----------:|:----:|
-| 叠纸游戏 | 84 | 72 | 92 | 60 | 72 | **79** |
-| TapTap | 82 | 78 | 92 | 72 | 76 | **78** |
-| 商泰 iAUTO | 75 | 70 | 95 | 72 | 65 | **76** |
-| 字节跳动 | 68 | 65 | 78 | 82 | 85 | **72** |
-| 欧税通 | 63 | 70 | 75 | 82 | 70 | **69** |
-| 美团 | 70 | 50 | 82 | 72 | 68 | **68** |
-| 商汤科技 | 60 | 48 | 82 | 45 | 55 | **59** |
-| 迈富时 | 35 | 55 | 62 | 58 | 72 | **58** |
-| 汇纳科技 | 52 | 45 | 68 | 35 | 50 | **51** |
-| 卓越睿新 | 35 | 72 | 60 | 40 | 65 | **50** |
-| 开普勒机器人 | 28 | 20 | 70 | 42 | 55 | **37** |
-| 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
-| DeepSeek | 45 | 38 | 78 | 90 | 78 | **56** |
-| MiniMax | 38 | 42 | 72 | 65 | 70 | **50** |
-| 智谱AI | 30 | 35 | 65 | 55 | 68 | **43** |
-| 阶跃星辰 | 40 | 30 | 70 | 60 | 65 | **47** |
+| TapTap | 90 | 91 | 95 | 72 | 76 | **88** |
+| 欧税通 | 90 | 86 | 95 | 90 | 61 | **87** |
+| 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
+| 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
+| 字节跳动 | 81 | 86 | 90 | 81 | 83 | **84** |
+| 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
+| 美团 | 81 | 61 | 83 | 62 | 83 | **76** |
+| 科大讯飞 | 72 | 57 | 54 | 62 | 76 | **66** |
+| DeepSeek | 52 | 59 | 95 | 81 | 69 | **65** |
+| MiniMax | 52 | 50 | 90 | 81 | 76 | **63** |
+| 阶跃星辰 | 52 | 50 | 90 | 63 | 76 | **61** |
+| 迈富时 | 52 | 56 | 69 | 71 | 83 | **61** |
+| 商汤科技 | 53 | 45 | 83 | 35 | 61 | **55** |
+| 智谱AI | 43 | 45 | 83 | 52 | 76 | **54** |
+| 汇纳科技 | 62 | 45 | 61 | 15 | 47 | **52** |
+| 卓越睿新 | 25 | 82 | 61 | 71 | 62 | **50** |
+| 开普勒机器人 | 33 | 31 | 76 | 52 | 61 | **44** |
+| 云从科技 | 25 | 29 | 61 | 35 | 46 | **34** |
 
 ## 雷达图
 
 每份报告均包含五边形雷达图，由 `scripts/radar_chart.py` 生成：
 
 ```bash
+# 1. 评分引擎输出（生成 radar 输入 JSON）
+python3 .claude/skills/company-health-eval/scripts/score.py --data /tmp/score_input.json --output /tmp/score_output.json
+
+# 2. 雷达图生成
 python3 .claude/skills/company-health-eval/scripts/radar_chart.py \
-  --data /tmp/radar_input.json \
+  --data /tmp/score_output.json \
   --output docs/examples/<公司英文名>_health_radar.png
 ```
 
-图表标签使用英文（避免中文字体渲染问题），文件名支持中文。需安装 `matplotlib`。
-
-JSON 输入格式：
+图表标签使用英文（避免中文字体渲染问题），文件名支持中文。需安装 `matplotlib`。评分引擎输出 JSON 可直接作为雷达图输入，格式：
 
 ```json
 {
-  "company": "Papergames",
+  "company": "TapTap",
   "scores": {
-    "Cash Flow Quality": 84,
-    "Profitability": 72,
-    "Debt Solvency": 92,
-    "Operational Efficiency": 60,
-    "Sustainability": 72
+    "Cash Flow Quality": 90,
+    "Profitability": 91,
+    "Debt Solvency": 95,
+    "Operational Efficiency": 72,
+    "Sustainability": 76
   },
   "weights": {
     "Cash Flow Quality": 0.45,
@@ -97,8 +103,9 @@ JSON 输入格式：
     "Operational Efficiency": 0.10,
     "Sustainability": 0.10
   },
-  "total_score": 79,
-  "grade": "Moderate-High"
+  "total_score": 87.8,
+  "grade": "Excellent",
+  "grade_label": "优秀"
 }
 ```
 
@@ -120,7 +127,7 @@ JSON 输入格式：
 本仓库由 Claude Code 通过 `company-health-eval` 技能驱动。每次评估遵循以下流程：
 
 1. **并行调研** — 5 个 Explore 子代理同时搜索公司基本面、财务数据、员工信息、竞品对标、政策风险。
-2. **五维评分** — 每维度按规则 0–100 打分，加权计算综合得分。
+2. **五维评分** — 使用标准化引擎 `scripts/score.py` 计算，指标等级映射固定分值，禁止主观调整。算法详见 [ALGORITHM.md](.claude/skills/company-health-eval/ALGORITHM.md)。
 3. **雷达图生成** — Python 脚本渲染五边形图，中心显示综合得分及等级。
 4. **报告撰写** — 结构化中文报告：公司画像 → 五维分析 → 同业对比 → 风险清单 → 求职建议。
 5. **提交推送** — 每份报告完成后立即 commit。

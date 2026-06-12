@@ -93,15 +93,16 @@ def _weighted(d: dict, weights: dict, level_maps: dict) -> float:
 # -- Grade ----------------------------------------------------------
 
 def get_grade(score: float) -> dict:
+    """Return English grade key + Chinese display label in one call."""
     if score >= 85:
-        return {"grade": "Excellent", "grade_label": "Excellent"}
+        return {"grade": "Excellent", "grade_label": "优秀"}
     if score >= 70:
-        return {"grade": "Moderate-High", "grade_label": "Moderate-High"}
+        return {"grade": "Moderate-High", "grade_label": "中等偏上"}
     if score >= 55:
-        return {"grade": "Moderate", "grade_label": "Moderate"}
+        return {"grade": "Moderate", "grade_label": "中等"}
     if score >= 40:
-        return {"grade": "Moderate-Low", "grade_label": "Moderate-Low"}
-    return {"grade": "High-Risk", "grade_label": "High-Risk"}
+        return {"grade": "Moderate-Low", "grade_label": "中等偏下"}
+    return {"grade": "High-Risk", "grade_label": "高风险"}
 
 
 # -- Main entry point -----------------------------------------------
@@ -176,7 +177,7 @@ def main():
         print(f"  {dim:30s}  {score:5.1f} × {weight:.0%} = {weighted:5.1f}")
     print(f"  {'─'*48}")
     print(f"  {'Total':30s}  {result['total_score']:5.1f} / 100")
-    print(f"  {'Grade':30s}  {result['grade']}")
+    print(f"  {'Grade':30s}  {result['grade_label']} ({result['grade']})")
     print(f"{'='*50}\n")
 
 

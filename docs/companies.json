@@ -483,6 +483,29 @@
     "revenue": "估算¥40-50亿（2025）"
   },
   {
+    "id": "unisound",
+    "name": "云知声",
+    "nameEn": "Unisound",
+    "ticker": "09678.HK",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 54,
+      "debt": 69,
+      "operations": 71,
+      "sustainability": 76
+    },
+    "total": 65,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "山海大模型收入暴增1076%至6亿，人均252万，应收89%+OCF连负",
+    "report": "云知声-财务健康评估-2026-06-12.md",
+    "radar": "Unisound_health_radar.png",
+    "employees": "~480",
+    "revenue": "¥12.11亿（2025）"
+  },
+  {
     "id": "modelbest",
     "name": "面壁智能",
     "nameEn": "ModelBest",

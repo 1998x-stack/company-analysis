@@ -529,6 +529,29 @@
     "revenue": "¥9.69亿（2025）"
   },
   {
+    "id": "baichuan",
+    "name": "百川智能",
+    "nameEn": "Baichuan AI",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 44,
+      "profitability": 22,
+      "debt": 76,
+      "operations": 35,
+      "sustainability": 76
+    },
+    "total": 47,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "医疗大模型世界第一（HealthBench三榜冠军），商业化未验证，4/5联创离职",
+    "report": "百川智能-财务健康评估-2026-06-12.md",
+    "radar": "BaichuanAI_health_radar.png",
+    "employees": "~200",
+    "revenue": "~¥1亿（2024，已放弃）"
+  },
+  {
     "id": "kepler",
     "name": "上海开普勒机器人",
     "nameEn": "Kepler Robot",

@@ -345,6 +345,29 @@
     "revenue": "未披露（2025H1同比翻倍）"
   },
   {
+    "id": "netdragon",
+    "name": "网龙",
+    "nameEn": "NetDragon",
+    "ticker": "0777.HK",
+    "ind1": "互动娱乐",
+    "ind2": "游戏",
+    "scores": {
+      "cashFlow": 64,
+      "profitability": 64,
+      "debt": 55,
+      "operations": 15,
+      "sustainability": 55
+    },
+    "total": 57,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "200+AI员工先行者，魔域IP占87%运营20年+现金跌破借款线",
+    "report": "网龙-财务健康评估-2026-06-12.md",
+    "radar": "NetDragon_health_radar.png",
+    "employees": "~3,400",
+    "revenue": "¥44.75亿（2025）"
+  },
+  {
     "id": "netease",
     "name": "网易",
     "nameEn": "NetEase",

@@ -345,6 +345,29 @@
     "revenue": "$2亿+ ARR（2026.4）"
   },
   {
+    "id": "mininglamp",
+    "name": "明略科技",
+    "nameEn": "MiningLamp",
+    "ticker": "02718.HK",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 63,
+      "profitability": 59,
+      "debt": 90,
+      "operations": 63,
+      "sustainability": 76
+    },
+    "total": 67,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "全球Agentic AI第一股首年盈利，IPO现金充裕但传统业务停滞+7月解禁",
+    "report": "明略科技-财务健康评估-2026-06-12.md",
+    "radar": "MiningLamp_health_radar.png",
+    "employees": "~1,400",
+    "revenue": "¥14.26亿（2025）"
+  },
+  {
     "id": "iflytek",
     "name": "科大讯飞",
     "nameEn": "iFLYTEK",

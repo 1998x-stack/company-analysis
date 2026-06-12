@@ -140,6 +140,8 @@ def calculate(input_data: dict) -> dict:
         "Sustainability": score_sustainability(_safe_dim(input_data, "sustainability")),
     }
 
+    dims = {k: max(v, 15.0) for k, v in dims.items()}
+
     total = sum(dims[name] * WEIGHTS[name] for name in dims)
     total = round(total, 1)
 

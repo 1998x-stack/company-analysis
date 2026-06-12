@@ -11,12 +11,16 @@
 | 1 | 叠纸游戏 (Papergames) | 游戏 · 女性向 | 79 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 2 | TapTap / 心动公司 (2400.HK) | 游戏 · 平台社区 | 78 | 🟡 中等偏上 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
 | 3 | 商泰汽车 iAUTO | 汽车 · 车载软件 | 76 | 🟡 中等偏上 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
-| 4 | 商汤科技 SenseTime (0020.HK) | AI · 计算机视觉 | 59 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
-| 5 | 迈富时 Marketingforce (02556.HK) | SaaS · MarTech | 58 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
-| 6 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
-| 7 | 卓越睿新 Neoexcellent (02687.HK) | 教育 · 高校数字化 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
-| 8 | 美团 Meituan (3690.HK) | 本地生活 · AI Agent | 68 | 🟠 中等 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
-| 9 | 字节跳动 ByteDance | AI · 社交媒体 | 72 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
+| 4 | 字节跳动 ByteDance | AI · 社交媒体 | 72 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
+| 5 | 欧税通 (eVat Master) | 企业服务 · 财税SaaS | 69 | 🟠 中等 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
+| 6 | 美团 Meituan (3690.HK) | 本地生活 · AI Agent | 68 | 🟠 中等 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
+| 7 | 商汤科技 SenseTime (0020.HK) | AI · 计算机视觉 | 59 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
+| 8 | 迈富时 Marketingforce (02556.HK) | SaaS · MarTech | 58 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
+| 9 | 汇纳科技 (Winner Tech 300609) | AI · 商业大数据 | 51 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
+| 10 | 卓越睿新 Neoexcellent (02687.HK) | 教育 · 高校数字化 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
+| 11 | 上海开普勒机器人 (Kepler Robot) | 机器人 · 人形机器人 | 37 | ⚫ 高风险 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
+| 12 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 13 | DeepSeek（深度求索） | AI · 大模型/AGI | 56 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -45,12 +49,16 @@
 | 叠纸游戏 | 84 | 72 | 92 | 60 | 72 | **79** |
 | TapTap | 82 | 78 | 92 | 72 | 76 | **78** |
 | 商泰 iAUTO | 75 | 70 | 95 | 72 | 65 | **76** |
+| 字节跳动 | 68 | 65 | 78 | 82 | 85 | **72** |
+| 欧税通 | 63 | 70 | 75 | 82 | 70 | **69** |
+| 美团 | 70 | 50 | 82 | 72 | 68 | **68** |
 | 商汤科技 | 60 | 48 | 82 | 45 | 55 | **59** |
 | 迈富时 | 35 | 55 | 62 | 58 | 72 | **58** |
-| 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
+| 汇纳科技 | 52 | 45 | 68 | 35 | 50 | **51** |
 | 卓越睿新 | 35 | 72 | 60 | 40 | 65 | **50** |
-| 美团 | 70 | 50 | 82 | 72 | 68 | **68** |
-| 字节跳动 | 68 | 65 | 78 | 82 | 85 | **72** |
+| 开普勒机器人 | 28 | 20 | 70 | 42 | 55 | **37** |
+| 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
+| DeepSeek | 45 | 38 | 78 | 90 | 78 | **56** |
 
 ## 雷达图
 

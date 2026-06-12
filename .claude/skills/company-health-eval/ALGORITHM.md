@@ -96,24 +96,25 @@ JSON 对象，包含 5 个维度，共 24 个指标（含 1 个加分项）：
 | 1 | 经营现金流净额 | `operating_cf` | 连续3年为正 | 时正时负 | 连续为负 |
 | 2 | 现金及等价物 | `cash_runway` | 覆盖12个月+运营 | 覆盖6-12个月 | 覆盖<6个月 |
 | 3 | 有息负债 | `debt_level` | 0或极低 | 可控 | 高杠杆 |
-| 4 | 应收周转天数 | `receivable_turnover` | <行业平均 | ≈行业平均 | >行业1.5倍 |
-| 5 | 净现比 | `cf_to_ni_ratio` | >1 | 0.5-1 | <0.5 |
+| 4 | 净现比 | `cf_to_ni_ratio` | >1 | 0.5-1 | <0.5 |
+
+> 应收周转天数（`receivable_turnover`）仅出现在运营效率维度。净现比已间接反映应收账款质量——利润无法转化为现金的首要原因就是回款恶化，无需在现金流维度重复计算。
 
 ### 3.2 计算公式
 
 ```
-score_cash_flow = mean(operating_cf, cash_runway, debt_level, receivable_turnover, cf_to_ni_ratio)
+score_cash_flow = mean(operating_cf, cash_runway, debt_level, cf_to_ni_ratio)
 ```
 
-5 个指标等权（各 20%），使用 `_average()` 辅助函数。缺失指标自动跳过，权重重新分配给剩余指标。
+4 个指标等权（各 25%）。
 
 ### 3.3 极端场景示例
 
 ```
-全部 health:          (90+90+90+90+90)/5 = 90.0
-全部 danger:          (15+15+15+15+15)/5 = 15.0
-3H+2W:                (90+90+90+55+55)/5 = 76.0
-2H+1W+2D:             (90+90+55+15+15)/5 = 53.0
+全部 health:          (90+90+90+90)/4 = 90.0
+全部 danger:          (15+15+15+15)/4 = 15.0
+2H+2W:                (90+90+55+55)/4 = 72.5
+2H+1W+1D:             (90+90+55+15)/4 = 62.5
 ```
 
 ---
@@ -216,9 +217,6 @@ score_operations = mean(receivable_turnover, customer_concentration, employee_tr
 
 4 个指标等权（各 25%）。
 
-### 6.3 注意事项
-
-`receivable_turnover` 同时出现在本维度和现金流维度中。这是有意为之——应收账款周转同时影响现金流质量（回款速度 → 现金充裕度）和运营效率（回款管理 → 运营能力），两个维度从不同角度评估，加权时会产生叠加效应（45% + 10% = 55% 的权重影响）。
 
 ---
 

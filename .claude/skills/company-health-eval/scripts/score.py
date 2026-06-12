@@ -29,9 +29,8 @@ LEVEL_RD = {"excellent": 95, "good": 70, "average": 50, "alert": 15}
 # -- Dimension scoring functions ------------------------------------
 
 def score_cash_flow(d: dict) -> float:
-    """5 indicators × 20% each. All use 3-tier mapping."""
-    indicators = ["operating_cf", "cash_runway", "debt_level",
-                  "receivable_turnover", "cf_to_ni_ratio"]
+    """4 indicators × 25% each. receivable_turnover lives in operations only."""
+    indicators = ["operating_cf", "cash_runway", "debt_level", "cf_to_ni_ratio"]
     return _average(d, indicators, LEVEL_3)
 
 

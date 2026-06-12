@@ -391,6 +391,29 @@
     "revenue": "估算¥40-50亿（2025）"
   },
   {
+    "id": "modelbest",
+    "name": "面壁智能",
+    "nameEn": "ModelBest",
+    "ticker": "",
+    "ind1": "人工智能",
+    "ind2": "大模型",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 39,
+      "debt": 90,
+      "operations": 73,
+      "sustainability": 76
+    },
+    "total": 65,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "端侧大模型独角兽，MiniCPM下载2400万+，开源变现未验证",
+    "report": "面壁智能-财务健康评估-2026-06-12.md",
+    "radar": "ModelBest_health_radar.png",
+    "employees": "~147",
+    "revenue": "未披露（极早期）"
+  },
+  {
     "id": "minimax",
     "name": "MiniMax",
     "nameEn": "MiniMax",

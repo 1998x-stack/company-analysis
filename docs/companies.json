@@ -230,6 +230,29 @@
     "revenue": "$1,860亿（2025）"
   },
   {
+    "id": "dualitybio",
+    "name": "映恩生物",
+    "nameEn": "Duality Biotherapeutics",
+    "ticker": "9606.HK",
+    "ind1": "生物医药",
+    "ind2": "ADC与创新药",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 65,
+      "debt": 90,
+      "operations": 71,
+      "sustainability": 90
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "ADC BD机器，现金充裕零负债，尚无商业化产品",
+    "report": "映恩生物-财务健康评估-2026-06-12.md",
+    "radar": "dualitybio_health_radar.png",
+    "employees": "220",
+    "revenue": "¥18.52亿（2025）"
+  },
+  {
     "id": "papergames",
     "name": "叠纸游戏",
     "nameEn": "Papergames",

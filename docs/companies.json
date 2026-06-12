@@ -23,6 +23,29 @@
     "revenue": "¥57.6亿（2025）"
   },
   {
+    "id": "kingsoftoffice",
+    "name": "金山办公",
+    "nameEn": "Kingsoft Office",
+    "ticker": "688111.SH",
+    "ind1": "企业服务",
+    "ind2": "办公软件",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 84,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 72
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "毛利率86%+零负债+中国唯一盈利上市办公软件，C端见顶+AI变现未验证",
+    "report": "金山办公-财务健康评估-2026-06-12.md",
+    "radar": "KingsoftOffice_health_radar.png",
+    "employees": "~6,048",
+    "revenue": "¥59.29亿（2025）"
+  },
+  {
     "id": "evatmaster",
     "name": "欧税通",
     "nameEn": "eVat Master",

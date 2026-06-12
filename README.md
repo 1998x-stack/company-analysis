@@ -14,6 +14,7 @@
 | 4 | 商汤科技 SenseTime (0020.HK) | AI · 计算机视觉 | 59 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
 | 5 | 迈富时 Marketingforce (02556.HK) | SaaS · MarTech | 58 | 🟠 中等 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
 | 6 | 云从科技 CloudWalk (688327.SH) | AI · 计算机视觉 | 30 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 7 | 卓越睿新 Neoexcellent (02687.HK) | 教育 · 高校数字化 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -45,6 +46,7 @@
 | 商汤科技 | 60 | 48 | 82 | 45 | 55 | **59** |
 | 迈富时 | 35 | 55 | 62 | 58 | 72 | **58** |
 | 云从科技 | 10 | 15 | 25 | 30 | 35 | **30** |
+| 卓越睿新 | 35 | 72 | 60 | 40 | 65 | **50** |
 
 ## 雷达图
 

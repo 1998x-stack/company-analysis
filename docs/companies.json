@@ -322,6 +322,29 @@
     "revenue": "¥2.5亿（2025，审计）"
   },
   {
+    "id": "haizhi",
+    "name": "海致科技",
+    "nameEn": "Haizhi",
+    "ticker": "02706.HK",
+    "ind1": "人工智能",
+    "ind2": "AI平台",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 63,
+      "debt": 90,
+      "operations": 71,
+      "sustainability": 76
+    },
+    "total": 70,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "GraphRAG知识图谱隐形冠军，CAGR 26%，应收恶化+IPO后暴跌67%",
+    "report": "海致科技-财务健康评估-2026-06-12.md",
+    "radar": "Haizhi_health_radar.png",
+    "employees": "721",
+    "revenue": "¥6.21亿（2025）"
+  },
+  {
     "id": "infinigence",
     "name": "无问芯穹",
     "nameEn": "Infinigence AI",

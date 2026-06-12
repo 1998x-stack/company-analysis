@@ -75,7 +75,7 @@
 
 - **务实优先**：以公司实际主营业务归类，而非注册行业。
 - **可扩展**：未来新增公司时，若现有二级行业不匹配，新增二级目录即可。
-- **评分标准化**：所有分数由 `scripts/score.py` 引擎统一计算，确保同指标同分数。
+- **评分标准化**：所有分数由 `scripts/score.py` 引擎统一计算，确保同指标同分数。算法详解见 [ALGORITHM.md](../.claude/skills/company-health-eval/ALGORITHM.md)。
 
 ## 文件组织
 

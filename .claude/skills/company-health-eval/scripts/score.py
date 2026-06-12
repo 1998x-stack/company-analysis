@@ -83,7 +83,12 @@ def _weighted(d: dict, weights: dict, level_maps: dict) -> float:
         if not isinstance(entry, str):
             continue
         level_map = level_maps.get(key, LEVEL_3)
-        total += level_map.get(entry, 0) * weight
+        if entry not in level_map:
+            valid = list(level_map.keys())
+            print(f"WARNING: '{entry}' is not a valid level for '{key}' (expected: {valid})",
+                  file=sys.stderr)
+            continue
+        total += level_map[entry] * weight
         used_weight += weight
     if used_weight == 0:
         return 0.0

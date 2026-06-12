@@ -460,6 +460,29 @@
     "revenue": "~¥5亿（2025）"
   },
   {
+    "id": "shizai",
+    "name": "实在智能",
+    "nameEn": "Shizai AI",
+    "ticker": "",
+    "ind1": "企业服务",
+    "ind2": "RPA与自动化",
+    "scores": {
+      "cashFlow": 44,
+      "profitability": 55,
+      "debt": 76,
+      "operations": 81,
+      "sustainability": 73
+    },
+    "total": 58,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "ISSUT+RPA+Agent信创第一，5,000+客户+40%增速，持续亏损是主要风险",
+    "report": "实在智能-财务健康评估-2026-06-12.md",
+    "radar": "ShizaiAI_health_radar.png",
+    "employees": "300+",
+    "revenue": "~¥2.5亿（2025）"
+  },
+  {
     "id": "marketingforce",
     "name": "迈富时",
     "nameEn": "Marketingforce",

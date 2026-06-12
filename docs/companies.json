@@ -138,6 +138,29 @@
     "revenue": "~¥70亿（2024）"
   },
   {
+    "id": "tencent",
+    "name": "腾讯",
+    "nameEn": "Tencent",
+    "ticker": "0700.HK",
+    "ind1": "互联网平台",
+    "ind2": "社交媒体与内容",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 91,
+      "debt": 61,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 77,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "盈利效率行业第一，AI下半场姚顺雨领衔破局",
+    "report": "腾讯-财务健康评估-2026-06-12.md",
+    "radar": "Tencent_health_radar.png",
+    "employees": "11.5万",
+    "revenue": "¥7,518亿（2025）"
+  },
+  {
     "id": "meituan",
     "name": "美团",
     "nameEn": "Meituan",

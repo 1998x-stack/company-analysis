@@ -1,0 +1,43 @@
+{
+  "company": "Company English Name",
+
+  "cash_flow": {
+    "operating_cf":          "healthy | warning | danger",
+    "cash_runway":           "healthy | warning | danger",
+    "debt_level":            "healthy | warning | danger",
+    "receivable_turnover":   "healthy | warning | danger",
+    "cf_to_ni_ratio":        "healthy | warning | danger"
+  },
+
+  "profitability": {
+    "gross_margin":          "excellent | good | average | alert",
+    "net_margin":            "excellent | good | average | alert",
+    "revenue_growth":        "excellent | good | average | alert",
+    "rd_ratio":              "excellent | good | average | alert",
+    "revenue_per_head":      "excellent | good | average | alert"
+  },
+
+  "debt": {
+    "debt_to_assets":        "healthy | warning | danger",
+    "interest_bearing_debt": "healthy | warning | danger",
+    "current_ratio":         "healthy | warning | danger",
+    "cash_ratio":            "healthy | warning | danger",
+    "pledge_ratio":          "healthy | warning | danger",
+    "bonus_zero_debt_tax_a": true
+  },
+
+  "operations": {
+    "receivable_turnover":   "healthy | warning | danger",
+    "customer_concentration": "healthy | warning | danger",
+    "employee_trend":        "healthy | warning | danger",
+    "executive_stability":   "healthy | warning | danger"
+  },
+
+  "sustainability": {
+    "market_growth":         "healthy | warning | danger",
+    "tech_moat":             "healthy | warning | danger",
+    "diversification":       "healthy | warning | danger",
+    "capital_support":       "healthy | warning | danger",
+    "policy_risk":           "healthy | warning | danger"
+  }
+}

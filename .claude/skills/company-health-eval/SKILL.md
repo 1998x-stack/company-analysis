@@ -68,7 +68,7 @@ description: |
 | 应收周转天数 | <行业平均 | 行业平均 | >行业1.5倍 |
 | 净现比（经营现金流/净利润） | >1 | 0.5-1 | <0.5 |
 
-**评分逻辑**：按上表逐项打分，加权得到本维度0-100分。
+**评分逻辑**：每个指标按三级（健康=90 / 关注=55 / 危险=15）打分，5个指标等权平均得到本维度0-100分。使用 `scripts/score.py` 自动计算，消除主观偏差。
 
 ### 维度二：盈利能力（权重 20%）
 
@@ -111,7 +111,91 @@ description: |
 | 融资/资本支持 | 上市或强VC背书 | 有融资记录 | 无融资+无盈利 |
 | 政策/监管风险 | 政策鼓励 | 中性 | 强监管或政策打压 |
 
-## 阶段三：综合评分
+## 阶段三：综合评分（使用标准化评分引擎）
+
+### 评分流程（强制使用 scripts/score.py）
+
+研究完成后，**必须使用标准化评分脚本**计算各维度得分，不再使用主观的"基础分-扣分项"方式。
+
+**Step 1** — 根据研究数据，对每个指标判定等级，写入JSON：
+
+```bash
+cat > /tmp/score_input.json << 'JSONEOF'
+{
+  "company": "<Company English Name>",
+  "cash_flow": {
+    "operating_cf": "healthy",
+    "cash_runway": "healthy",
+    "debt_level": "warning",
+    "receivable_turnover": "danger",
+    "cf_to_ni_ratio": "healthy"
+  },
+  "profitability": {
+    "gross_margin": "good",
+    "net_margin": "average",
+    "revenue_growth": "excellent",
+    "rd_ratio": "excellent",
+    "revenue_per_head": "good"
+  },
+  "debt": {
+    "debt_to_assets": "healthy",
+    "interest_bearing_debt": "healthy",
+    "current_ratio": "warning",
+    "cash_ratio": "healthy",
+    "pledge_ratio": "healthy",
+    "bonus_zero_debt_tax_a": false
+  },
+  "operations": {
+    "receivable_turnover": "danger",
+    "customer_concentration": "healthy",
+    "employee_trend": "healthy",
+    "executive_stability": "warning"
+  },
+  "sustainability": {
+    "market_growth": "healthy",
+    "tech_moat": "healthy",
+    "diversification": "healthy",
+    "capital_support": "warning",
+    "policy_risk": "warning"
+  }
+}
+JSONEOF
+```
+
+等级映射（详见阶段二各维度指标表）：
+- 三维度指标：`healthy`（健康）/ `warning`（关注）/ `danger`（危险）
+- 四维度指标（仅盈利能力）：`excellent`（优秀）/ `good`（良好）/ `average`（一般）/ `alert`（预警）
+
+**Step 2** — 运行脚本获得精确分数：
+
+```bash
+python3 .claude/skills/company-health-eval/scripts/score.py --data /tmp/score_input.json
+```
+
+输出示例：
+```
+==================================================
+  iFLYTEK
+==================================================
+  Cash Flow Quality                61.0 × 45% =  27.4
+  Profitability                    57.0 × 20% =  11.4
+  Debt Solvency                    54.0 × 15% =   8.1
+  Operational Efficiency           62.5 × 10% =   6.2
+  Sustainability                   76.0 × 10% =   7.6
+  ────────────────────────────────────────────────
+  Total                            60.8 / 100
+  Grade                           Moderate
+==================================================
+```
+
+**Step 3** — 将计算出的分数填入报告的综合评分表，并在报告中保留每个维度的分析叙述（解释为什么每个指标被判定为对应等级）。
+
+**评分引擎规则**（硬编码在 `scripts/score.py` 中，保证每次评估一致）：
+- 三维度指标分值：healthy=90, warning=55, danger=15
+- 四维度指标分值：excellent=95, good=75, average=50, alert=15
+- 研发费用率特殊分值：excellent=95, good=70, average=50, alert=15
+- 维度内各指标等权平均；缺失指标自动跳过，权重重新分配
+- 偿债能力加分项：零有息负债 + 税务信用A级 → +5分（上限100）
 
 ### 加权计算
 

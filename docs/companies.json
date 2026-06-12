@@ -1012,6 +1012,29 @@
     "revenue": "¥28.2亿（2025）"
   },
   {
+    "id": "dreame",
+    "name": "追觅科技",
+    "nameEn": "Dreame Technology",
+    "ticker": "",
+    "ind1": "机器人",
+    "ind2": "服务机器人",
+    "scores": {
+      "cashFlow": 54,
+      "profitability": 68,
+      "debt": 55,
+      "operations": 63,
+      "sustainability": 75
+    },
+    "total": 60,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "扫地机全球第三增速最快，创始人全网禁言+财务存疑+劳工合规红线",
+    "report": "追觅科技-财务健康评估-2026-06-12.md",
+    "radar": "Dreame_health_radar.png",
+    "employees": "~5,000（社保<700）",
+    "revenue": "¥119亿（2024招股书）"
+  },
+  {
     "id": "4paradigm",
     "name": "第四范式",
     "nameEn": "4Paradigm",

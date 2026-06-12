@@ -10,7 +10,8 @@
 |---|------|------|----------|------|------|--------|
 | 1 | TapTap / 心动公司 (2400.HK) | 互动娱乐 · 游戏平台 | 88 | 🟢 优秀 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
 | 2 | 欧税通 (eVat Master) | 企业服务 · 财税SaaS | 87 | 🟢 优秀 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
-| 3 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
+| 3 | 小红书 | 互联网平台 · 社交媒体与内容 | 87 | 🟢 优秀 | [报告](docs/examples/小红书-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Xiaohongshu_health_radar.png) |
+| 4 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
 | 4 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
 | 5 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
 | 6 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
@@ -56,6 +57,7 @@
 |------|:-----------:|:---------:|:---------:|:---------:|:----------:|:----:|
 | TapTap | 90 | 91 | 95 | 72 | 76 | **88** |
 | 欧税通 | 90 | 86 | 95 | 90 | 61 | **87** |
+| 小红书 | 90 | 90 | 76 | 90 | 83 | **87** |
 | 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
 | 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
 | 字节跳动 | 81 | 86 | 90 | 81 | 83 | **84** |

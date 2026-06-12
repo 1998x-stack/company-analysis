@@ -46,6 +46,29 @@
     "revenue": "未披露"
   },
   {
+    "id": "xiaohongshu",
+    "name": "小红书",
+    "nameEn": "Xiaohongshu",
+    "ticker": "",
+    "ind1": "互联网平台",
+    "ind2": "社交媒体与内容",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 90,
+      "debt": 76,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 87,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "人均产出行业第一，零负债高利润，监管合规是核心隐忧",
+    "report": "小红书-财务健康评估-2026-06-12.md",
+    "radar": "Xiaohongshu_health_radar.png",
+    "employees": "~4,000",
+    "revenue": "~¥420亿（2025，估）"
+  },
+  {
     "id": "iauto",
     "name": "商泰汽车 iAUTO",
     "nameEn": "iAUTO",

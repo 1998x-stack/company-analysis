@@ -69,6 +69,29 @@
     "revenue": "~¥420亿（2025，估）"
   },
   {
+    "id": "hithink",
+    "name": "同花顺",
+    "nameEn": "Hithink",
+    "ticker": "300033.SZ",
+    "ind1": "金融科技",
+    "ind2": "金融数据服务",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 90,
+      "debt": 90,
+      "operations": 55,
+      "sustainability": 52
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "零负债+¥140亿现金+53%净利率+金融AI第一，业绩高度绑定A股牛市",
+    "report": "同花顺-财务健康评估-2026-06-12.md",
+    "radar": "Hithink_health_radar.png",
+    "employees": "5,087",
+    "revenue": "¥60.29亿（2025）"
+  },
+  {
     "id": "antgroup",
     "name": "蚂蚁集团",
     "nameEn": "Ant Group",

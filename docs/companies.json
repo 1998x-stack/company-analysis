@@ -782,6 +782,29 @@
     "revenue": "未披露（极早期）"
   },
   {
+    "id": "yuanfudao",
+    "name": "猿辅导",
+    "nameEn": "Yuanfudao",
+    "ticker": "",
+    "ind1": "教育科技",
+    "ind2": "在线教育",
+    "scores": {
+      "cashFlow": 55,
+      "profitability": 73,
+      "debt": 15,
+      "operations": 52,
+      "sustainability": 52
+    },
+    "total": 52,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "猿力大模型5级认证+教育AI Agent先行者，双减毁灭原生模式",
+    "report": "猿辅导-财务健康评估-2026-06-12.md",
+    "radar": "Yuanfudao_health_radar.png",
+    "employees": "~20,000-50,000（口径差异大）",
+    "revenue": "约¥220亿（2024，估）"
+  },
+  {
     "id": "dewu",
     "name": "得物",
     "nameEn": "Dewu (Poizon)",

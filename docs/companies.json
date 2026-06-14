@@ -276,6 +276,29 @@
     "revenue": "¥130.42亿（2025）"
   },
   {
+    "id": "shanghai9th",
+    "name": "上海第九人民医院",
+    "nameEn": "Shanghai Ninth People's Hospital",
+    "ticker": "",
+    "ind1": "生物医药",
+    "ind2": "医疗机构",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 70,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 81,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "整形#1+口腔#3=中国医学界金字招牌，DRG降薪+编制门槛+过劳是硬伤",
+    "report": "上海九院-雇主评估-2026-06-14.md",
+    "radar": "shanghai_ninth_hospital_health_radar.png",
+    "employees": "5,160",
+    "revenue": "¥94.23亿（2024决算）"
+  },
+  {
     "id": "siengine",
     "name": "芯擎科技",
     "nameEn": "SiEngine Technology",

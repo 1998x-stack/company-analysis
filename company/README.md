@@ -66,6 +66,8 @@
 │       └── 卓越睿新 (Neoexcellent / 智慧树)
 
 ├── 生物医药
+│   ├── 医疗机构
+│   │   └── 上海第九人民医院 (Shanghai Ninth)
 │   ├── 综合制药
 │   │   ├── 恒瑞医药 (Hengrui Medicine / 600276.SH)
 │   │   ├── 君实生物 (Junshi Biosciences / 688180.SH)

@@ -22,6 +22,7 @@
 | 38 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
 | 38 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
 | 38 | 映恩生物 (9606.HK) | 生物医药 · ADC与创新药 | 83 | 🟡 中等偏上 | [报告](docs/examples/映恩生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/dualitybio_health_radar.png) |
+| 38 | 上海九院 | 生物医药 · 医疗机构 | 81 | 🟡 中等偏上 | [报告](docs/examples/上海九院-雇主评估-2026-06-14.md) | [PNG](docs/examples/shanghai_ninth_hospital_health_radar.png) |
 | 38 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 38 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
 | 38 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
@@ -90,6 +91,7 @@
 | 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
 | 字节跳动 | 81 | 86 | 90 | 81 | 83 | **84** |
 | 映恩生物 | 90 | 65 | 90 | 71 | 90 | **83** |
+| 上海九院 | 81 | 70 | 90 | 90 | 83 | **81** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
 | 腾讯 | 73 | 91 | 61 | 90 | 83 | **77** |
 | 美团 | 81 | 61 | 83 | 62 | 83 | **76** |

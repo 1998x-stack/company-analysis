@@ -299,6 +299,29 @@
     "revenue": "¥94.23亿（2024决算）"
   },
   {
+    "id": "ruijin",
+    "name": "瑞金医院",
+    "nameEn": "Ruijin Hospital",
+    "ticker": "",
+    "ind1": "生物医药",
+    "ind2": "医疗机构",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 66,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 81,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "上海综合实力最强三甲+A++++等级+年薪制试验田，多院区26亿扩张+编制缩减是硬伤",
+    "report": "瑞金医院-雇主评估-2026-06-15.md",
+    "radar": "ruijin_hospital_health_radar.png",
+    "employees": "6,505",
+    "revenue": "¥143.9亿（2024决算）"
+  },
+  {
     "id": "siengine",
     "name": "芯擎科技",
     "nameEn": "SiEngine Technology",

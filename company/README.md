@@ -67,6 +67,7 @@
 
 ├── 生物医药
 │   ├── 医疗机构
+│   │   ├── 瑞金医院 (Ruijin Hospital)
 │   │   └── 上海第九人民医院 (Shanghai Ninth)
 │   ├── 综合制药
 │   │   ├── 恒瑞医药 (Hengrui Medicine / 600276.SH)

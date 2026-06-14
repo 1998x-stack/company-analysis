@@ -230,6 +230,29 @@
     "revenue": "~¥350-400亿（2025，估）"
   },
   {
+    "id": "innoventbio",
+    "name": "信达生物",
+    "nameEn": "Innovent Biologics",
+    "ticker": "01801.HK",
+    "ind1": "生物医药",
+    "ind2": "综合制药",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 91,
+      "debt": 69,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "18款产品+243亿现金+首次全面盈利+BD超220亿美元，集采风险是核心隐忧",
+    "report": "信达生物-财务健康评估-2026-06-12.md",
+    "radar": "信达生物_health_radar.png",
+    "employees": "7,502",
+    "revenue": "¥130.42亿（2025）"
+  },
+  {
     "id": "keymed",
     "name": "康诺亚",
     "nameEn": "Keymed Biosciences",
@@ -711,6 +734,29 @@
     "radar": "Haizhi_health_radar.png",
     "employees": "721",
     "revenue": "¥6.21亿（2025）"
+  },
+  {
+    "id": "qifu",
+    "name": "奇富科技",
+    "nameEn": "Qifu Technology",
+    "ticker": "NASDAQ: QFIN / 03660.HK",
+    "ind1": "金融科技",
+    "ind2": "信贷科技",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 73,
+      "debt": 62,
+      "operations": 72,
+      "sustainability": 61
+    },
+    "total": 70,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "信贷科技规模第一，净现比1.85+ROE 22.7%，24%利率红线致利润腰斩",
+    "report": "奇富科技-财务健康评估-2026-06-14.md",
+    "radar": "qifu_technology_health_radar.png",
+    "employees": "3,527",
+    "revenue": "¥192.05亿（2025）"
   },
   {
     "id": "infinigence",
@@ -1217,6 +1263,29 @@
     "radar": "ZhipuAI_health_radar.png",
     "employees": "883",
     "revenue": "¥7.24亿（2025）"
+  },
+  {
+    "id": "junshibio",
+    "name": "君实生物",
+    "nameEn": "Junshi Biosciences",
+    "ticker": "688180.SH / 01877.HK",
+    "ind1": "生物医药",
+    "ind2": "综合制药",
+    "scores": {
+      "cashFlow": 45,
+      "profitability": 55,
+      "debt": 69,
+      "operations": 54,
+      "sustainability": 61
+    },
+    "total": 53,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "首个FDA获批国产PD-1，持续亏损+债务急升+单产品依赖三重压力",
+    "report": "君实生物-财务健康评估-2026-06-12.md",
+    "radar": "君实生物_health_radar.png",
+    "employees": "2,903",
+    "revenue": "¥24.98亿（2025）"
   },
   {
     "id": "winnertech",

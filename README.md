@@ -17,6 +17,7 @@
 | 38 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 优秀 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
 | 38 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
 | 38 | 米哈游 (miHoYo) | 互动娱乐 · 游戏研发 | 85 | 🟢 优秀 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
+| 38 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 优秀 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
 | 38 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
 | 38 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 中等偏上 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
 | 38 | 映恩生物 (9606.HK) | 生物医药 · ADC与创新药 | 83 | 🟡 中等偏上 | [报告](docs/examples/映恩生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/dualitybio_health_radar.png) |
@@ -29,6 +30,7 @@
 | 38 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 中等偏上 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
 | 38 | 阿里巴巴 (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 中等偏上 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
 | 38 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 中等 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
+| 38 | 奇富科技 (QFIN/03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 中等 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
 | 38 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
 | 38 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
 | 38 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 中等 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
@@ -42,6 +44,7 @@
 | 38 | 追觅科技 | 机器人 · 服务机器人 | 60 | 🟠 中等 | [报告](docs/examples/追觅科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dreame_health_radar.png) |
 | 38 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 55 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
 | 38 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
+| 38 | 君实生物 (688180.SH/01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 中等偏下 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
 | 38 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
 | 38 | 卓越睿新 (02687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
 | 38 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 中等偏下 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
@@ -80,6 +83,7 @@
 | 蚂蚁集团 | 90 | 91 | 76 | 90 | 76 | **87** |
 | 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
 | 米哈游 | 90 | 84 | 90 | 72 | 72 | **85** |
+| 信达生物 | 90 | 91 | 69 | 81 | 83 | **85** |
 | 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
 | 字节跳动 | 81 | 86 | 90 | 81 | 83 | **84** |
 | 映恩生物 | 90 | 65 | 90 | 71 | 90 | **83** |
@@ -94,6 +98,7 @@
 | 声网 | 81 | 72 | 90 | 35 | 55 | **74** |
 | 阿里巴巴 | 72 | 69 | 61 | 72 | 83 | **71** |
 | 零一万物 | 73 | 63 | 76 | 55 | 76 | **70** |
+| 奇富科技 | 72 | 73 | 62 | 72 | 61 | **70** |
 | 月之暗面 | 62 | 61 | 90 | 72 | 69 | **68** |
 | 明略科技 | 63 | 59 | 90 | 63 | 76 | **67** |
 | 联影智能 | 63 | 50 | 90 | 73 | 83 | **67** |
@@ -107,6 +112,7 @@
 | 追觅科技 | 54 | 68 | 55 | 63 | 75 | **60** |
 | 商汤科技 | 53 | 45 | 83 | 35 | 61 | **55** |
 | 智谱AI | 43 | 45 | 83 | 52 | 76 | **54** |
+| 君实生物 | 45 | 55 | 69 | 54 | 61 | **53** |
 | 汇纳科技 | 62 | 45 | 61 | 15 | 47 | **52** |
 | 卓越睿新 | 25 | 82 | 61 | 71 | 62 | **50** |
 | 百川智能 | 44 | 22 | 76 | 35 | 76 | **47** |

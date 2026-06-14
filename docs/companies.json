@@ -138,6 +138,29 @@
     "revenue": "~¥2,100亿（2024，估）"
   },
   {
+    "id": "hypergryph",
+    "name": "鹰角网络",
+    "nameEn": "Hypergryph",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 77,
+      "debt": 95,
+      "operations": 90,
+      "sustainability": 69
+    },
+    "total": 86,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "零负债+终末地两周12亿流水，单IP依赖与行业收缩是隐忧",
+    "report": "鹰角网络-财务健康评估-2026-06-14.md",
+    "radar": "hypergryph_health_radar.png",
+    "employees": "~1,700",
+    "revenue": "~¥30亿（2024）+终末地¥12.5亿两周（2026.1）"
+  },
+  {
     "id": "kingsoftoffice",
     "name": "金山办公",
     "nameEn": "Kingsoft Office",

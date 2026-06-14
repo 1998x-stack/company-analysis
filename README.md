@@ -30,6 +30,7 @@
 | 38 | 百度 (9888.HK/BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 中等偏上 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
 | 38 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 中等偏上 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
 | 38 | 阿里巴巴 (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 中等偏上 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
+| 38 | 芯擎科技 (SiEngine) | 汽车科技 · 自动驾驶芯片 | 71 | 🟡 中等偏上 | [报告](docs/examples/芯擎科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/siengine_health_radar.png) |
 | 38 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 中等 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
 | 38 | 奇富科技 (QFIN/03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 中等 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
 | 38 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
@@ -99,6 +100,7 @@
 | 百度 | 81 | 69 | 61 | 73 | 76 | **74** |
 | 声网 | 81 | 72 | 90 | 35 | 55 | **74** |
 | 阿里巴巴 | 72 | 69 | 61 | 72 | 83 | **71** |
+| 芯擎科技 | 72 | 45 | 95 | 81 | 69 | **71** |
 | 零一万物 | 73 | 63 | 76 | 55 | 76 | **70** |
 | 奇富科技 | 72 | 73 | 62 | 72 | 61 | **70** |
 | 月之暗面 | 62 | 61 | 90 | 72 | 69 | **68** |

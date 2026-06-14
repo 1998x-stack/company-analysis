@@ -276,6 +276,29 @@
     "revenue": "¥130.42亿（2025）"
   },
   {
+    "id": "siengine",
+    "name": "芯擎科技",
+    "nameEn": "SiEngine Technology",
+    "ticker": "",
+    "ind1": "汽车科技",
+    "ind2": "自动驾驶芯片",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 45,
+      "debt": 95,
+      "operations": 81,
+      "sustainability": 69
+    },
+    "total": 71,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "国产座舱芯片第一，龙鹰二号5nm追平高通，烧钱亏损+台积电依赖是隐忧",
+    "report": "芯擎科技-财务健康评估-2026-06-14.md",
+    "radar": "siengine_health_radar.png",
+    "employees": "~400",
+    "revenue": "~¥3-5亿（2024）+有望超¥10亿（2025）"
+  },
+  {
     "id": "keymed",
     "name": "康诺亚",
     "nameEn": "Keymed Biosciences",

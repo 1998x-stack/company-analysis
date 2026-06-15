@@ -1493,5 +1493,28 @@
     "radar": "CloudWalk_health_radar.png",
     "employees": "~800",
     "revenue": "¥3.7亿（2025）"
+  },
+  {
+    "id": "feidu",
+    "name": "北京飞渡科技",
+    "nameEn": "Freedo Technology",
+    "ticker": "",
+    "ind1": "数字孪生",
+    "ind2": "平台与引擎",
+    "scores": {
+      "cashFlow": 78,
+      "profitability": 73,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 80,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "数字孪生平台市占率第一，零负债+腾讯背书，盈利能力未验证",
+    "report": "北京飞渡科技-财务健康评估-2026-06-15.md",
+    "radar": "北京飞渡科技_health_radar.png",
+    "employees": "~300",
+    "revenue": "📊~1.58亿（2024，IDC推算）"
   }
 ]

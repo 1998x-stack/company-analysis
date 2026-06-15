@@ -1562,5 +1562,28 @@
     "radar": "Tesla_health_radar.png",
     "employees": "~13.5万",
     "revenue": "$948亿（FY2025，经审计）"
+  },
+  {
+    "id": "spacex",
+    "name": "SpaceX",
+    "nameEn": "SpaceX",
+    "ticker": "SPCX (NASDAQ)",
+    "ind1": "航天",
+    "ind2": "商业航天",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 59,
+      "debt": 62,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 75,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "Starlink年入$114亿养全公司，xAI亏损$64亿拖累整体，$2.1万亿市值全球航天霸主",
+    "report": "SpaceX-财务健康评估-2026-06-15.md",
+    "radar": "SpaceX_health_radar.png",
+    "employees": "~22,000",
+    "revenue": "$187亿（FY2025，经审计S-1）"
   }
 ]

@@ -33,6 +33,7 @@
 | 38 | 新开普 (300248.SZ) | 教育科技 · 智慧教育 | 76 | 🟡 中等偏上 | [报告](docs/examples/新开普-财务健康评估-2026-06-12.md) | [PNG](docs/examples/newcapec_health_radar.png) |
 | 38 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 中等偏上 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
 | 38 | 百度 (9888.HK/BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 中等偏上 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
+| 38 | SpaceX (SPCX) | 航天 · 商业航天 | 75 | 🟡 中等偏上 | [报告](docs/examples/SpaceX-财务健康评估-2026-06-15.md) | [PNG](docs/examples/SpaceX_health_radar.png) |
 | 38 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 中等偏上 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
 | 38 | 阿里巴巴 (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 中等偏上 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
 | 38 | 芯擎科技 (SiEngine) | 汽车科技 · 自动驾驶芯片 | 71 | 🟡 中等偏上 | [报告](docs/examples/芯擎科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/siengine_health_radar.png) |
@@ -107,6 +108,7 @@
 | 康诺亚 | 54 | 65 | 76 | 90 | 90 | **67** |
 | 新开普 | 81 | 66 | 83 | 53 | 83 | **76** |
 | 华为 | 73 | 87 | 62 | 90 | 76 | **76** |
+| SpaceX (SPCX) | 81 | 59 | 62 | 90 | 83 | **75** |
 | 百度 | 81 | 69 | 61 | 73 | 76 | **74** |
 | 声网 | 81 | 72 | 90 | 35 | 55 | **74** |
 | 阿里巴巴 | 72 | 69 | 61 | 72 | 83 | **71** |

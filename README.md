@@ -25,6 +25,7 @@
 | 38 | 上海九院 | 生物医药 · 医疗机构 | 81 | 🟡 中等偏上 | [报告](docs/examples/上海九院-雇主评估-2026-06-14.md) | [PNG](docs/examples/shanghai_ninth_hospital_health_radar.png) |
 | 38 | 瑞金医院 | 生物医药 · 医疗机构 | 81 | 🟡 中等偏上 | [报告](docs/examples/瑞金医院-雇主评估-2026-06-15.md) | [PNG](docs/examples/ruijin_hospital_health_radar.png) |
 | 38 | 北京飞渡科技 | 数字孪生 · 平台与引擎 | 80 | 🟡 中等偏上 | [报告](docs/examples/北京飞渡科技-财务健康评估-2026-06-15.md) | [PNG](docs/examples/北京飞渡科技_health_radar.png) |
+| 38 | 国家能源集团 | 能源 · 综合能源 | 78 | 🟡 中等偏上 | [报告](docs/examples/国家能源集团-财务健康评估-2026-06-15.md) | [PNG](docs/examples/国家能源集团_health_radar.png) |
 | 38 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 38 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
 | 38 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
@@ -95,6 +96,7 @@
 | 映恩生物 | 90 | 65 | 90 | 71 | 90 | **83** |
 | 上海九院 | 81 | 70 | 90 | 90 | 83 | **81** |
 | 北京飞渡科技 | 78 | 73 | 90 | 81 | 83 | **80** |
+| 国家能源集团 | 81 | 65 | 76 | 90 | 76 | **78** |
 | 瑞金医院 | 81 | 66 | 90 | 90 | 83 | **81** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
 | 腾讯 | 73 | 91 | 61 | 90 | 83 | **77** |

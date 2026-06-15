@@ -1516,5 +1516,28 @@
     "radar": "北京飞渡科技_health_radar.png",
     "employees": "~300",
     "revenue": "📊~1.58亿（2024，IDC推算）"
+  },
+  {
+    "id": "chnenergy",
+    "name": "国家能源集团",
+    "nameEn": "CHN Energy",
+    "ticker": "601088.SH / 01088.HK（中国神华）",
+    "ind1": "能源",
+    "ind2": "综合能源",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 65,
+      "debt": 76,
+      "operations": 90,
+      "sustainability": 76
+    },
+    "total": 78,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球最大煤电+风电央企，年经营现金流1,771亿，碳中和长期压力是核心隐忧",
+    "report": "国家能源集团-财务健康评估-2026-06-15.md",
+    "radar": "国家能源集团_health_radar.png",
+    "employees": "~35万",
+    "revenue": "¥7,748亿（2024，经审计）"
   }
 ]

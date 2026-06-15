@@ -1539,5 +1539,28 @@
     "radar": "国家能源集团_health_radar.png",
     "employees": "~35万",
     "revenue": "¥7,748亿（2024，经审计）"
+  },
+  {
+    "id": "tesla",
+    "name": "特斯拉 (Tesla)",
+    "nameEn": "Tesla Inc.",
+    "ticker": "TSLA (NASDAQ)",
+    "ind1": "汽车科技",
+    "ind2": "新能源整车",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 63,
+      "debt": 76,
+      "operations": 73,
+      "sustainability": 83
+    },
+    "total": 80,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "$441亿现金+净现比3.89x，交付两连降+Musk政治化+FSD未兑现是核心隐忧",
+    "report": "Tesla-财务健康评估-2026-06-15.md",
+    "radar": "Tesla_health_radar.png",
+    "employees": "~13.5万",
+    "revenue": "$948亿（FY2025，经审计）"
   }
 ]

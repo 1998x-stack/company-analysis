@@ -1585,5 +1585,28 @@
     "radar": "SpaceX_health_radar.png",
     "employees": "~22,000",
     "revenue": "$187亿（FY2025，经审计S-1）"
+  },
+  {
+    "id": "byd",
+    "name": "比亚迪 (BYD)",
+    "nameEn": "BYD Company Limited",
+    "ticker": "002594.SZ / 1211.HK",
+    "ind1": "汽车科技",
+    "ind2": "新能源整车",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 73,
+      "debt": 69,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 82,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球NEV销冠460万辆+海外利润贡献60%，OCF腰斩+FCF转负+有息负债翻四倍是核心隐忧",
+    "report": "BYD-财务健康评估-2026-06-16.md",
+    "radar": "BYD_health_radar.png",
+    "employees": "~87万",
+    "revenue": "¥8,040亿（FY2025，经审计）"
   }
 ]

@@ -1357,6 +1357,29 @@
     "revenue": "¥50亿（2025）"
   },
   {
+    "id": "neuralink",
+    "name": "Neuralink",
+    "nameEn": "Neuralink",
+    "ticker": "",
+    "ind1": "生物医药",
+    "ind2": "医疗器械",
+    "scores": {
+      "cashFlow": 53,
+      "profitability": 15,
+      "debt": 95,
+      "operations": 71,
+      "sustainability": 69
+    },
+    "total": 55,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "全球融资最多BCI公司，零负债+百亿估值+Musk背书，零收入+年烧$3-5亿+7/8联创出走",
+    "report": "Neuralink-财务健康评估-2026-06-16.md",
+    "radar": "Neuralink_health_radar.png",
+    "employees": "~300-500",
+    "revenue": "$0（临床阶段）"
+  },
+  {
     "id": "zhipuai",
     "name": "智谱AI",
     "nameEn": "Zhipu AI",

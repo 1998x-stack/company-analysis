@@ -29,6 +29,7 @@
 | 38 | 国家能源集团 | 能源 · 综合能源 | 78 | 🟡 中等偏上 | [报告](docs/examples/国家能源集团-财务健康评估-2026-06-15.md) | [PNG](docs/examples/国家能源集团_health_radar.png) |
 | 38 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 38 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
+| 38 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 中等偏上 | [报告](docs/examples/Sea Limited(Shopee)-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
 | 38 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 中等偏上 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
 | 38 | 新开普 (300248.SZ) | 教育科技 · 智慧教育 | 76 | 🟡 中等偏上 | [报告](docs/examples/新开普-财务健康评估-2026-06-12.md) | [PNG](docs/examples/newcapec_health_radar.png) |
 | 38 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 中等偏上 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
@@ -103,6 +104,7 @@
 | 瑞金医院 | 81 | 66 | 90 | 90 | 83 | **81** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
 | 腾讯 | 73 | 91 | 61 | 90 | 83 | **77** |
+| Sea Limited (Shopee) | 81 | 69 | 69 | 90 | 76 | **77** |
 | 美团 | 81 | 61 | 83 | 62 | 83 | **76** |
 | 科伦博泰 | 73 | 66 | 95 | 71 | 90 | **76** |
 | 康诺亚 | 54 | 65 | 76 | 90 | 90 | **67** |

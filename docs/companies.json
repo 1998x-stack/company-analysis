@@ -621,6 +621,29 @@
     "revenue": "¥7,518亿（2025）"
   },
   {
+    "id": "sealimited",
+    "name": "Sea Limited (Shopee)",
+    "nameEn": "Sea Limited (Shopee)",
+    "ticker": "NYSE: SE",
+    "ind1": "互联网平台",
+    "ind2": "电商",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 69,
+      "debt": 69,
+      "operations": 90,
+      "sustainability": 76
+    },
+    "total": 77,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "东南亚电商霸主+净现金$45亿+OCF $32.8亿，TikTok Shop以2倍增速蚕食份额",
+    "report": "Sea Limited(Shopee)-财务健康评估-2026-06-16.md",
+    "radar": "Sea_Limited_Shopee_health_radar.png",
+    "employees": "102,700",
+    "revenue": "$168.2亿（FY2024）"
+  },
+  {
     "id": "kelunbiotech",
     "name": "科伦博泰",
     "nameEn": "Kelun-Biotech",

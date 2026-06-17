@@ -299,6 +299,29 @@
     "revenue": "¥130.42亿（2025）"
   },
   {
+    "id": "nebius",
+    "name": "Nebius",
+    "nameEn": "Nebius Group",
+    "ticker": "NASDAQ: NBIS",
+    "ind1": "人工智能",
+    "ind2": "AI基础设施",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 79,
+      "debt": 90,
+      "operations": 71,
+      "sustainability": 83
+    },
+    "total": 85,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "Yandex凤凰涅槃的欧洲GPU云新贵，$9.3B现金+OCF $2.3B+$460亿积压，客户集中+内部人抛售是隐忧",
+    "report": "Nebius-财务健康评估-2026-06-17.md",
+    "radar": "Nebius_health_radar.png",
+    "employees": "1,500",
+    "revenue": "$5.3亿（FY2025）→ Q1 2026 $3.99亿"
+  },
+  {
     "id": "shanghai9th",
     "name": "上海第九人民医院",
     "nameEn": "Shanghai Ninth People's Hospital",

@@ -18,6 +18,7 @@
 | 38 | 鹰角网络 (Hypergryph) | 互动娱乐 · 游戏研发 | 86 | 🟢 优秀 | [报告](docs/examples/鹰角网络-财务健康评估-2026-06-14.md) | [PNG](docs/examples/hypergryph_health_radar.png) |
 | 38 | Caper (Instacart) (CART) | 科技硬件 · 智能零售 | 86 | 🟢 优秀 | [报告](docs/examples/Caper-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Caper_health_radar.png) |
 | 38 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
+| 38 | Nebius (NBIS) | 人工智能 · AI基础设施 | 85 | 🟢 优秀 | [报告](docs/examples/Nebius-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Nebius_health_radar.png) |
 | 38 | 米哈游 (miHoYo) | 互动娱乐 · 游戏研发 | 85 | 🟢 优秀 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
 | 38 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 优秀 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
 | 38 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
@@ -96,6 +97,7 @@
 | 鹰角网络 | 90 | 77 | 95 | 90 | 69 | **86** |
 | Caper (Instacart) | 90 | 87 | 90 | 64 | 83 | **86** |
 | 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
+| Nebius | 90 | 79 | 90 | 71 | 83 | **85** |
 | 米哈游 | 90 | 84 | 90 | 72 | 72 | **85** |
 | 信达生物 | 90 | 91 | 69 | 81 | 83 | **85** |
 | 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |

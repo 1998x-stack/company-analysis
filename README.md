@@ -16,6 +16,7 @@
 | 38 | 小红书 | 互联网平台 · 社交媒体与内容 | 87 | 🟢 优秀 | [报告](docs/examples/小红书-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Xiaohongshu_health_radar.png) |
 | 38 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 优秀 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
 | 38 | 鹰角网络 (Hypergryph) | 互动娱乐 · 游戏研发 | 86 | 🟢 优秀 | [报告](docs/examples/鹰角网络-财务健康评估-2026-06-14.md) | [PNG](docs/examples/hypergryph_health_radar.png) |
+| 38 | Caper (Instacart) (CART) | 科技硬件 · 智能零售 | 86 | 🟢 优秀 | [报告](docs/examples/Caper-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Caper_health_radar.png) |
 | 38 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 优秀 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
 | 38 | 米哈游 (miHoYo) | 互动娱乐 · 游戏研发 | 85 | 🟢 优秀 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
 | 38 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 优秀 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
@@ -92,6 +93,7 @@
 | 小红书 | 90 | 90 | 76 | 90 | 83 | **87** |
 | 蚂蚁集团 | 90 | 91 | 76 | 90 | 76 | **87** |
 | 鹰角网络 | 90 | 77 | 95 | 90 | 69 | **86** |
+| Caper (Instacart) | 90 | 87 | 90 | 64 | 83 | **86** |
 | 商泰 iAUTO | 90 | 87 | 95 | 62 | 69 | **85** |
 | 米哈游 | 90 | 84 | 90 | 72 | 72 | **85** |
 | 信达生物 | 90 | 91 | 69 | 81 | 83 | **85** |

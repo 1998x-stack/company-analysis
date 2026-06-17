@@ -161,6 +161,29 @@
     "revenue": "~¥30亿（2024）+终末地¥12.5亿两周（2026.1）"
   },
   {
+    "id": "caper",
+    "name": "Caper (Instacart)",
+    "nameEn": "Caper (Instacart)",
+    "ticker": "NASDAQ: CART",
+    "ind1": "科技硬件",
+    "ind2": "智能零售",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 87,
+      "debt": 90,
+      "operations": 64,
+      "sustainability": 83
+    },
+    "total": 86,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "零负债$8.8B现金+OCF 2.17x覆盖净利润，客户集中+高管批量流失是隐忧",
+    "report": "Caper-财务健康评估-2026-06-17.md",
+    "radar": "Caper_health_radar.png",
+    "employees": "~3,300 (Instacart)",
+    "revenue": "$37.42亿（Instacart FY2025）"
+  },
+  {
     "id": "kingsoftoffice",
     "name": "金山办公",
     "nameEn": "Kingsoft Office",

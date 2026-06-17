@@ -368,6 +368,29 @@
     "revenue": "¥94.23亿（2024决算）"
   },
   {
+    "id": "epam",
+    "name": "EPAM Systems",
+    "nameEn": "EPAM Systems",
+    "ticker": "NYSE: EPAM",
+    "ind1": "企业服务",
+    "ind2": "IT服务与软件工程",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 64,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 76
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "IT服务工程标杆，$1.3B现金零负债+OCF 1.73x，毛利率持续下行+东欧地缘暴露",
+    "report": "EPAM-财务健康评估-2026-06-17.md",
+    "radar": "EPAM_health_radar.png",
+    "employees": "62,850",
+    "revenue": "$54.6亿（FY2025）"
+  },
+  {
     "id": "ruijin",
     "name": "瑞金医院",
     "nameEn": "Ruijin Hospital",

@@ -1403,6 +1403,29 @@
     "revenue": "$0（临床阶段）"
   },
   {
+    "id": "leaderdrive",
+    "name": "领骏科技 (LeaderDrive)",
+    "nameEn": "Leadgentech",
+    "ticker": "",
+    "ind1": "科技硬件",
+    "ind2": "智能驾驶",
+    "scores": {
+      "cashFlow": 54,
+      "profitability": 29,
+      "debt": 90,
+      "operations": 44,
+      "sustainability": 69
+    },
+    "total": 55,
+    "grade": "Moderate-Low",
+    "gradeLabel": "中等偏下",
+    "oneLine": "百度系L4微型方案商，4年无大额融资+团队从百人萎缩至个位数+官网关停",
+    "report": "LeaderDrive-财务健康评估-2026-06-17.md",
+    "radar": "LeaderDrive_health_radar.png",
+    "employees": "2-3（社保）",
+    "revenue": "📊~¥0.3-0.5亿（2022E，此后黑箱）"
+  },
+  {
     "id": "zhipuai",
     "name": "智谱AI",
     "nameEn": "Zhipu AI",

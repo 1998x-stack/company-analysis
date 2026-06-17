@@ -54,6 +54,7 @@
 | 38 | 追觅科技 | 机器人 · 服务机器人 | 60 | 🟠 中等 | [报告](docs/examples/追觅科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dreame_health_radar.png) |
 | 38 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 55 | 🟠 中等 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/SenseTime_health_radar.png) |
 | 38 | Neuralink | 生物医药 · 医疗器械 | 55 | 🔴 中等偏下 | [报告](docs/examples/Neuralink-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Neuralink_health_radar.png) |
+| 38 | 领骏科技 (LeaderDrive) | 科技硬件 · 智能驾驶 | 55 | 🔴 中等偏下 | [报告](docs/examples/LeaderDrive-财务健康评估-2026-06-17.md) | [PNG](docs/examples/LeaderDrive_health_radar.png) |
 | 38 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
 | 38 | 君实生物 (688180.SH/01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 中等偏下 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
 | 38 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
@@ -133,6 +134,7 @@
 | 追觅科技 | 54 | 68 | 55 | 63 | 75 | **60** |
 | 商汤科技 | 53 | 45 | 83 | 35 | 61 | **55** |
 | Neuralink | 53 | 15 | 95 | 71 | 69 | **55** |
+| 领骏科技 | 54 | 29 | 90 | 44 | 69 | **55** |
 | 智谱AI | 43 | 45 | 83 | 52 | 76 | **54** |
 | 君实生物 | 45 | 55 | 69 | 54 | 61 | **53** |
 | 汇纳科技 | 62 | 45 | 61 | 15 | 47 | **52** |

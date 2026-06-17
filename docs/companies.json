@@ -322,6 +322,29 @@
     "revenue": "$5.3亿（FY2025）→ Q1 2026 $3.99亿"
   },
   {
+    "id": "transsion",
+    "name": "传音控股",
+    "nameEn": "Transsion Holdings",
+    "ticker": "688036.SH",
+    "ind1": "科技硬件",
+    "ind2": "手机与智能终端",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 60,
+      "debt": 69,
+      "operations": 90,
+      "sustainability": 69
+    },
+    "total": 75,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "非洲手机之王利润腰斩后强势修复，Q1 +43%，汇率裸奔+专利围剿+存储涨价三重暴击",
+    "report": "Transsion-财务健康评估-2026-06-17.md",
+    "radar": "Transsion_health_radar.png",
+    "employees": "24,025",
+    "revenue": "¥655.91亿（FY2025）→ Q1 2026 ¥162亿"
+  },
+  {
     "id": "shanghai9th",
     "name": "上海第九人民医院",
     "nameEn": "Shanghai Ninth People's Hospital",

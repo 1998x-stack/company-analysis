@@ -29,6 +29,7 @@
 | 38 | 特斯拉 (Tesla) | 汽车科技 · 新能源整车 | 80 | 🟡 中等偏上 | [报告](docs/examples/Tesla-财务健康评估-2026-06-15.md) | [PNG](docs/examples/Tesla_health_radar.png) |
 | 38 | 北京飞渡科技 | 数字孪生 · 平台与引擎 | 80 | 🟡 中等偏上 | [报告](docs/examples/北京飞渡科技-财务健康评估-2026-06-15.md) | [PNG](docs/examples/北京飞渡科技_health_radar.png) |
 | 38 | 国家能源集团 | 能源 · 综合能源 | 78 | 🟡 中等偏上 | [报告](docs/examples/国家能源集团-财务健康评估-2026-06-15.md) | [PNG](docs/examples/国家能源集团_health_radar.png) |
+| 38 | 传音控股 (688036.SH) | 科技硬件 · 手机与智能终端 | 75 | 🟡 中等偏上 | [报告](docs/examples/Transsion-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Transsion_health_radar.png) |
 | 38 | 叠纸游戏 (Papergames) | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 38 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 中等偏上 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
 | 38 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 中等偏上 | [报告](docs/examples/Sea Limited(Shopee)-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
@@ -107,6 +108,7 @@
 | 北京飞渡科技 | 78 | 73 | 90 | 81 | 83 | **80** |
 | 特斯拉 (Tesla) | 90 | 63 | 76 | 73 | 83 | **80** |
 | 国家能源集团 | 81 | 65 | 76 | 90 | 76 | **78** |
+| 传音控股 | 81 | 60 | 69 | 90 | 69 | **75** |
 | 瑞金医院 | 81 | 66 | 90 | 90 | 83 | **81** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
 | 腾讯 | 73 | 91 | 61 | 90 | 83 | **77** |

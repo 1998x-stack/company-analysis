@@ -69,6 +69,29 @@
     "revenue": "¥57.6亿（2025）"
   },
   {
+    "id": "dena",
+    "name": "DeNA",
+    "nameEn": "DeNA Co., Ltd.",
+    "ticker": "2432.T",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 64,
+      "debt": 90,
+      "operations": 73,
+      "sustainability": 76
+    },
+    "total": 82,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "Pokemon TCG Pocket首年$13亿+净现金¥546亿，爆款后遗症MAU腰斩+CEO一年两换+医疗减值",
+    "report": "DeNA-财务健康评估-2026-06-18.md",
+    "radar": "DeNA_health_radar.png",
+    "employees": "2,572",
+    "revenue": "¥1,477亿（FY2025）"
+  },
+  {
     "id": "evatmaster",
     "name": "欧税通",
     "nameEn": "eVat Master",

@@ -920,6 +920,29 @@
     "revenue": "$1.41亿（FY2025）"
   },
   {
+    "id": "toyota",
+    "name": "丰田汽车",
+    "nameEn": "Toyota Motor Corporation",
+    "ticker": "7203.T / TM (NYSE)",
+    "ind1": "汽车科技",
+    "ind2": "新能源整车",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 70,
+      "debt": 67,
+      "operations": 73,
+      "sustainability": 76
+    },
+    "total": 72,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球最大车企混动之王，利润两连降+美国关税+中国失速三重逆风",
+    "report": "丰田汽车-财务健康评估-2026-06-18.md",
+    "radar": "toyota_health_radar.png",
+    "employees": "~39.1万",
+    "revenue": "¥50.68万亿（FY2026）"
+  },
+  {
     "id": "alibaba",
     "name": "阿里巴巴 (阿里云)",
     "nameEn": "Alibaba Cloud",
@@ -1479,20 +1502,20 @@
     "ind1": "人工智能",
     "ind2": "计算机视觉",
     "scores": {
-      "cashFlow": 53,
-      "profitability": 45,
-      "debt": 83,
-      "operations": 35,
+      "cashFlow": 78,
+      "profitability": 54,
+      "debt": 90,
+      "operations": 63,
       "sustainability": 61
     },
-    "total": 55,
-    "grade": "Moderate",
-    "gradeLabel": "中等",
-    "oneLine": "AI视觉领军者，七年亏损563亿",
-    "report": "商汤科技-财务健康评估-2026-06-12.md",
-    "radar": "SenseTime_health_radar.png",
+    "total": 72,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "生成式AI转型兑现+亏损收窄59%+EBITDA转正，美国制裁+持续稀释+人才流失是隐忧",
+    "report": "商汤科技-财务健康评估-2026-06-19.md",
+    "radar": "sensetime_health_radar.png",
     "employees": "2,472",
-    "revenue": "¥50亿（2025）"
+    "revenue": "¥50.15亿（FY2025，+32.9%）"
   },
   {
     "id": "neuralink",
@@ -1815,5 +1838,166 @@
     "radar": "BYD_health_radar.png",
     "employees": "~87万",
     "revenue": "¥8,040亿（FY2025，经审计）"
+  },
+  {
+    "id": "wallstreetcn",
+    "name": "华尔街见闻",
+    "nameEn": "Wallstreetcn",
+    "ticker": "",
+    "ind1": "金融科技",
+    "ind2": "财经媒体",
+    "scores": {
+      "cashFlow": 67,
+      "profitability": 54,
+      "debt": 90,
+      "operations": 65,
+      "sustainability": 46
+    },
+    "total": 65,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "偿债极强但创始人入刑+十年无融资+AI替代三重打击",
+    "report": "华尔街见闻-财务健康评估-2026-06-19.md",
+    "radar": "wallstreetcn_health_radar.png",
+    "employees": "~130",
+    "revenue": "📊 ~¥0.5-1亿（估）"
+  },
+  {
+    "id": "linkedcare",
+    "name": "领健",
+    "nameEn": "LinkedCare",
+    "ticker": "",
+    "ind1": "企业服务",
+    "ind2": "医疗SaaS",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 68,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 76
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "口腔SaaS绝对龙头+已盈利独角兽，集采冲击下游+数据合规是隐忧",
+    "report": "领健-财务健康评估-2026-06-19.md",
+    "radar": "linkedcare_health_radar.png",
+    "employees": "~500-800",
+    "revenue": "📊 ~¥3-6亿（2024估）"
+  },
+  {
+    "id": "happyelements",
+    "name": "乐元素",
+    "nameEn": "Happy Elements",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "休闲游戏",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 69,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 69
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "三消国民IP+零负债+游戏圈最佳WLB，单一产品依赖+9年财务黑箱是隐忧",
+    "report": "乐元素-财务健康评估-2026-06-19.md",
+    "radar": "happyelements_health_radar.png",
+    "employees": "~1,600",
+    "revenue": "📊 ~¥15-30亿（2024估，2017招股书¥22.64亿）"
+  },
+  {
+    "id": "sharpa",
+    "name": "Sharpa",
+    "nameEn": "Sharpa Pte. Ltd.",
+    "ticker": "",
+    "ind1": "机器人",
+    "ind2": "灵巧手与具身智能",
+    "scores": {
+      "cashFlow": 65,
+      "profitability": 40,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 68
+    },
+    "total": 66,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "零收入独角兽，禾赛三剑客+英伟达GR00T背书，地缘政治+估值泡沫是核心隐忧",
+    "report": "Sharpa-财务健康评估-2026-06-19.md",
+    "radar": "sharpa_health_radar.png",
+    "employees": "100+",
+    "revenue": "~$0（pre-revenue，2025.10刚开始量产）"
+  },
+  {
+    "id": "yokagames",
+    "name": "游卡",
+    "nameEn": "YOKA Games",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "桌游与卡牌",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 74,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 54
+    },
+    "total": 83,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "16年国民IP现金牛+零负债+965标杆，单一IP依赖+口碑死亡螺旋是隐忧",
+    "report": "游卡-财务健康评估-2026-06-19.md",
+    "radar": "yokagames_health_radar.png",
+    "employees": "~1,500-2,000",
+    "revenue": "📊 ~¥21-27亿（2024估，月流水¥3亿）"
+  },
+  {
+    "id": "blacklake",
+    "name": "黑湖科技",
+    "nameEn": "Black Lake",
+    "ticker": "",
+    "ind1": "企业服务",
+    "ind2": "工业SaaS",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 78,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 87,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "SaaS MES绝对龙头+已盈利+增速>60%+国家级基金背书，中小企业PMI承压是唯一隐忧",
+    "report": "黑湖科技-财务健康评估-2026-06-19.md",
+    "radar": "blacklake_health_radar.png",
+    "employees": "~1,000",
+    "revenue": "📊 ¥3-8亿（估，增速>60%）"
+  },
+  {
+    "id": "saicvw",
+    "name": "上汽大众",
+    "nameEn": "SAIC Volkswagen",
+    "ticker": "600104.SH（上汽集团）",
+    "ind1": "汽车科技",
+    "ind2": "合资整车",
+    "scores": {
+      "cashFlow": 67,
+      "profitability": 52,
+      "debt": 55,
+      "operations": 63,
+      "sustainability": 54
+    },
+    "total": 60,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "百万销量底盘尚在，销量三连降+产能利用率58%+NEV仅14%是结构性危机",
+    "report": "上汽大众-财务健康评估-2026-06-19.md",
+    "radar": "saicvw_health_radar.png",
+    "employees": "~3-4万",
+    "revenue": "¥1,357亿（2024，-3.2%）"
   }
 ]

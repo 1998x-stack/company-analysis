@@ -69,6 +69,29 @@
     "revenue": "¥57.6亿（2025）"
   },
   {
+    "id": "delta",
+    "name": "台达电子",
+    "nameEn": "Delta Electronics",
+    "ticker": "2308.TW",
+    "ind1": "科技硬件",
+    "ind2": "电源管理与热管理",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 83,
+      "debt": 83,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 86,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "全球电源#1+零有息负债+AI数据中心需求爆发，中国大陆产能外迁是唯一隐忧",
+    "report": "台达电子-财务健康评估-2026-06-22.md",
+    "radar": "Delta_health_radar.png",
+    "employees": "~80,000+",
+    "revenue": "NT$5,549亿（FY2025）"
+  },
+  {
     "id": "dena",
     "name": "DeNA",
     "nameEn": "DeNA Co., Ltd.",

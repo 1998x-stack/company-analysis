@@ -506,6 +506,29 @@
     "revenue": "¥7.16亿（2025）"
   },
   {
+    "id": "fliggy",
+    "name": "飞猪 (Fliggy)",
+    "nameEn": "Fliggy",
+    "ticker": "（阿里巴巴集团全资子公司）",
+    "ind1": "互联网平台",
+    "ind2": "在线旅游",
+    "scores": {
+      "cashFlow": 63,
+      "profitability": 57,
+      "debt": 90,
+      "operations": 63,
+      "sustainability": 68
+    },
+    "total": 66,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "出境自由行赛道王者（44.3%份额），阿里生态庇护下盈利能力成谜+2026年监管风暴密集升级",
+    "report": "飞猪-财务健康评估-2026-06-20.md",
+    "radar": "Fliggy_health_radar.png",
+    "employees": "~2,000-4,000",
+    "revenue": "📊 未独立披露（GMV增速国庆+48%/双11+30%）"
+  },
+  {
     "id": "horizonrobotics",
     "name": "地平线",
     "nameEn": "Horizon Robotics",

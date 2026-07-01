@@ -529,6 +529,29 @@
     "revenue": "📊 未独立披露（GMV增速国庆+48%/双11+30%）"
   },
   {
+    "id": "imilab",
+    "name": "创米数联 (IMILAB)",
+    "nameEn": "IMILAB",
+    "ticker": "",
+    "ind1": "科技硬件",
+    "ind2": "智能家居与IoT",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 61,
+      "debt": 90,
+      "operations": 25,
+      "sustainability": 39
+    },
+    "total": 65,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "小米生态链摄像头ODM，零负债现金充裕，毛利率仅行业一半+创始人内斗公开化",
+    "report": "创米数联-财务健康评估-2026-07-01.md",
+    "radar": "IMILAB_health_radar.png",
+    "employees": "~339",
+    "revenue": "📊 ~15.33亿（2021招股书，2022年后无公开数据）"
+  },
+  {
     "id": "horizonrobotics",
     "name": "地平线",
     "nameEn": "Horizon Robotics",

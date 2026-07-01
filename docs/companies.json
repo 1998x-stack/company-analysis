@@ -2022,5 +2022,28 @@
     "radar": "saicvw_health_radar.png",
     "employees": "~3-4万",
     "revenue": "¥1,357亿（2024，-3.2%）"
+  },
+  {
+    "id": "hefeinl",
+    "name": "合肥国家实验室",
+    "nameEn": "Hefei National Laboratory",
+    "ticker": "",
+    "ind1": "科研机构",
+    "ind2": "国家实验室",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 83,
+      "debt": 95,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 88,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "量子科技国家战略核心，Nature Index全球第一，中科大附属学校教育福利，国际交流受限是核心隐忧",
+    "report": "合肥国家实验室-财务健康评估-2026-07-01.md",
+    "radar": "Hefei_National_Lab_health_radar.png",
+    "employees": "~1,800",
+    "revenue": "📊 ~¥22.59亿/年（2024合肥市拨付，三级财政保障）"
   }
 ]

@@ -2045,5 +2045,28 @@
     "radar": "Hefei_National_Lab_health_radar.png",
     "employees": "~1,800",
     "revenue": "📊 ~¥22.59亿/年（2024合肥市拨付，三级财政保障）"
+  },
+  {
+    "id": "microsoft",
+    "name": "微软",
+    "nameEn": "Microsoft",
+    "ticker": "NASDAQ: MSFT",
+    "ind1": "科技巨头",
+    "ind2": "软件与云服务",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 87,
+      "debt": 69,
+      "operations": 72,
+      "sustainability": 83
+    },
+    "total": 84,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球最大软件公司，$94B现金+36%净利率+AI $37B ARR全球领先，资本开支回报期和反垄断是核心隐忧",
+    "report": "微软-财务健康评估-2026-07-01.md",
+    "radar": "microsoft_health_radar.png",
+    "employees": "228,000",
+    "revenue": "$2,817亿（FY2025）"
   }
 ]

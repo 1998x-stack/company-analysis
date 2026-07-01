@@ -483,6 +483,29 @@
     "revenue": "~¥3-5亿（2024）+有望超¥10亿（2025）"
   },
   {
+    "id": "goertek",
+    "name": "歌尔股份 (Goertek)",
+    "nameEn": "Goertek",
+    "ticker": "002241.SZ",
+    "ind1": "科技硬件",
+    "ind2": "消费电子与EMS",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 64,
+      "debt": 54,
+      "operations": 63,
+      "sustainability": 76
+    },
+    "total": 71,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球VR/AR代工龙头（市占率>70%），OCF强劲但短期借款暴增+VR市场断崖下跌",
+    "report": "歌尔股份-财务健康评估-2026-07-01.md",
+    "radar": "Goertek_health_radar.png",
+    "employees": "~111,585",
+    "revenue": "🔒 965.50亿（2025年年报）"
+  },
+  {
     "id": "keymed",
     "name": "康诺亚",
     "nameEn": "Keymed Biosciences",

@@ -920,6 +920,29 @@
     "revenue": "¥3,789亿（2025）"
   },
   {
+    "id": "zhihu",
+    "name": "知乎",
+    "nameEn": "Zhihu",
+    "ticker": "NYSE: ZH / HKEX: 2390",
+    "ind1": "互联网平台",
+    "ind2": "内容社区与知识平台",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 64,
+      "debt": 90,
+      "operations": 73,
+      "sustainability": 62
+    },
+    "total": 76,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "现金充裕但增长弹性有限，内容社区与AI搜索转型仍在验证期",
+    "report": "知乎-财务健康评估-2026-07-07.md",
+    "radar": "zhihu_health_radar.png",
+    "employees": "数千人级（估）",
+    "revenue": "RMB 651.6m（Q1 2026）"
+  },
+  {
     "id": "huawei",
     "name": "华为",
     "nameEn": "Huawei",
@@ -1840,6 +1863,29 @@
     "revenue": "📊~1.58亿（2024，IDC推算）"
   },
   {
+    "id": "yostar",
+    "name": "悠星网络",
+    "nameEn": "Yostar",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏发行与运营",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 69,
+      "debt": 90,
+      "operations": 64,
+      "sustainability": 62
+    },
+    "total": 80,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "多款长青二游+全球发行能力强，现金流稳健；标题集中度和自研原创验证仍是核心短板",
+    "report": "悠星网络-财务健康评估-2026-07-07.md",
+    "radar": "yostar_health_radar.png",
+    "employees": "数百人-千人级（估）",
+    "revenue": "📊 未披露（公开财务黑箱）"
+  },
+  {
     "id": "chnenergy",
     "name": "国家能源集团",
     "nameEn": "CHN Energy",
@@ -2160,5 +2206,51 @@
     "radar": "duoyi_health_radar.png",
     "employees": "高峰期~3,000（2024-2025大规模裁员中）",
     "revenue": "📊 估算~¥10-15亿（2017招股书¥19.3亿，此后新游戏全部失败）"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "nameEn": "GitHub",
+    "ticker": "",
+    "ind1": "科技巨头",
+    "ind2": "开发者平台",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 69,
+      "debt": 90,
+      "operations": 72,
+      "sustainability": 90
+    },
+    "total": 84,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "全球最大开发者平台之一，微软现金流托底+Copilot 高速扩张，独立性下降与 AI 成本压力是核心隐忧",
+    "report": "GitHub-财务健康评估-2026-07-07.md",
+    "radar": "GitHub_health_radar.png",
+    "employees": "3,000+",
+    "revenue": "未单独披露"
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "nameEn": "Google",
+    "ticker": "NASDAQ: GOOGL / GOOG",
+    "ind1": "科技巨头",
+    "ind2": "搜索与AI",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 91,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "total": 89,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "Search、YouTube、Cloud 与 Gemini 共同构成超强现金引擎，但 AI capex 和监管风险是长期压力",
+    "report": "Google-财务健康评估-2026-07-07.md",
+    "radar": "Google_health_radar.png",
+    "employees": "~19万",
+    "revenue": "$4030亿（FY2025）"
   }
 ]

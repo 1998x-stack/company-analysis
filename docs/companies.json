@@ -2137,5 +2137,28 @@
     "radar": "microsoft_health_radar.png",
     "employees": "228,000",
     "revenue": "$2,817亿（FY2025）"
+  },
+  {
+    "id": "duoyi",
+    "name": "多益网络",
+    "nameEn": "Duoyi Network",
+    "ticker": "",
+    "ind1": "互动娱乐",
+    "ind2": "游戏研发",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 75,
+      "debt": 90,
+      "operations": 34,
+      "sustainability": 39
+    },
+    "total": 76,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "高现金流+零负债的神武IP现金牛，创始人极端言论+批量裁员+IPO两次失败+极度集中股权是核心隐忧",
+    "report": "多益网络-财务健康评估-2026-07-07.md",
+    "radar": "duoyi_health_radar.png",
+    "employees": "高峰期~3,000（2024-2025大规模裁员中）",
+    "revenue": "📊 估算~¥10-15亿（2017招股书¥19.3亿，此后新游戏全部失败）"
   }
 ]

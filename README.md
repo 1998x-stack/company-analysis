@@ -48,6 +48,7 @@
 | 34 | 瑞金医院 | 生物医药 · 医疗机构 | 81 | 🟡 中等偏上 | [报告](docs/examples/瑞金医院-雇主评估-2026-06-15.md) | [PNG](docs/examples/ruijin_hospital_health_radar.png) |
 | 35 | 北京飞渡科技 | 数字孪生 · 平台与引擎 | 80 | 🟡 中等偏上 | [报告](docs/examples/北京飞渡科技-财务健康评估-2026-06-15.md) | [PNG](docs/examples/北京飞渡科技_health_radar.png) |
 | 36 | 特斯拉 (Tesla) (TSLA (NASDAQ)) | 汽车科技 · 新能源整车 | 80 | 🟡 中等偏上 | [报告](docs/examples/Tesla-财务健康评估-2026-06-15.md) | [PNG](docs/examples/Tesla_health_radar.png) |
+| 36 | 康捷国际物流 (NYSE: EXPD) | 物流 · 国际货运代理 | 80 | 🟡 中等偏上 | [报告](docs/examples/康捷国际物流-财务健康评估-2026-07-11.md) | [PNG](docs/examples/expeditors_health_radar.png) |
 | 37 | 悠星网络 | 互动娱乐 · 游戏发行与运营 | 80 | 🟡 中等偏上 | [报告](docs/examples/悠星网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/yostar_health_radar.png) |
 | 37 | 叠纸游戏 | 互动娱乐 · 游戏研发 | 78 | 🟡 中等偏上 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
 | 38 | 九章云极 | 人工智能 · AI平台 | 78 | 🟡 中等偏上 | [报告](docs/examples/九章云极-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DataCanvas_health_radar.png) |
@@ -74,6 +75,7 @@
 | 59 | 奇富科技 (NASDAQ: QFIN / 03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 中等 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
 | 60 | 无问芯穹 | 人工智能 · AI基础设施 | 69 | 🟠 中等 | [报告](docs/examples/无问芯穹-财务健康评估-2026-06-12.md) | [PNG](docs/examples/InfinigenceAI_health_radar.png) |
 | 61 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
+| 62 | 艾默生电气 (NYSE: EMR) | 工业自动化 · 过程控制与测试测量 | 68 | 🟠 中等 | [报告](docs/examples/艾默生-财务健康评估-2026-07-11.md) | [PNG](docs/examples/emerson_health_radar.png) |
 | 62 | 康诺亚 (2162.HK) | 生物医药 · ADC与创新药 | 67 | 🟠 中等 | [报告](docs/examples/康诺亚-财务健康评估-2026-06-12.md) | [PNG](docs/examples/keymed_health_radar.png) |
 | 63 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 中等 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
 | 64 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
@@ -171,6 +173,7 @@
 | 瑞金医院 | 81 | 66 | 90 | 90 | 83 | **81** |
 | 北京飞渡科技 | 78 | 73 | 90 | 81 | 83 | **80** |
 | 特斯拉 | 90 | 63 | 76 | 73 | 83 | **80** |
+| 康捷国际物流 | 90 | 69 | 74 | 81 | 61 | **80** |
 | 悠星网络 | 90 | 69 | 90 | 64 | 62 | **80** |
 | 叠纸游戏 | 81 | 75 | 95 | 53 | 69 | **78** |
 | 九章云极 | 78 | 64 | 90 | 81 | 83 | **78** |
@@ -197,6 +200,7 @@
 | 奇富科技 | 72 | 73 | 62 | 72 | 61 | **70** |
 | 无问芯穹 | 65 | 50 | 90 | 81 | 83 | **69** |
 | 月之暗面 | 62 | 61 | 90 | 72 | 69 | **68** |
+| 艾默生电气 | 73 | 64 | 46 | 73 | 83 | **68** |
 | 康诺亚 | 54 | 65 | 76 | 90 | 90 | **67** |
 | 联影智能 | 63 | 50 | 90 | 73 | 83 | **67** |
 | 明略科技 | 63 | 59 | 90 | 63 | 76 | **67** |

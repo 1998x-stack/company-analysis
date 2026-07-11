@@ -2252,5 +2252,51 @@
     "radar": "Google_health_radar.png",
     "employees": "~19万",
     "revenue": "$4030亿（FY2025）"
+  },
+  {
+    "id": "expeditors",
+    "name": "康捷国际物流",
+    "nameEn": "Expeditors International",
+    "ticker": "NYSE: EXPD",
+    "ind1": "物流",
+    "ind2": "国际货运代理",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 69,
+      "debt": 74,
+      "operations": 81,
+      "sustainability": 61
+    },
+    "total": 80,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "零负债现金牛，行业利润率第一，但行业低增速+贸易政策不确定性压制上限",
+    "report": "康捷国际物流-财务健康评估-2026-07-11.md",
+    "radar": "expeditors_health_radar.png",
+    "employees": "~20,000",
+    "revenue": "$110.7B（FY2025）"
+  },
+  {
+    "id": "emerson",
+    "name": "艾默生电气",
+    "nameEn": "Emerson Electric",
+    "ticker": "NYSE: EMR",
+    "ind1": "工业自动化",
+    "ind2": "过程控制与测试测量",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 64,
+      "debt": 46,
+      "operations": 73,
+      "sustainability": 83
+    },
+    "total": 68,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "自动化转型战略正确+毛利率52.8%行业领先，但$131亿债务+商誉占净资产90%是核心隐忧",
+    "report": "艾默生-财务健康评估-2026-07-11.md",
+    "radar": "emerson_health_radar.png",
+    "employees": "~71,000",
+    "revenue": "$180亿（FY2025）"
   }
 ]

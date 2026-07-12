@@ -622,8 +622,8 @@
   },
   {
     "id": "henkel",
-    "name": "汉高",
-    "nameEn": "Henkel",
+    "name": "汉高（中国地区）",
+    "nameEn": "Henkel China",
     "ticker": "HEN3.DE",
     "ind1": "化工",
     "ind2": "特种化学品",
@@ -637,11 +637,11 @@
     "total": 84,
     "grade": "Moderate-High",
     "gradeLabel": "中等偏上",
-    "oneLine": "现金流极稳、零净债务的百年德企，消费品利润追赶中",
-    "report": "汉高-财务健康评估-2026-06-12.md",
-    "radar": "Henkel_health_radar.png",
-    "employees": "47,150",
-    "revenue": "€205亿（FY2025）"
+    "oneLine": "全球现金流堡垒在中国的战略增长引擎，中国持续加码投资，薪酬竞争力是唯一短板",
+    "report": "汉高（中国）-财务健康评估-2026-07-12.md",
+    "radar": "Henkel_China_health_radar.png",
+    "employees": "~4,000-5,000（中国） / 47,150（全球）",
+    "revenue": "€205亿（FY2025全球）"
   },
   {
     "id": "lilith",

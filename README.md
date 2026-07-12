@@ -29,7 +29,7 @@
 | 16 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 优秀 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
 | 17 | Nebius (NASDAQ: NBIS) | 人工智能 · AI基础设施 | 85 | 🟢 优秀 | [报告](docs/examples/Nebius-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Nebius_health_radar.png) |
 | 18 | 中科创达 (300496.SZ) | 科技硬件 · 智能操作系统 | 85 | 🟡 中等偏上 | [报告](docs/examples/中科创达-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ThunderSoft_health_radar.png) |
-| 19 | 汉高 (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Henkel_health_radar.png) |
+| 19 | 汉高（中国地区） (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 中等偏上 | [报告](docs/examples/汉高（中国）-财务健康评估-2026-07-12.md) | [PNG](docs/examples/Henkel_China_health_radar.png) |
 | 20 | 微软 (NASDAQ: MSFT) | 科技巨头 · 软件与云服务 | 84 | 🟡 中等偏上 | [报告](docs/examples/微软-财务健康评估-2026-07-01.md) | [PNG](docs/examples/microsoft_health_radar.png) |
 | 21 | GitHub | 科技巨头 · 开发者平台 | 84 | 🟡 中等偏上 | [报告](docs/examples/GitHub-财务健康评估-2026-07-07.md) | [PNG](docs/examples/GitHub_health_radar.png) |
 | 22 | 莉莉丝游戏 | 互动娱乐 · 游戏研发 | 84 | 🟡 中等偏上 | [报告](docs/examples/莉莉丝游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/LilithGames_health_radar.png) |
@@ -154,7 +154,7 @@
 | 信达生物 | 90 | 91 | 69 | 81 | 83 | **85** |
 | Nebius | 90 | 79 | 90 | 71 | 83 | **85** |
 | 中科创达 | 90 | 80 | 90 | 72 | 72 | **85** |
-| 汉高 | 90 | 73 | 88 | 81 | 76 | **84** |
+| 汉高（中国地区） | 90 | 73 | 88 | 81 | 76 | **84** |
 | 微软 | 90 | 87 | 69 | 72 | 83 | **84** |
 | GitHub | 90 | 69 | 90 | 72 | 90 | **84** |
 | 莉莉丝游戏 | 90 | 85 | 90 | 52 | 72 | **84** |

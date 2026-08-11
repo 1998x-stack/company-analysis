@@ -2344,5 +2344,28 @@
   "radar": "RocheChina_health_radar.png",
   "employees": "5,000+（官方口径）",
   "revenue": "中国区约CHF48亿（2025）"
+ },
+ {
+  "id": "smic",
+  "name": "中芯国际",
+  "nameEn": "SMIC",
+  "ticker": "688981.SH / 00981.HK",
+  "ind1": "科技硬件",
+  "ind2": "晶圆代工",
+  "scores": {
+   "cashFlow": 81,
+   "profitability": 69,
+   "debt": 76,
+   "operations": 81,
+   "sustainability": 83
+  },
+  "total": 78,
+  "grade": "Moderate-High",
+  "gradeLabel": "中等偏上",
+  "oneLine": "大陆晶圆代工第一，低负债+现金流优异+国产替代红利，但毛利率21%+资本开支吞噬FCF是核心隐忧",
+  "report": "中芯国际-财务健康评估-2026-08-11.md",
+  "radar": "SMIC_health_radar.png",
+  "employees": "19,952",
+  "revenue": "$93.27亿（2025）"
  }
 ]

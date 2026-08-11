@@ -3,8 +3,8 @@
   "created_at": "2026-08-10",
   "loop_status": "in_progress",
   "total": 8,
-  "completed": 1,
-  "pending": 7,
+  "completed": 2,
+  "pending": 6,
   "companies": [
     {
       "id": 1,
@@ -20,10 +20,11 @@
       "id": 2,
       "name_cn": "罗氏制药（中国）",
       "name_en": "Roche China",
-      "status": "pending",
-      "score": null,
-      "report": null,
-      "radar": null
+      "status": "completed",
+      "score": 77,
+      "report": "罗氏制药-财务健康评估-2026-08-11.md",
+      "radar": "RocheChina_health_radar.png",
+      "started_at": "2026-08-11"
     },
     {
       "id": 3,

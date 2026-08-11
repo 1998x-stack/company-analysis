@@ -2321,5 +2321,28 @@
   "radar": "FosunPharma_health_radar.png",
   "employees": "40,603",
   "revenue": "416.62亿元（2025）"
+ },
+ {
+  "id": "rochechina",
+  "name": "罗氏制药（中国）",
+  "nameEn": "Roche China",
+  "ticker": "ROG.SIX / RHHBY",
+  "ind1": "生物医药",
+  "ind2": "综合制药",
+  "scores": {
+   "cashFlow": 81,
+   "profitability": 82,
+   "debt": 62,
+   "operations": 63,
+   "sustainability": 83
+  },
+  "total": 77,
+  "grade": "Moderate-High",
+  "gradeLabel": "中等偏上",
+  "oneLine": "全球现金流最强制药巨头在华持续加码——高薪稳定平台，中国区诊断承压+生物药集采是核心风险点",
+  "report": "罗氏制药-财务健康评估-2026-08-11.md",
+  "radar": "RocheChina_health_radar.png",
+  "employees": "5,000+（官方口径）",
+  "revenue": "中国区约CHF48亿（2025）"
  }
 ]

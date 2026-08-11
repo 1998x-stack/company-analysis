@@ -3,8 +3,8 @@
   "created_at": "2026-08-10",
   "loop_status": "in_progress",
   "total": 8,
-  "completed": 3,
-  "pending": 5,
+  "completed": 4,
+  "pending": 4,
   "companies": [
     {
       "id": 1,
@@ -40,10 +40,10 @@
       "id": 4,
       "name_cn": "中国远洋海运",
       "name_en": "COSCO Shipping",
-      "status": "in_progress",
-      "score": null,
-      "report": null,
-      "radar": null,
+      "status": "completed",
+      "score": 77,
+      "report": "中国远洋海运-财务健康评估-2026-08-11.md",
+      "radar": "COSCO_health_radar.png",
       "started_at": "2026-08-11"
     },
     {

@@ -40,10 +40,11 @@
       "id": 4,
       "name_cn": "中国远洋海运",
       "name_en": "COSCO Shipping",
-      "status": "pending",
+      "status": "in_progress",
       "score": null,
       "report": null,
-      "radar": null
+      "radar": null,
+      "started_at": "2026-08-11"
     },
     {
       "id": 5,

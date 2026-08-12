@@ -2390,5 +2390,28 @@
   "radar": "COSCO_health_radar.png",
   "employees": "集团~12万 / 中远海控~3.2万",
   "revenue": "¥2,195亿（中远海控2025）"
+ },
+ {
+  "id": "comac",
+  "name": "中国商飞",
+  "nameEn": "COMAC",
+  "ticker": "未上市（央企）",
+  "ind1": "航空",
+  "ind2": "大飞机制造",
+  "scores": {
+   "cashFlow": 45,
+   "profitability": 57,
+   "debt": 62,
+   "operations": 72,
+   "sustainability": 76
+  },
+  "total": 56,
+  "grade": "Moderate",
+  "gradeLabel": "中等",
+  "oneLine": "国产大飞机国家队·国家战略托底+规模化放量在即，但连年亏损+超高杠杆+美国供应链制裁是核心隐忧",
+  "report": "中国商飞-财务健康评估-2026-08-12.md",
+  "radar": "COMAC_health_radar.png",
+  "employees": "~2-3万（估算）",
+  "revenue": "~¥180-240亿（估算2024）"
  }
 ]

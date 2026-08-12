@@ -80,15 +80,15 @@
 | 68 | 无问芯穹 | 人工智能 · AI基础设施 | 69 | 🟠 中等 | [报告](docs/examples/无问芯穹-财务健康评估-2026-06-12.md) | [PNG](docs/examples/InfinigenceAI_health_radar.png) |
 | 69 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
 | 70 | 艾默生电气 (NYSE: EMR) | 工业自动化 · 过程控制与测试测量 | 68 | 🟠 中等 | [报告](docs/examples/艾默生-财务健康评估-2026-07-11.md) | [PNG](docs/examples/emerson_health_radar.png) |
-| 71 | 康诺亚 (2162.HK) | 生物医药 · ADC与创新药 | 67 | 🟠 中等 | [报告](docs/examples/康诺亚-财务健康评估-2026-06-12.md) | [PNG](docs/examples/keymed_health_radar.png) |
-| 72 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 中等 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
-| 73 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
-| 74 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
-| 75 | 飞猪 (Fliggy) | 互联网平台 · 在线旅游 | 66 | 🟠 中等 | [报告](docs/examples/飞猪-财务健康评估-2026-06-20.md) | [PNG](docs/examples/Fliggy_health_radar.png) |
-| 76 | Sharpa | 机器人 · 灵巧手与具身智能 | 66 | 🟠 中等 | [报告](docs/examples/Sharpa-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sharpa_health_radar.png) |
-| 77 | 创米数联 (IMILAB) | 科技硬件 · 智能家居与IoT | 66 | 🟠 中等 | [报告](docs/examples/创米数联-财务健康评估-2026-07-01.md) | [PNG](docs/examples/IMILAB_health_radar.png) |
-| 78 | DeepSeek | 人工智能 · 大模型 | 67 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
-| 79 | 云知声 (09678.HK) | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/云知声-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Unisound_health_radar.png) |
+| 71 | 云知声 (09678.HK) | 人工智能 · 大模型 | 68 | 🟠 中等 | [报告](docs/examples/云知声-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Unisound_health_radar.png) |
+| 72 | 康诺亚 (2162.HK) | 生物医药 · ADC与创新药 | 67 | 🟠 中等 | [报告](docs/examples/康诺亚-财务健康评估-2026-06-12.md) | [PNG](docs/examples/keymed_health_radar.png) |
+| 73 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 中等 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
+| 74 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 中等 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
+| 75 | DeepSeek | 人工智能 · 大模型 | 67 | 🟠 中等 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
+| 76 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 中等 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
+| 77 | 飞猪 (Fliggy) | 互联网平台 · 在线旅游 | 66 | 🟠 中等 | [报告](docs/examples/飞猪-财务健康评估-2026-06-20.md) | [PNG](docs/examples/Fliggy_health_radar.png) |
+| 78 | Sharpa | 机器人 · 灵巧手与具身智能 | 66 | 🟠 中等 | [报告](docs/examples/Sharpa-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sharpa_health_radar.png) |
+| 79 | 创米数联 (IMILAB) | 科技硬件 · 智能家居与IoT | 66 | 🟠 中等 | [报告](docs/examples/创米数联-财务健康评估-2026-07-01.md) | [PNG](docs/examples/IMILAB_health_radar.png) |
 | 80 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 中等 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
 | 81 | 华尔街见闻 | 金融科技 · 财经媒体 | 65 | 🟠 中等 | [报告](docs/examples/华尔街见闻-财务健康评估-2026-06-19.md) | [PNG](docs/examples/wallstreetcn_health_radar.png) |
 | 82 | 地平线 (9660.HK) | 汽车科技 · 自动驾驶芯片 | 63 | 🟠 中等 | [报告](docs/examples/地平线-财务健康评估-2026-06-12.md) | [PNG](docs/examples/HorizonRobotics_health_radar.png) |
@@ -104,16 +104,17 @@
 | 92 | 上汽大众 (600104.SH（上汽集团）) | 汽车科技 · 合资整车 | 60 | 🟠 中等 | [报告](docs/examples/上汽大众-财务健康评估-2026-06-19.md) | [PNG](docs/examples/saicvw_health_radar.png) |
 | 93 | 实在智能 | 企业服务 · RPA与自动化 | 58 | 🟠 中等 | [报告](docs/examples/实在智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ShizaiAI_health_radar.png) |
 | 94 | 网龙 (0777.HK) | 互动娱乐 · 游戏 | 57 | 🟠 中等 | [报告](docs/examples/网龙-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetDragon_health_radar.png) |
-| 95 | Neuralink | 生物医药 · 医疗器械 | 55 | 🔴 中等偏下 | [报告](docs/examples/Neuralink-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Neuralink_health_radar.png) |
-| 96 | 领骏科技 (LeaderDrive) | 科技硬件 · 智能驾驶 | 55 | 🔴 中等偏下 | [报告](docs/examples/LeaderDrive-财务健康评估-2026-06-17.md) | [PNG](docs/examples/LeaderDrive_health_radar.png) |
-| 97 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
-| 98 | 君实生物 (688180.SH / 01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 中等偏下 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
-| 99 | 猿辅导 | 教育科技 · 在线教育 | 52 | 🔴 中等偏下 | [报告](docs/examples/猿辅导-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Yuanfudao_health_radar.png) |
-| 100 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
-| 101 | 卓越睿新 (2687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
-| 102 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 中等偏下 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
-| 103 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
-| 104 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 95 | 中国商飞 (COMAC) | 航空 · 大飞机制造 | 56 | 🟠 中等 | [报告](docs/examples/中国商飞-财务健康评估-2026-08-12.md) | [PNG](docs/examples/COMAC_health_radar.png) |
+| 96 | Neuralink | 生物医药 · 医疗器械 | 55 | 🔴 中等偏下 | [报告](docs/examples/Neuralink-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Neuralink_health_radar.png) |
+| 97 | 领骏科技 (LeaderDrive) | 科技硬件 · 智能驾驶 | 55 | 🔴 中等偏下 | [报告](docs/examples/LeaderDrive-财务健康评估-2026-06-17.md) | [PNG](docs/examples/LeaderDrive_health_radar.png) |
+| 98 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 中等偏下 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
+| 99 | 君实生物 (688180.SH / 01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 中等偏下 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
+| 100 | 猿辅导 | 教育科技 · 在线教育 | 52 | 🔴 中等偏下 | [报告](docs/examples/猿辅导-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Yuanfudao_health_radar.png) |
+| 101 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 中等偏下 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
+| 102 | 卓越睿新 (2687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 中等偏下 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
+| 103 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 中等偏下 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
+| 104 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
+| 105 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -213,9 +214,9 @@
 | 联影智能 | 63 | 50 | 90 | 73 | 83 | **67** |
 | 明略科技 | 63 | 59 | 90 | 63 | 76 | **67** |
 | 科大讯飞 | 72 | 57 | 54 | 62 | 76 | **66** |
-| 创米数联 (IMILAB) | 73 | 61 | 90 | 25 | 39 | **65** |
 | 飞猪 (Fliggy) | 63 | 57 | 90 | 63 | 68 | **66** |
 | Sharpa | 65 | 40 | 90 | 81 | 68 | **66** |
+| 创米数联 (IMILAB) | 73 | 61 | 90 | 25 | 39 | **65** |
 | DeepSeek | 52 | 59 | 95 | 81 | 69 | **65** |
 | 云知声 | 65 | 54 | 69 | 71 | 76 | **65** |
 | 面壁智能 | 65 | 39 | 90 | 73 | 76 | **65** |
@@ -233,6 +234,7 @@
 | 上汽大众 | 67 | 52 | 55 | 63 | 54 | **60** |
 | 实在智能 | 44 | 55 | 76 | 81 | 73 | **58** |
 | 网龙 | 64 | 64 | 55 | 15 | 55 | **57** |
+| 中国商飞 | 45 | 57 | 62 | 72 | 76 | **56** |
 | Neuralink | 53 | 15 | 95 | 71 | 69 | **55** |
 | 领骏科技 | 54 | 29 | 90 | 44 | 69 | **55** |
 | 智谱AI | 43 | 45 | 83 | 52 | 76 | **54** |

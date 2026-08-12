@@ -2413,5 +2413,28 @@
   "radar": "COMAC_health_radar.png",
   "employees": "~2-3万（估算）",
   "revenue": "~¥180-240亿（估算2024）"
+ },
+ {
+  "id": "saic",
+  "name": "上汽集团",
+  "nameEn": "SAIC Motor",
+  "ticker": "600104.SH",
+  "ind1": "汽车科技",
+  "ind2": "整车制造",
+  "scores": {
+   "cashFlow": 81,
+   "profitability": 41,
+   "debt": 69,
+   "operations": 53,
+   "sustainability": 61
+  },
+  "total": 67,
+  "grade": "Moderate",
+  "gradeLabel": "中等",
+  "oneLine": "千亿现金+正经营现金流托底，但合资利润塌方（2024扣非亏54亿）+连续4年减员3.6万+欧盟37.6%关税是核心隐忧",
+  "report": "上汽集团-财务健康评估-2026-08-12.md",
+  "radar": "SAIC_health_radar.png",
+  "employees": "~18.8万（2024年报，-9.3%）",
+  "revenue": "¥6,562亿（2025）"
  }
 ]

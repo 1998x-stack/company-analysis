@@ -3,8 +3,8 @@
   "created_at": "2026-08-10",
   "loop_status": "in_progress",
   "total": 8,
-  "completed": 4,
-  "pending": 4,
+  "completed": 5,
+  "pending": 3,
   "companies": [
     {
       "id": 1,
@@ -50,10 +50,11 @@
       "id": 5,
       "name_cn": "中国商飞",
       "name_en": "COMAC",
-      "status": "pending",
-      "score": null,
-      "report": null,
-      "radar": null
+      "status": "completed",
+      "score": 56,
+      "report": "中国商飞-财务健康评估-2026-08-12.md",
+      "radar": "COMAC_health_radar.png",
+      "started_at": "2026-08-12"
     },
     {
       "id": 6,

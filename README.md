@@ -1,263 +1,144 @@
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
-| 122 | ...
 | 1 | Google (NASDAQ: GOOGL / GOOG) | 科技巨头 · 搜索与AI | 89 | 🟢 | [报告](docs/examples/Google-财务健康评估-2026-07-07.md) | [PNG](docs/examples/Google_health_radar.png) |
 | 2 | 恒瑞医药 (600276.SH / 01276.HK) | 生物医药 · 综合制药 | 89 | 🟢 | [报告](docs/examples/恒瑞医药-财务健康评估-2026-06-12.md) | [PNG](docs/examples/hengrui_health_radar.png) |
 | 3 | 明汯投资 | 金融科技 · 量化投资 | 89 | 🟢 | [报告](docs/examples/明汯投资-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MHInvestments_health_radar.png) |
 | 4 | TapTap / 心动公司 (2400.HK) | 互动娱乐 · 游戏平台 | 88 | 🟢 | [报告](docs/examples/TapTap-财务健康评估-2026-06-12.md) | [PNG](docs/examples/TapTap_health_radar.png) |
 | 5 | 合肥国家实验室 | 科研机构 · 国家实验室 | 88 | 🟢 | [报告](docs/examples/合肥国家实验室-财务健康评估-2026-07-01.md) | [PNG](docs/examples/Hefei_National_Lab_health_radar.png) |
 | 6 | 小红书 | 互联网平台 · 社交媒体与内容 | 87 | 🟢 | [报告](docs/examples/小红书-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Xiaohongshu_health_radar.png) |
-| 7 | 招商银行 (600036.SH / 03968.HK) | 金融科技 · 综合金融科技 | 87 | 🟢 | [报告](docs/examples/招商银行-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CMB_health_radar.png) |
-| 8 | 欧税通 | 企业服务 · 财税SaaS | 87 | 🟢 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
-| 9 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
-| 10 | 黑湖科技 | 企业服务 · 工业SaaS | 87 | 🟢 | [报告](docs/examples/黑湖科技-财务健康评估-2026-06-19.md) | [PNG](docs/examples/blacklake_health_radar.png) |
-| 11 | Caper (Instacart) (NASDAQ: CART) | 科技硬件 · 智能零售 | 86 | 🟢 | [报告](docs/examples/Caper-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Caper_health_radar.png) |
-| 12 | 台达电子 (2308.TW) | 科技硬件 · 电源管理与热管理 | 86 | 🟢 | [报告](docs/examples/台达电子-财务健康评估-2026-06-22.md) | [PNG](docs/examples/Delta_health_radar.png) |
-| 13 | 鹰角网络 | 互动娱乐 · 游戏研发 | 86 | 🟢 | [报告](docs/examples/鹰角网络-财务健康评估-2026-06-14.md) | [PNG](docs/examples/hypergryph_health_radar.png) |
-| 14 | Nebius (NASDAQ: NBIS) | 人工智能 · AI基础设施 | 85 | 🟢 | [报告](docs/examples/Nebius-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Nebius_health_radar.png) |
-| 15 | 中科创达 (300496.SZ) | 科技硬件 · 智能操作系统 | 85 | 🟡 | [报告](docs/examples/中科创达-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ThunderSoft_health_radar.png) |
-| 16 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
-| 17 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
-| 18 | 拼多多 (NASDAQ: PDD) | 互联网平台 · 电商 | 85 | 🟢 | [报告](docs/examples/拼多多-财务健康评估-2026-06-12.md) | [PNG](docs/examples/PDD_health_radar.png) |
-| 19 | 米哈游 | 互动娱乐 · 游戏研发 | 85 | 🟢 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
-| 20 | 金山办公 (688111.SH) | 企业服务 · 办公软件 | 85 | 🟢 | [报告](docs/examples/金山办公-财务健康评估-2026-06-12.md) | [PNG](docs/examples/KingsoftOffice_health_radar.png) |
-| 21 | FunPlus（趣加游戏） | 互动娱乐 · 游戏研发 | 84 | 🟡 | [报告](docs/examples/FunPlus-财务健康评估-2026-06-18.md) | [PNG](docs/examples/FunPlus_health_radar.png) |
-| 22 | GitHub | 科技巨头 · 开发者平台 | 84 | 🟡 | [报告](docs/examples/GitHub-财务健康评估-2026-07-07.md) | [PNG](docs/examples/GitHub_health_radar.png) |
-| 23 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
-| 24 | 平安银行 (000001.SZ) | 金融科技 · 综合金融科技 | 84 | 🟡 | [报告](docs/examples/平安银行-财务健康评估-2026-08-13.md) | [PNG](docs/examples/PingAnBank_health_radar.png) |
-| 25 | 微软 (NASDAQ: MSFT) | 科技巨头 · 软件与云服务 | 84 | 🟡 | [报告](docs/examples/微软-财务健康评估-2026-07-01.md) | [PNG](docs/examples/microsoft_health_radar.png) |
-| 26 | 汉高（中国地区） (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 | [报告](docs/examples/汉高（中国）-财务健康评估-2026-07-12.md) | [PNG](docs/examples/Henkel_China_health_radar.png) |
-| 27 | 莉莉丝游戏 | 互动娱乐 · 游戏研发 | 84 | 🟡 | [报告](docs/examples/莉莉丝游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/LilithGames_health_radar.png) |
-| 28 | EPAM Systems (NYSE: EPAM) | 企业服务 · IT服务与软件工程 | 83 | 🟡 | [报告](docs/examples/EPAM-财务健康评估-2026-06-17.md) | [PNG](docs/examples/EPAM_health_radar.png) |
-| 29 | 乐元素 | 互动娱乐 · 休闲游戏 | 83 | 🟡 | [报告](docs/examples/乐元素-财务健康评估-2026-06-19.md) | [PNG](docs/examples/happyelements_health_radar.png) |
-| 30 | 同花顺 (300033.SZ) | 金融科技 · 金融数据服务 | 83 | 🟡 | [报告](docs/examples/同花顺-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Hithink_health_radar.png) |
-| 31 | 映恩生物 (9606.HK) | 生物医药 · ADC与创新药 | 83 | 🟡 | [报告](docs/examples/映恩生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/dualitybio_health_radar.png) |
-| 32 | 游卡 | 互动娱乐 · 桌游与卡牌 | 83 | 🟡 | [报告](docs/examples/游卡-财务健康评估-2026-06-19.md) | [PNG](docs/examples/yokagames_health_radar.png) |
-| 33 | 领健 | 企业服务 · 医疗SaaS | 83 | 🟡 | [报告](docs/examples/领健-财务健康评估-2026-06-19.md) | [PNG](docs/examples/linkedcare_health_radar.png) |
-| 34 | DeNA (2432.T) | 互动娱乐 · 游戏研发 | 82 | 🟡 | [报告](docs/examples/DeNA-财务健康评估-2026-06-18.md) | [PNG](docs/examples/DeNA_health_radar.png) |
-| 35 | 比亚迪 (BYD) (002594.SZ / 1211.HK) | 汽车科技 · 新能源整车 | 82 | 🟡 | [报告](docs/examples/BYD-财务健康评估-2026-06-16.md) | [PNG](docs/examples/BYD_health_radar.png) |
-| 36 | 网易 (9999.HK / NTES) | 互动娱乐 · 游戏 | 82 | 🟡 | [报告](docs/examples/网易-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetEase_health_radar.png) |
-| 37 | 阳光保险 (6963.HK) | 金融科技 · 保险 | 82 | 🟡 | [报告](docs/examples/阳光保险-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Sunshine_health_radar.png) |
-| 38 | 上海第九人民医院 | 生物医药 · 医疗机构 | 81 | 🟡 | [报告](docs/examples/上海九院-雇主评估-2026-06-14.md) | [PNG](docs/examples/shanghai_ninth_hospital_health_radar.png) |
-| 39 | 瑞金医院 | 生物医药 · 医疗机构 | 81 | 🟡 | [报告](docs/examples/瑞金医院-雇主评估-2026-06-15.md) | [PNG](docs/examples/ruijin_hospital_health_radar.png) |
-| 40 | 中国广核电力 (003816.SZ / 01816.HK) | 能源 · 核电 | 80 | 🟡 | [报告](docs/examples/中国广核电力-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CGNP_health_radar.png) |
-| 41 | 北京飞渡科技 | 数字孪生 · 平台与引擎 | 80 | 🟡 | [报告](docs/examples/北京飞渡科技-财务健康评估-2026-06-15.md) | [PNG](docs/examples/北京飞渡科技_health_radar.png) |
-| 42 | 康捷国际物流 (NYSE: EXPD) | 物流 · 国际货运代理 | 80 | 🟡 | [报告](docs/examples/康捷国际物流-财务健康评估-2026-07-11.md) | [PNG](docs/examples/expeditors_health_radar.png) |
-| 43 | 律商联讯 (RELX: LSE/REL · NYSE: RELX) | 企业服务 · 法律信息服务 | 80 | 🟡 | [报告](docs/examples/律商联讯-财务健康评估-2026-06-16.md) | [PNG](docs/examples/LexisNexis_health_radar.png) |
-| 44 | 悠星网络 | 互动娱乐 · 游戏发行与运营 | 80 | 🟡 | [报告](docs/examples/悠星网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/yostar_health_radar.png) |
-| 45 | 特斯拉 (Tesla) (TSLA (NASDAQ)) | 汽车科技 · 新能源整车 | 80 | 🟡 | [报告](docs/examples/Tesla-财务健康评估-2026-06-15.md) | [PNG](docs/examples/Tesla_health_radar.png) |
-| 46 | 中国平安 (601318.SH / 02318.HK) | 金融科技 · 综合金融科技 | 79 | 🟡 | [报告](docs/examples/中国平安-财务健康评估-2026-08-13.md) | [PNG](docs/examples/PingAn_health_radar.png) |
-| 47 | 中国广核集团 (—（央企）) | 能源 · 综合能源 | 79 | 🟡 | [报告](docs/examples/中国广核集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CGN_health_radar.png) |
-| 48 | 中芯国际 (688981.SH / 00981.HK) | 科技硬件 · 晶圆代工 | 78 | 🟡 | [报告](docs/examples/中芯国际-财务健康评估-2026-08-11.md) | [PNG](docs/examples/SMIC_health_radar.png) |
-| 49 | 九章云极 | 人工智能 · AI平台 | 78 | 🟡 | [报告](docs/examples/九章云极-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DataCanvas_health_radar.png) |
-| 50 | 叠纸游戏 | 互动娱乐 · 游戏研发 | 78 | 🟡 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
-| 51 | 国家能源集团 (601088.SH / 01088.HK（中国神华）) | 能源 · 综合能源 | 78 | 🟡 | [报告](docs/examples/国家能源集团-财务健康评估-2026-06-15.md) | [PNG](docs/examples/国家能源集团_health_radar.png) |
-| 52 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 | [报告](docs/examples/Sea Limited(Shopee)-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
-| 53 | 中国远洋海运 (601919.SH / 1919.HK（中远海控）) | 物流 · 航运 | 77 | 🟡 | [报告](docs/examples/中国远洋海运-财务健康评估-2026-08-11.md) | [PNG](docs/examples/COSCO_health_radar.png) |
-| 54 | 罗氏制药（中国） (ROG.SIX / RHHBY) | 生物医药 · 综合制药 | 77 | 🟡 | [报告](docs/examples/罗氏制药-财务健康评估-2026-08-11.md) | [PNG](docs/examples/RocheChina_health_radar.png) |
-| 55 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
-| 56 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
-| 57 | 多益网络 | 互动娱乐 · 游戏研发 | 76 | 🟡 | [报告](docs/examples/多益网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/duoyi_health_radar.png) |
-| 58 | 新开普 (300248.SZ) | 教育科技 · 智慧教育 | 76 | 🟡 | [报告](docs/examples/新开普-财务健康评估-2026-06-12.md) | [PNG](docs/examples/newcapec_health_radar.png) |
-| 59 | 知乎 (NYSE: ZH / HKEX: 2390) | 互联网平台 · 内容社区与知识平台 | 76 | 🟡 | [报告](docs/examples/知乎-财务健康评估-2026-07-07.md) | [PNG](docs/examples/zhihu_health_radar.png) |
-| 60 | 科伦博泰 (6990.HK) | 生物医药 · ADC与创新药 | 76 | 🟡 | [报告](docs/examples/科伦博泰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/kelunbiotech_health_radar.png) |
-| 61 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
-| 62 | SpaceX (SPCX (NASDAQ)) | 航天 · 商业航天 | 75 | 🟡 | [报告](docs/examples/SpaceX-财务健康评估-2026-06-15.md) | [PNG](docs/examples/SpaceX_health_radar.png) |
-| 63 | 传音控股 (688036.SH) | 科技硬件 · 手机与智能终端 | 75 | 🟡 | [报告](docs/examples/Transsion-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Transsion_health_radar.png) |
-| 64 | 禾赛科技 (NASDAQ: HSAI / 2525.HK) | 汽车科技 · 激光雷达 | 75 | 🟡 | [报告](docs/examples/禾赛科技-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Hesai_health_radar.png) |
-| 65 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
-| 66 | 百度 (9888.HK / BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
-| 67 | 立讯精密 (002475.SZ) | 科技硬件 · 消费电子与EMS | 74 | 🟡 | [报告](docs/examples/立讯精密-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Luxshare_health_radar.png) |
-| 68 | 丰田汽车 (7203.T / TM (NYSE)) | 汽车科技 · 新能源整车 | 72 | 🟡 | [报告](docs/examples/丰田汽车-财务健康评估-2026-06-18.md) | [PNG](docs/examples/toyota_health_radar.png) |
-| 69 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 72 | 🟡 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sensetime_health_radar.png) |
-| 70 | 歌尔股份 (Goertek) (002241.SZ) | 科技硬件 · 消费电子与EMS | 71 | 🟡 | [报告](docs/examples/歌尔股份-财务健康评估-2026-07-01.md) | [PNG](docs/examples/Goertek_health_radar.png) |
-| 71 | 芯擎科技 | 汽车科技 · 自动驾驶芯片 | 71 | 🟡 | [报告](docs/examples/芯擎科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/siengine_health_radar.png) |
-| 72 | 阿里巴巴 (阿里云) (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
-| 73 | 中兴通讯 (000063.SZ / 0763.HK) | 科技硬件 · 通信与ICT | 70 | 🟡 | [报告](docs/examples/中兴通讯-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ZTE_health_radar.png) |
-| 74 | 中集集团 (000039.SZ / 02039.HK) | 汽车科技 · 智能装备 | 70 | 🟡 | [报告](docs/examples/中集集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CIMC_health_radar.png) |
-| 75 | 复星医药 (600196.SH / 02196.HK) | 生物医药 · 综合制药 | 70 | 🟡 | [报告](docs/examples/复星医药-财务健康评估-2026-08-10.md) | [PNG](docs/examples/FosunPharma_health_radar.png) |
-| 76 | 奇富科技 (NASDAQ: QFIN / 03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
-| 77 | 海致科技 (02706.HK) | 人工智能 · AI平台 | 70 | 🟡 | [报告](docs/examples/海致科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Haizhi_health_radar.png) |
-| 78 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
-| 79 | 中国电子 (—（央企）) | 科技硬件 · 通信与ICT | 69 | 🟠 | [报告](docs/examples/中国电子-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CEC_health_radar.png) |
-| 80 | 无问芯穹 | 人工智能 · AI基础设施 | 69 | 🟠 | [报告](docs/examples/无问芯穹-财务健康评估-2026-06-12.md) | [PNG](docs/examples/InfinigenceAI_health_radar.png) |
-| 81 | 深投控 (—（非上市·深圳国资）) | 金融科技 · 综合金融科技 | 69 | 🟠 | [报告](docs/examples/深投控-财务健康评估-2026-08-13.md) | [PNG](docs/examples/SIHC_health_radar.png) |
-| 82 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
-| 83 | 艾默生电气 (NYSE: EMR) | 工业自动化 · 过程控制与测试测量 | 68 | 🟠 | [报告](docs/examples/艾默生-财务健康评估-2026-07-11.md) | [PNG](docs/examples/emerson_health_radar.png) |
-| 84 | 上汽集团 (600104.SH) | 汽车科技 · 整车制造 | 67 | 🟠 | [报告](docs/examples/上汽集团-财务健康评估-2026-08-12.md) | [PNG](docs/examples/SAIC_health_radar.png) |
-| 85 | 康诺亚 (2162.HK) | 生物医药 · ADC与创新药 | 67 | 🟠 | [报告](docs/examples/康诺亚-财务健康评估-2026-06-12.md) | [PNG](docs/examples/keymed_health_radar.png) |
-| 86 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
-| 87 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
-| 88 | Sharpa | 机器人 · 灵巧手与具身智能 | 66 | 🟠 | [报告](docs/examples/Sharpa-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sharpa_health_radar.png) |
-| 89 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
-| 90 | 飞猪 (Fliggy) (（阿里巴巴集团全资子公司）) | 互联网平台 · 在线旅游 | 66 | 🟠 | [报告](docs/examples/飞猪-财务健康评估-2026-06-20.md) | [PNG](docs/examples/Fliggy_health_radar.png) |
-| 91 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
-| 92 | 云知声 (09678.HK) | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/云知声-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Unisound_health_radar.png) |
-| 93 | 创米数联 (IMILAB) | 科技硬件 · 智能家居与IoT | 65 | 🟠 | [报告](docs/examples/创米数联-财务健康评估-2026-07-01.md) | [PNG](docs/examples/IMILAB_health_radar.png) |
-| 94 | 华尔街见闻 | 金融科技 · 财经媒体 | 65 | 🟠 | [报告](docs/examples/华尔街见闻-财务健康评估-2026-06-19.md) | [PNG](docs/examples/wallstreetcn_health_radar.png) |
-| 95 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
-| 96 | MiniMax (0100.HK) | 人工智能 · 大模型 | 63 | 🟠 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
-| 97 | 地平线 (9660.HK) | 汽车科技 · 自动驾驶芯片 | 63 | 🟠 | [报告](docs/examples/地平线-财务健康评估-2026-06-12.md) | [PNG](docs/examples/HorizonRobotics_health_radar.png) |
-| 98 | 得物 | 互联网平台 · 电商 | 63 | 🟠 | [报告](docs/examples/得物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dewu_health_radar.png) |
-| 99 | 昆仑万维 (300418.SZ) | 人工智能 · 大模型 | 63 | 🟠 | [报告](docs/examples/昆仑万维-财务健康评估-2026-06-12.md) | [PNG](docs/examples/KunlunTech_health_radar.png) |
-| 100 | 星环科技 (688031.SH) | 人工智能 · AI平台 | 62 | 🟠 | [报告](docs/examples/星环科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Transwarp_health_radar.png) |
-| 101 | 达观数据 | 人工智能 · AI平台 | 61 | 🟠 | [报告](docs/examples/达观数据-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DataGrand_health_radar.png) |
-| 102 | 迈富时 (02556.HK) | 企业服务 · 营销SaaS | 61 | 🟠 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
-| 103 | 阶跃星辰 | 人工智能 · 大模型 | 61 | 🟠 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
-| 104 | 上汽大众 (600104.SH（上汽集团）) | 汽车科技 · 合资整车 | 60 | 🟠 | [报告](docs/examples/上汽大众-财务健康评估-2026-06-19.md) | [PNG](docs/examples/saicvw_health_radar.png) |
-| 105 | 第四范式 (06682.HK) | 人工智能 · AI平台 | 60 | 🟠 | [报告](docs/examples/第四范式-财务健康评估-2026-06-12.md) | [PNG](docs/examples/4Paradigm_health_radar.png) |
-| 106 | 追觅科技 | 机器人 · 服务机器人 | 60 | 🟠 | [报告](docs/examples/追觅科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dreame_health_radar.png) |
-| 107 | 顺丰控股 (002352.SZ / 06936.HK) | 物流 · 快递 | 60 | 🟠 | [报告](docs/examples/顺丰控股-财务健康评估-2026-08-13.md) | [PNG](docs/examples/SFExpress_health_radar.png) |
-| 108 | 实在智能 | 企业服务 · RPA与自动化 | 58 | 🟠 | [报告](docs/examples/实在智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ShizaiAI_health_radar.png) |
-| 109 | 工业富联 (601138.SH) | 科技硬件 · 消费电子与EMS | 57 | 🟠 | [报告](docs/examples/工业富联-财务健康评估-2026-08-13.md) | [PNG](docs/examples/FoxconnIndustrial_health_radar.png) |
-| 110 | 网龙 (0777.HK) | 互动娱乐 · 游戏 | 57 | 🟠 | [报告](docs/examples/网龙-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetDragon_health_radar.png) |
-| 111 | 中国商飞 (未上市（央企）) | 航空 · 大飞机制造 | 56 | 🟠 | [报告](docs/examples/中国商飞-财务健康评估-2026-08-12.md) | [PNG](docs/examples/COMAC_health_radar.png) |
-| 112 | Neuralink | 生物医药 · 医疗器械 | 55 | 🔴 | [报告](docs/examples/Neuralink-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Neuralink_health_radar.png) |
-| 113 | 领骏科技 (LeaderDrive) | 科技硬件 · 智能驾驶 | 55 | 🔴 | [报告](docs/examples/LeaderDrive-财务健康评估-2026-06-17.md) | [PNG](docs/examples/LeaderDrive_health_radar.png) |
-| 114 | 招商蛇口 (001979.SZ) | 房地产 · 住宅开发 | 54 | 🔴 | [报告](docs/examples/招商蛇口-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ChinaMerchantsSK_health_radar.png) |
-| 115 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
-| 116 | 君实生物 (688180.SH / 01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
-| 117 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
-| 118 | 猿辅导 | 教育科技 · 在线教育 | 52 | 🔴 | [报告](docs/examples/猿辅导-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Yuanfudao_health_radar.png) |
-| 119 | 智元机器人 (未上市（目标港股2026）) | 机器人 · 人形机器人 | 51 | 🔴 | [报告](docs/examples/智元机器人-财务健康评估-2026-08-12.md) | [PNG](docs/examples/AGIBOT_health_radar.png) |
-| 120 | 立业集团 (—（非上市）) | 企业服务 · 综合投资 | 51 | 🔴 | [报告](docs/examples/立业集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Liye_health_radar.png) |
-| 121 | 卓越睿新 (2687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
-| 122 | 江西铜业 (600362.SH / 00358.HK) | 化工 · 有色金属 | 50 | 🔴 | [报告](docs/examples/江西铜业-财务健康评估-2026-08-13.md) | [PNG](docs/examples/JiangxiCopper_health_radar.png) |
-| 123 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
-| 124 | 相信光网络科技 | 企业服务 · 区块链与Web3 | 47 | 🔴 | [报告](docs/examples/相信光网络科技-财务健康评估-2026-06-16.md) | [PNG](docs/examples/相信光_health_radar.png) |
-| 125 | 神州数码 (000034.SZ) | 企业服务 · IT服务 | 47 | 🔴 | [报告](docs/examples/神州数码-财务健康评估-2026-08-13.md) | [PNG](docs/examples/DigitalChina_health_radar.png) |
-| 126 | 风瀚天驰 | 企业服务 · 区块链与Web3 | 45 | 🔴 | [报告](docs/examples/风瀚天驰-财务健康评估-2026-06-16.md) | [PNG](docs/examples/风瀚天驰_health_radar.png) |
-| 127 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
-| 128 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
-| 129 | 万科 (000002.SZ / 02202.HK) | 房地产 · 住宅开发 | 29 | ⚫ | [报告](docs/examples/万科-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Vanke_health_radar.png) |
+| 7 | 微众银行 (—（未上市）) | 金融科技 · 综合金融科技 | 87 | 🟢 | [报告](docs/examples/微众银行-财务健康评估-2026-08-13.md) | [PNG](docs/examples/WeCanBank_health_radar.png) |
+| 8 | 招商银行 (600036.SH / 03968.HK) | 金融科技 · 综合金融科技 | 87 | 🟢 | [报告](docs/examples/招商银行-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CMB_health_radar.png) |
+| 9 | 欧税通 | 企业服务 · 财税SaaS | 87 | 🟢 | [报告](docs/examples/欧税通-财务健康评估-2026-06-12.md) | [PNG](docs/examples/欧税通_eVatMaster_health_radar.png) |
+| 10 | 蚂蚁集团 | 金融科技 · 综合金融科技 | 87 | 🟢 | [报告](docs/examples/蚂蚁集团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AntGroup_health_radar.png) |
+| 11 | 黑湖科技 | 企业服务 · 工业SaaS | 87 | 🟢 | [报告](docs/examples/黑湖科技-财务健康评估-2026-06-19.md) | [PNG](docs/examples/blacklake_health_radar.png) |
+| 12 | Caper (Instacart) (NASDAQ: CART) | 科技硬件 · 智能零售 | 86 | 🟢 | [报告](docs/examples/Caper-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Caper_health_radar.png) |
+| 13 | 台达电子 (2308.TW) | 科技硬件 · 电源管理与热管理 | 86 | 🟢 | [报告](docs/examples/台达电子-财务健康评估-2026-06-22.md) | [PNG](docs/examples/Delta_health_radar.png) |
+| 14 | 鹰角网络 | 互动娱乐 · 游戏研发 | 86 | 🟢 | [报告](docs/examples/鹰角网络-财务健康评估-2026-06-14.md) | [PNG](docs/examples/hypergryph_health_radar.png) |
+| 15 | Nebius (NASDAQ: NBIS) | 人工智能 · AI基础设施 | 85 | 🟢 | [报告](docs/examples/Nebius-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Nebius_health_radar.png) |
+| 16 | 中科创达 (300496.SZ) | 科技硬件 · 智能操作系统 | 85 | 🟡 | [报告](docs/examples/中科创达-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ThunderSoft_health_radar.png) |
+| 17 | 信达生物 (01801.HK) | 生物医药 · 综合制药 | 85 | 🟢 | [报告](docs/examples/信达生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/信达生物_health_radar.png) |
+| 18 | 商泰汽车 iAUTO | 汽车科技 · 汽车软件 | 85 | 🟢 | [报告](docs/examples/商泰汽车-iAUTO-财务健康评估-2026-06-12.md) | [PNG](docs/examples/iAUTO_health_radar.png) |
+| 19 | 拼多多 (NASDAQ: PDD) | 互联网平台 · 电商 | 85 | 🟢 | [报告](docs/examples/拼多多-财务健康评估-2026-06-12.md) | [PNG](docs/examples/PDD_health_radar.png) |
+| 20 | 米哈游 | 互动娱乐 · 游戏研发 | 85 | 🟢 | [报告](docs/examples/米哈游-财务健康评估-2026-06-12.md) | [PNG](docs/examples/miHoYo_health_radar.png) |
+| 21 | 金山办公 (688111.SH) | 企业服务 · 办公软件 | 85 | 🟢 | [报告](docs/examples/金山办公-财务健康评估-2026-06-12.md) | [PNG](docs/examples/KingsoftOffice_health_radar.png) |
+| 22 | FunPlus（趣加游戏） | 互动娱乐 · 游戏研发 | 84 | 🟡 | [报告](docs/examples/FunPlus-财务健康评估-2026-06-18.md) | [PNG](docs/examples/FunPlus_health_radar.png) |
+| 23 | GitHub | 科技巨头 · 开发者平台 | 84 | 🟡 | [报告](docs/examples/GitHub-财务健康评估-2026-07-07.md) | [PNG](docs/examples/GitHub_health_radar.png) |
+| 24 | 字节跳动 | 互联网平台 · 社交媒体与内容 | 84 | 🟡 | [报告](docs/examples/字节跳动-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ByteDance_health_radar.png) |
+| 25 | 平安银行 (000001.SZ) | 金融科技 · 综合金融科技 | 84 | 🟡 | [报告](docs/examples/平安银行-财务健康评估-2026-08-13.md) | [PNG](docs/examples/PingAnBank_health_radar.png) |
+| 26 | 微软 (NASDAQ: MSFT) | 科技巨头 · 软件与云服务 | 84 | 🟡 | [报告](docs/examples/微软-财务健康评估-2026-07-01.md) | [PNG](docs/examples/microsoft_health_radar.png) |
+| 27 | 汉高（中国地区） (HEN3.DE) | 化工 · 特种化学品 | 84 | 🟡 | [报告](docs/examples/汉高（中国）-财务健康评估-2026-07-12.md) | [PNG](docs/examples/Henkel_China_health_radar.png) |
+| 28 | 莉莉丝游戏 | 互动娱乐 · 游戏研发 | 84 | 🟡 | [报告](docs/examples/莉莉丝游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/LilithGames_health_radar.png) |
+| 29 | EPAM Systems (NYSE: EPAM) | 企业服务 · IT服务与软件工程 | 83 | 🟡 | [报告](docs/examples/EPAM-财务健康评估-2026-06-17.md) | [PNG](docs/examples/EPAM_health_radar.png) |
+| 30 | 乐元素 | 互动娱乐 · 休闲游戏 | 83 | 🟡 | [报告](docs/examples/乐元素-财务健康评估-2026-06-19.md) | [PNG](docs/examples/happyelements_health_radar.png) |
+| 31 | 同花顺 (300033.SZ) | 金融科技 · 金融数据服务 | 83 | 🟡 | [报告](docs/examples/同花顺-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Hithink_health_radar.png) |
+| 32 | 映恩生物 (9606.HK) | 生物医药 · ADC与创新药 | 83 | 🟡 | [报告](docs/examples/映恩生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/dualitybio_health_radar.png) |
+| 33 | 游卡 | 互动娱乐 · 桌游与卡牌 | 83 | 🟡 | [报告](docs/examples/游卡-财务健康评估-2026-06-19.md) | [PNG](docs/examples/yokagames_health_radar.png) |
+| 34 | 领健 | 企业服务 · 医疗SaaS | 83 | 🟡 | [报告](docs/examples/领健-财务健康评估-2026-06-19.md) | [PNG](docs/examples/linkedcare_health_radar.png) |
+| 35 | DeNA (2432.T) | 互动娱乐 · 游戏研发 | 82 | 🟡 | [报告](docs/examples/DeNA-财务健康评估-2026-06-18.md) | [PNG](docs/examples/DeNA_health_radar.png) |
+| 36 | 中信证券 (600030.SH / 06030.HK) | 金融科技 · 证券 | 82 | 🟡 | [报告](docs/examples/中信证券-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CiticSec_health_radar.png) |
+| 37 | 比亚迪 (BYD) (002594.SZ / 1211.HK) | 汽车科技 · 新能源整车 | 82 | 🟡 | [报告](docs/examples/BYD-财务健康评估-2026-06-16.md) | [PNG](docs/examples/BYD_health_radar.png) |
+| 38 | 网易 (9999.HK / NTES) | 互动娱乐 · 游戏 | 82 | 🟡 | [报告](docs/examples/网易-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetEase_health_radar.png) |
+| 39 | 阳光保险 (6963.HK) | 金融科技 · 保险 | 82 | 🟡 | [报告](docs/examples/阳光保险-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Sunshine_health_radar.png) |
+| 40 | 上海第九人民医院 | 生物医药 · 医疗机构 | 81 | 🟡 | [报告](docs/examples/上海九院-雇主评估-2026-06-14.md) | [PNG](docs/examples/shanghai_ninth_hospital_health_radar.png) |
+| 41 | 瑞金医院 | 生物医药 · 医疗机构 | 81 | 🟡 | [报告](docs/examples/瑞金医院-雇主评估-2026-06-15.md) | [PNG](docs/examples/ruijin_hospital_health_radar.png) |
+| 42 | 中国广核电力 (003816.SZ / 01816.HK) | 能源 · 核电 | 80 | 🟡 | [报告](docs/examples/中国广核电力-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CGNP_health_radar.png) |
+| 43 | 北京飞渡科技 | 数字孪生 · 平台与引擎 | 80 | 🟡 | [报告](docs/examples/北京飞渡科技-财务健康评估-2026-06-15.md) | [PNG](docs/examples/北京飞渡科技_health_radar.png) |
+| 44 | 康捷国际物流 (NYSE: EXPD) | 物流 · 国际货运代理 | 80 | 🟡 | [报告](docs/examples/康捷国际物流-财务健康评估-2026-07-11.md) | [PNG](docs/examples/expeditors_health_radar.png) |
+| 45 | 律商联讯 (RELX: LSE/REL · NYSE: RELX) | 企业服务 · 法律信息服务 | 80 | 🟡 | [报告](docs/examples/律商联讯-财务健康评估-2026-06-16.md) | [PNG](docs/examples/LexisNexis_health_radar.png) |
+| 46 | 悠星网络 | 互动娱乐 · 游戏发行与运营 | 80 | 🟡 | [报告](docs/examples/悠星网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/yostar_health_radar.png) |
+| 47 | 特斯拉 (Tesla) (TSLA (NASDAQ)) | 汽车科技 · 新能源整车 | 80 | 🟡 | [报告](docs/examples/Tesla-财务健康评估-2026-06-15.md) | [PNG](docs/examples/Tesla_health_radar.png) |
+| 48 | 中国平安 (601318.SH / 02318.HK) | 金融科技 · 综合金融科技 | 79 | 🟡 | [报告](docs/examples/中国平安-财务健康评估-2026-08-13.md) | [PNG](docs/examples/PingAn_health_radar.png) |
+| 49 | 中国广核集团 (—（央企）) | 能源 · 综合能源 | 79 | 🟡 | [报告](docs/examples/中国广核集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CGN_health_radar.png) |
+| 50 | 中芯国际 (688981.SH / 00981.HK) | 科技硬件 · 晶圆代工 | 78 | 🟡 | [报告](docs/examples/中芯国际-财务健康评估-2026-08-11.md) | [PNG](docs/examples/SMIC_health_radar.png) |
+| 51 | 九章云极 | 人工智能 · AI平台 | 78 | 🟡 | [报告](docs/examples/九章云极-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DataCanvas_health_radar.png) |
+| 52 | 叠纸游戏 | 互动娱乐 · 游戏研发 | 78 | 🟡 | [报告](docs/examples/叠纸游戏-财务健康评估-2026-06-12.md) | [PNG](docs/examples/叠纸游戏_health_radar.png) |
+| 53 | 国家能源集团 (601088.SH / 01088.HK（中国神华）) | 能源 · 综合能源 | 78 | 🟡 | [报告](docs/examples/国家能源集团-财务健康评估-2026-06-15.md) | [PNG](docs/examples/国家能源集团_health_radar.png) |
+| 54 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 | [报告](docs/examples/Sea Limited(Shopee)-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
+| 55 | 中国远洋海运 (601919.SH / 1919.HK（中远海控）) | 物流 · 航运 | 77 | 🟡 | [报告](docs/examples/中国远洋海运-财务健康评估-2026-08-11.md) | [PNG](docs/examples/COSCO_health_radar.png) |
+| 56 | 罗氏制药（中国） (ROG.SIX / RHHBY) | 生物医药 · 综合制药 | 77 | 🟡 | [报告](docs/examples/罗氏制药-财务健康评估-2026-08-11.md) | [PNG](docs/examples/RocheChina_health_radar.png) |
+| 57 | 腾讯 (0700.HK) | 互联网平台 · 社交媒体与内容 | 77 | 🟡 | [报告](docs/examples/腾讯-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Tencent_health_radar.png) |
+| 58 | 华为 | 科技硬件 · 通信与ICT | 76 | 🟡 | [报告](docs/examples/华为-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Huawei_health_radar.png) |
+| 59 | 多益网络 | 互动娱乐 · 游戏研发 | 76 | 🟡 | [报告](docs/examples/多益网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/duoyi_health_radar.png) |
+| 60 | 新开普 (300248.SZ) | 教育科技 · 智慧教育 | 76 | 🟡 | [报告](docs/examples/新开普-财务健康评估-2026-06-12.md) | [PNG](docs/examples/newcapec_health_radar.png) |
+| 61 | 知乎 (NYSE: ZH / HKEX: 2390) | 互联网平台 · 内容社区与知识平台 | 76 | 🟡 | [报告](docs/examples/知乎-财务健康评估-2026-07-07.md) | [PNG](docs/examples/zhihu_health_radar.png) |
+| 62 | 科伦博泰 (6990.HK) | 生物医药 · ADC与创新药 | 76 | 🟡 | [报告](docs/examples/科伦博泰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/kelunbiotech_health_radar.png) |
+| 63 | 美团 (3690.HK) | 互联网平台 · 本地生活 | 76 | 🟡 | [报告](docs/examples/美团-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Meituan_health_radar.png) |
+| 64 | SpaceX (SPCX (NASDAQ)) | 航天 · 商业航天 | 75 | 🟡 | [报告](docs/examples/SpaceX-财务健康评估-2026-06-15.md) | [PNG](docs/examples/SpaceX_health_radar.png) |
+| 65 | 传音控股 (688036.SH) | 科技硬件 · 手机与智能终端 | 75 | 🟡 | [报告](docs/examples/Transsion-财务健康评估-2026-06-17.md) | [PNG](docs/examples/Transsion_health_radar.png) |
+| 66 | 国药一致 (000028.SZ) | 生物医药 · 医药分销 | 75 | 🟡 | [报告](docs/examples/国药一致-财务健康评估-2026-08-13.md) | [PNG](docs/examples/GuoYaoYiZhi_health_radar.png) |
+| 67 | 禾赛科技 (NASDAQ: HSAI / 2525.HK) | 汽车科技 · 激光雷达 | 75 | 🟡 | [报告](docs/examples/禾赛科技-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Hesai_health_radar.png) |
+| 68 | 声网 (NASDAQ: API) | 企业服务 · 云通信 | 74 | 🟡 | [报告](docs/examples/声网-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Agora_health_radar.png) |
+| 69 | 百度 (9888.HK / BIDU) | 互联网平台 · 搜索引擎与AI | 74 | 🟡 | [报告](docs/examples/百度-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Baidu_health_radar.png) |
+| 70 | 立讯精密 (002475.SZ) | 科技硬件 · 消费电子与EMS | 74 | 🟡 | [报告](docs/examples/立讯精密-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Luxshare_health_radar.png) |
+| 71 | 丰田汽车 (7203.T / TM (NYSE)) | 汽车科技 · 新能源整车 | 72 | 🟡 | [报告](docs/examples/丰田汽车-财务健康评估-2026-06-18.md) | [PNG](docs/examples/toyota_health_radar.png) |
+| 72 | 商汤科技 (0020.HK) | 人工智能 · 计算机视觉 | 72 | 🟡 | [报告](docs/examples/商汤科技-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sensetime_health_radar.png) |
+| 73 | 歌尔股份 (Goertek) (002241.SZ) | 科技硬件 · 消费电子与EMS | 71 | 🟡 | [报告](docs/examples/歌尔股份-财务健康评估-2026-07-01.md) | [PNG](docs/examples/Goertek_health_radar.png) |
+| 74 | 芯擎科技 | 汽车科技 · 自动驾驶芯片 | 71 | 🟡 | [报告](docs/examples/芯擎科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/siengine_health_radar.png) |
+| 75 | 阿里巴巴 (阿里云) (BABA/9988.HK) | 互联网平台 · 电商与云计算 | 71 | 🟡 | [报告](docs/examples/阿里巴巴-财务健康评估-2026-06-12.md) | [PNG](docs/examples/AlibabaCloud_health_radar.png) |
+| 76 | 中兴通讯 (000063.SZ / 0763.HK) | 科技硬件 · 通信与ICT | 70 | 🟡 | [报告](docs/examples/中兴通讯-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ZTE_health_radar.png) |
+| 77 | 中集集团 (000039.SZ / 02039.HK) | 汽车科技 · 智能装备 | 70 | 🟡 | [报告](docs/examples/中集集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CIMC_health_radar.png) |
+| 78 | 复星医药 (600196.SH / 02196.HK) | 生物医药 · 综合制药 | 70 | 🟡 | [报告](docs/examples/复星医药-财务健康评估-2026-08-10.md) | [PNG](docs/examples/FosunPharma_health_radar.png) |
+| 79 | 奇富科技 (NASDAQ: QFIN / 03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
+| 80 | 海致科技 (02706.HK) | 人工智能 · AI平台 | 70 | 🟡 | [报告](docs/examples/海致科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Haizhi_health_radar.png) |
+| 81 | 零一万物 | 人工智能 · 大模型 | 70 | 🟠 | [报告](docs/examples/零一万物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/01AI_health_radar.png) |
+| 82 | 中国电子 (—（央企）) | 科技硬件 · 通信与ICT | 69 | 🟠 | [报告](docs/examples/中国电子-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CEC_health_radar.png) |
+| 83 | 无问芯穹 | 人工智能 · AI基础设施 | 69 | 🟠 | [报告](docs/examples/无问芯穹-财务健康评估-2026-06-12.md) | [PNG](docs/examples/InfinigenceAI_health_radar.png) |
+| 84 | 深投控 (—（非上市·深圳国资）) | 金融科技 · 综合金融科技 | 69 | 🟠 | [报告](docs/examples/深投控-财务健康评估-2026-08-13.md) | [PNG](docs/examples/SIHC_health_radar.png) |
+| 85 | 月之暗面 | 人工智能 · 大模型 | 68 | 🟠 | [报告](docs/examples/月之暗面-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MoonshotAI_health_radar.png) |
+| 86 | 爱施德 (002416.SZ) | 企业服务 · IT分销 | 68 | 🟠 | [报告](docs/examples/爱施德-财务健康评估-2026-08-13.md) | [PNG](docs/examples/AiShide_health_radar.png) |
+| 87 | 艾默生电气 (NYSE: EMR) | 工业自动化 · 过程控制与测试测量 | 68 | 🟠 | [报告](docs/examples/艾默生-财务健康评估-2026-07-11.md) | [PNG](docs/examples/emerson_health_radar.png) |
+| 88 | 上汽集团 (600104.SH) | 汽车科技 · 整车制造 | 67 | 🟠 | [报告](docs/examples/上汽集团-财务健康评估-2026-08-12.md) | [PNG](docs/examples/SAIC_health_radar.png) |
+| 89 | 康诺亚 (2162.HK) | 生物医药 · ADC与创新药 | 67 | 🟠 | [报告](docs/examples/康诺亚-财务健康评估-2026-06-12.md) | [PNG](docs/examples/keymed_health_radar.png) |
+| 90 | 明略科技 (02718.HK) | 人工智能 · AI平台 | 67 | 🟠 | [报告](docs/examples/明略科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiningLamp_health_radar.png) |
+| 91 | 联影智能 | 人工智能 · 医疗AI | 67 | 🟠 | [报告](docs/examples/联影智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/UnitedImagingAI_health_radar.png) |
+| 92 | Sharpa | 机器人 · 灵巧手与具身智能 | 66 | 🟠 | [报告](docs/examples/Sharpa-财务健康评估-2026-06-19.md) | [PNG](docs/examples/sharpa_health_radar.png) |
+| 93 | 科大讯飞 (002230.SZ) | 人工智能 · AI平台 | 66 | 🟠 | [报告](docs/examples/科大讯飞-财务健康评估-2026-06-12.md) | [PNG](docs/examples/科大讯飞_iFLYTEK_health_radar.png) |
+| 94 | 飞猪 (Fliggy) (（阿里巴巴集团全资子公司）) | 互联网平台 · 在线旅游 | 66 | 🟠 | [报告](docs/examples/飞猪-财务健康评估-2026-06-20.md) | [PNG](docs/examples/Fliggy_health_radar.png) |
+| 95 | DeepSeek | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/DeepSeek-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DeepSeek_health_radar.png) |
+| 96 | 云知声 (09678.HK) | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/云知声-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Unisound_health_radar.png) |
+| 97 | 创米数联 (IMILAB) | 科技硬件 · 智能家居与IoT | 65 | 🟠 | [报告](docs/examples/创米数联-财务健康评估-2026-07-01.md) | [PNG](docs/examples/IMILAB_health_radar.png) |
+| 98 | 华尔街见闻 | 金融科技 · 财经媒体 | 65 | 🟠 | [报告](docs/examples/华尔街见闻-财务健康评估-2026-06-19.md) | [PNG](docs/examples/wallstreetcn_health_radar.png) |
+| 99 | 面壁智能 | 人工智能 · 大模型 | 65 | 🟠 | [报告](docs/examples/面壁智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ModelBest_health_radar.png) |
+| 100 | MiniMax (0100.HK) | 人工智能 · 大模型 | 63 | 🟠 | [报告](docs/examples/MiniMax-财务健康评估-2026-06-12.md) | [PNG](docs/examples/MiniMax_health_radar.png) |
+| 101 | 地平线 (9660.HK) | 汽车科技 · 自动驾驶芯片 | 63 | 🟠 | [报告](docs/examples/地平线-财务健康评估-2026-06-12.md) | [PNG](docs/examples/HorizonRobotics_health_radar.png) |
+| 102 | 得物 | 互联网平台 · 电商 | 63 | 🟠 | [报告](docs/examples/得物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dewu_health_radar.png) |
+| 103 | 昆仑万维 (300418.SZ) | 人工智能 · 大模型 | 63 | 🟠 | [报告](docs/examples/昆仑万维-财务健康评估-2026-06-12.md) | [PNG](docs/examples/KunlunTech_health_radar.png) |
+| 104 | 创维集团 (00751.HK) | 科技硬件 · 智能家电 | 62 | 🟠 | [报告](docs/examples/创维集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Skyworth_health_radar.png) |
+| 105 | 星环科技 (688031.SH) | 人工智能 · AI平台 | 62 | 🟠 | [报告](docs/examples/星环科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Transwarp_health_radar.png) |
+| 106 | 达观数据 | 人工智能 · AI平台 | 61 | 🟠 | [报告](docs/examples/达观数据-财务健康评估-2026-06-12.md) | [PNG](docs/examples/DataGrand_health_radar.png) |
+| 107 | 迈富时 (02556.HK) | 企业服务 · 营销SaaS | 61 | 🟠 | [报告](docs/examples/迈富时-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Marketingforce_health_radar.png) |
+| 108 | 阶跃星辰 | 人工智能 · 大模型 | 61 | 🟠 | [报告](docs/examples/阶跃星辰-财务健康评估-2026-06-12.md) | [PNG](docs/examples/StepFun_health_radar.png) |
+| 109 | 上汽大众 (600104.SH（上汽集团）) | 汽车科技 · 合资整车 | 60 | 🟠 | [报告](docs/examples/上汽大众-财务健康评估-2026-06-19.md) | [PNG](docs/examples/saicvw_health_radar.png) |
+| 110 | 第四范式 (06682.HK) | 人工智能 · AI平台 | 60 | 🟠 | [报告](docs/examples/第四范式-财务健康评估-2026-06-12.md) | [PNG](docs/examples/4Paradigm_health_radar.png) |
+| 111 | 追觅科技 | 机器人 · 服务机器人 | 60 | 🟠 | [报告](docs/examples/追觅科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Dreame_health_radar.png) |
+| 112 | 顺丰控股 (002352.SZ / 06936.HK) | 物流 · 快递 | 60 | 🟠 | [报告](docs/examples/顺丰控股-财务健康评估-2026-08-13.md) | [PNG](docs/examples/SFExpress_health_radar.png) |
+| 113 | 深桑达 (000032.SZ) | 企业服务 · 电子信息服务 | 59 | 🟠 | [报告](docs/examples/深桑达-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ShenSangDa_health_radar.png) |
+| 114 | 实在智能 | 企业服务 · RPA与自动化 | 58 | 🟠 | [报告](docs/examples/实在智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ShizaiAI_health_radar.png) |
+| 115 | 工业富联 (601138.SH) | 科技硬件 · 消费电子与EMS | 57 | 🟠 | [报告](docs/examples/工业富联-财务健康评估-2026-08-13.md) | [PNG](docs/examples/FoxconnIndustrial_health_radar.png) |
+| 116 | 网龙 (0777.HK) | 互动娱乐 · 游戏 | 57 | 🟠 | [报告](docs/examples/网龙-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetDragon_health_radar.png) |
+| 117 | 中国商飞 (未上市（央企）) | 航空 · 大飞机制造 | 56 | 🟠 | [报告](docs/examples/中国商飞-财务健康评估-2026-08-12.md) | [PNG](docs/examples/COMAC_health_radar.png) |
+| 118 | 永道控股 (—（非上市）) | 企业服务 · 综合投资 | 56 | 🟠 | [报告](docs/examples/永道控股-财务健康评估-2026-08-13.md) | [PNG](docs/examples/YongDao_health_radar.png) |
+| 119 | Neuralink | 生物医药 · 医疗器械 | 55 | 🔴 | [报告](docs/examples/Neuralink-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Neuralink_health_radar.png) |
+| 120 | 领骏科技 (LeaderDrive) | 科技硬件 · 智能驾驶 | 55 | 🔴 | [报告](docs/examples/LeaderDrive-财务健康评估-2026-06-17.md) | [PNG](docs/examples/LeaderDrive_health_radar.png) |
+| 121 | 招商蛇口 (001979.SZ) | 房地产 · 住宅开发 | 54 | 🔴 | [报告](docs/examples/招商蛇口-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ChinaMerchantsSK_health_radar.png) |
+| 122 | 智谱AI (02513.HK) | 人工智能 · 大模型 | 54 | 🔴 | [报告](docs/examples/智谱AI-财务健康评估-2026-06-12.md) | [PNG](docs/examples/ZhipuAI_health_radar.png) |
+| 123 | 君实生物 (688180.SH / 01877.HK) | 生物医药 · 综合制药 | 53 | 🔴 | [报告](docs/examples/君实生物-财务健康评估-2026-06-12.md) | [PNG](docs/examples/君实生物_health_radar.png) |
+| 124 | 汇纳科技 (300609.SZ) | 人工智能 · 商业大数据 | 52 | 🔴 | [报告](docs/examples/汇纳科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/汇纳科技_WinnerTech_health_radar.png) |
+| 125 | 猿辅导 | 教育科技 · 在线教育 | 52 | 🔴 | [报告](docs/examples/猿辅导-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Yuanfudao_health_radar.png) |
+| 126 | 心里程控股 (—（非上市民企）) | 企业服务 · 供应链服务 | 51 | 🔴 | [报告](docs/examples/心里程控股-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Xinlicheng_health_radar.png) |
+| 127 | 智元机器人 (未上市（目标港股2026）) | 机器人 · 人形机器人 | 51 | 🔴 | [报告](docs/examples/智元机器人-财务健康评估-2026-08-12.md) | [PNG](docs/examples/AGIBOT_health_radar.png) |
+| 128 | 立业集团 (—（非上市）) | 企业服务 · 综合投资 | 51 | 🔴 | [报告](docs/examples/立业集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Liye_health_radar.png) |
+| 129 | 卓越睿新 (2687.HK) | 教育科技 · 智慧教育 | 50 | 🔴 | [报告](docs/examples/卓越睿新-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Neoexcellent_health_radar.png) |
+| 130 | 江西铜业 (600362.SH / 00358.HK) | 化工 · 有色金属 | 50 | 🔴 | [报告](docs/examples/江西铜业-财务健康评估-2026-08-13.md) | [PNG](docs/examples/JiangxiCopper_health_radar.png) |
+| 131 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
+| 132 | 相信光网络科技 | 企业服务 · 区块链与Web3 | 47 | 🔴 | [报告](docs/examples/相信光网络科技-财务健康评估-2026-06-16.md) | [PNG](docs/examples/相信光_health_radar.png) |
+| 133 | 神州数码 (000034.SZ) | 企业服务 · IT服务 | 47 | 🔴 | [报告](docs/examples/神州数码-财务健康评估-2026-08-13.md) | [PNG](docs/examples/DigitalChina_health_radar.png) |
+| 134 | 怡亚通 (002183.SZ) | 企业服务 · 供应链服务 | 46 | 🔴 | [报告](docs/examples/怡亚通-财务健康评估-2026-08-13.md) | [PNG](docs/examples/EternalAsia_health_radar.png) |
+| 135 | 风瀚天驰 | 企业服务 · 区块链与Web3 | 45 | 🔴 | [报告](docs/examples/风瀚天驰-财务健康评估-2026-06-16.md) | [PNG](docs/examples/风瀚天驰_health_radar.png) |
+| 136 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
+| 137 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 138 | 金地集团 (600383.SH) | 房地产 · 住宅开发 | 31 | ⚫ | [报告](docs/examples/金地集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Gemdale_health_radar.png) |
+| 139 | 万科 (000002.SZ / 02202.HK) | 房地产 · 住宅开发 | 29 | ⚫ | [报告](docs/examples/万科-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Vanke_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -292,6 +173,7 @@
 | 蚂蚁集团 | 90 | 91 | 76 | 90 | 76 | **87** |
 | 黑湖科技 | 90 | 78 | 90 | 90 | 83 | **87** |
 | 招商银行 | 90 | 82 | 83 | 90 | 83 | **87** |
+| 微众银行 | 90 | 82 | 83 | 90 | 83 | **87** |
 | 台达电子 | 90 | 83 | 83 | 81 | 83 | **86** |
 | 鹰角网络 | 90 | 77 | 95 | 90 | 69 | **86** |
 | Caper (Instacart) | 90 | 87 | 90 | 64 | 83 | **86** |
@@ -319,6 +201,7 @@
 | 网易 | 90 | 84 | 90 | 35 | 72 | **82** |
 | 比亚迪 (BYD) | 90 | 73 | 69 | 81 | 83 | **82** |
 | 阳光保险 | 81 | 79 | 83 | 90 | 83 | **82** |
+| 中信证券 | 81 | 82 | 76 | 90 | 83 | **82** |
 | 上海第九人民医院 | 81 | 70 | 90 | 90 | 83 | **81** |
 | 瑞金医院 | 81 | 66 | 90 | 90 | 83 | **81** |
 | 北京飞渡科技 | 78 | 73 | 90 | 81 | 83 | **80** |
@@ -346,6 +229,7 @@
 | 传音控股 | 81 | 60 | 69 | 90 | 69 | **75** |
 | SpaceX | 81 | 59 | 62 | 90 | 83 | **75** |
 | 禾赛科技 | 71 | 78 | 90 | 63 | 75 | **75** |
+| 国药一致 | 81 | 55 | 76 | 81 | 83 | **75** |
 | 百度 | 81 | 69 | 61 | 73 | 76 | **74** |
 | 声网 | 81 | 72 | 90 | 35 | 55 | **74** |
 | 立讯精密 | 72 | 74 | 76 | 72 | 83 | **74** |
@@ -365,6 +249,7 @@
 | 中国电子 | 72 | 38 | 76 | 81 | 90 | **69** |
 | 月之暗面 | 62 | 61 | 90 | 72 | 69 | **68** |
 | 艾默生电气 | 73 | 64 | 46 | 73 | 83 | **68** |
+| 爱施德 | 72 | 50 | 62 | 81 | 76 | **68** |
 | 康诺亚 | 54 | 65 | 76 | 90 | 90 | **67** |
 | 联影智能 | 63 | 50 | 90 | 73 | 83 | **67** |
 | 明略科技 | 63 | 59 | 90 | 63 | 76 | **67** |
@@ -382,6 +267,7 @@
 | MiniMax | 52 | 50 | 90 | 81 | 76 | **63** |
 | 昆仑万维 | 44 | 79 | 69 | 90 | 83 | **63** |
 | 星环科技 | 65 | 34 | 90 | 44 | 76 | **62** |
+| 创维集团 | 55 | 50 | 69 | 81 | 83 | **62** |
 | 达观数据 | 53 | 41 | 90 | 81 | 76 | **61** |
 | 阶跃星辰 | 52 | 50 | 90 | 63 | 76 | **61** |
 | 迈富时 | 52 | 56 | 69 | 71 | 83 | **61** |
@@ -389,10 +275,12 @@
 | 第四范式 | 44 | 72 | 76 | 54 | 90 | **60** |
 | 上汽大众 | 67 | 52 | 55 | 63 | 54 | **60** |
 | 顺丰控股 | 55 | 55 | 62 | 71 | 83 | **60** |
+| 深桑达 | 55 | 50 | 62 | 60 | 76 | **59** |
 | 实在智能 | 44 | 55 | 76 | 81 | 73 | **58** |
 | 网龙 | 64 | 64 | 55 | 15 | 55 | **57** |
 | 工业富联 | 45 | 68 | 62 | 62 | 76 | **57** |
 | 中国商飞 | 45 | 57 | 62 | 72 | 76 | **56** |
+| 永道控股 | 55 | 50 | 55 | 63 | 62 | **56** |
 | Neuralink | 53 | 15 | 95 | 71 | 69 | **55** |
 | 领骏科技 (LeaderDrive) | 54 | 29 | 90 | 44 | 69 | **55** |
 | 智谱AI | 43 | 45 | 83 | 52 | 76 | **54** |
@@ -402,13 +290,16 @@
 | 汇纳科技 | 62 | 45 | 61 | 15 | 47 | **52** |
 | 智元机器人 | 35 | 61 | 62 | 63 | 76 | **51** |
 | 立业集团 | 45 | 50 | 47 | 72 | 67 | **51** |
+| 心里程控股 | 45 | 50 | 47 | 72 | 67 | **51** |
 | 卓越睿新 | 25 | 82 | 61 | 71 | 62 | **50** |
 | 江西铜业 | 35 | 55 | 62 | 81 | 64 | **50** |
 | 百川智能 | 44 | 22 | 76 | 35 | 76 | **47** |
 | 相信光网络科技 | 53 | 15 | 76 | 63 | 23 | **47** |
 | 神州数码 | 25 | 55 | 54 | 81 | 83 | **47** |
+| 怡亚通 | 42 | 36 | 47 | 64 | 62 | **46** |
 | 风瀚天驰 | 53 | 15 | 76 | 45 | 23 | **45** |
 | 上海开普勒机器人 | 33 | 31 | 76 | 52 | 61 | **44** |
 | 云从科技 | 25 | 29 | 61 | 35 | 46 | **34** |
+| 金地集团 | 28 | 22 | 31 | 44 | 47 | **31** |
 | 万科 | 25 | 22 | 23 | 44 | 54 | **29** |
 

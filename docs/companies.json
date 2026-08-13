@@ -2620,5 +2620,28 @@
     "radar": "Vanke_health_radar.png",
     "employees": "约8-10万",
     "revenue": "¥2,334.33亿（2025）"
+  },
+  {
+    "id": "cmb",
+    "name": "招商银行",
+    "nameEn": "CMB",
+    "ticker": "600036.SH / 03968.HK",
+    "ind1": "金融科技",
+    "ind2": "综合金融科技",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 82,
+      "debt": 83,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 87,
+    "grade": "Excellent",
+    "gradeLabel": "优秀",
+    "oneLine": "中国零售银行之王，不良率0.94%行业最优+拨备391.79%+AUM17万亿，净息差收窄是唯一隐忧",
+    "report": "招商银行-财务健康评估-2026-08-13.md",
+    "radar": "CMB_health_radar.png",
+    "employees": "约11-12万",
+    "revenue": "¥3,375.32亿（2025）"
   }
 ]

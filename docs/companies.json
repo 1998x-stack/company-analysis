@@ -2574,5 +2574,28 @@
     "radar": "PingAn_health_radar.png",
     "employees": "约30万",
     "revenue": "¥10,289亿（2024）"
+  },
+  {
+    "id": "foxconn_industrial",
+    "name": "工业富联",
+    "nameEn": "Foxconn Industrial",
+    "ticker": "601138.SH",
+    "ind1": "科技硬件",
+    "ind2": "消费电子与EMS",
+    "scores": {
+      "cashFlow": 45,
+      "profitability": 68,
+      "debt": 62,
+      "operations": 62,
+      "sustainability": 76
+    },
+    "total": 57,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "全球AI服务器制造龙头，营收净利爆发+48%/+52%，但毛利7%+现金流-78%+应收高企是核心矛盾",
+    "report": "工业富联-财务健康评估-2026-08-13.md",
+    "radar": "FoxconnIndustrial_health_radar.png",
+    "employees": "21.7万",
+    "revenue": "¥9,028.87亿（2025）"
   }
 ]

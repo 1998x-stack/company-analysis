@@ -7,3 +7,7 @@
 | US-ID | Company | Status | Score |
 |-------|---------|--------|-------|
 | US-001 | 中国平安 | ✅ done | 79 |
+| US-002 | 华为 | ✅ already done | 76 |
+| US-003 | 比亚迪 | ✅ already done | 82 |
+| US-004 | 腾讯 | ✅ already done | 77 |
+| US-005 | 工业富联 | ✅ done | 57 |

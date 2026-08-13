@@ -2482,5 +2482,74 @@
   "radar": "Hesai_health_radar.png",
   "employees": "1,118",
   "revenue": "RMB 30.3亿（FY2025，+45.8%）"
+ },
+ {
+  "id": "lexisnexis",
+  "name": "律商联讯",
+  "nameEn": "LexisNexis",
+  "ticker": "RELX: LSE/REL · NYSE: RELX",
+  "ind1": "企业服务",
+  "ind2": "法律信息服务",
+  "scores": {
+   "cashFlow": 81,
+   "profitability": 86,
+   "debt": 62,
+   "operations": 90,
+   "sustainability": 76
+  },
+  "total": 80,
+  "grade": "Moderate-High",
+  "gradeLabel": "中等偏上",
+  "oneLine": "全球法律信息双寡头之一、34.8%利润率+99%现金转化率+90%订阅收入，核心短板是增速平庸（~7%）、AI颠覆风险和£72亿净债务",
+  "report": "律商联讯-财务健康评估-2026-06-16.md",
+  "radar": "LexisNexis_health_radar.png",
+  "employees": "~36,400（全球）",
+  "revenue": "£95.9亿（RELX FY2025）"
+ },
+ {
+  "id": "xiangxinguang",
+  "name": "相信光网络科技",
+  "nameEn": "Believe Light",
+  "ticker": "",
+  "ind1": "企业服务",
+  "ind2": "区块链与Web3",
+  "scores": {
+   "cashFlow": 53,
+   "profitability": 15,
+   "debt": 76,
+   "operations": 63,
+   "sustainability": 23
+  },
+  "total": 47,
+  "grade": "Moderate-Low",
+  "gradeLabel": "中等偏下",
+  "oneLine": "成立16个月的微型初创，无融资+无产品+无品牌，极度不透明。除非内部人脉确认业务已产生现金流，否则不建议作为求职首选",
+  "report": "相信光网络科技-财务健康评估-2026-06-16.md",
+  "radar": "相信光_health_radar.png",
+  "employees": "20-50",
+  "revenue": "未披露"
+ },
+ {
+  "id": "fenghantianchi",
+  "name": "风瀚天驰",
+  "nameEn": "FengHanTianChi",
+  "ticker": "",
+  "ind1": "企业服务",
+  "ind2": "区块链与Web3",
+  "scores": {
+   "cashFlow": 53,
+   "profitability": 15,
+   "debt": 76,
+   "operations": 45,
+   "sustainability": 23
+  },
+  "total": 45,
+  "grade": "Moderate-Low",
+  "gradeLabel": "中等偏下",
+  "oneLine": "成立3年仍完全隐身、200万注册资本却声称千人规模的Web3公司，多项重大红旗信号，强烈建议规避",
+  "report": "风瀚天驰-财务健康评估-2026-06-16.md",
+  "radar": "风瀚天驰_health_radar.png",
+  "employees": "50以下",
+  "revenue": "未披露"
  }
 ]

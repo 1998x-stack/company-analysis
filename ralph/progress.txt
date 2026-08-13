@@ -16,4 +16,5 @@
 | US-008 | 顺丰控股 | ✅ done | 60 |
 | US-009 | 深投控 | ✅ done | 69 |
 | US-010 | 立讯精密 | ✅ done | 74 |
-| US-011 | 中国电子 | 🔄 in progress | — |
+| US-011 | 中国电子 | ✅ done | 69 |
+| US-012 | 招商蛇口 | 🔄 in progress | — |

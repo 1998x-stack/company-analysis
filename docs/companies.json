@@ -2712,5 +2712,28 @@
     "radar": "Luxshare_health_radar.png",
     "employees": "约20万+",
     "revenue": "¥3,323.44亿（2025）"
+  },
+  {
+    "id": "cec",
+    "name": "中国电子",
+    "nameEn": "CEC",
+    "ticker": "—（央企）",
+    "ind1": "科技硬件",
+    "ind2": "通信与ICT",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 38,
+      "debt": 76,
+      "operations": 81,
+      "sustainability": 90
+    },
+    "total": 69,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "自主可控/网络安全国家队央企·18万员工·国家战略+安全可控生态，但盈利极薄(净利率0.1%)+营收负增长是核心矛盾",
+    "report": "中国电子-财务健康评估-2026-08-13.md",
+    "radar": "CEC_health_radar.png",
+    "employees": "18.3万",
+    "revenue": "¥2,664亿（2023）"
   }
 ]

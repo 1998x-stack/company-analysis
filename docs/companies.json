@@ -2689,5 +2689,28 @@
     "radar": "SIHC_health_radar.png",
     "employees": "—",
     "revenue": "¥2,714亿（2024）"
+  },
+  {
+    "id": "luxshare",
+    "name": "立讯精密",
+    "nameEn": "Luxshare",
+    "ticker": "002475.SZ",
+    "ind1": "科技硬件",
+    "ind2": "消费电子与EMS",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 74,
+      "debt": 76,
+      "operations": 72,
+      "sustainability": 83
+    },
+    "total": 74,
+    "grade": "Moderate-High",
+    "gradeLabel": "中等偏上",
+    "oneLine": "消费电子制造龙头+汽车(+185%)+AI数据中心多轮驱动，营收净利双增，但苹果集中+净利5%+扩产现金流降是隐忧",
+    "report": "立讯精密-财务健康评估-2026-08-13.md",
+    "radar": "Luxshare_health_radar.png",
+    "employees": "约20万+",
+    "revenue": "¥3,323.44亿（2025）"
   }
 ]

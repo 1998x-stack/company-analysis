@@ -13,4 +13,5 @@
 | US-005 | 工业富联 | ✅ done | 57 |
 | US-006 | 万科 | ✅ done | 29 |
 | US-007 | 招商银行 | ✅ done | 87 |
-| US-008 | 顺丰 | 🔄 in progress | — |
+| US-008 | 顺丰控股 | ✅ done | 60 |
+| US-009 | 深圳市投资控股 | 🔄 in progress | — |

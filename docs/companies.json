@@ -2643,5 +2643,28 @@
     "radar": "CMB_health_radar.png",
     "employees": "约11-12万",
     "revenue": "¥3,375.32亿（2025）"
+  },
+  {
+    "id": "sf_express",
+    "name": "顺丰控股",
+    "nameEn": "SF Express",
+    "ticker": "002352.SZ / 06936.HK",
+    "ind1": "物流",
+    "ind2": "快递",
+    "scores": {
+      "cashFlow": 55,
+      "profitability": 55,
+      "debt": 62,
+      "operations": 71,
+      "sustainability": 83
+    },
+    "total": 60,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "中国物流龙头+时效快递之王，营收净利双增+自营全网护城河，但毛利下滑+应收275%+现金承压是隐忧",
+    "report": "顺丰控股-财务健康评估-2026-08-13.md",
+    "radar": "SFExpress_health_radar.png",
+    "employees": "约30万",
+    "revenue": "¥3,082.27亿（2025）"
   }
 ]

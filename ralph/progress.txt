@@ -1,0 +1,9 @@
+# Ralph Execution Progress
+# Project: Shenzhen Top100 Company Health Eval
+# Branch: ralph/shenzhen-top100-company-health-eval
+# Started: 2026-08-13
+# Source PRD: ralph/prd.json (100 user stories: evaluate each Shenzhen TOP100 company one-by-one)
+
+| US-ID | Company | Status | Score |
+|-------|---------|--------|-------|
+| US-001 | 中国平安 | ✅ done | 79 |

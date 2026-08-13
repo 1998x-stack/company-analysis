@@ -1,0 +1,1807 @@
+{
+  "project": "Shenzhen Top100 Company Health Eval",
+  "branchName": "ralph/shenzhen-top100-company-health-eval",
+  "description": "Run the company-health-eval skill one-by-one on Shenzhen's top 100 companies by 2024 revenue, producing scraped report+radar for each and keeping all data layers consistent.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Evaluate 中国平安 (深圳TOP1)",
+      "description": "As an analyst, evaluate the financial health of 中国平安(深圳企业 1) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": "radar_en=PingAn"
+    },
+    {
+      "id": "US-002",
+      "title": "Evaluate 华为 (深圳TOP2)",
+      "description": "As an analyst, evaluate the financial health of 华为(深圳企业 2) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "radar_en=Huawei"
+    },
+    {
+      "id": "US-003",
+      "title": "Evaluate 比亚迪 (深圳TOP3)",
+      "description": "As an analyst, evaluate the financial health of 比亚迪(深圳企业 3) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "radar_en=BYD"
+    },
+    {
+      "id": "US-004",
+      "title": "Evaluate 腾讯 (深圳TOP4)",
+      "description": "As an analyst, evaluate the financial health of 腾讯(深圳企业 4) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "radar_en=Tencent"
+    },
+    {
+      "id": "US-005",
+      "title": "Evaluate 工业富联 (深圳TOP5)",
+      "description": "As an analyst, evaluate the financial health of 工业富联(深圳企业 5) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "radar_en=FoxconnIndustrial"
+    },
+    {
+      "id": "US-006",
+      "title": "Evaluate 万科 (深圳TOP6)",
+      "description": "As an analyst, evaluate the financial health of 万科(深圳企业 6) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "radar_en=Vanke"
+    },
+    {
+      "id": "US-007",
+      "title": "Evaluate 招商银行 (深圳TOP7)",
+      "description": "As an analyst, evaluate the financial health of 招商银行(深圳企业 7) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": "radar_en=CMB"
+    },
+    {
+      "id": "US-008",
+      "title": "Evaluate 顺丰 (深圳TOP8)",
+      "description": "As an analyst, evaluate the financial health of 顺丰(深圳企业 8) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": "radar_en=SFExpress"
+    },
+    {
+      "id": "US-009",
+      "title": "Evaluate 深圳市投资控股 (深圳TOP9)",
+      "description": "As an analyst, evaluate the financial health of 深圳市投资控股(深圳企业 9) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": "radar_en=ShenzhenInvestmentHoldings"
+    },
+    {
+      "id": "US-010",
+      "title": "Evaluate 立讯精密 (深圳TOP10)",
+      "description": "As an analyst, evaluate the financial health of 立讯精密(深圳企业 10) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": "radar_en=Luxshare"
+    },
+    {
+      "id": "US-011",
+      "title": "Evaluate 中国电子信息产业集团 (深圳TOP11)",
+      "description": "As an analyst, evaluate the financial health of 中国电子信息产业集团(深圳企业 11) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": "radar_en=CEC"
+    },
+    {
+      "id": "US-012",
+      "title": "Evaluate 招商蛇口 (深圳TOP12)",
+      "description": "As an analyst, evaluate the financial health of 招商蛇口(深圳企业 12) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": "radar_en=ChinaMerchantsShekou"
+    },
+    {
+      "id": "US-013",
+      "title": "Evaluate 中集集团 (深圳TOP13)",
+      "description": "As an analyst, evaluate the financial health of 中集集团(深圳企业 13) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": "radar_en=CIMC"
+    },
+    {
+      "id": "US-014",
+      "title": "Evaluate 中国广核集团 (深圳TOP14)",
+      "description": "As an analyst, evaluate the financial health of 中国广核集团(深圳企业 14) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 14,
+      "passes": false,
+      "notes": "radar_en=CGN"
+    },
+    {
+      "id": "US-015",
+      "title": "Evaluate 平安银行 (深圳TOP15)",
+      "description": "As an analyst, evaluate the financial health of 平安银行(深圳企业 15) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 15,
+      "passes": false,
+      "notes": "radar_en=PingAnBank"
+    },
+    {
+      "id": "US-016",
+      "title": "Evaluate 江西铜业（深圳） (深圳TOP16)",
+      "description": "As an analyst, evaluate the financial health of 江西铜业（深圳）(深圳企业 16) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 16,
+      "passes": false,
+      "notes": "radar_en=JCCOShenzhen"
+    },
+    {
+      "id": "US-017",
+      "title": "Evaluate 神州数码 (深圳TOP17)",
+      "description": "As an analyst, evaluate the financial health of 神州数码(深圳企业 17) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 17,
+      "passes": false,
+      "notes": "radar_en=DigitalChina"
+    },
+    {
+      "id": "US-018",
+      "title": "Evaluate 中兴通讯 (深圳TOP18)",
+      "description": "As an analyst, evaluate the financial health of 中兴通讯(深圳企业 18) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 18,
+      "passes": false,
+      "notes": "radar_en=ZTE"
+    },
+    {
+      "id": "US-019",
+      "title": "Evaluate 阳光保险 (深圳TOP19)",
+      "description": "As an analyst, evaluate the financial health of 阳光保险(深圳企业 19) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 19,
+      "passes": false,
+      "notes": "radar_en=SunshineInsurance"
+    },
+    {
+      "id": "US-020",
+      "title": "Evaluate 立业集团 (深圳TOP20)",
+      "description": "As an analyst, evaluate the financial health of 立业集团(深圳企业 20) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 20,
+      "passes": false,
+      "notes": "radar_en=LiyeGroup"
+    },
+    {
+      "id": "US-021",
+      "title": "Evaluate 中国广核电力 (深圳TOP21)",
+      "description": "As an analyst, evaluate the financial health of 中国广核电力(深圳企业 21) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 21,
+      "passes": false,
+      "notes": "radar_en=CGNPower"
+    },
+    {
+      "id": "US-022",
+      "title": "Evaluate 心里程控股 (深圳TOP22)",
+      "description": "As an analyst, evaluate the financial health of 心里程控股(深圳企业 22) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 22,
+      "passes": false,
+      "notes": "radar_en=Xinlicheng"
+    },
+    {
+      "id": "US-023",
+      "title": "Evaluate 怡亚通 (深圳TOP23)",
+      "description": "As an analyst, evaluate the financial health of 怡亚通(深圳企业 23) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 23,
+      "passes": false,
+      "notes": "radar_en=EternalAsia"
+    },
+    {
+      "id": "US-024",
+      "title": "Evaluate 金地集团 (深圳TOP24)",
+      "description": "As an analyst, evaluate the financial health of 金地集团(深圳企业 24) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 24,
+      "passes": false,
+      "notes": "radar_en=Gemdale"
+    },
+    {
+      "id": "US-025",
+      "title": "Evaluate 国药一致 (深圳TOP25)",
+      "description": "As an analyst, evaluate the financial health of 国药一致(深圳企业 25) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 25,
+      "passes": false,
+      "notes": "radar_en=SinopharmOne"
+    },
+    {
+      "id": "US-026",
+      "title": "Evaluate 传音控股 (深圳TOP26)",
+      "description": "As an analyst, evaluate the financial health of 传音控股(深圳企业 26) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 26,
+      "passes": false,
+      "notes": "radar_en=Transsion"
+    },
+    {
+      "id": "US-027",
+      "title": "Evaluate 微众银行 (深圳TOP27)",
+      "description": "As an analyst, evaluate the financial health of 微众银行(深圳企业 27) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 27,
+      "passes": false,
+      "notes": "radar_en=WeBank"
+    },
+    {
+      "id": "US-028",
+      "title": "Evaluate 深桑达 (深圳TOP28)",
+      "description": "As an analyst, evaluate the financial health of 深桑达(深圳企业 28) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 28,
+      "passes": false,
+      "notes": "radar_en=SED"
+    },
+    {
+      "id": "US-029",
+      "title": "Evaluate 永道控股 (深圳TOP29)",
+      "description": "As an analyst, evaluate the financial health of 永道控股(深圳企业 29) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 29,
+      "passes": false,
+      "notes": "radar_en=Yongdao"
+    },
+    {
+      "id": "US-030",
+      "title": "Evaluate 爱施德 (深圳TOP30)",
+      "description": "As an analyst, evaluate the financial health of 爱施德(深圳企业 30) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 30,
+      "passes": false,
+      "notes": "radar_en=Aisidi"
+    },
+    {
+      "id": "US-031",
+      "title": "Evaluate 创维 (深圳TOP31)",
+      "description": "As an analyst, evaluate the financial health of 创维(深圳企业 31) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 31,
+      "passes": false,
+      "notes": "radar_en=Skyworth"
+    },
+    {
+      "id": "US-032",
+      "title": "Evaluate 中信证券 (深圳TOP32)",
+      "description": "As an analyst, evaluate the financial health of 中信证券(深圳企业 32) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 32,
+      "passes": false,
+      "notes": "radar_en=CITICSecurities"
+    },
+    {
+      "id": "US-033",
+      "title": "Evaluate 中金岭南 (深圳TOP33)",
+      "description": "As an analyst, evaluate the financial health of 中金岭南(深圳企业 33) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 33,
+      "passes": false,
+      "notes": "radar_en=ZhongjinLingnan"
+    },
+    {
+      "id": "US-034",
+      "title": "Evaluate 天音通信 (深圳TOP34)",
+      "description": "As an analyst, evaluate the financial health of 天音通信(深圳企业 34) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 34,
+      "passes": false,
+      "notes": "radar_en=Telling"
+    },
+    {
+      "id": "US-035",
+      "title": "Evaluate 金雅福 (深圳TOP35)",
+      "description": "As an analyst, evaluate the financial health of 金雅福(深圳企业 35) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 35,
+      "passes": false,
+      "notes": "radar_en=Jinyaifu"
+    },
+    {
+      "id": "US-036",
+      "title": "Evaluate 欣旺达 (深圳TOP36)",
+      "description": "As an analyst, evaluate the financial health of 欣旺达(深圳企业 36) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 36,
+      "passes": false,
+      "notes": "radar_en=Sunwoda"
+    },
+    {
+      "id": "US-037",
+      "title": "Evaluate 华侨城 (深圳TOP37)",
+      "description": "As an analyst, evaluate the financial health of 华侨城(深圳企业 37) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 37,
+      "passes": false,
+      "notes": "radar_en=OCT"
+    },
+    {
+      "id": "US-038",
+      "title": "Evaluate 中电港 (深圳TOP38)",
+      "description": "As an analyst, evaluate the financial health of 中电港(深圳企业 38) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 38,
+      "passes": false,
+      "notes": "radar_en=CEPort"
+    },
+    {
+      "id": "US-039",
+      "title": "Evaluate 点金贵金属 (深圳TOP39)",
+      "description": "As an analyst, evaluate the financial health of 点金贵金属(深圳企业 39) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 39,
+      "passes": false,
+      "notes": "radar_en=Dianjin"
+    },
+    {
+      "id": "US-040",
+      "title": "Evaluate 海王集团 (深圳TOP40)",
+      "description": "As an analyst, evaluate the financial health of 海王集团(深圳企业 40) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 40,
+      "passes": false,
+      "notes": "radar_en=Neptunus"
+    },
+    {
+      "id": "US-041",
+      "title": "Evaluate 信利康 (深圳TOP41)",
+      "description": "As an analyst, evaluate the financial health of 信利康(深圳企业 41) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 41,
+      "passes": false,
+      "notes": "radar_en=Xinlikang"
+    },
+    {
+      "id": "US-042",
+      "title": "Evaluate 天行云供应链 (深圳TOP42)",
+      "description": "As an analyst, evaluate the financial health of 天行云供应链(深圳企业 42) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 42,
+      "passes": false,
+      "notes": "radar_en=Tianxingyun"
+    },
+    {
+      "id": "US-043",
+      "title": "Evaluate 深圳能源 (深圳TOP43)",
+      "description": "As an analyst, evaluate the financial health of 深圳能源(深圳企业 43) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 43,
+      "passes": false,
+      "notes": "radar_en=ShenzhenEnergy"
+    },
+    {
+      "id": "US-044",
+      "title": "Evaluate 中农网 (深圳TOP44)",
+      "description": "As an analyst, evaluate the financial health of 中农网(深圳企业 44) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 44,
+      "passes": false,
+      "notes": "radar_en=Zhongnongwang"
+    },
+    {
+      "id": "US-045",
+      "title": "Evaluate 惠科股份 (深圳TOP45)",
+      "description": "As an analyst, evaluate the financial health of 惠科股份(深圳企业 45) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 45,
+      "passes": false,
+      "notes": "radar_en=HKC"
+    },
+    {
+      "id": "US-046",
+      "title": "Evaluate 中建科工 (深圳TOP46)",
+      "description": "As an analyst, evaluate the financial health of 中建科工(深圳企业 46) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 46,
+      "passes": false,
+      "notes": "radar_en=CSCTEC"
+    },
+    {
+      "id": "US-047",
+      "title": "Evaluate 卓越置业 (深圳TOP47)",
+      "description": "As an analyst, evaluate the financial health of 卓越置业(深圳企业 47) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 47,
+      "passes": false,
+      "notes": "radar_en=ExcellenceGroup"
+    },
+    {
+      "id": "US-048",
+      "title": "Evaluate 铜锣湾商业 (深圳TOP48)",
+      "description": "As an analyst, evaluate the financial health of 铜锣湾商业(深圳企业 48) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 48,
+      "passes": false,
+      "notes": "radar_en=Tongluowan"
+    },
+    {
+      "id": "US-049",
+      "title": "Evaluate 汇川技术 (深圳TOP49)",
+      "description": "As an analyst, evaluate the financial health of 汇川技术(深圳企业 49) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 49,
+      "passes": false,
+      "notes": "radar_en=Inovance"
+    },
+    {
+      "id": "US-050",
+      "title": "Evaluate 迈瑞医疗 (深圳TOP50)",
+      "description": "As an analyst, evaluate the financial health of 迈瑞医疗(深圳企业 50) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 50,
+      "passes": false,
+      "notes": "radar_en=Mindray"
+    },
+    {
+      "id": "US-051",
+      "title": "Evaluate 大悦城控股 (深圳TOP51)",
+      "description": "As an analyst, evaluate the financial health of 大悦城控股(深圳企业 51) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 51,
+      "passes": false,
+      "notes": "radar_en=CofcoJoy"
+    },
+    {
+      "id": "US-052",
+      "title": "Evaluate 鹏鼎控股 (深圳TOP52)",
+      "description": "As an analyst, evaluate the financial health of 鹏鼎控股(深圳企业 52) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 52,
+      "passes": false,
+      "notes": "radar_en=Avary"
+    },
+    {
+      "id": "US-053",
+      "title": "Evaluate 天马微电子 (深圳TOP53)",
+      "description": "As an analyst, evaluate the financial health of 天马微电子(深圳企业 53) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 53,
+      "passes": false,
+      "notes": "radar_en=Tianma"
+    },
+    {
+      "id": "US-054",
+      "title": "Evaluate 东阳光实业 (深圳TOP54)",
+      "description": "As an analyst, evaluate the financial health of 东阳光实业(深圳企业 54) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 54,
+      "passes": false,
+      "notes": "radar_en=SunshineEGroup"
+    },
+    {
+      "id": "US-055",
+      "title": "Evaluate 格林美 (深圳TOP55)",
+      "description": "As an analyst, evaluate the financial health of 格林美(深圳企业 55) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 55,
+      "passes": false,
+      "notes": "radar_en=GEM"
+    },
+    {
+      "id": "US-056",
+      "title": "Evaluate 太平财险 (深圳TOP56)",
+      "description": "As an analyst, evaluate the financial health of 太平财险(深圳企业 56) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 56,
+      "passes": false,
+      "notes": "radar_en=TaipingP&C"
+    },
+    {
+      "id": "US-057",
+      "title": "Evaluate 深圳华强 (深圳TOP57)",
+      "description": "As an analyst, evaluate the financial health of 深圳华强(深圳企业 57) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 57,
+      "passes": false,
+      "notes": "radar_en=Huaqiang"
+    },
+    {
+      "id": "US-058",
+      "title": "Evaluate 海王生物 (深圳TOP58)",
+      "description": "As an analyst, evaluate the financial health of 海王生物(深圳企业 58) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 58,
+      "passes": false,
+      "notes": "radar_en=Nepstar"
+    },
+    {
+      "id": "US-059",
+      "title": "Evaluate 达道工业 (深圳TOP59)",
+      "description": "As an analyst, evaluate the financial health of 达道工业(深圳企业 59) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 59,
+      "passes": false,
+      "notes": "radar_en=Dadao"
+    },
+    {
+      "id": "US-060",
+      "title": "Evaluate 深圳燃气 (深圳TOP60)",
+      "description": "As an analyst, evaluate the financial health of 深圳燃气(深圳企业 60) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 60,
+      "passes": false,
+      "notes": "radar_en=ShenzhenGas"
+    },
+    {
+      "id": "US-061",
+      "title": "Evaluate 华润三九 (深圳TOP61)",
+      "description": "As an analyst, evaluate the financial health of 华润三九(深圳企业 61) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 61,
+      "passes": false,
+      "notes": "radar_en=ChinaResourcesSanjiu"
+    },
+    {
+      "id": "US-062",
+      "title": "Evaluate 广深铁路 (深圳TOP62)",
+      "description": "As an analyst, evaluate the financial health of 广深铁路(深圳企业 62) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 62,
+      "passes": false,
+      "notes": "radar_en=GuangshenRailway"
+    },
+    {
+      "id": "US-063",
+      "title": "Evaluate 中铁南方 (深圳TOP63)",
+      "description": "As an analyst, evaluate the financial health of 中铁南方(深圳企业 63) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 63,
+      "passes": false,
+      "notes": "radar_en=CRECSouth"
+    },
+    {
+      "id": "US-064",
+      "title": "Evaluate 中建八局南方 (深圳TOP64)",
+      "description": "As an analyst, evaluate the financial health of 中建八局南方(深圳企业 64) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 64,
+      "passes": false,
+      "notes": "radar_en=CSCEC8South"
+    },
+    {
+      "id": "US-065",
+      "title": "Evaluate 天健集团 (深圳TOP65)",
+      "description": "As an analyst, evaluate the financial health of 天健集团(深圳企业 65) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 65,
+      "passes": false,
+      "notes": "radar_en=Tagen"
+    },
+    {
+      "id": "US-066",
+      "title": "Evaluate 中国南山开发 (深圳TOP66)",
+      "description": "As an analyst, evaluate the financial health of 中国南山开发(深圳企业 66) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 66,
+      "passes": false,
+      "notes": "radar_en=ChinaNanshan"
+    },
+    {
+      "id": "US-067",
+      "title": "Evaluate 鑫荣懋 (深圳TOP67)",
+      "description": "As an analyst, evaluate the financial health of 鑫荣懋(深圳企业 67) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 67,
+      "passes": false,
+      "notes": "radar_en=Skysberry"
+    },
+    {
+      "id": "US-068",
+      "title": "Evaluate 中集车辆 (深圳TOP68)",
+      "description": "As an analyst, evaluate the financial health of 中集车辆(深圳企业 68) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 68,
+      "passes": false,
+      "notes": "radar_en=CIMCVehicles"
+    },
+    {
+      "id": "US-069",
+      "title": "Evaluate 招商证券 (深圳TOP69)",
+      "description": "As an analyst, evaluate the financial health of 招商证券(深圳企业 69) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 69,
+      "passes": false,
+      "notes": "radar_en=ChinaCMBSecurities"
+    },
+    {
+      "id": "US-070",
+      "title": "Evaluate 德赛电池 (深圳TOP70)",
+      "description": "As an analyst, evaluate the financial health of 德赛电池(深圳企业 70) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 70,
+      "passes": false,
+      "notes": "radar_en=DesayBattery"
+    },
+    {
+      "id": "US-071",
+      "title": "Evaluate 欧菲光 (深圳TOP71)",
+      "description": "As an analyst, evaluate the financial health of 欧菲光(深圳企业 71) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 71,
+      "passes": false,
+      "notes": "radar_en=O-Film"
+    },
+    {
+      "id": "US-072",
+      "title": "Evaluate 兆驰股份 (深圳TOP72)",
+      "description": "As an analyst, evaluate the financial health of 兆驰股份(深圳企业 72) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 72,
+      "passes": false,
+      "notes": "radar_en=AMTC"
+    },
+    {
+      "id": "US-073",
+      "title": "Evaluate 中国宝安 (深圳TOP73)",
+      "description": "As an analyst, evaluate the financial health of 中国宝安(深圳企业 73) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 73,
+      "passes": false,
+      "notes": "radar_en=ChinaBaoan"
+    },
+    {
+      "id": "US-074",
+      "title": "Evaluate 国信证券 (深圳TOP74)",
+      "description": "As an analyst, evaluate the financial health of 国信证券(深圳企业 74) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 74,
+      "passes": false,
+      "notes": "radar_en=GuosenSecurities"
+    },
+    {
+      "id": "US-075",
+      "title": "Evaluate 富森供应链 (深圳TOP75)",
+      "description": "As an analyst, evaluate the financial health of 富森供应链(深圳企业 75) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 75,
+      "passes": false,
+      "notes": "radar_en=Fusen"
+    },
+    {
+      "id": "US-076",
+      "title": "Evaluate 中国华西 (深圳TOP76)",
+      "description": "As an analyst, evaluate the financial health of 中国华西(深圳企业 76) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 76,
+      "passes": false,
+      "notes": "radar_en=Huaxi"
+    },
+    {
+      "id": "US-077",
+      "title": "Evaluate 捷佳伟创 (深圳TOP77)",
+      "description": "As an analyst, evaluate the financial health of 捷佳伟创(深圳企业 77) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 77,
+      "passes": false,
+      "notes": "radar_en=Leadrail"
+    },
+    {
+      "id": "US-078",
+      "title": "Evaluate 九立供应链 (深圳TOP78)",
+      "description": "As an analyst, evaluate the financial health of 九立供应链(深圳企业 78) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 78,
+      "passes": false,
+      "notes": "radar_en=Jiuli"
+    },
+    {
+      "id": "US-079",
+      "title": "Evaluate 深南电路 (深圳TOP79)",
+      "description": "As an analyst, evaluate the financial health of 深南电路(深圳企业 79) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 79,
+      "passes": false,
+      "notes": "radar_en=SCC"
+    },
+    {
+      "id": "US-080",
+      "title": "Evaluate 江波龙 (深圳TOP80)",
+      "description": "As an analyst, evaluate the financial health of 江波龙(深圳企业 80) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 80,
+      "passes": false,
+      "notes": "radar_en=Longsys"
+    },
+    {
+      "id": "US-081",
+      "title": "Evaluate 招联消费金融 (深圳TOP81)",
+      "description": "As an analyst, evaluate the financial health of 招联消费金融(深圳企业 81) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 81,
+      "passes": false,
+      "notes": "radar_en=Zhaolian"
+    },
+    {
+      "id": "US-082",
+      "title": "Evaluate 招商积余 (深圳TOP82)",
+      "description": "As an analyst, evaluate the financial health of 招商积余(深圳企业 82) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 82,
+      "passes": false,
+      "notes": "radar_en=ChinaMerchantsProperty"
+    },
+    {
+      "id": "US-083",
+      "title": "Evaluate 裕同包装 (深圳TOP83)",
+      "description": "As an analyst, evaluate the financial health of 裕同包装(深圳企业 83) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 83,
+      "passes": false,
+      "notes": "radar_en=Yuto"
+    },
+    {
+      "id": "US-084",
+      "title": "Evaluate 深业集团 (深圳TOP84)",
+      "description": "As an analyst, evaluate the financial health of 深业集团(深圳企业 84) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 84,
+      "passes": false,
+      "notes": "radar_en=ShumYip"
+    },
+    {
+      "id": "US-085",
+      "title": "Evaluate 中建二局华南 (深圳TOP85)",
+      "description": "As an analyst, evaluate the financial health of 中建二局华南(深圳企业 85) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 85,
+      "passes": false,
+      "notes": "radar_en=CSCEC2South"
+    },
+    {
+      "id": "US-086",
+      "title": "Evaluate 长盈精密 (深圳TOP86)",
+      "description": "As an analyst, evaluate the financial health of 长盈精密(深圳企业 86) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 86,
+      "passes": false,
+      "notes": "radar_en=ChangyingPrecision"
+    },
+    {
+      "id": "US-087",
+      "title": "Evaluate 天珑移动 (深圳TOP87)",
+      "description": "As an analyst, evaluate the financial health of 天珑移动(深圳企业 87) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 87,
+      "passes": false,
+      "notes": "radar_en=TINNO"
+    },
+    {
+      "id": "US-088",
+      "title": "Evaluate 海王易点药 (深圳TOP88)",
+      "description": "As an analyst, evaluate the financial health of 海王易点药(深圳企业 88) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 88,
+      "passes": false,
+      "notes": "radar_en=Yidianyao"
+    },
+    {
+      "id": "US-089",
+      "title": "Evaluate 特发集团 (深圳TOP89)",
+      "description": "As an analyst, evaluate the financial health of 特发集团(深圳企业 89) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 89,
+      "passes": false,
+      "notes": "radar_en=Tefa"
+    },
+    {
+      "id": "US-090",
+      "title": "Evaluate 招商局港口 (深圳TOP90)",
+      "description": "As an analyst, evaluate the financial health of 招商局港口(深圳企业 90) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 90,
+      "passes": false,
+      "notes": "radar_en=CMPort"
+    },
+    {
+      "id": "US-091",
+      "title": "Evaluate 中建二局二公司 (深圳TOP91)",
+      "description": "As an analyst, evaluate the financial health of 中建二局二公司(深圳企业 91) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 91,
+      "passes": false,
+      "notes": "radar_en=CSCEC2No2"
+    },
+    {
+      "id": "US-092",
+      "title": "Evaluate 东鹏饮料 (深圳TOP92)",
+      "description": "As an analyst, evaluate the financial health of 东鹏饮料(深圳企业 92) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 92,
+      "passes": false,
+      "notes": "radar_en=Dongpeng"
+    },
+    {
+      "id": "US-093",
+      "title": "Evaluate 博科供应链 (深圳TOP93)",
+      "description": "As an analyst, evaluate the financial health of 博科供应链(深圳企业 93) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 93,
+      "passes": false,
+      "notes": "radar_en=Boke"
+    },
+    {
+      "id": "US-094",
+      "title": "Evaluate 健康元 (深圳TOP94)",
+      "description": "As an analyst, evaluate the financial health of 健康元(深圳企业 94) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 94,
+      "passes": false,
+      "notes": "radar_en=Joincare"
+    },
+    {
+      "id": "US-095",
+      "title": "Evaluate 康冠科技 (深圳TOP95)",
+      "description": "As an analyst, evaluate the financial health of 康冠科技(深圳企业 95) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 95,
+      "passes": false,
+      "notes": "radar_en=KTC"
+    },
+    {
+      "id": "US-096",
+      "title": "Evaluate 国银金融租赁 (深圳TOP96)",
+      "description": "As an analyst, evaluate the financial health of 国银金融租赁(深圳企业 96) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 96,
+      "passes": false,
+      "notes": "radar_en=CDBLeasing"
+    },
+    {
+      "id": "US-097",
+      "title": "Evaluate 中国南玻 (深圳TOP97)",
+      "description": "As an analyst, evaluate the financial health of 中国南玻(深圳企业 97) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 97,
+      "passes": false,
+      "notes": "radar_en=CSG"
+    },
+    {
+      "id": "US-098",
+      "title": "Evaluate 长城开发 (深圳TOP98)",
+      "description": "As an analyst, evaluate the financial health of 长城开发(深圳企业 98) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 98,
+      "passes": false,
+      "notes": "radar_en=Kaifa"
+    },
+    {
+      "id": "US-099",
+      "title": "Evaluate 分期乐 (深圳TOP99)",
+      "description": "As an analyst, evaluate the financial health of 分期乐(深圳企业 99) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 99,
+      "passes": false,
+      "notes": "radar_en=Fenqile"
+    },
+    {
+      "id": "US-100",
+      "title": "Evaluate 大族激光 (深圳TOP100)",
+      "description": "As an analyst, evaluate the financial health of 大族激光(深圳企业 100) using the company-health-eval skill, producing a scored Chinese report and radar chart and archiving into the indexed data tree.",
+      "acceptanceCriteria": [
+        "Research the company per company-health-eval skill 阶段一 (open + financial sources, cross-validated)",
+        "Classify each dimension indicator into rubric levels and run score.py engine from a saved input JSON",
+        "Write report to docs/examples/<name>-财务健康评估-YYYY-MM-DD.md with dimension scores matching engine output exactly",
+        "Generate radar PNG from engine output JSON via radar_chart.py",
+        "Archive report + radar as relative symlinks under company/<ind1>/<ind2>/<name>/",
+        "Update docs/companies.json, company/index.md, company/README.md, root README.md to keep all data layers consistent",
+        "git commit (feat: evaluate <name> with radar chart) and push to origin/master",
+        "Typecheck passes (all JSON/scripts valid)"
+      ],
+      "priority": 100,
+      "passes": false,
+      "notes": "radar_en=Hanlaser"
+    }
+  ]
+}

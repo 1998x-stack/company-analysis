@@ -2459,5 +2459,28 @@
   "radar": "AGIBOT_health_radar.png",
   "employees": "~2,000（研发占70-75%）",
   "revenue": "¥10.5亿+（2025，+20倍）"
+ },
+ {
+  "id": "hesai",
+  "name": "禾赛科技",
+  "nameEn": "Hesai Technology",
+  "ticker": "NASDAQ: HSAI / 2525.HK",
+  "ind1": "汽车科技",
+  "ind2": "激光雷达",
+  "scores": {
+   "cashFlow": 71,
+   "profitability": 78,
+   "debt": 90,
+   "operations": 63,
+   "sustainability": 75
+  },
+  "total": 75,
+  "grade": "Moderate-High",
+  "gradeLabel": "中等偏上",
+  "oneLine": "全球激光雷达出货与营收双料第一·行业唯一全年GAAP盈利，净现比0.27+美方NDAA §164直接点名是核心隐忧",
+  "report": "禾赛科技-财务健康评估-2026-08-13.md",
+  "radar": "Hesai_health_radar.png",
+  "employees": "1,118",
+  "revenue": "RMB 30.3亿（FY2025，+45.8%）"
  }
 ]

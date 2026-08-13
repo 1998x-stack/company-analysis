@@ -1,10 +1,10 @@
 {
   "version": "2.0",
   "created_at": "2026-08-10",
-  "loop_status": "in_progress",
+  "loop_status": "completed",
   "total": 8,
-  "completed": 7,
-  "pending": 1,
+  "completed": 8,
+  "pending": 0,
   "companies": [
     {
       "id": 1,
@@ -80,10 +80,11 @@
       "id": 8,
       "name_cn": "禾赛科技",
       "name_en": "Hesai",
-      "status": "pending",
-      "score": null,
-      "report": null,
-      "radar": null
+      "status": "completed",
+      "score": 75,
+      "report": "禾赛科技-财务健康评估-2026-08-13.md",
+      "radar": "Hesai_health_radar.png",
+      "started_at": "2026-08-13"
     }
   ]
 }

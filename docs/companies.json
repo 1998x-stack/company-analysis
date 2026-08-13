@@ -2436,5 +2436,28 @@
   "radar": "SAIC_health_radar.png",
   "employees": "~18.8万（2024年报，-9.3%）",
   "revenue": "¥6,562亿（2025）"
+ },
+ {
+  "id": "agibot",
+  "name": "智元机器人",
+  "nameEn": "AGIBOT",
+  "ticker": "未上市（目标港股2026）",
+  "ind1": "机器人",
+  "ind2": "人形机器人",
+  "scores": {
+   "cashFlow": 35,
+   "profitability": 61,
+   "debt": 62,
+   "operations": 63,
+   "sustainability": 76
+  },
+  "total": 51,
+  "grade": "Moderate-Low",
+  "gradeLabel": "中等偏下",
+  "oneLine": "具身智能头部独角兽·营收20倍增长+量产1.5万台+目标估值-64亿，持续亏损+高度依赖融资+商业化早期是隐忧",
+  "report": "智元机器人-财务健康评估-2026-08-12.md",
+  "radar": "AGIBOT_health_radar.png",
+  "employees": "~2,000（研发占70-75%）",
+  "revenue": "¥10.5亿+（2025，+20倍）"
  }
 ]

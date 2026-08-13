@@ -2666,5 +2666,28 @@
     "radar": "SFExpress_health_radar.png",
     "employees": "约30万",
     "revenue": "¥3,082.27亿（2025）"
+  },
+  {
+    "id": "sihc",
+    "name": "深投控",
+    "nameEn": "SIHC",
+    "ticker": "—（非上市·深圳国资）",
+    "ind1": "金融科技",
+    "ind2": "综合金融科技",
+    "scores": {
+      "cashFlow": 64,
+      "profitability": 60,
+      "debt": 76,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "total": 69,
+    "grade": "Moderate",
+    "gradeLabel": "中等",
+    "oneLine": "深圳国资旗舰平台·世界500强#414·总资产1.3万亿+科创生态，重资产高杠杆+盈利偏薄是特征",
+    "report": "深投控-财务健康评估-2026-08-13.md",
+    "radar": "SIHC_health_radar.png",
+    "employees": "—",
+    "revenue": "¥2,714亿（2024）"
   }
 ]

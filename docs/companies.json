@@ -2597,5 +2597,28 @@
     "radar": "FoxconnIndustrial_health_radar.png",
     "employees": "21.7万",
     "revenue": "¥9,028.87亿（2025）"
+  },
+  {
+    "id": "vanke",
+    "name": "万科",
+    "nameEn": "Vanke",
+    "ticker": "000002.SZ / 02202.HK",
+    "ind1": "房地产",
+    "ind2": "住宅开发",
+    "scores": {
+      "cashFlow": 25,
+      "profitability": 22,
+      "debt": 23,
+      "operations": 44,
+      "sustainability": 54
+    },
+    "total": 29,
+    "grade": "High-Risk",
+    "gradeLabel": "高风险",
+    "oneLine": "地产行业深度出清，2025归母巨亏885.56亿+两年累亏1314亿+持续经营隐患，经营服务(万物云)尚稳但主业造血枯竭",
+    "report": "万科-财务健康评估-2026-08-13.md",
+    "radar": "Vanke_health_radar.png",
+    "employees": "约8-10万",
+    "revenue": "¥2,334.33亿（2025）"
   }
 ]

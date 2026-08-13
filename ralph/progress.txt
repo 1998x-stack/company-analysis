@@ -11,3 +11,5 @@
 | US-003 | 比亚迪 | ✅ already done | 82 |
 | US-004 | 腾讯 | ✅ already done | 77 |
 | US-005 | 工业富联 | ✅ done | 57 |
+| US-006 | 万科 | ✅ done | 29 |
+| US-007 | 招商银行 | 🔄 in progress | — |

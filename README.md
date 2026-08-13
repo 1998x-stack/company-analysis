@@ -113,6 +113,7 @@
 | 111 | 风瀚天驰 | 企业服务 · 区块链与Web3 | 45 | 🔴 中等偏下 | [报告](docs/examples/风瀚天驰-财务健康评估-2026-06-16.md) | [PNG](docs/examples/风瀚天驰_health_radar.png) |
 | 112 | 上海开普勒机器人 | 机器人 · 人形机器人 | 44 | 🔴 中等偏下 | [报告](docs/examples/开普勒机器人-财务健康评估-2026-06-12.md) | [PNG](docs/examples/开普勒机器人_KeplerRobot_health_radar.png) |
 | 113 | 云从科技 (688327.SH) | 人工智能 · 计算机视觉 | 34 | ⚫ 高风险 | [报告](docs/examples/云从科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/CloudWalk_health_radar.png) |
+| 114 | 万科 (000002.SZ / 02202.HK) | 房地产 · 住宅开发 | 29 | ⚫ 高风险 | [报告](docs/examples/万科-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Vanke_health_radar.png) |
 
 ## 五维度评估框架
 
@@ -251,3 +252,4 @@
 | 风瀚天驰 | 53 | 15 | 76 | 45 | 23 | **45** |
 | 上海开普勒机器人 | 33 | 31 | 76 | 52 | 61 | **44** |
 | 云从科技 | 25 | 29 | 61 | 35 | 46 | **34** |
+| 万科 | 25 | 22 | 23 | 44 | 54 | **29** |

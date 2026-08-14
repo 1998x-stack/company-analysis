@@ -104,3 +104,5 @@
 | US-098 | 长城开发 | ✅ done | 75 |
 | US-099 | 分期乐 | ✅ done | 77 |
 | US-100 | 大族激光 | ✅ done | 77 |
+| US-052 | 鹏鼎控股 | ✅ already done (US-051) | 84 |
+| US-058 | 海王生物 | ✅ already done (US-039) | 30 |

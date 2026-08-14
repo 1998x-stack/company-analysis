@@ -196,7 +196,7 @@
 | 194 | 铜锣湾商业发展 | 房地产 · 商业地产 | 48 | 🔴 | [报告](docs/examples/铜锣湾商业发展-财务健康评估-2026-08-13.md) | [PNG](docs/examples/TongLuoWan_health_radar.png) |
 | 195 | 百川智能 | 人工智能 · 大模型 | 47 | 🔴 | [报告](docs/examples/百川智能-财务健康评估-2026-06-12.md) | [PNG](docs/examples/BaichuanAI_health_radar.png) |
 | 196 | 相信光网络科技 | 企业服务 · 区块链与Web3 | 47 | 🔴 | [报告](docs/examples/相信光网络科技-财务健康评估-2026-06-16.md) | [PNG](docs/examples/相信光_health_radar.png) |
-| 197 | 神州数码 (000034.SZ) | 企业服务 · IT服务 | 47 | 🔴 | [报告](docs/examples/神州数码-财务健康评估-2026-08-13.md) | [PNG](docs/examples/DigitalChina_health_radar.png) |
+| 197 | 神州数码 (000034.SZ) | 企业服务 · IT服务与软件工程 | 47 | 🔴 | [报告](docs/examples/神州数码-财务健康评估-2026-08-13.md) | [PNG](docs/examples/DigitalChina_health_radar.png) |
 | 198 | 天音控股 (000829.SZ) | 企业服务 · IT分销 | 46 | 🔴 | [报告](docs/examples/天音控股-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Tianyin_health_radar.png) |
 | 199 | 怡亚通 (002183.SZ) | 企业服务 · 供应链服务 | 46 | 🔴 | [报告](docs/examples/怡亚通-财务健康评估-2026-08-13.md) | [PNG](docs/examples/EternalAsia_health_radar.png) |
 | 200 | 欧菲光 (002456.SZ) | 科技硬件 · 消费电子与EMS | 46 | 🔴 | [报告](docs/examples/欧菲光-财务健康评估-2026-08-13.md) | [PNG](docs/examples/OFilm_health_radar.png) |

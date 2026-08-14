@@ -2848,7 +2848,8 @@
     "report": "江西铜业-财务健康评估-2026-08-13.md",
     "radar": "JiangxiCopper_health_radar.png",
     "employees": "—",
-    "revenue": "—"
+    "revenue": "—",
+    "oneLine": "铜业龙头，规模大但低毛利+现金流转负，盈利质量弱"
   },
   {
     "id": "digital_china",
@@ -2856,7 +2857,7 @@
     "nameEn": "Digital China",
     "ticker": "000034.SZ",
     "ind1": "企业服务",
-    "ind2": "IT服务",
+    "ind2": "IT服务与软件工程",
     "scores": {
       "cashFlow": 25,
       "profitability": 55,
@@ -2870,7 +2871,8 @@
     "report": "神州数码-财务健康评估-2026-08-13.md",
     "radar": "DigitalChina_health_radar.png",
     "employees": "—",
-    "revenue": "—"
+    "revenue": "—",
+    "oneLine": "IT分销+信创龙头，AI业务爆发但毛利率低+资金承压"
   },
   {
     "id": "zte",
@@ -2915,7 +2917,8 @@
     "report": "阳光保险-财务健康评估-2026-08-13.md",
     "radar": "Sunshine_health_radar.png",
     "employees": "—",
-    "revenue": "—"
+    "revenue": "—",
+    "oneLine": "上市险企，保费+寿险NBV增长，经营现金流转好"
   },
   {
     "id": "liye",
@@ -2937,7 +2940,8 @@
     "report": "立业集团-财务健康评估-2026-08-13.md",
     "radar": "Liye_health_radar.png",
     "employees": "—",
-    "revenue": "—"
+    "revenue": "—",
+    "oneLine": "深圳多元化民企，营收大但非上市不透明+高质押是风险"
   },
   {
     "id": "cgnp",
@@ -2959,7 +2963,8 @@
     "report": "中国广核电力-财务健康评估-2026-08-13.md",
     "radar": "CGNP_health_radar.png",
     "employees": "—",
-    "revenue": "—"
+    "revenue": "—",
+    "oneLine": "核电上市龙头，运营稳现金流强，长期确定性高"
   },
   {
     "id": "xinlicheng",

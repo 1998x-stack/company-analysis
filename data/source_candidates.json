@@ -1,0 +1,26 @@
+[
+  {
+    "company_id": "tencent",
+    "url": "https://www.tencent.com/investors/financial-reports/",
+    "publisher": "Tencent Investor Relations",
+    "reporting_period": "2025-FY",
+    "kind": "official_filing_index",
+    "verification_status": "candidate_only"
+  },
+  {
+    "company_id": "vanke",
+    "url": "https://www.vanke.com/investor/financial",
+    "publisher": "Vanke Investor Relations",
+    "reporting_period": "2025-FY",
+    "kind": "official_filing_index",
+    "verification_status": "candidate_only"
+  },
+  {
+    "company_id": "mindray",
+    "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-31/1b8ea98b-732d-4f61-afef-f368196b0dbc.PDF",
+    "publisher": "Shenzhen Stock Exchange",
+    "reporting_period": "2025-FY",
+    "kind": "official_filing_pdf",
+    "verification_status": "candidate_only"
+  }
+]

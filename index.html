@@ -732,7 +732,7 @@ async function loadReportContent(cid, mode) {
     if (mode === 'summary') {
       // Extract first 3 sections: 一句话结论 + 基本画像 + 5-dim summary
       const h2s = [...md.matchAll(/^## /gm)];
-      if (h2s.length >= 3) {
+      if (h2s.length >= 4) {
         md = md.substring(0, h2s[3].index);
       } else if (h2s.length >= 2) {
         md = md.substring(0, h2s[2].index);
@@ -755,6 +755,16 @@ function renderMarkdown(md) {
   const lines = md.split('\n');
   let inTable = false, tableHtml = '';
   let inCodeBlock = false, codeHtml = '', codeLang = '';
+  let inList = null, listHtml = '';
+
+  function flushList() {
+    if (!inList) return '';
+    const tag = inList === 'ol' ? 'ol' : 'ul';
+    const out = '<' + tag + '>' + listHtml + '</' + tag + '>';
+    inList = null;
+    listHtml = '';
+    return out;
+  }
 
   function flushTable() {
     if (inTable && tableHtml) {
@@ -769,6 +779,7 @@ function renderMarkdown(md) {
 
     // Code block
     if (line.startsWith('```')) {
+      html += flushList();
       if (inCodeBlock) {
         html += `<pre><code>${escapeHtml(codeHtml)}</code></pre>`;
         codeHtml = ''; inCodeBlock = false;
@@ -780,6 +791,7 @@ function renderMarkdown(md) {
       continue;
     }
     if (inCodeBlock) { codeHtml += (codeHtml ? '\n' : '') + line; continue; }
+    if (!/^\s*(?:[-*]\s|\d+[.)]\s)/.test(line)) html += flushList();
 
     // Table
     if (line.startsWith('|') && line.endsWith('|')) {
@@ -806,19 +818,7 @@ function renderMarkdown(md) {
     if (line.startsWith('> ')) { html += `<blockquote>${inlineMarkdown(line.slice(2))}</blockquote>`; continue; }
     if (line.startsWith('>') && line.length > 1) { html += `<blockquote>${inlineMarkdown(line.slice(1))}</blockquote>`; continue; }
 
-    // Lists — track state to wrap groups in <ul>/<ol>
-    let inList = null; // 'ul' | 'ol' | null
-    let listHtml = '';
-
-    function flushList() {
-      if (!inList) return '';
-      const tag = inList === 'ol' ? 'ol' : 'ul';
-      const out = `<${tag}>${listHtml}</${tag}>`;
-      inList = null;
-      listHtml = '';
-      return out;
-    }
-
+    // Lists — state persists across consecutive lines.
     if (/^\s*[\-\*]\s/.test(line)) {
       if (inList !== 'ul') { html += flushList(); inList = 'ul'; }
       const content = line.replace(/^\s*[\-\*]\s/, '');
@@ -842,6 +842,7 @@ function renderMarkdown(md) {
     html += `<p>${inlineMarkdown(line)}</p>`;
   }
 
+  html += flushList();
   flushTable();
   if (inCodeBlock && codeHtml) { html += `<pre><code>${escapeHtml(codeHtml)}</code></pre>`; }
 
@@ -853,7 +854,19 @@ function inlineMarkdown(text) {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, rawHref) => {
+      // Markdown may be authored by a research agent. Reject unsafe URL schemes.
+      const href = rawHref.replace(/&amp;/g, '&').replace(/&quot;/g, '"').trim();
+      if (/[\x00-\x1f\x7f]/.test(href)) return label;
+      try {
+        const parsed = new URL(href, window.location.href);
+        if (!['http:', 'https:', 'mailto:'].includes(parsed.protocol)) return label;
+        return '<a href="' + escapeHtml(parsed.href) +
+          '" target="_blank" rel="noopener noreferrer">' + label + '</a>';
+      } catch (_) {
+        return label;
+      }
+    });
 }
 
 function escapeHtml(str) {

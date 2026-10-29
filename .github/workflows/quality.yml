@@ -1,0 +1,29 @@
+name: Quality Gate
+on:
+  push:
+    branches: [master, "feat/**"]
+  pull_request:
+    branches: [master]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (preserve archive symlinks)
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate JSON
+        run: python3 -m json.tool docs/companies.json > /dev/null
+      - name: Python regression tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Frontend tests
+        run: node --test tests/frontend.test.mjs
+      - name: Repository audit (legacy warnings remain non-fatal)
+        run: python3 tools/audit_repository.py

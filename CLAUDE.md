@@ -143,6 +143,10 @@ print('All layers consistent.')
 - **External modifications**: `index.md` and `README.md` may be edited by other tools; always read before writing
 - **Verification script requires score_inputs**: section 1 of the verification loop reads from `/tmp/score_inputs/` — ensure those mirror the current indicator levels used in each report; stale inputs silently mask drift
 
+## Quality Gate
+
+Before submitting changes, run `python3 -m unittest discover -s tests -p 'test_*.py' -v`, `node --test tests/frontend.test.mjs`, and `python3 tools/audit_repository.py`. Audit warnings require review and a follow-up remediation plan; do not silently overwrite historical company ratings or source claims. New reports must include permanent scoring inputs and source references once the v2 data contract is implemented.
+
 ## Git Workflow
 
 **Commit after every completed report or skill change.** Never batch unrelated work into one commit. Format:
@@ -151,4 +155,4 @@ print('All layers consistent.')
 feat: evaluate <company name> with radar chart
 ```
 
-Push to `origin/master` after each commit. Remote: `github.com/1998x-stack/company-analysis` (private).
+Push to a topic branch and open a PR against `master`; merge only after review and CI. This repository is public: check reports and agent artifacts for personal information or unsupported claims before publication. Remote: `github.com/1998x-stack/company-analysis`.

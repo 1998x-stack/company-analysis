@@ -9,17 +9,17 @@
 ```
 研究数据 → 指标等级判定 → 分值映射 → 维度内等权平均 → 加权求和 → 等级划分
                 ↑                              ↑              ↑
-          24个指标的定性等级              5个维度0-100分    总分+等级
+          23个指标等级 + 1个加分项              5个维度0-100分    总分+等级
 ```
 
 ### 1.1 输入
 
-JSON 对象，包含 5 个维度，共 24 个指标（含 1 个加分项）：
+JSON 对象，包含 5 个维度，共 23 个参与评分的指标和 1 个可选加分项：
 
 ```json
 {
   "company": "公司英文名",
-  "cash_flow":      { 5个指标, 每个取值 healthy|warning|danger },
+  "cash_flow":      { 4个指标, 每个取值 healthy|warning|danger },
   "profitability":  { 5个指标, 每个取值 excellent|good|average|alert },
   "debt":           { 5个指标 + 1个加分项 },
   "operations":     { 4个指标 },

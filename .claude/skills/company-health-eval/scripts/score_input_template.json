@@ -5,7 +5,6 @@
     "operating_cf":          "healthy | warning | danger",
     "cash_runway":           "healthy | warning | danger",
     "debt_level":            "healthy | warning | danger",
-    "receivable_turnover":   "healthy | warning | danger",
     "cf_to_ni_ratio":        "healthy | warning | danger"
   },
 

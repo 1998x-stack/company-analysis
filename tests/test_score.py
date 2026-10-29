@@ -49,6 +49,18 @@ class ScoreEngineTests(unittest.TestCase):
             with self.subTest(value=value):
                 self.assertEqual(score.get_grade(value)["grade"], expected)
 
+    def test_input_template_matches_scoring_engine(self):
+        import json
+        template_path = ENGINE.parent / "score_input_template.json"
+        template = json.loads(template_path.read_text(encoding="utf-8"))
+        self.assertEqual(set(template["cash_flow"]), {
+            "operating_cf", "cash_runway", "debt_level", "cf_to_ni_ratio"
+        })
+        self.assertEqual(set(template["operations"]), {
+            "receivable_turnover", "customer_concentration",
+            "employee_trend", "executive_stability"
+        })
+
     def test_invalid_top_level_input(self):
         with self.assertRaises(TypeError):
             score.calculate(["invalid"])

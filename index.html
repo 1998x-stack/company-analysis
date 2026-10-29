@@ -499,6 +499,16 @@ const SCORE_BAR_COLORS = {
 
 function byId(id) { return document.getElementById(id); }
 function getC(cid) { return COMPANIES.find(c => c.id === cid); }
+function reportDate(c) {
+  const match = (c.report || '').match(/\d{4}-\d{2}-\d{2}/);
+  return match ? match[0] : '未知';
+}
+function legacyGradeNote(c) {
+  const grade = [[85,'Excellent'],[70,'Moderate-High'],[55,'Moderate'],
+    [40,'Moderate-Low'],[0,'High-Risk']].find(([limit]) => c.total >= limit)?.[1];
+  return grade === c.grade ? '' :
+    '历史等级与整数展示分数的分界不同；未留存原始精度输入，不能擅自修正。';
+}
 
 // ============================================================
 // ROUTER
@@ -622,6 +632,7 @@ function renderBrowse() {
         </div>
         <div class="card-industry">${c.ind1} · ${c.ind2}</div>
         <div class="card-oneline">${c.oneLine}</div>
+        <div style="font-size:0.65rem;color:var(--text-muted);margin-top:5px;">历史报告：${reportDate(c)} · 证据尚未逐条复核</div>
         <div class="card-meta">
           <span>👥 ${c.employees}</span>
           <span>💰 ${c.revenue}</span>
@@ -645,6 +656,7 @@ function renderBrowse() {
         <div>
           <h1 style="margin-bottom:4px;">公司健康评估总览</h1>
           <p style="font-size:0.8rem;color:var(--text-muted);">${COMPANIES.length} 家公司 · ${new Set(COMPANIES.map(c => c.ind1)).size} 个赛道 · 5维财务框架</p>
+          <p style="font-size:0.76rem;color:var(--amber);margin-top:6px;">历史研究档案，不代表实时评级；来源与跨行业可比性尚未逐条核验。</p>
         </div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">${statChips}</div>
@@ -692,6 +704,8 @@ function renderCompany(cid) {
             <span style="font-size:0.85rem;color:${g.fg};padding:2px 10px;border-radius:4px;background:${g.bg};">${c.gradeLabel}</span>
           </div>
           <div class="company-verdict">${c.oneLine}</div>
+          <p style="font-size:0.73rem;color:var(--amber);margin-bottom:8px;">报告日期：${reportDate(c)} · 历史 v1 评分 · 原始指标输入未完整归档。</p>
+          ${legacyGradeNote(c) ? `<p style="font-size:0.73rem;color:var(--amber);">${legacyGradeNote(c)}</p>` : ''}
           <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:12px;">👥 ${c.employees} · 💰 ${c.revenue}</div>
           <div class="score-bars">${bars}</div>
         </div>
@@ -1035,6 +1049,7 @@ function renderCompare(cid1, cid2) {
     <div class="compare-view">
       <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
 
+      <p style="color:var(--amber);font-size:0.76rem;margin-top:16px;">仅比较历史 v1 分数；跨行业口径不同、原始输入不完整，请勿作为实时决策依据。</p>
       <div class="compare-header" style="margin-top:16px;">
         <div class="compare-company-pick" style="border-color:${g1.fg};">
           <div class="pick-hint">公司 A</div>

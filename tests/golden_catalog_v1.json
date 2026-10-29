@@ -1,0 +1,198 @@
+[
+  {
+    "id": "google",
+    "name": "Google",
+    "total": 89,
+    "grade": "Excellent",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 91,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "radar": "Google_health_radar.png"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "total": 65,
+    "grade": "Moderate",
+    "scores": {
+      "cashFlow": 52,
+      "profitability": 59,
+      "debt": 95,
+      "operations": 81,
+      "sustainability": 69
+    },
+    "radar": "DeepSeek_health_radar.png"
+  },
+  {
+    "id": "tencent",
+    "name": "腾讯",
+    "total": 77,
+    "grade": "Moderate-High",
+    "scores": {
+      "cashFlow": 73,
+      "profitability": 91,
+      "debt": 61,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "radar": "Tencent_health_radar.png"
+  },
+  {
+    "id": "vanke",
+    "name": "万科",
+    "total": 29,
+    "grade": "High-Risk",
+    "scores": {
+      "cashFlow": 25,
+      "profitability": 22,
+      "debt": 23,
+      "operations": 44,
+      "sustainability": 54
+    },
+    "radar": "Vanke_health_radar.png"
+  },
+  {
+    "id": "mindray",
+    "name": "迈瑞医疗",
+    "total": 89,
+    "grade": "Excellent",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 89,
+      "debt": 90,
+      "operations": 90,
+      "sustainability": 81
+    },
+    "radar": "Mindray_health_radar.png"
+  },
+  {
+    "id": "iauto",
+    "name": "商泰汽车 iAUTO",
+    "total": 85,
+    "grade": "Excellent",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 87,
+      "debt": 95,
+      "operations": 62,
+      "sustainability": 69
+    },
+    "radar": "iAUTO_health_radar.png"
+  },
+  {
+    "id": "sunshine_ins",
+    "name": "阳光保险",
+    "total": 82,
+    "grade": "Moderate-High",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 79,
+      "debt": 83,
+      "operations": 90,
+      "sustainability": 83
+    },
+    "radar": "Sunshine_health_radar.png"
+  },
+  {
+    "id": "sdgt",
+    "name": "崇达技术",
+    "total": 70,
+    "grade": "Moderate-High",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 50,
+      "debt": 62,
+      "operations": 72,
+      "sustainability": 69
+    },
+    "radar": "Chongda_health_radar.svg"
+  },
+  {
+    "id": "szhuaqiang",
+    "name": "深圳华强",
+    "total": 70,
+    "grade": "Moderate",
+    "scores": {
+      "cashFlow": 72,
+      "profitability": 55,
+      "debt": 62,
+      "operations": 90,
+      "sustainability": 76
+    },
+    "radar": "SZHuaQiang_health_radar.png"
+  },
+  {
+    "id": "inovance",
+    "name": "汇川技术",
+    "total": 84,
+    "grade": "Moderate-High",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 82,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 90
+    },
+    "radar": "Inovance_health_radar.png"
+  },
+  {
+    "id": "minghong",
+    "name": "明汯投资",
+    "total": 89,
+    "grade": "Excellent",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 95,
+      "debt": 90,
+      "operations": 81,
+      "sustainability": 83
+    },
+    "radar": "MHInvestments_health_radar.png"
+  },
+  {
+    "id": "taptap",
+    "name": "TapTap / 心动公司",
+    "total": 88,
+    "grade": "Excellent",
+    "scores": {
+      "cashFlow": 90,
+      "profitability": 91,
+      "debt": 95,
+      "operations": 72,
+      "sustainability": 76
+    },
+    "radar": "TapTap_health_radar.png"
+  },
+  {
+    "id": "haiwang",
+    "name": "海王生物",
+    "total": 30,
+    "grade": "High-Risk",
+    "scores": {
+      "cashFlow": 28,
+      "profitability": 29,
+      "debt": 23,
+      "operations": 45,
+      "sustainability": 39
+    },
+    "radar": "HaiWang_health_radar.png"
+  },
+  {
+    "id": "sunwoda",
+    "name": "欣旺达",
+    "total": 74,
+    "grade": "Moderate-High",
+    "scores": {
+      "cashFlow": 81,
+      "profitability": 56,
+      "debt": 72,
+      "operations": 72,
+      "sustainability": 83
+    },
+    "radar": "Sunwoda_health_radar.png"
+  }
+]

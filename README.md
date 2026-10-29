@@ -1,3 +1,7 @@
+# 企业健康度历史研究库 / Company Analysis
+
+> **历史资料提示**：本仓库的 230 份企业评估主要形成于 2026 年，部分缺少直接来源链接、原始评分输入及细化的报告期。评分不等同于审计意见或实时风险判断。技术对齐与剩余问题参见 [对齐审计](docs/ALIGNMENT_REMEDIATION_2026-10-29.md)，新评分来源约束参见 [Evidence Contract](docs/EVALUATION_INPUT_CONTRACT.md)。
+
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
 | 1 | Google (NASDAQ: GOOGL / GOOG) | 科技巨头 · 搜索与AI | 89 | 🟢 | [报告](docs/examples/Google-财务健康评估-2026-07-07.md) | [PNG](docs/examples/Google_health_radar.png) |

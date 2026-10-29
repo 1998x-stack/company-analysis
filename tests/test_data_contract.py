@@ -33,8 +33,8 @@ class CatalogIntegrityTests(unittest.TestCase):
     def test_warning_baseline_covers_all_remaining_legacy_flags(self):
         import json
         baseline = json.loads((ROOT / "docs/audit_warning_baseline.json").read_text())
-        allowed = {(x["code"], x["company"]) for x in baseline}
-        current = {(x["code"], x["company"]) for x in self.result["issues"]
+        allowed = {(x["code"], x["company"], x["detail"]) for x in baseline}
+        current = {(x["code"], x["company"], x["detail"]) for x in self.result["issues"]
                    if x["level"] == "warning"}
         self.assertFalse(current - allowed, f"New warnings: {current - allowed}")
 

@@ -188,14 +188,16 @@ def main() -> int:
         baseline = json.loads(args.baseline.read_text(encoding="utf-8"))
         if not isinstance(baseline, list):
             raise ValueError("Warning baseline must be an array")
-        allowed = {(x["code"], x["company"]) for x in baseline}
-        current = {(x["code"], x["company"]) for x in result["issues"]
+        # Include the warning detail so score changes at the same company
+        # cannot silently inherit an old warning's allowance.
+        allowed = {(x["code"], x["company"], x["detail"]) for x in baseline}
+        current = {(x["code"], x["company"], x["detail"]) for x in result["issues"]
                    if x["level"] == "warning"}
         new_warnings = sorted(current - allowed)
         print(f"Baseline: {len(current & allowed)} known, "
               f"{len(new_warnings)} unexpected, {len(allowed - current)} resolved")
-        for code, company in new_warnings:
-            print(f"  [NEW WARNING] {code}: {company}")
+        for code, company, detail in new_warnings:
+            print(f"  [NEW WARNING] {code}: {company} — {detail}")
     return int(result["errors"] > 0 or (args.strict and result["warnings"] > 0)
                or bool(new_warnings))
 

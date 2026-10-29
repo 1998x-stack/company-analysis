@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review-required evaluation run",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "evaluation_id",
+    "company_id",
+    "as_of_date",
+    "rubric_version",
+    "verification_status",
+    "input_sha256",
+    "engine_sha256",
+    "citation_link_coverage",
+    "payload",
+    "score_result"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 12
+    },
+    "company_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rubric_version": {
+      "const": "financial-health-v1"
+    },
+    "verification_status": {
+      "const": "requires_human_review"
+    },
+    "input_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "engine_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "citation_link_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "payload": {
+      "type": "object"
+    },
+    "score_result": {
+      "type": "object",
+      "required": [
+        "scores",
+        "weights",
+        "total_score",
+        "grade",
+        "grade_label"
+      ],
+      "properties": {
+        "scores": {
+          "type": "object"
+        },
+        "weights": {
+          "type": "object"
+        },
+        "total_score": {
+          "type": "number"
+        },
+        "grade": {
+          "type": "string"
+        },
+        "grade_label": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

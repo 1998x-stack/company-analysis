@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Company catalog record v1",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "nameEn",
+    "ind1",
+    "ind2",
+    "scores",
+    "total",
+    "grade",
+    "report",
+    "radar"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nameEn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ticker": {
+      "type": "string"
+    },
+    "ind1": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ind2": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cashFlow",
+        "profitability",
+        "debt",
+        "operations",
+        "sustainability"
+      ],
+      "properties": {
+        "cashFlow": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "profitability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "debt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "operations": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sustainability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "total": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "grade": {
+      "enum": [
+        "Excellent",
+        "Moderate-High",
+        "Moderate",
+        "Moderate-Low",
+        "High-Risk"
+      ]
+    },
+    "gradeLabel": {
+      "type": "string"
+    },
+    "report": {
+      "type": "string",
+      "pattern": "^[^/\\\\]+\\.md$"
+    },
+    "radar": {
+      "type": "string",
+      "pattern": "^[^/\\\\]+\\.(png|svg)$"
+    },
+    "employees": {
+      "type": "string"
+    },
+    "revenue": {
+      "type": "string"
+    },
+    "oneLine": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

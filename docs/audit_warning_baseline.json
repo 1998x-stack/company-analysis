@@ -1,0 +1,107 @@
+[
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "Neuralink",
+    "detail": "catalog=Moderate-Low; displayed total=55 => Moderate"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "东鹏饮料",
+    "detail": "catalog=Moderate-High; displayed total=85 => Excellent"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "中科创达",
+    "detail": "catalog=Moderate-High; displayed total=85 => Excellent"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "信利康",
+    "detail": "catalog=Moderate-Low; displayed total=55 => Moderate"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "奇富科技",
+    "detail": "catalog=Moderate; displayed total=70 => Moderate-High"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "深圳华强",
+    "detail": "catalog=Moderate; displayed total=70 => Moderate-High"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "点金贵金属",
+    "detail": "catalog=Moderate-Low; displayed total=55 => Moderate"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "盐田港",
+    "detail": "catalog=Moderate-High; displayed total=85 => Excellent"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "达道工业",
+    "detail": "catalog=Moderate-Low; displayed total=55 => Moderate"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "零一万物",
+    "detail": "catalog=Moderate; displayed total=70 => Moderate-High"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "领骏科技 (LeaderDrive)",
+    "detail": "catalog=Moderate-Low; displayed total=55 => Moderate"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "上汽集团",
+    "detail": "catalog=67; from rounded dimensions=66.40"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "中建二局华南",
+    "detail": "catalog=58; from rounded dimensions=58.60"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "中科创达",
+    "detail": "catalog=85; from rounded dimensions=84.40"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "国家能源集团",
+    "detail": "catalog=78; from rounded dimensions=77.45"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "声网",
+    "detail": "catalog=74; from rounded dimensions=73.35"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "深圳华强",
+    "detail": "catalog=70; from rounded dimensions=69.30"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "爱施德",
+    "detail": "catalog=68; from rounded dimensions=67.40"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "莉莉丝游戏",
+    "detail": "catalog=84; from rounded dimensions=83.40"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "迈富时",
+    "detail": "catalog=61; from rounded dimensions=60.35"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "金蝶国际",
+    "detail": "catalog=78; from rounded dimensions=77.35"
+  }
+]

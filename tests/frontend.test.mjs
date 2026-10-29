@@ -40,3 +40,18 @@ test('Markdown is HTML-escaped', () => {
   assert.doesNotMatch(value, /<img/);
   assert.match(value, /&lt;img/);
 });
+
+test('reportDate uses report filename', () => {
+  const code = script.match(/function reportDate\(c\)[\s\S]*?\n\}/)?.[0];
+  assert.ok(code);
+  const fn = vm.runInNewContext(code + '\nreportDate');
+  assert.equal(fn({report:'A-2026-08-13.md'}), '2026-08-13');
+  assert.equal(fn({report:'A.md'}), '未知');
+});
+test('legacyGradeNote warns on score boundary', () => {
+  const code = script.match(/function legacyGradeNote\(c\)[\s\S]*?\n\}/)?.[0];
+  assert.ok(code);
+  const fn = vm.runInNewContext(code + '\nlegacyGradeNote');
+  assert.match(fn({grade:'Moderate',total:70}), /历史等级/);
+  assert.equal(fn({grade:'Excellent',total:89}), '');
+});

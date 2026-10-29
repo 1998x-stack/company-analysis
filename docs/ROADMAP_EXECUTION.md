@@ -1,7 +1,7 @@
 # Execution Plan: Company Analysis Factory P0–P4
 
-Status: ordered backlog. Only changes in the quality-foundation PR are
-implemented; all other deliverables below are proposed.
+Status: ordered backlog. The quality-foundation PR is merged. PR #2 implements selected P0 repairs and
+starts P1 contracts; later stages remain proposed until verified.
 
 ## P0 — Make the existing catalog trustworthy (next)
 
@@ -23,8 +23,8 @@ rounded catalog values.
 
 Tasks:
 - Persist raw evidence snapshots with license-safe metadata and content hashes.
-- Save indicator input JSON per evaluation (not in temporary directories).
-- Create versioned JSON schemas for Company, Evidence, Observation, Evaluation.
+- [Implemented for NEW inputs] Save rubric indicator inputs in immutable evaluation snapshots.
+- [Implemented] Versioned JSON schemas for Company, Evidence, Observation, Evaluation.
 - Preserve period/unit/currency/source/estimate flags for each financial value.
 - Extract structured facts from documents, with page anchors and human review.
 - Move ranking/industry/report index generation to one deterministic command.

@@ -54,6 +54,21 @@ DISCOVER -> COLLECT -> EXTRACT -> VERIFY -> NORMALIZE -> SCORE -> REVIEW
 Store evidence references, source dates and retrieval timestamps, track
 contradictions, and separate unknown/unavailable data from actual risk.
 
+## Research factory stages
+
+- S01: tools/backfill_evidence.py builds the 230-entry evidence gap ledger.
+- S02: tools/reproduce_scores.py diagnoses legacy score drift;
+  tools/replay_evaluations.py exactly replays NEW persisted inputs.
+- S03: tools/publish_factory.py builds staged sites only after review.
+- S04: tools/sector_scoring_v2.py is exploratory and NOT deployed to rankings.
+- S05: tools/run_research_pipeline.py runs a checkpointed local workflow.
+- Optional tools/collect_sources.py network access requires an explicit
+  allowlisted HTTPS host and --allow-network. Source retrieval is NOT claim validation.
+
+The automated CI uploads two temporary, machine-readable research quality
+ledgers. Do not commit downloaded copyrighted PDFs or personalized materials
+into this public repository. Never mark a candidate source as verified.
+
 ## Done means
 
 - Unit and regression tests are green.

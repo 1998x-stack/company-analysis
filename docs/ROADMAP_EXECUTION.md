@@ -1,7 +1,9 @@
 # Execution Plan: Company Analysis Factory P0–P4
 
-Status: ordered backlog. The quality-foundation PR is merged. PR #2 implements selected P0 repairs and
-starts P1 contracts; later stages remain proposed until verified.
+Status: PR #1 and PR #2 are merged. PR #3 introduces runnable MVP code for
+all five research stages, but full factual backfill, calibrated industry rubrics,
+autonomous external source discovery, and verified legacy replay remain incomplete.
+See docs/RESEARCH_FACTORY_RUNBOOK.md and docs/IMPLEMENTATION_STATUS_2026-10-29.md.
 
 ## P0 — Make the existing catalog trustworthy (next)
 

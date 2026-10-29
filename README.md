@@ -2,6 +2,26 @@
 
 > **历史资料提示**：本仓库的 230 份企业评估主要形成于 2026 年，部分缺少直接来源链接、原始评分输入及细化的报告期。评分不等同于审计意见或实时风险判断。技术对齐与剩余问题参见 [对齐审计](docs/ALIGNMENT_REMEDIATION_2026-10-29.md)，新评分来源约束参见 [Evidence Contract](docs/EVALUATION_INPUT_CONTRACT.md)。
 
+## Research Factory — Stages 01–05 (MVP, 2026-10-29)
+
+The five-stage runnable implementation is documented in
+[Research Factory Runbook](docs/RESEARCH_FACTORY_RUNBOOK.md).
+Legacy historical research (230 companies) remains unverified: source discovery
+and fact checking are **not completed** by the new programs.
+
+| Stage | Executable | Actual result |
+|---|---|---|
+| 01 Evidence backfill | tools/backfill_evidence.py | 230-company source-gap ledger; 3 official source leads, not verified facts |
+| 02 Score reproduction | tools/reproduce_scores.py / tools/replay_evaluations.py | Legacy interval diagnostics; exact replay for new saved inputs |
+| 03 Publishing Factory | tools/publish_factory.py | Human-reviewed snapshot → isolated static site, MD, SVG, indexes, JSON |
+| 04 Sector v2 | tools/sector_scoring_v2.py | Four experimental rubrics + evidence/coverage/ablation, not calibrated |
+| 05 Research workflow | tools/run_research_pipeline.py | SQLite checkpoints, source hash and PDF/HTML/TXT parser, review gate |
+
+CI creates downloadable ledgers for all 230 companies:
+legacy_evidence_manifest.json and legacy_score_reproduction.json.
+See the PR Actions artifacts and the runbook for local regeneration.
+
+
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
 | 1 | Google (NASDAQ: GOOGL / GOOG) | 科技巨头 · 搜索与AI | 89 | 🟢 | [报告](docs/examples/Google-财务健康评估-2026-07-07.md) | [PNG](docs/examples/Google_health_radar.png) |

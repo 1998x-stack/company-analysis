@@ -29,3 +29,14 @@ jobs:
         run: node --test tests/frontend.test.mjs
       - name: Repository audit (no new warnings allowed)
         run: python3 tools/audit_repository.py --baseline docs/audit_warning_baseline.json
+      - name: Build legacy backfill and reproducibility ledgers
+        run: |
+          mkdir -p build
+          python3 tools/backfill_evidence.py --output build/legacy_evidence_manifest.json
+          python3 tools/reproduce_scores.py --output build/legacy_score_reproduction.json
+      - name: Upload research quality ledgers
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-quality-ledgers
+          path: build/*.json
+          retention-days: 30

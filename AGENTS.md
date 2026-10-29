@@ -32,6 +32,10 @@ current or independently verified.
 9. Do not cite AI-produced summaries as independent confirmation.
 10. If primary evidence is unavailable, state uncertainty rather than invent.
 
+## New evidence-linked evaluations
+
+Run tools/create_evaluation.py with complete cited indicator assessments; it always emits requires_human_review and never publishes automatically. See docs/EVALUATION_INPUT_CONTRACT.md.
+
 ## Required checks
 
     python3 -m unittest discover -s tests -p "test_*.py" -v

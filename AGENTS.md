@@ -57,7 +57,8 @@ contradictions, and separate unknown/unavailable data from actual risk.
 ## Research factory stages
 
 - S01: tools/backfill_evidence.py builds the 230-entry evidence gap ledger.
-- S02: tools/reproduce_scores.py identifies unverified legacy score drift.
+- S02: tools/reproduce_scores.py diagnoses legacy score drift;
+  tools/replay_evaluations.py exactly replays NEW persisted inputs.
 - S03: tools/publish_factory.py builds staged sites only after review.
 - S04: tools/sector_scoring_v2.py is exploratory and NOT deployed to rankings.
 - S05: tools/run_research_pipeline.py runs a checkpointed local workflow.

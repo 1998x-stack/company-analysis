@@ -30,6 +30,14 @@ class CatalogIntegrityTests(unittest.TestCase):
         self.assertIn("warnings", self.result)
         self.assertIsInstance(self.result["issues"], list)
 
+    def test_warning_baseline_covers_all_remaining_legacy_flags(self):
+        import json
+        baseline = json.loads((ROOT / "docs/audit_warning_baseline.json").read_text())
+        allowed = {(x["code"], x["company"]) for x in baseline}
+        current = {(x["code"], x["company"]) for x in self.result["issues"]
+                   if x["level"] == "warning"}
+        self.assertFalse(current - allowed, f"New warnings: {current - allowed}")
+
 
 if __name__ == "__main__":
     unittest.main()

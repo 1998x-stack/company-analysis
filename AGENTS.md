@@ -36,7 +36,7 @@ current or independently verified.
 
     python3 -m unittest discover -s tests -p "test_*.py" -v
     node --test tests/frontend.test.mjs
-    python3 tools/audit_repository.py
+    python3 tools/audit_repository.py --baseline docs/audit_warning_baseline.json
 
 The audit intentionally reports legacy warnings. Review warning deltas on each
 PR: new warnings should not be introduced without an explicit explanation.

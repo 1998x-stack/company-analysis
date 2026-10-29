@@ -19,11 +19,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Install schema validator
+        run: python3 -m pip install -r requirements-dev.txt
       - name: Validate JSON
         run: python3 -m json.tool docs/companies.json > /dev/null
       - name: Python regression tests
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
       - name: Frontend tests
         run: node --test tests/frontend.test.mjs
-      - name: Repository audit (legacy warnings remain non-fatal)
-        run: python3 tools/audit_repository.py
+      - name: Repository audit (no new warnings allowed)
+        run: python3 tools/audit_repository.py --baseline docs/audit_warning_baseline.json

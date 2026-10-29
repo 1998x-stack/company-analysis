@@ -69,7 +69,11 @@ def audit_repository(root: Path) -> dict:
     company_dir = root / "company"
     for path in company_dir.rglob("*"):
         if path.is_symlink():
-            archive_by_target[path.resolve()].append(path)
+            if not path.exists():
+                issue("error", "broken_archive_symlink", str(path.relative_to(root)),
+                      f"target={path.readlink()}")
+            else:
+                archive_by_target[path.resolve()].append(path)
 
     seen_ids = set()
     for index, c in enumerate(items):
@@ -165,6 +169,8 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--format", choices=("text", "json"), default="text")
     parser.add_argument("--strict", action="store_true", help="Treat warnings as failures")
+    parser.add_argument("--baseline", type=Path,
+                        help="Allow known historical warning identities, but fail on new warnings")
     args = parser.parse_args()
     result = audit_repository(args.root)
     if args.format == "json":
@@ -177,7 +183,21 @@ def main() -> int:
         for problem in result["issues"]:
             print(f"  [{problem['level'].upper()}] {problem['code']}: "
                   f"{problem['company']} — {problem['detail']}")
-    return int(result["errors"] > 0 or (args.strict and result["warnings"] > 0))
+    new_warnings = []
+    if args.baseline is not None:
+        baseline = json.loads(args.baseline.read_text(encoding="utf-8"))
+        if not isinstance(baseline, list):
+            raise ValueError("Warning baseline must be an array")
+        allowed = {(x["code"], x["company"]) for x in baseline}
+        current = {(x["code"], x["company"]) for x in result["issues"]
+                   if x["level"] == "warning"}
+        new_warnings = sorted(current - allowed)
+        print(f"Baseline: {len(current & allowed)} known, "
+              f"{len(new_warnings)} unexpected, {len(allowed - current)} resolved")
+        for code, company in new_warnings:
+            print(f"  [NEW WARNING] {code}: {company}")
+    return int(result["errors"] > 0 or (args.strict and result["warnings"] > 0)
+               or bool(new_warnings))
 
 
 if __name__ == "__main__":

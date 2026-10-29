@@ -1,7 +1,7 @@
 # Execution Plan: Company Analysis Factory P0–P4
 
-Status: ordered backlog. Only changes in the quality-foundation PR are
-implemented; all other deliverables below are proposed.
+Status: ordered backlog. The quality-foundation PR is merged. PR #2 implements selected P0 repairs and
+starts P1 contracts; later stages remain proposed until verified.
 
 ## P0 — Make the existing catalog trustworthy (next)
 

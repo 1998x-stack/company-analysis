@@ -1,0 +1,86 @@
+[
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "Neuralink"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "东鹏饮料"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "中科创达"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "信利康"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "奇富科技"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "深圳华强"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "点金贵金属"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "盐田港"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "达道工业"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "零一万物"
+  },
+  {
+    "code": "grade_boundary_ambiguity",
+    "company": "领骏科技 (LeaderDrive)"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "上汽集团"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "中建二局华南"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "中科创达"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "国家能源集团"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "声网"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "深圳华强"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "爱施德"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "莉莉丝游戏"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "迈富时"
+  },
+  {
+    "code": "total_precision_drift",
+    "company": "金蝶国际"
+  }
+]

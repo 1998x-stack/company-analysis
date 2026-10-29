@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source document evidence v1",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_url",
+    "publisher",
+    "retrieved_at",
+    "document_sha256",
+    "reporting_period"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._:-]+$"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "reporting_period": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "document_locator": {
+      "type": "string"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "classification": {
+      "enum": [
+        "primary",
+        "secondary",
+        "user_supplied",
+        "unknown"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

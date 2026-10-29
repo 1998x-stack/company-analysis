@@ -69,3 +69,29 @@ def extract_text(content,media_type):
         parser=TextExtractor();parser.feed(text)
         return "\n".join(parser.parts)
     return text
+
+def main():
+    """Explicit network opt-in: never run mass discovery by default."""
+    import argparse,json
+    from datetime import date
+    p=argparse.ArgumentParser()
+    p.add_argument("--url",required=True)
+    p.add_argument("--allowed-host",action="append",required=True)
+    p.add_argument("--allow-network",action="store_true")
+    p.add_argument("--output-dir",type=Path,required=True)
+    args=p.parse_args()
+    if not args.allow_network:
+        raise SystemExit("Explicit --allow-network is required")
+    result=fetch(args.url,args.allowed_host)
+    suffix=".pdf" if result["content"].startswith(b"%PDF-") else ".html"
+    args.output_dir.mkdir(parents=True,exist_ok=True)
+    output=args.output_dir/(result["sha256"]+suffix)
+    if output.exists() and output.read_bytes()!=result["content"]:
+        raise ValueError("Content-addressed file collision")
+    output.write_bytes(result["content"])
+    meta={"url":args.url,"sha256":result["sha256"],
+          "media_type":result["media_type"],"retrieved_at":date.today().isoformat(),
+          "local_path":str(output),"verification_status":"retrieved_not_fact_checked"}
+    print(json.dumps(meta,ensure_ascii=False,indent=2))
+if __name__=="__main__":
+    main()

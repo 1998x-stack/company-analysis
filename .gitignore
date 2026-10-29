@@ -4,3 +4,8 @@ __pycache__/
 .DS_Store
 pdfs/XieMingReSume-ZH.pdf
 .omo/
+data/runtime/
+data/raw/
+data/evaluations/
+data/generated/
+build/

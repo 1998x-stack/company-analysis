@@ -1,0 +1,135 @@
+{
+  "schema_version": "2.0.0-experimental",
+  "status": "uncalibrated_research_prototype",
+  "minimum_coverage": 0.75,
+  "sectors": {
+    "bank": {
+      "display": "Commercial banks",
+      "metrics": {
+        "cet1_ratio": {
+          "weight": 0.28,
+          "good": 0.13,
+          "bad": 0.075,
+          "units": "fraction"
+        },
+        "npl_ratio": {
+          "weight": 0.26,
+          "good": 0.01,
+          "bad": 0.05,
+          "units": "fraction"
+        },
+        "coverage_ratio": {
+          "weight": 0.23,
+          "good": 2.5,
+          "bad": 1,
+          "units": "multiple"
+        },
+        "liquidity_coverage_ratio": {
+          "weight": 0.23,
+          "good": 1.4,
+          "bad": 0.8,
+          "units": "multiple"
+        }
+      }
+    },
+    "insurance": {
+      "display": "Insurance companies",
+      "metrics": {
+        "solvency_ratio": {
+          "weight": 0.3,
+          "good": 2,
+          "bad": 1,
+          "units": "multiple"
+        },
+        "combined_ratio": {
+          "weight": 0.25,
+          "good": 0.9,
+          "bad": 1.1,
+          "units": "fraction"
+        },
+        "investment_return": {
+          "weight": 0.2,
+          "good": 0.06,
+          "bad": 0,
+          "units": "fraction"
+        },
+        "new_business_growth": {
+          "weight": 0.25,
+          "good": 0.15,
+          "bad": -0.2,
+          "units": "fraction"
+        }
+      }
+    },
+    "manufacturing": {
+      "display": "Manufacturers",
+      "metrics": {
+        "operating_cash_to_revenue": {
+          "weight": 0.26,
+          "good": 0.12,
+          "bad": -0.05,
+          "units": "fraction"
+        },
+        "net_debt_to_ebitda": {
+          "weight": 0.22,
+          "good": 0,
+          "bad": 5,
+          "units": "multiple"
+        },
+        "inventory_days": {
+          "weight": 0.18,
+          "good": 35,
+          "bad": 180,
+          "units": "days"
+        },
+        "return_on_invested_capital": {
+          "weight": 0.18,
+          "good": 0.15,
+          "bad": 0,
+          "units": "fraction"
+        },
+        "capex_to_operating_cash_flow": {
+          "weight": 0.16,
+          "good": 0.6,
+          "bad": 2.5,
+          "units": "multiple"
+        }
+      }
+    },
+    "ai_startup": {
+      "display": "AI startups",
+      "metrics": {
+        "runway_months": {
+          "weight": 0.3,
+          "good": 30,
+          "bad": 6,
+          "units": "months"
+        },
+        "gross_margin": {
+          "weight": 0.22,
+          "good": 0.75,
+          "bad": 0.2,
+          "units": "fraction"
+        },
+        "customer_retention": {
+          "weight": 0.2,
+          "good": 1.1,
+          "bad": 0.5,
+          "units": "multiple"
+        },
+        "revenue_concentration": {
+          "weight": 0.16,
+          "good": 0.25,
+          "bad": 0.8,
+          "units": "fraction"
+        },
+        "burn_multiple": {
+          "weight": 0.12,
+          "good": 1,
+          "bad": 6,
+          "units": "multiple"
+        }
+      }
+    }
+  }
+}

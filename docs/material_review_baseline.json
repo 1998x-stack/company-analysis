@@ -1,0 +1,12 @@
+[
+  {
+    "company_id": "fosunpharma",
+    "code": "report_heading_date_differs_from_filename",
+    "detail": "filename=2026-08-10; heading=2026-08-11"
+  },
+  {
+    "company_id": "sunshine_ins",
+    "code": "radar_geometry_differs_from_catalog",
+    "detail": "radar_sha256=35359361c11f15c62dc89ad1e945443e7dab9c23ade8f59f5bcd8ee357208583; catalog_scores=81,79,83,90,83"
+  }
+]

@@ -9,3 +9,4 @@ data/raw/
 data/evaluations/
 data/generated/
 build/
+.pi/

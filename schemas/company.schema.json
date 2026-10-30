@@ -28,7 +28,8 @@
       "minLength": 1
     },
     "ticker": {
-      "type": "string"
+      "type": "string",
+      "description": "Legacy display text; may identify a related listed entity or listing status, not a canonical security identifier."
     },
     "ind1": {
       "type": "string",
@@ -109,6 +110,16 @@
     },
     "oneLine": {
       "type": "string"
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rubric_version": {
+      "type": "string"
+    },
+    "verification_status": {
+      "enum": ["reviewer_attested"]
     }
   },
   "additionalProperties": true

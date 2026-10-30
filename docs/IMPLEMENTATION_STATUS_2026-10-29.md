@@ -1,20 +1,23 @@
 # Implementation and Acceptance — 2026-10-29
 
-Branch: feat/research-factory-stages-1-5
+Branch: fix/data-architecture-audit-20261029
 PR: https://github.com/1998x-stack/company-analysis/pull/3
+Superseded note: the stage implementation below was merged in PR #3 on
+feat/research-factory-stages-1-5; the current branch carries the audit fixes.
 
 ## Scope and verified results
 
 The five research stages now have runnable MVP implementations and tests,
 not merely architecture documents. GitHub Actions has run Python+Node tests,
-repository audit, and two 230-company ledger generators.
+repository audit, and three 230-company ledger generators
+(backfill evidence, score reproduction, company materials).
 
 Coverage from the real repository snapshot:
 - Companies inventoried: 230 / 230
 - Historical reports with no direct HTTP(S) URL: 227
 - Reports shorter than 3KB: 111
 - Companies with curated official source *candidates*: 3
-- Historical score flags: 11 boundary + 10 precision
+- Historical score flags: 11 boundary + 9 precision (corrected threshold audit)
 - Historical input rubrics recovered: 0 (not present in repository)
 - Independent historical source/page checks completed: 0
 - New evaluation deterministic replay: implemented + tested with synthetic inputs
@@ -35,7 +38,7 @@ Coverage from the real repository snapshot:
 
 ## Design protection
 
-No historical score, grade or claims were modified. Historical 21 audit warnings
+No historical score, grade or claims were modified. Historical 20 audit warnings
 stay visible and frozen as explicit baseline, and CI prevents new warnings.
 Source candidate discovery must never be mislabeled verified. The current
 pipeline cannot establish claim truth from a document hash alone. Human approval

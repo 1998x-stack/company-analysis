@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Review-gated static site builder. Never overwrites the source repository."""
-import argparse,json,hashlib,re,shutil,math
+import argparse,importlib.util,json,hashlib,re,shutil,math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 MAP={"Cash Flow Quality":"cashFlow","Profitability":"profitability",
@@ -17,6 +17,14 @@ def check_approval(s,a):
     if a["decision"]!="approve" or not isinstance(a["reviewer"],str) or not a["reviewer"].strip():
         raise ValueError("Human approval required")
     if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}",a["approved_at"]):raise ValueError("Approval date invalid")
+
+def check_snapshot(s):
+    spec=importlib.util.spec_from_file_location("publication_evaluation",ROOT/"tools/create_evaluation.py")
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    fresh=module.calculate_snapshot(s["payload"])
+    fields=("evaluation_id","company_id","as_of_date","rubric_version","input_sha256","engine_sha256","score_result")
+    if any(s.get(field)!=fresh[field] for field in fields):
+        raise ValueError("Snapshot differs from exact scoring replay")
 
 def radar_svg(scores,total):
     keys=list(scores);cx,cy,R=240,190,120
@@ -72,25 +80,42 @@ def indexes(catalog):
 
 def publish(snapshot,approval,company,out,root=ROOT):
     check_approval(snapshot,approval)
+    check_snapshot(snapshot)
     if snapshot["company_id"]!=company["id"]:raise ValueError("Company ID mismatch")
+    if not re.fullmatch(r"[a-zA-Z0-9_-]+",company["id"]):raise ValueError("Unsafe company ID")
     if out.exists() and any(out.iterdir()):raise FileExistsError("Output must be empty")
     x=snapshot["score_result"]
     scores={MAP[k]:v for k,v in x["scores"].items()}
     if len(scores)!=5:raise ValueError("Five scores required")
     stem=snapshot["evaluation_id"]
     if not re.fullmatch(r"[a-zA-Z0-9_-]+",stem):raise ValueError("Unsafe ID")
+    if any((root/"docs/examples"/(stem+suffix)).exists() for suffix in (".md",".svg")):
+        raise ValueError("Evaluation asset already exists")
     record={"id":company["id"],"name":company["name"],"nameEn":company["nameEn"],
             "ticker":company.get("ticker",""),"ind1":company["ind1"],"ind2":company["ind2"],
-            "scores":scores,"total":round(x["total_score"]),"grade":x["grade"],
+            "scores":scores,"total":x["total_score"],"grade":x["grade"],
             "gradeLabel":LABEL[x["grade"]],"report":stem+".md","radar":stem+".svg",
-            "oneLine":"Reviewed evaluation snapshot","employees":"—","revenue":"—",
-            "evaluation_id":stem,"verification_status":"reviewer_attested"}
+            "oneLine":"人工审核的评估快照；证据链接不代表事实已核验","employees":"—","revenue":"—",
+            "evaluation_id":stem,"verification_status":"reviewer_attested",
+            "as_of_date":snapshot["as_of_date"],"rubric_version":snapshot["rubric_version"]}
     existing=json.loads((root/"docs/companies.json").read_text(encoding="utf-8"))
-    catalog={c["id"]:c for c in existing};catalog[record["id"]]=record
+    catalog={c["id"]:c for c in existing}
+    if record["id"] in catalog:
+        historical=catalog[record["id"]]
+        if any(company[key]!=historical[key] for key in ("name","ind1","ind2")):
+            raise ValueError("Existing company identity or industry mismatch")
+        versions=historical.get("evaluations",[])
+        if any(item["evaluation_id"]==stem for item in versions):
+            raise ValueError("Evaluation version already exists")
+        catalog[record["id"]]={**historical,"evaluations":versions+[record]}
+    else:
+        catalog[record["id"]]=record
     out.mkdir(parents=True,exist_ok=True)
     dest=out/"docs/examples"
     shutil.copytree(root/"docs/examples",dest)
     shutil.copy2(root/"index.html",out/"index.html")
+    shutil.copy2(root/"docs/material_review_baseline.json",out/"docs/material_review_baseline.json")
+    shutil.copytree(root/"docs/企业健康度评估体系",out/"docs/企业健康度评估体系")
     (dest/record["radar"]).write_text(radar_svg(scores,x["total_score"]),encoding="utf-8")
     (dest/record["report"]).write_text(report_text(snapshot,approval,company,record["radar"]),encoding="utf-8")
     ordered=sorted(catalog.values(),key=lambda c:c["id"])
@@ -100,7 +125,8 @@ def publish(snapshot,approval,company,out,root=ROOT):
     (out/"company/index.md").write_text(rank,encoding="utf-8")
     (out/"company/README.md").write_text(industry,encoding="utf-8")
     manifest={"evaluation_id":stem,"report":record["report"],"radar":record["radar"],
-              "companies":len(ordered),"status":"staged_not_deployed"}
+              "companies":len(ordered),"publication_kind":"new_version" if record["id"] in {c["id"] for c in existing} else "new_company",
+              "status":"staged_not_deployed"}
     (out/"publication_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n",encoding="utf-8")
     return manifest
 

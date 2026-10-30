@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="230 家企业的五维财务健康评估快照：现金流、盈利能力、偿债能力、运营效率、可持续发展。历史 v1 评分，原始指标输入未完整归档，请结合日期与不确定性阅读。">
+<meta name="theme-color" content="#0a0a0f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="企业健康度评估 · Company Health Evaluation">
+<meta property="og:description" content="230 家企业的五维财务健康评估快照，历史 v1 评分。">
+<meta property="og:image" content="docs/examples/Tencent_health_radar.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>企业健康度评估 · Company Health Evaluation</title>
 <style>
 /* ============================================================
@@ -18,7 +25,7 @@
   --border-light: #2e2e3a;
   --text: #e4e2df;
   --text-secondary: #8b8b96;
-  --text-muted: #5c5c68;
+  --text-muted: #85858f;
   --amber: #d4a853;
   --amber-dim: #8a6d30;
   --teal: #5b9e9e;
@@ -304,6 +311,23 @@ a:hover { color: var(--amber); }
 .detail-tab:hover { color: var(--text); }
 .detail-tab.active { color: var(--amber); border-bottom-color: var(--amber); }
 
+.material-warning {
+  margin: 16px 0; padding: 14px 18px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--amber); font-size: 0.82rem;
+}
+.material-warning ul { margin: 8px 0 0; padding-left: 20px; }
+.evaluation-versions { margin: 0 0 24px; }
+.evaluation-versions h2 { font-size: 1.05rem; margin-bottom: 10px; }
+.evaluation-version {
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+  padding: 16px; margin-bottom: 10px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+}
+.evaluation-version img { width: 96px; height: 96px; object-fit: contain; }
+.evaluation-version .version-info { flex: 1; min-width: min(220px, 100%); }
+.evaluation-version .version-score { color: var(--amber); font-size: 1.25rem; font-weight: 700; }
+
 .report-content {
   background: var(--bg-surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 32px 36px;
@@ -442,6 +466,19 @@ a:hover { color: var(--amber); }
   .compare-verdicts { grid-template-columns: 1fr; }
   .report-content { padding: 16px; font-size: 0.82rem; }
 }
+/* Focus, reduced-motion and a11y baseline */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -459,6 +496,10 @@ a:hover { color: var(--amber); }
 // DATA: loaded from docs/companies.json
 // ============================================================
 let COMPANIES = [];
+let MATERIAL_ISSUES = [];
+const reportCache = new Map();
+const openGroups = new Set();
+let reportLoadToken = 0;
 
 // ============================================================
 // HELPERS
@@ -487,7 +528,19 @@ const CARD_GRADE_CLS = {
   "High-Risk": "grade-high-risk"
 };
 
-const IND_ORDER = ['人工智能','互联网平台','企业服务','金融科技','科技硬件','互动娱乐','教育科技','机器人','汽车科技','化工'];
+// Preferred first-level industry display order. The catalog stays the single
+// source of truth: any ind1 present in the data is rendered even when it is
+// not listed here, so adding a company can never hide it from the sidebar.
+const IND_PRIORITY = ['人工智能','互联网平台','企业服务','金融科技','科技硬件','互动娱乐','教育科技','机器人','汽车科技','化工'];
+
+function industryOrder(companies) {
+  const present = [...new Set(companies.map(c => c.ind1))];
+  const preferred = IND_PRIORITY.filter(ind1 => present.includes(ind1));
+  const remaining = present
+    .filter(ind1 => !IND_PRIORITY.includes(ind1))
+    .sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'));
+  return preferred.concat(remaining);
+}
 
 const SCORE_BAR_COLORS = {
   cashFlow: "#d4a853",
@@ -499,9 +552,54 @@ const SCORE_BAR_COLORS = {
 
 function byId(id) { return document.getElementById(id); }
 function getC(cid) { return COMPANIES.find(c => c.id === cid); }
+function sanitizeCompany(c) {
+  if (!/^[a-zA-Z0-9_-]+$/.test(c.id) ||
+      !/^[^/\\]+\.md$/.test(c.report) ||
+      !/^[^/\\]+\.(png|svg)$/.test(c.radar) ||
+      /[<>"'`&\x00-\x1f]/.test(c.report + c.radar) ||
+      (c.as_of_date && !/^\d{4}-\d{2}-\d{2}$/.test(c.as_of_date))) {
+    throw new Error('目录记录包含不安全的标识或文件名');
+  }
+  if (c.evaluations && !Array.isArray(c.evaluations)) {
+    throw new Error('评估版本格式无效');
+  }
+  return {...c, name: escapeHtml(c.name), nameEn: escapeHtml(c.nameEn),
+    ticker: escapeHtml(c.ticker || ''), ind1: escapeHtml(c.ind1),
+    ind2: escapeHtml(c.ind2), oneLine: escapeHtml(c.oneLine || ''),
+    gradeLabel: escapeHtml(c.gradeLabel || ''),
+    employees: escapeHtml(c.employees || ''), revenue: escapeHtml(c.revenue || ''),
+    evaluations: (c.evaluations || []).map(sanitizeCompany)};
+}
+function resolveReportVersion(c, evaluationId) {
+  return evaluationId ? c.evaluations.find(v => v.evaluation_id === evaluationId) : c;
+}
+async function loadMaterialIssues(fetcher) {
+  try {
+    const resp = await fetcher('docs/material_review_baseline.json');
+    if (!resp.ok) return [];
+    const data = await resp.json();
+    return Array.isArray(data) ? data.filter(issue => issue && issue.company_id && issue.code) : [];
+  } catch(e) {
+    console.warn('Material review baseline unavailable; continuing without review hints:', e);
+    return [];
+  }
+}
+function materialIssueLabel(code) {
+  return {
+    report_conclusion_score_differs_from_catalog: '报告结论分数与目录不一致',
+    report_heading_date_differs_from_filename: '报告标题日期与文件名不一致',
+    radar_geometry_differs_from_catalog: '雷达图数据点与目录分数不一致'
+  }[code] || '资料存在待核冲突';
+}
 function reportDate(c) {
+  if (c.as_of_date) return c.as_of_date;
   const match = (c.report || '').match(/\d{4}-\d{2}-\d{2}/);
   return match ? match[0] : '未知';
+}
+function evaluationNote(c) {
+  return c.verification_status === 'reviewer_attested'
+    ? `审核记录：${reportDate(c)} · ${escapeHtml(c.rubric_version || '模型未知')} · 来源与判断仍需独立核验。`
+    : `历史报告：${reportDate(c)} · 历史 v1 评分 · 原始指标输入未完整归档。`;
 }
 function legacyGradeNote(c) {
   const grade = [[85,'Excellent'],[70,'Moderate-High'],[55,'Moderate'],
@@ -526,9 +624,41 @@ function route() {
     renderCompany(parts[1]);
   } else if (parts[0] === 'compare') {
     renderCompare(parts[1], parts[2]);
+  } else if (parts[0] === 'method') {
+    renderMethod();
   } else {
     renderBrowse();
   }
+  syncDocumentTitle(parts);
+}
+
+// Keep the browser tab, bookmarks and link previews meaningful. Values come
+// from the already-sanitized catalog, never from raw user input.
+const SITE_TITLE = '企业健康度评估 · Company Health Evaluation';
+function titleForRoute(parts, lookup) {
+  if (parts[0] === 'company' && parts[1]) {
+    const c = lookup(parts[1]);
+    if (c) return `${c.name} ${c.total} 分 · ${c.gradeLabel} · 企业健康度评估`;
+  }
+  if (parts[0] === 'compare') {
+    const names = [parts[1], parts[2]].filter(Boolean)
+      .map(id => (lookup(id) || {}).name).filter(Boolean);
+    if (names.length) return `${names.join(' vs ')} · 五维对比`;
+  }
+  if (parts[0] === 'method') return `评分方法 · ${SITE_TITLE}`;
+  return SITE_TITLE;
+}
+function syncDocumentTitle(parts) {
+  document.title = titleForRoute(parts, getC);
+}
+function openCompany(cid) {
+  location.hash = `company/${cid}`;
+}
+// "Back to overview" must not push a new history entry, otherwise the browser
+// back button bounces between the same two views forever.
+function goHome() {
+  if (history.length > 1) history.back();
+  else location.hash = '';
 }
 
 window.addEventListener('hashchange', route);
@@ -539,6 +669,11 @@ window.addEventListener('hashchange', route);
 function renderSidebar() {
   const nav = byId('sidebar');
   const hash = location.hash.slice(1) || '';
+  const scrollTop = nav.scrollTop;
+  // The active company keeps its industry branch expanded, so the reader can
+  // see where the current page sits in the tree.
+  const active = hash.startsWith('company/') ? getC(hash.slice('company/'.length)) : null;
+  if (active) { openGroups.add(active.ind1); openGroups.add(`${active.ind1}/${active.ind2}`); }
 
   // Build industry tree
   const tree = {};
@@ -561,27 +696,33 @@ function renderSidebar() {
     <a class="company-link" href="#compare" style="padding-left:20px;border-left:none;${hash.startsWith('compare') ? 'color:var(--amber);border-left:2px solid var(--amber);background:rgba(212,168,83,0.06);' : ''}">
       <span style="font-size:0.8rem;">⇆ 对比公司</span>
     </a>
+    <a class="company-link" href="#method" style="padding-left:20px;border-left:none;${hash === 'method' ? 'color:var(--amber);border-left:2px solid var(--amber);background:rgba(212,168,83,0.06);' : ''}">
+      <span style="font-size:0.8rem;">📖 评分方法</span>
+    </a>
   `;
 
-  IND_ORDER.forEach(ind1 => {
+  industryOrder(COMPANIES).forEach(ind1 => {
     if (!tree[ind1]) return;
     const subInds = tree[ind1];
     const total = Object.values(subInds).reduce((s, arr) => s + arr.length, 0);
+    const isOpen = openGroups.has(ind1);
     html += `<div class="industry-group">
-      <button class="industry-toggle" onclick="toggleIndustry(this)" data-ind1="${ind1}">
+      <button class="industry-toggle ${isOpen ? 'open' : ''}" onclick="toggleIndustry(this)" data-ind1="${ind1}" aria-expanded="${isOpen}">
         <span class="arrow">▶</span> ${ind1}
         <span class="count">${total}</span>
       </button>
-      <div class="sub-industries">`;
+      <div class="sub-industries ${isOpen ? 'open' : ''}">`;
 
     Object.keys(subInds).sort().forEach(ind2 => {
       const companies = subInds[ind2];
+      const subKey = `${ind1}/${ind2}`;
+      const subOpen = openGroups.has(subKey);
       html += `<div class="sub-industry-group">
-        <button class="sub-toggle" onclick="toggleSub(this)">
+        <button class="sub-toggle ${subOpen ? 'open' : ''}" onclick="toggleSub(this)" data-sub="${subKey}" aria-expanded="${subOpen}">
           <span class="arrow">▶</span> ${ind2}
           <span class="count" style="margin-left:auto;">${companies.length}</span>
         </button>
-        <div class="company-list">`;
+        <div class="company-list ${subOpen ? 'open' : ''}">`;
 
       companies.sort((a,b) => b.total - a.total).forEach(c => {
         const isActive = hash === `company/${c.id}`;
@@ -599,15 +740,22 @@ function renderSidebar() {
   });
 
   nav.innerHTML = html;
+  nav.scrollTop = scrollTop;
 }
 
 function toggleIndustry(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
+  const open = btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', String(open));
+  const key = btn.dataset.ind1;
+  if (open) openGroups.add(key); else openGroups.delete(key);
 }
 function toggleSub(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
+  const open = btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', String(open));
+  const key = btn.dataset.sub;
+  if (open) openGroups.add(key); else openGroups.delete(key);
 }
 
 // ============================================================
@@ -621,8 +769,10 @@ function renderBrowse() {
   sorted.forEach((c, i) => {
     const g = GRADE_COLORS[c.grade];
     cards += `
-      <div class="company-card ${CARD_GRADE_CLS[c.grade]}" style="animation-delay:${i*0.04}s"
-           onclick="location.hash='company/${c.id}'">
+      <div class="company-card ${CARD_GRADE_CLS[c.grade]}" style="animation-delay:${Math.min(i,12)*0.04}s"
+           role="link" tabindex="0"
+           onclick="openCompany('${c.id}')"
+           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCompany('${c.id}');}">
         <div class="card-header">
           <div>
             <div class="card-name">${c.name}</div>
@@ -632,7 +782,7 @@ function renderBrowse() {
         </div>
         <div class="card-industry">${c.ind1} · ${c.ind2}</div>
         <div class="card-oneline">${c.oneLine}</div>
-        <div style="font-size:0.65rem;color:var(--text-muted);margin-top:5px;">历史报告：${reportDate(c)} · 证据尚未逐条复核</div>
+        <div style="font-size:0.65rem;color:var(--text-muted);margin-top:5px;">${evaluationNote(c)}</div>
         <div class="card-meta">
           <span>👥 ${c.employees}</span>
           <span>💰 ${c.revenue}</span>
@@ -667,14 +817,54 @@ function renderBrowse() {
 }
 
 // ============================================================
+// METHOD VIEW
+// ============================================================
+const METHOD_DOC = 'docs/企业健康度评估体系/00-评估框架总览.md';
+async function fetchText(path) {
+  const resp = await fetch(path.split('/').map(encodeURIComponent).join('/'));
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  return resp.text();
+}
+async function renderMethod() {
+  const main = byId('main');
+  main.innerHTML = `
+    <div class="company-detail">
+      <button class="back-btn" onclick="goHome()">← 返回总览</button>
+      <nav class="breadcrumb" aria-label="面包屑"><a href="#">总览</a> › <span>评分方法</span></nav>
+      <div class="report-content" id="method-container"><div class="loading">加载评分方法...</div></div>
+    </div>`;
+  const container = byId('method-container');
+  try {
+    const md = await fetchText(METHOD_DOC);
+    if (container) container.innerHTML = renderMarkdown(md);
+  } catch (e) {
+    if (container) container.innerHTML = '<p>评分方法文档暂时无法加载。</p>'
+      + '<p>也可直接阅读 <code>docs/企业健康度评估体系/</code> 目录下的 Markdown 原文。</p>';
+  }
+}
+
+// ============================================================
 // SINGLE COMPANY VIEW
 // ============================================================
 function renderCompany(cid) {
   const c = getC(cid);
-  if (!c) { location.hash = ''; return; }
+  if (!c) { goHome(); return; }
 
   const main = byId('main');
   const g = GRADE_COLORS[c.grade];
+  const issues = MATERIAL_ISSUES.filter(issue => issue.company_id === cid);
+  const versions = [...c.evaluations].sort((a, b) => b.as_of_date.localeCompare(a.as_of_date));
+  const issueHtml = issues.length ? `<section class="material-warning" aria-label="资料待核">
+    <strong>资料待核</strong><ul>${issues.map(issue => `<li>${materialIssueLabel(issue.code)}。</li>`).join('')}</ul>
+  </section>` : '';
+  const versionsHtml = versions.length ? `<section class="evaluation-versions" aria-label="新版评估">
+    <h2>新版评估</h2>${versions.map(v => `<article class="evaluation-version">
+      <img src="docs/examples/${v.radar}" alt="${v.name} ${reportDate(v)} 雷达图">
+      <div class="version-info"><div class="version-score">${v.total} · ${v.gradeLabel}</div>
+      <div>${reportDate(v)} · ${escapeHtml(v.rubric_version || '模型未知')}</div>
+      <div style="font-size:0.75rem;color:var(--text-muted);">人工审核输入；财务判断尚需独立核验。</div></div>
+      <button class="detail-tab" onclick="loadReport('${c.id}','full',this,'${v.evaluation_id}')">查看该版报告</button>
+    </article>`).join('')}</section>` : '';
 
   let bars = '';
   DIMS.forEach(d => {
@@ -689,27 +879,34 @@ function renderCompany(cid) {
 
   main.innerHTML = `
     <div class="company-detail">
-      <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+      <button class="back-btn" onclick="goHome()">← 返回总览</button>
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="#">总览</a> › <a href="#">${c.ind1}</a> › <a href="#">${c.ind2}</a> › <span>${c.name}</span>
+      </nav>
       <div style="display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap;">
         <button class="back-btn" onclick="startCompare('${c.id}')" style="border-color:var(--amber);color:var(--amber);">⇆ 加入对比</button>
       </div>
+      ${issueHtml}
 
       <div class="detail-hero" style="margin-top:16px;">
         <div class="radar-img"><img src="docs/examples/${c.radar}" alt="${c.name} radar" onerror="this.parentElement.innerHTML='<div style=padding:40px;color:var(--text-muted)>Radar chart unavailable</div>'"></div>
         <div class="detail-info">
           <div class="company-title">${c.name}</div>
           <div class="company-ticker">${c.nameEn} ${c.ticker ? '· '+c.ticker : ''} · ${c.ind1} · ${c.ind2}</div>
+          ${c.ticker ? '<p style="font-size:0.7rem;color:var(--text-muted);margin-bottom:8px;">证券栏为历史展示文本，部分代码属于关联上市主体；请按法律实体核对。</p>' : ''}
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
             <span style="font-family:var(--font-mono);font-size:2rem;font-weight:700;color:${g.fg};">${c.total}</span>
             <span style="font-size:0.85rem;color:${g.fg};padding:2px 10px;border-radius:4px;background:${g.bg};">${c.gradeLabel}</span>
           </div>
           <div class="company-verdict">${c.oneLine}</div>
-          <p style="font-size:0.73rem;color:var(--amber);margin-bottom:8px;">报告日期：${reportDate(c)} · 历史 v1 评分 · 原始指标输入未完整归档。</p>
-          ${legacyGradeNote(c) ? `<p style="font-size:0.73rem;color:var(--amber);">${legacyGradeNote(c)}</p>` : ''}
+          <p style="font-size:0.73rem;color:var(--amber);margin-bottom:8px;">${evaluationNote(c)}</p>
+          ${c.verification_status !== 'reviewer_attested' && legacyGradeNote(c) ? `<p style="font-size:0.73rem;color:var(--amber);">${legacyGradeNote(c)}</p>` : ''}
           <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:12px;">👥 ${c.employees} · 💰 ${c.revenue}</div>
           <div class="score-bars">${bars}</div>
         </div>
       </div>
+
+      ${versionsHtml}
 
       <div class="detail-tabs">
         <button class="detail-tab active" onclick="loadReport('${cid.replace(/'/g, "\\'")}','full',this)">完整报告</button>
@@ -726,22 +923,31 @@ function renderCompany(cid) {
   loadReportContent(cid, 'full');
 }
 
-function loadReport(cid, mode, btn) {
+function loadReport(cid, mode, btn, evaluationId) {
   document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  loadReportContent(cid, mode);
+  loadReportContent(cid, mode, evaluationId);
 }
 
-async function loadReportContent(cid, mode) {
+async function loadReportContent(cid, mode, evaluationId) {
   const c = getC(cid);
   const container = document.getElementById('report-container');
   if (!container) return;
   container.innerHTML = '<div class="loading">加载报告中...</div>';
+  const token = ++reportLoadToken;
 
   try {
-    const resp = await fetch(`docs/examples/${c.report}`);
-    if (!resp.ok) throw new Error('Not found');
-    let md = await resp.text();
+    const version = resolveReportVersion(c, evaluationId);
+    if (!version) throw new Error('评估版本不存在');
+    let md = reportCache.get(version.report);
+    if (md === undefined) {
+      const resp = await fetch(`docs/examples/${encodeURIComponent(version.report)}`);
+      if (!resp.ok) throw new Error('Not found');
+      md = await resp.text();
+      reportCache.set(version.report, md);
+    }
+    // A slower earlier request must never overwrite a newer view.
+    if (token !== reportLoadToken) return;
 
     if (mode === 'summary') {
       // Extract first 3 sections: 一句话结论 + 基本画像 + 5-dim summary
@@ -767,7 +973,7 @@ async function loadReportContent(cid, mode) {
 function renderMarkdown(md) {
   let html = '';
   const lines = md.split('\n');
-  let inTable = false, tableHtml = '';
+  let inTable = false, tableRows = [];
   let inCodeBlock = false, codeHtml = '', codeLang = '';
   let inList = null, listHtml = '';
 
@@ -780,12 +986,20 @@ function renderMarkdown(md) {
     return out;
   }
 
+  // Rows are buffered so header/data cells can be decided once the separator
+  // row position is known. Markdown without a separator row is a headerless
+  // block of data cells, never a header.
   function flushTable() {
-    if (inTable && tableHtml) {
-      html += `<table>${tableHtml}</table>`;
-      tableHtml = '';
-      inTable = false;
-    }
+    if (!inTable || !tableRows.length) { inTable = false; tableRows = []; return; }
+    const sepIndex = tableRows.findIndex(row => row.sep);
+    html += '<table>' + tableRows.map((row, index) => {
+      if (row.sep) return '';
+      const tag = sepIndex >= 0 && index < sepIndex ? 'th' : 'td';
+      return '<tr>' + row.cells.map(cell =>
+        `<${tag}>${inlineMarkdown(cell)}</${tag}>`).join('') + '</tr>';
+    }).join('') + '</table>';
+    inTable = false;
+    tableRows = [];
   }
 
   for (let i = 0; i < lines.length; i++) {
@@ -809,11 +1023,11 @@ function renderMarkdown(md) {
 
     // Table
     if (line.startsWith('|') && line.endsWith('|')) {
-      if (line.match(/^\|[\s\-:]+\|/)) { inTable = true; continue; } // separator row
-      if (!inTable) { inTable = true; tableHtml = ''; }
-      const cells = line.split('|').filter(c => c.trim() !== '');
-      const tag = i === 0 || (i > 0 && lines[i-1] && lines[i-1].match(/^\|[\s\-:]+\|/)) ? 'th' : 'td';
-      tableHtml += '<tr>' + cells.map(c => `<${tag}>${inlineMarkdown(c.trim())}</${tag}>`).join('') + '</tr>';
+      inTable = true;
+      const isSeparator = /^\|[\s\-:|]+\|$/.test(line);
+      // Keep interior empty cells so columns stay aligned with the header.
+      const cells = line.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
+      tableRows.push({ cells, sep: isSeparator });
       continue;
     } else {
       flushTable();
@@ -1000,7 +1214,7 @@ function renderCompare(cid1, cid2) {
 
     main.innerHTML = `
       <div class="fade-in">
-        <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+        <button class="back-btn" onclick="goHome()">← 返回总览</button>
         <div class="compare-header" style="margin-top:16px;">
           <div class="compare-company-pick" style="border-color:var(--amber);">
             <div class="pick-hint">公司 A</div>
@@ -1047,9 +1261,9 @@ function renderCompare(cid1, cid2) {
 
   main.innerHTML = `
     <div class="compare-view">
-      <button class="back-btn" onclick="location.hash=''">← 返回总览</button>
+      <button class="back-btn" onclick="goHome()">← 返回总览</button>
 
-      <p style="color:var(--amber);font-size:0.76rem;margin-top:16px;">仅比较历史 v1 分数；跨行业口径不同、原始输入不完整，请勿作为实时决策依据。</p>
+      <p style="color:var(--amber);font-size:0.76rem;margin-top:16px;">${c1.verification_status === 'reviewer_attested' || c2.verification_status === 'reviewer_attested' ? '包含人工审核的评估快照；来源和跨行业可比性仍需独立核验。' : '仅比较历史 v1 分数；跨行业口径不同、原始输入不完整，请勿作为实时决策依据。'}</p>
       <div class="compare-header" style="margin-top:16px;">
         <div class="compare-company-pick" style="border-color:${g1.fg};">
           <div class="pick-hint">公司 A</div>
@@ -1216,7 +1430,10 @@ function drawCompareRadar(c1, c2) {
   try {
     const resp = await fetch('docs/companies.json');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    COMPANIES = await resp.json();
+    COMPANIES = (await resp.json()).map(sanitizeCompany);
+    // The material review ledger is advisory only: a missing or malformed
+    // baseline must never take the whole site down.
+    MATERIAL_ISSUES = await loadMaterialIssues(fetch);
     route();
   } catch(e) {
     console.error('Failed to load companies data:', e);

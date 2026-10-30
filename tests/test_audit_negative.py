@@ -14,6 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location("repository_audit", ROOT / "tools/audit_repository.py")
 audit = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(audit)
+REPRO_SPEC = importlib.util.spec_from_file_location(
+    "score_reproduction", ROOT / "tools/reproduce_scores.py")
+audit_reproduction = importlib.util.module_from_spec(REPRO_SPEC)
+REPRO_SPEC.loader.exec_module(audit_reproduction)
 
 REPORT = "# Acme 财务健康评估（2026-01-01）\n\n## 一句话结论\n\n结论正文。\n"
 
@@ -137,3 +141,41 @@ class AuditNegativeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PrecisionThresholdDeterminismTests(unittest.TestCase):
+    """0.55 is a boundary, and float summation differs between CPython versions.
+
+    78 vs 77.45 is 0.5499999999999972 with the compensated sum() of CPython 3.12
+    and 0.55000000000001 with the plain sum() of 3.11, so an unrounded comparison
+    makes the audit result depend on the interpreter that runs it.
+    """
+
+    SCORES = {"cashFlow": 81, "profitability": 65, "debt": 76,
+              "operations": 90, "sustainability": 76}
+
+    def run_audit(self, total):
+        neg = AuditNegativeTests()
+        neg.build([record(total=total, scores=dict(self.SCORES),
+                          grade="Moderate-High")])
+        return neg.codes(Path(neg._tmp.name))
+
+    def test_exact_boundary_is_not_flagged(self):
+        codes = self.run_audit(78)  # weighted sum is 77.45 -> exactly 0.55 away
+        self.assertNotIn("total_precision_drift", codes)
+
+    def test_drift_beyond_the_boundary_is_flagged(self):
+        codes = self.run_audit(79)  # 1.55 away
+        self.assertIn("total_precision_drift", codes)
+
+    def test_both_interpreter_float_representations_resolve_the_same_way(self):
+        # CPython 3.12 compensated sum() vs 3.11 plain sum().
+        for drift in (0.5499999999999972, 0.55000000000001):
+            self.assertFalse(round(drift, 6) > 0.55, drift)
+
+    def test_reproduce_scores_uses_the_same_boundary(self):
+        for total, expected in ((78, False), (79, True)):
+            analysis = audit_reproduction.analyze({
+                "id": "acme", "name": "Acme", "total": total, "grade": "Moderate-High",
+                "scores": dict(self.SCORES)})
+            self.assertEqual(analysis["precision_drift"], expected, total)

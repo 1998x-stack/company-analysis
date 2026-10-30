@@ -195,7 +195,10 @@ def audit_repository(root: Path) -> dict:
 
         calculated = sum(dimensions[k] * w for k, w in DIMENSION_WEIGHTS.items())
         # Stored dimensions have already been rounded; compare generously.
-        if abs(calculated - total) > 0.55:
+        # Round before comparing: 78 vs 77.45 is 0.5499999999999972 under
+        # CPython 3.12 (compensated sum) and 0.55000000000001 under 3.11
+        # (plain sum), so the raw comparison flips across Python versions.
+        if round(abs(calculated - total), 6) > 0.55:
             issue("warning", "total_precision_drift", name,
                   f"catalog={total}; from rounded dimensions={calculated:.2f}")
         if c["grade"] != grade_for(total):

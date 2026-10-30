@@ -12,7 +12,7 @@ def analyze(c):
     return {"company_id":c["id"],"name":c["name"],"published_score":c["total"],
             "published_grade":c["grade"],"from_rounded_dimensions":round(raw,4),
             "possible_unrounded_total":[round(max(0,raw-.5),4),round(min(100,raw+.5),4)],
-            "precision_drift":abs(c["total"]-raw)>.55,
+            "precision_drift":round(abs(c["total"]-raw),6)>.55,
             "grade_boundary_ambiguous":c["grade"]!=grade(c["total"]),
             "reproduction_status":"needs_original_inputs",
             "verified_original_indicator_input":False}

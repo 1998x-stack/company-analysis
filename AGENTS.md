@@ -47,6 +47,7 @@ Run tools/create_evaluation.py with complete cited indicator assessments; it alw
     python3 tools/audit_repository.py --baseline docs/audit_warning_baseline.json
     python3 tools/verify_company_materials.py --baseline docs/material_review_baseline.json \
         --output build/company_materials.json
+    python3 tools/render_readme.py --check
     python3 tools/backfill_evidence.py --output build/legacy_evidence_manifest.json
     python3 tools/reproduce_scores.py --output build/legacy_score_reproduction.json
 
@@ -72,6 +73,8 @@ contradictions, and separate unknown/unavailable data from actual risk.
 - S05: tools/run_research_pipeline.py runs a checkpointed local workflow.
 - Optional tools/collect_sources.py network access requires an explicit
   allowlisted HTTPS host and --allow-network. Source retrieval is NOT claim validation.
+- tools/render_readme.py generates the two 230-row tables in README.md from the
+  catalog. Never hand-edit those tables; run `make readme` and commit the result.
 - Gate tooling: tools/audit_repository.py (catalog/report/archive integrity),
   tools/verify_company_materials.py (per-artifact hashes, image references,
   report score/date conflicts, orphan assets) and tools/radar_geometry.py

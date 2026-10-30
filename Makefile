@@ -2,9 +2,9 @@
 # Usage: make check        (all gates, same commands CI runs)
 #        make test         (fast: unit + frontend)
 #        make ledgers      (regenerate the research ledgers into build/)
-.PHONY: check test test-py test-node audit materials ledgers determinism clean
+.PHONY: check test test-py test-node audit materials readme ledgers determinism clean
 
-check: test audit materials determinism
+check: test audit materials readme-check determinism
 
 test: test-py test-node
 
@@ -19,6 +19,13 @@ audit:
 
 materials:
 	python3 tools/verify_company_materials.py --baseline docs/material_review_baseline.json --output build/company_materials.json
+
+# The README tables are generated from the catalog; never hand-edit them.
+readme:
+	python3 tools/render_readme.py --write
+
+readme-check:
+	python3 tools/render_readme.py --check
 
 ledgers:
 	mkdir -p build

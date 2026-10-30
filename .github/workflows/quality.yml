@@ -29,6 +29,8 @@ jobs:
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
       - name: Frontend tests
         run: node --test tests/frontend.test.mjs
+      - name: README tables match the catalog
+        run: python3 tools/render_readme.py --check
       - name: Repository audit (no new warnings allowed)
         run: python3 tools/audit_repository.py --baseline docs/audit_warning_baseline.json
       - name: Verify all company materials (no new conflicts allowed)

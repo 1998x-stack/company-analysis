@@ -13,6 +13,7 @@ Fastest path — `make check` runs every gate exactly as CI does:
     make audit          # repository audit against the warning baseline
     make materials      # material verifier against the review baseline
     make determinism    # ledgers must be byte-identical for identical input
+    make readme         # regenerate the README tables from the catalog
 
 Individual commands:
 
@@ -42,6 +43,7 @@ or frontend dependencies.
 | `test_constant_consistency.py` | grade thresholds, labels and dimension weights across engine/audit/publisher/frontend |
 | `test_cli_exit_codes.py` | CLI exit codes for the audit, ledger `--check` modes and material verifier |
 | `test_company_materials.py` | material verifier output vs its baseline |
+| `test_render_readme.py` | README tables are generated from the catalog and every generated link resolves |
 | `test_legacy_golden.py` (via `golden_catalog_v1.json`) | 14 historical score records must not drift |
 | `frontend.test.mjs` | Markdown renderer, sanitising, routing titles, sidebar order, report cache |
 

@@ -7,6 +7,7 @@ def load(name):
     m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 backfill=load("backfill_evidence.py")
 replay=load("reproduce_scores.py")
+audit=load("audit_repository.py")
 class LedgersTests(unittest.TestCase):
     def test_230_company_backfill(self):
         seeds=json.loads((ROOT/"data/source_candidates.json").read_text(encoding="utf-8"))
@@ -20,8 +21,12 @@ class LedgersTests(unittest.TestCase):
     def test_230_score_replay_requires_original_inputs(self):
         result=replay.build(ROOT)
         self.assertEqual(result["summary"]["companies"],230)
-        self.assertEqual(result["summary"]["precision_drift"],10)
+        self.assertEqual(result["summary"]["precision_drift"],9)
         self.assertEqual(result["summary"]["grade_boundary_ambiguous"],11)
+        names={x["name"] for x in result["records"] if x["precision_drift"]}
+        warnings={x["company"] for x in audit.audit_repository(ROOT)["issues"]
+                  if x["code"]=="total_precision_drift"}
+        self.assertEqual(names,warnings)
         self.assertTrue(all(x["reproduction_status"]=="needs_original_inputs"
                             for x in result["records"]))
     def test_no_candidate_is_fake_verified_filing(self):

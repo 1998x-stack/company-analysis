@@ -13,7 +13,7 @@ leads are included; no new financial claims were inferred.
 
 ## 2. Score replay diagnostics
 Run: python3 tools/reproduce_scores.py --output build/scores.json
-Result: 230 records flagging 11 grade-boundary and 10 total precision anomalies.
+Result: 230 records flagging 11 grade-boundary and 9 total precision anomalies.
 None has original v1 indicator inputs; no reconstructed financial tier is
 fabricated. Restore source inputs to enable exact replay.
 
@@ -49,12 +49,26 @@ redistribution of the source content are subject to the original license.
 
 ## CI
 The Quality Gate runs all tests, repository integrity checks and a full
-230-company ledger build. The two full ledgers are retained as workflow
+230-company ledger build. The three full ledgers are retained as workflow
 artifacts and do not need to be committed to the public source repository.
+
+The material verifier runs with:
+
+    python3 tools/verify_company_materials.py --baseline docs/material_review_baseline.json --output build/company_materials.json
+
+It writes one row for every catalog ID, with report and radar hashes, archive
+links, image references, displayed score, and source status. It fails for broken
+local material references or new report/date conflicts. Two known conflicts
+remain in the review baseline: 复星医药 has different dates in its report heading
+and filename, and 阳光保险's radar geometry does not match its catalog scores.
+金雅福集团 and 中集车辆 were repaired against their own weighted tables, so their
+entries were removed from the baseline rather than kept as allowances. The baseline records their exact observed values; it does
+not validate either side. The unreferenced Henkel_health_radar.png is kept as
+an orphan candidate pending provenance review.
 
 ## Remaining work (requires facts, data or human decisions)
 - Verify source pages and original indicator assessments for 230 companies.
-- Correct 21 historical precision/grade flags from verified inputs.
+- Investigate 20 historical precision/grade flags from verified inputs.
 - Build an annotated financial extraction benchmark, evaluate false claims,
   tune sector thresholds, and run historical backtests.
 - Integrate authorized live document search and LLM extractors with review;

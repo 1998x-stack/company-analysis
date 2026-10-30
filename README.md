@@ -1,27 +1,179 @@
 # 企业健康度历史研究库 / Company Analysis
 
-> **历史资料提示**：本仓库的 230 份企业评估主要形成于 2026 年，部分缺少直接来源链接、原始评分输入及细化的报告期。评分不等同于审计意见或实时风险判断。技术对齐与剩余问题参见 [对齐审计](docs/ALIGNMENT_REMEDIATION_2026-10-29.md)，新评分来源约束参见 [Evidence Contract](docs/EVALUATION_INPUT_CONTRACT.md)。
+> **这是一个历史研究快照，不是实时评级，也不是审计意见。**
+>
+> 230 家企业评估形成于 2026 年 6–8 月，使用已冻结的 v1 口径。可核验性有限：
+> **227/230** 份报告没有可点击的一手来源链接，**230/230** 家的原始指标输入一份都没有留存，
+> **111** 份报告不足 3 KB（只有结论、没有指标级依据）。引用前请先读
+> [已知限制与数据质量](#已知限制与数据质量)。
 
-## Research Factory — Stages 01–05 (MVP, 2026-10-29)
+| | |
+|---|---|
+| 站点 | `index.html` — 单文件静态站，无后端、无构建步骤 |
+| 数据 | `docs/companies.json` — 230 条，站点唯一数据源 |
+| 报告 | `docs/examples/` — 230 份 Markdown + 230 张雷达图（229 PNG + 1 SVG） |
+| 方法 | `docs/企业健康度评估体系/` — 6 篇，站点 `#/method` 直接渲染 |
+| 覆盖 | 230 家 · 22 个一级行业 · 117 个二级行业 |
 
-The five-stage runnable implementation is documented in
-[Research Factory Runbook](docs/RESEARCH_FACTORY_RUNBOOK.md).
-Legacy historical research (230 companies) remains unverified: source discovery
-and fact checking are **not completed** by the new programs.
+## 30 秒上手
 
-| Stage | Executable | Actual result |
+```bash
+make check                      # 全部门禁：单测 + 前端 + 审计 + 材料核验 + 账本确定性
+python3 -m http.server 8000     # 打开 http://localhost:8000/
+```
+
+`make check` 与本仓库 CI 跑的是同一组命令，不需要额外配置。改动 `docs/companies.json` 之后运行
+`make readme` 刷新本文档尾部两张生成表（见 [贡献流程](#贡献流程)）。
+
+## 仓库结构
+
+| 路径 | 内容 |
+|---|---|
+| `index.html` | 静态站点：总览、公司详情、两家对比、`#/method` 方法论页；含自研 Markdown 渲染器 |
+| `docs/companies.json` | 230 条目录（15 个字段），站点唯一数据源 |
+| `docs/examples/` | 230 份报告 + 230 张雷达图 |
+| `docs/企业健康度评估体系/` | 评分框架、薪酬/合规/区域等 6 篇方法论 |
+| `company/` | 两級行业归档符号链接树，加生成的 `index.md`（排名）与 `README.md`（行业索引） |
+| `tools/` | 仓库审计、材料核验、雷达几何校验、发布工厂、研究流水线、README 生成 |
+| `tests/` | 93 个 Python 测试 + 22 个 Node 测试；黄金基线见 `tests/golden_catalog_v1.json` |
+| `docs/*_2026-10-29.md` | 一次性审计/路线记录，是当时状态的快照，不代表当前状态 |
+
+## 评分方法（v1，已冻结）
+
+### 五维权重
+
+| 维度 | 权重 | 指标 | 说明 |
+|---|---|---|---|
+| **现金流质量** | 45% | 经营现金流、现金跑道、有息负债、净现比 | v1.1 起应收周转归入运营效率 |
+| **盈利能力** | 20% | 毛利率、净利率、营收增速、研发费用率、人均产出 | 研发费用率用非线性档位（10–25% 最优） |
+| **偿债能力** | 15% | 资产负债率、有息负债率、流动比率、现金比率、股权质押 | 零息负债 + 税务 A 级可加 5 分，上限 100 |
+| **运营效率** | 10% | 应收周转、客户集中度、员工规模趋势、高管稳定性 | |
+| **可持续发展** | 10% | 市场增速、技术壁垒、业务多元化、融资通道、监管风险 | |
+
+指标不自行赋分：每个指标先落到 3–4 档定性等级，再由 `score.py` 映射为固定分值并按权重加权。
+这意味着**维度分只能落在有限的档位组合上**，同档内排序不具区分意义（见已知限制）。
+
+### 等级（左闭右开）
+
+阈值与 `.claude/skills/company-health-eval/scripts/score.py` 的 `get_grade()` 完全一致，**该函数是唯一判定权威**。
+
+| 区间 | 等级 | 含义 |
 |---|---|---|
-| 01 Evidence backfill | tools/backfill_evidence.py | 230-company source-gap ledger; 3 official source leads, not verified facts |
-| 02 Score reproduction | tools/reproduce_scores.py / tools/replay_evaluations.py | Legacy interval diagnostics; exact replay for new saved inputs |
-| 03 Publishing Factory | tools/publish_factory.py | Human-reviewed snapshot → isolated static site, MD, SVG, indexes, JSON |
-| 04 Sector v2 | tools/sector_scoring_v2.py | Four experimental rubrics + evidence/coverage/ablation, not calibrated |
-| 05 Research workflow | tools/run_research_pipeline.py | SQLite checkpoints, source hash and PDF/HTML/TXT parser, review gate |
+| [85, 100] | 🟢 优秀 (Excellent) | 财务极稳健 |
+| [70, 85) | 🟡 中等偏上 (Moderate-High) | 整体稳健，有少量关注点 |
+| [55, 70) | 🟠 中等 (Moderate) | 存在明显短板 |
+| [40, 55) | 🔴 中等偏下 (Moderate-Low) | 多个维度预警 |
+| [0, 40) | ⚫ 高风险 (High-Risk) | 重大隐患，建议规避 |
 
-CI creates downloadable ledgers for all 230 companies:
-legacy_evidence_manifest.json and legacy_score_reproduction.json.
-See the PR Actions artifacts and the runbook for local regeneration.
+当前分布：优秀 30 · 中等偏上 100 · 中等 58 · 中等偏下 34 · 高风险 8。
 
+> 注意：目录里 `total` 存的是**取整后**的整数，而 `grade` 是用**未取整**的加权值判定的。
+> 因此有 11 条记录会出现"显示 70 分但等级为中等"这类看似矛盾的情况（例如 69.9 分取整为 70）。
+> 这 11 条已冻结在 `docs/audit_warning_baseline.json`，在原始指标输入回填前不得改动分数或等级。
 
+## 数据文件与字段
+
+`docs/companies.json` 是一个 230 元素的数组，每条记录 15 个字段：
+
+| 字段 | 说明 |
+|---|---|
+| `id` | 稳定标识（小写、`[a-z0-9_-]`），是站点 URL 与引用锚点 |
+| `name` / `nameEn` | 中文名 / 英文名 |
+| `ticker` | **展示用文本，非规范证券代码**；46 条为空，30 条是 `—（非上市）` 之类的占位符（显示层会过滤） |
+| `ind1` / `ind2` | 一级 / 二级行业 |
+| `scores` | 五维得分（整数 0–100），键为 `cashFlow`/`profitability`/`debt`/`operations`/`sustainability` |
+| `total` | 综合得分（整数，四舍五入） |
+| `grade` / `gradeLabel` | 等级键（英文）/ 中文标签 |
+| `oneLine` | 一句话结论 |
+| `report` / `radar` | `docs/examples/` 下的报告与雷达图文件名 |
+| `employees` / `revenue` | 展示用文本（区间或带"估"），非结构化金额 |
+
+`as_of_date`、`rubric_version`、`verification_status` 三个字段已在 schema 中定义，但**230 条记录都没用**：
+目录里没有数据期间，日期只能从报告文件名解析，缺失时显示"未知"。
+
+## 引用方式
+
+站内每家公司的地址是稳定的：`#company/<id>`（或 `#/company/<id>`）。建议的引用格式：
+
+```
+企业健康度历史研究库（Company Analysis），<公司名>（id: <id>），
+评估日 <YYYY-MM-DD>，v1 历史评分，<站点 URL>/#company/<id>（检索于 <日期>）。
+历史快照，未经独立核验。
+```
+
+外部程序化使用直接取 `docs/companies.json`（GitHub raw 即可），但要连同上面那句限定语一起传递。
+
+## 已知限制与数据质量
+
+这些是**已知并冻结**的问题，不是待发现的缺陷。审计工具会把它们逐条列出：
+
+| 限制 | 规模 | 位置 |
+|---|---|---|
+| 报告无直接一手来源链接 | 227 / 230 | `tools/audit_repository.py` 统计项 |
+| 原始指标输入未留存，评分不可重算 | 230 / 230 | `tools/reproduce_scores.py`（`needs_original_inputs`） |
+| 报告过短（只有结论，无指标依据） | 111 / 230 小于 3 KB | `docs/audit_warning_baseline.json` |
+| 显示总分与等级边界歧义 | 11 条 | 同上 |
+| 显示总分与五维取整精度漂移 | 9 条 | 同上 |
+| 报告结论分/标题日期与目录冲突 | 2 条 | `docs/material_review_baseline.json` |
+| 雷达图数据点与目录分数不符 | 1 条（阳光保险） | 同上 |
+| 未被任何目录引用的图片 | 1 张（`Henkel_health_radar.png`，保留待溯源） | 材料核验输出 |
+| 报告缺"同业对标"章 | 132 / 230 | 需人工取证 |
+| 同一五维向量被多家复用 | 16 组 / 36 家 | 需原始输入才能判定是巧合还是模板复制 |
+
+两个 baseline（`docs/audit_warning_baseline.json`、`docs/material_review_baseline.json`）是**历史遗留的豁免清单，不是批准**：
+新增告警必须修掉，不能登记进去。它们的用处只有一条——让历史债可见且不扩大。
+
+## 贡献流程
+
+```bash
+git switch -c fix/<topic>            # 不要在 master 上直接改
+make check                           # 改任何东西之前先确认基线是绿的
+# …修改…
+make readme                          # 若动了 docs/companies.json，刷新本文档的两张表
+make check                           # 再跑一次
+```
+
+约束（详见 [AGENTS.md](AGENTS.md)）：
+
+1. **不要只改一个已发布的总分、等级或雷达图**。分数必须来自可追溯的指标输入、期间与引擎版本。
+2. **v1 分数冻结**。新增/更正评估走 `tools/create_evaluation.py`（强制 `requires_human_review`），不要手改历史记录。
+3. 新评估的证据要求见 [EVALUATION_INPUT_CONTRACT.md](docs/EVALUATION_INPUT_CONTRACT.md)。
+4. 不要为了让 CI 变绿而放宽检查或往 baseline 里加条目。
+5. 本仓库为公开仓库：不要提交密钥、私人简历、未公开的个人信息或个人化求职匹配笔记。
+
+> 本仓库**未声明开源许可证**。在获得明确授权前，请勿再分发。
+
+## Research Factory — Stages 01–05（MVP）
+
+五个阶段的实现与用法见 [Research Factory Runbook](docs/RESEARCH_FACTORY_RUNBOOK.md)。
+新程序**不**为 230 家历史记录完成来源核验或事实核查。
+
+| Stage | 可执行文件 | 实际产出 |
+|---|---|---|
+| 01 证据回填 | `tools/backfill_evidence.py` | 230 家来源缺口清单；3 条官方来源线索，非已核事实 |
+| 02 分数复现 | `tools/reproduce_scores.py` / `tools/replay_evaluations.py` | 历史区间诊断；新存档输入可精确重放 |
+| 03 发布工厂 | `tools/publish_factory.py` | 人工审核快照 → 隔离静态站、报告、SVG、索引、JSON |
+| 04 行业 v2 | `tools/sector_scoring_v2.py` | 四套实验 rubric + 证据/覆盖度/敏感性，**未校准、未上线榜单** |
+| 05 研究流水线 | `tools/research_pipeline` / `tools/run_research_pipeline.py` | SQLite 检查点、源文件哈希、PDF/HTML/TXT 解析、审核门 |
+
+CI 生成三份可下载的 230 家账本：`legacy_evidence_manifest.json`、`legacy_score_reproduction.json`、
+`company_materials.json`，并校验两次生成结果逐字节一致。
+
+## 质量门禁
+
+| 门禁 | 覆盖 | 现状 |
+|---|---|---|
+| `python3 -m unittest discover -s tests` | 目录/报告/归档完整性、评分引擎、发布工厂、研究流水线、审计代码负向用例、跨文件常量一致性、CLI 退出码 | 93 个测试 |
+| `node --test tests/frontend.test.mjs` | Markdown 渲染器、转义与白名单、路由标题、侧栏可达性、报告缓存 | 22 个测试 |
+| `tools/audit_repository.py --baseline …` | 引用、行业归档、分数/等级漂移、报告等级词、得分表 | 0 error / 20 known warning |
+| `tools/verify_company_materials.py --baseline …` | 产物哈希、图片引用、结论分/日期冲突、孤儿资产、雷达几何 | 0 error / 2 known conflict |
+| `tools/render_readme.py --check` | 本文档两张表与目录逐字节一致 | 通过 |
+
+## 全部 230 家公司
+
+按综合得分降序（同分按名称排序）。表格由 `make readme` 从 `docs/companies.json` 生成，请勿手工编辑。
+
+<!-- BEGIN GENERATED: RANKING (make readme) -->
 | # | 公司 | 行业 | 综合得分 | 等级 | 报告 | 雷达图 |
 |---|------|------|----------|------|------|--------|
 | 1 | Google (NASDAQ: GOOGL / GOOG) | 科技巨头 · 搜索与AI | 89 | 🟢 | [报告](docs/examples/Google-财务健康评估-2026-07-07.md) | [PNG](docs/examples/Google_health_radar.png) |
@@ -78,7 +230,7 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 52 | 领健 | 企业服务 · 医疗SaaS | 83 | 🟡 | [报告](docs/examples/领健-财务健康评估-2026-06-19.md) | [PNG](docs/examples/linkedcare_health_radar.png) |
 | 53 | DeNA (2432.T) | 互动娱乐 · 游戏研发 | 82 | 🟡 | [报告](docs/examples/DeNA-财务健康评估-2026-06-18.md) | [PNG](docs/examples/DeNA_health_radar.png) |
 | 54 | 中信证券 (600030.SH / 06030.HK) | 金融科技 · 证券 | 82 | 🟡 | [报告](docs/examples/中信证券-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CiticSec_health_radar.png) |
-| 55 | 名创优品 (09998.HK / MNSO) | 消费 · 零售 | 82 | 🟡 | [报告](docs/examples/名创优品-财务健康评估-2026-08-14.md) | [PNG](docs/examples/MINISO_health_radar.png) |
+| 55 | 名创优品 (9898.HK / MNSO) | 消费 · 零售 | 82 | 🟡 | [报告](docs/examples/名创优品-财务健康评估-2026-08-14.md) | [PNG](docs/examples/MINISO_health_radar.png) |
 | 56 | 国信证券 (002736.SZ / 1786.HK) | 金融科技 · 证券 | 82 | 🟡 | [报告](docs/examples/国信证券-财务健康评估-2026-08-14.md) | [PNG](docs/examples/GuosenSec_health_radar.png) |
 | 57 | 比亚迪 (BYD) (002594.SZ / 1211.HK) | 汽车科技 · 新能源整车 | 82 | 🟡 | [报告](docs/examples/BYD-财务健康评估-2026-06-16.md) | [PNG](docs/examples/BYD_health_radar.png) |
 | 58 | 网易 (9999.HK / NTES) | 互动娱乐 · 游戏 | 82 | 🟡 | [报告](docs/examples/网易-财务健康评估-2026-06-12.md) | [PNG](docs/examples/NetEase_health_radar.png) |
@@ -95,7 +247,7 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 69 | 康捷国际物流 (NYSE: EXPD) | 物流 · 国际货运代理 | 80 | 🟡 | [报告](docs/examples/康捷国际物流-财务健康评估-2026-07-11.md) | [PNG](docs/examples/expeditors_health_radar.png) |
 | 70 | 律商联讯 (RELX: LSE/REL · NYSE: RELX) | 企业服务 · 法律信息服务 | 80 | 🟡 | [报告](docs/examples/律商联讯-财务健康评估-2026-06-16.md) | [PNG](docs/examples/LexisNexis_health_radar.png) |
 | 71 | 悠星网络 | 互动娱乐 · 游戏发行与运营 | 80 | 🟡 | [报告](docs/examples/悠星网络-财务健康评估-2026-07-07.md) | [PNG](docs/examples/yostar_health_radar.png) |
-| 72 | 江波龙 (301308.SZ) | 科技硬件 · 消费电子与EMS | 80 | 🟡 | [报告](docs/examples/江波龙-财务健康评估-2026-08-14.md) | [PNG](docs/examples/LongSys_health_radar.png) |
+| 72 | 江波龙 (301308.SZ) | 科技硬件 · 消费电子与EMS | 80 | 🟡 | [报告](docs/examples/江波龙-财务健康评估-2026-08-14.md) | [PNG](docs/examples/Longsys_health_radar.png) |
 | 73 | 特斯拉 (Tesla) (TSLA (NASDAQ)) | 汽车科技 · 新能源整车 | 80 | 🟡 | [报告](docs/examples/Tesla-财务健康评估-2026-06-15.md) | [PNG](docs/examples/Tesla_health_radar.png) |
 | 74 | 中国平安 (601318.SH / 02318.HK) | 金融科技 · 综合金融科技 | 79 | 🟡 | [报告](docs/examples/中国平安-财务健康评估-2026-08-13.md) | [PNG](docs/examples/PingAn_health_radar.png) |
 | 75 | 中国广核集团 | 能源 · 综合能源 | 79 | 🟡 | [报告](docs/examples/中国广核集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CGN_health_radar.png) |
@@ -106,9 +258,9 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 80 | 景旺电子 (603228.SH) | 科技硬件 · PCB | 78 | 🟡 | [报告](docs/examples/景旺电子-财务健康评估-2026-08-14.md) | [PNG](docs/examples/Kinwong_health_radar.png) |
 | 81 | 瑞声科技 (02018.HK) | 科技硬件 · 消费电子与EMS | 78 | 🟡 | [报告](docs/examples/瑞声科技-财务健康评估-2026-08-14.md) | [PNG](docs/examples/AAC_health_radar.png) |
 | 82 | 金蝶国际 (0268.HK) | 企业服务 · IT服务与软件工程 | 78 | 🟡 | [报告](docs/examples/金蝶国际-财务健康评估-2026-08-14.md) | [PNG](docs/examples/Kingdee_health_radar.png) |
-| 83 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 | [报告](docs/examples/Sea Limited(Shopee)-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
+| 83 | Sea Limited (Shopee) (NYSE: SE) | 互联网平台 · 电商 | 77 | 🟡 | [报告](docs/examples/Sea%20Limited%28Shopee%29-财务健康评估-2026-06-16.md) | [PNG](docs/examples/Sea_Limited_Shopee_health_radar.png) |
 | 84 | 中国远洋海运 (601919.SH / 1919.HK（中远海控）) | 物流 · 航运 | 77 | 🟡 | [报告](docs/examples/中国远洋海运-财务健康评估-2026-08-11.md) | [PNG](docs/examples/COSCO_health_radar.png) |
-| 85 | 分期乐 (NASDQ: LX) | 金融科技 · 信贷科技 | 77 | 🟡 | [报告](docs/examples/分期乐-财务健康评估-2026-08-14.md) | [PNG](docs/examples/LexinFin_health_radar.png) |
+| 85 | 分期乐 (NASDAQ: LX) | 金融科技 · 信贷科技 | 77 | 🟡 | [报告](docs/examples/分期乐-财务健康评估-2026-08-14.md) | [PNG](docs/examples/LexinFin_health_radar.png) |
 | 86 | 大族激光 (002008.SZ) | 科技硬件 · 工控自动化 | 77 | 🟡 | [报告](docs/examples/大族激光-财务健康评估-2026-08-14.md) | [PNG](docs/examples/HanLaser_health_radar.png) |
 | 87 | 招联消费 | 金融科技 · 信贷科技 | 77 | 🟡 | [报告](docs/examples/招联消费-财务健康评估-2026-08-14.md) | [PNG](docs/examples/ZhaolianFin_health_radar.png) |
 | 88 | 罗氏制药（中国） (ROG.SIX / RHHBY) | 生物医药 · 综合制药 | 77 | 🟡 | [报告](docs/examples/罗氏制药-财务健康评估-2026-08-11.md) | [PNG](docs/examples/RocheChina_health_radar.png) |
@@ -152,7 +304,7 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 126 | 中集集团 (000039.SZ / 02039.HK) | 汽车科技 · 智能装备 | 70 | 🟡 | [报告](docs/examples/中集集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/CIMC_health_radar.png) |
 | 127 | 复星医药 (600196.SH / 02196.HK) | 生物医药 · 综合制药 | 70 | 🟡 | [报告](docs/examples/复星医药-财务健康评估-2026-08-10.md) | [PNG](docs/examples/FosunPharma_health_radar.png) |
 | 128 | 奇富科技 (NASDAQ: QFIN / 03660.HK) | 金融科技 · 信贷科技 | 70 | 🟠 | [报告](docs/examples/奇富科技-财务健康评估-2026-06-14.md) | [PNG](docs/examples/qifu_technology_health_radar.png) |
-| 129 | 崇达技术 (002815.SZ) | 科技硬件 · PCB | 70 | 🟡 | [报告](docs/examples/崇达技术-财务健康评估-2026-08-14.md) | [PNG](docs/examples/Sunshine_health_radar.png) |
+| 129 | 崇达技术 (002815.SZ) | 科技硬件 · PCB | 70 | 🟡 | [报告](docs/examples/崇达技术-财务健康评估-2026-08-14.md) | [PNG](docs/examples/Chongda_health_radar.svg) |
 | 130 | 格林美 (002340.SZ) | 化工 · 电池回收 | 70 | 🟡 | [报告](docs/examples/格林美-财务健康评估-2026-08-13.md) | [PNG](docs/examples/GEM_health_radar.png) |
 | 131 | 海致科技 (02706.HK) | 人工智能 · AI平台 | 70 | 🟡 | [报告](docs/examples/海致科技-财务健康评估-2026-06-12.md) | [PNG](docs/examples/Haizhi_health_radar.png) |
 | 132 | 深圳华强 (000062.SZ) | 企业服务 · 电子分销 | 70 | 🟠 | [报告](docs/examples/深圳华强-财务健康评估-2026-08-13.md) | [PNG](docs/examples/SZHuaQiang_health_radar.png) |
@@ -254,30 +406,15 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 228 | 万科 (000002.SZ / 02202.HK) | 房地产 · 住宅开发 | 29 | ⚫ | [报告](docs/examples/万科-财务健康评估-2026-08-13.md) | [PNG](docs/examples/Vanke_health_radar.png) |
 | 229 | 金雅福集团 | 化工 · 黄金珠宝 | 26 | ⚫ | [报告](docs/examples/金雅福集团-财务健康评估-2026-08-13.md) | [PNG](docs/examples/JinYuFu_health_radar.png) |
 | 230 | 卓越置业 | 房地产 · 住宅开发 | 21 | ⚫ | [报告](docs/examples/卓越置业-财务健康评估-2026-08-13.md) | [PNG](docs/examples/ZhuoYue_health_radar.png) |
-
-## 五维度评估框架
-
-| 维度 | 权重 | 核心指标 |
-|------|------|----------|
-| **现金流质量** | 45% | 经营现金流趋势、现金跑道、有息负债、净现比（4项，v1.1 应收周转已移至运营效率） |
-| **盈利能力** | 20% | 毛利率、净利率、营收增速（3年CAGR）、研发效率、人均产出 |
-| **偿债能力** | 15% | 资产负债率、有息负债率、流动比率、现金比率、股权质押 |
-| **运营效率** | 10% | 应收周转、客户集中度、员工人数趋势、管理层稳定性 |
-| **可持续发展** | 10% | 市场增速、技术护城河、业务多元化、融资通道、监管风险 |
-
-**等级对应：**
-
-| 分数区间 | 等级 | 含义 |
-|----------|------|------|
-| 85–100 | 🟢 优秀 (Excellent) | 财务极健康，值得优先考虑 |
-| 70–85 | 🟡 中等偏上 (Moderate-High) | 整体稳健，有少量关注点 |
-| 55–70 | 🟠 中等 (Moderate) | 存在明显短板，需针对性评估 |
-| 40–55 | 🔴 中等偏下 (Moderate-Low) | 多个维度亮红灯，风险较高 |
-| <40 | ⚫ 高风险 (High-Risk) | 生存存疑，不建议作为首选雇主 |
+<!-- END GENERATED: RANKING -->
 
 ## 维度得分总览
 
+同样是生成内容，用于核对五维与综合分的关系；加权和与 `total` 的差异来自取整，详见[已知限制](#已知限制与数据质量)。
+
+<!-- BEGIN GENERATED: DIMENSIONS (make readme) -->
 | 公司 | 现金流 (45%) | 盈利 (20%) | 偿债 (15%) | 运营 (10%) | 可持续 (10%) | 综合 |
+|---|---|---|---|---|---|---|
 | Google | 90 | 91 | 90 | 81 | 83 | **89** |
 | 恒瑞医药 | 90 | 86 | 95 | 90 | 83 | **89** |
 | 明汯投资 | 90 | 95 | 90 | 81 | 83 | **89** |
@@ -508,3 +645,4 @@ See the PR Actions artifacts and the runbook for local regeneration.
 | 万科 | 25 | 22 | 23 | 44 | 54 | **29** |
 | 金雅福集团 | 15 | 41 | 15 | 54 | 31 | **26** |
 | 卓越置业 | 15 | 22 | 15 | 44 | 31 | **21** |
+<!-- END GENERATED: DIMENSIONS -->

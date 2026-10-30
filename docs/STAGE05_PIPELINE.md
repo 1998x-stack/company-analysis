@@ -15,6 +15,9 @@ A job contains evaluation_input (the strict v1 contract), company_record, and
 source_files mapping each evidence ID to a LOCAL file. No claims are invented.
 The pipeline validates document hashes, parses text and computes a deterministic
 snapshot from supplied indicator levels, then stops for human review.
+Publication replays the snapshot and rejects a company ID already present in the
+historical catalog. Publishing a new version of an existing company needs a
+versioned catalog and review surface; the legacy row is never overwritten.
 The verification gate attests inputs; it cannot prove source content is true.
 The optional source_collector.fetch helper implements explicitly allowlisted
 HTTPS retrieval with DNS/IP checking, redirect refusal, byte and media limits.

@@ -1,2 +1,6 @@
 jsonschema==4.23.0
 pypdf>=5.0,<7.0
+Pillow>=10.0,<12.0
+# radar_chart.py (v1 radar renderer) needs matplotlib; it was previously
+# undocumented, so following CLAUDE.md's radar workflow failed on a clean env.
+matplotlib>=3.8,<4.0
